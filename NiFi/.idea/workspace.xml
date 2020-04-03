@@ -10,6 +10,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -30,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/flows" />
@@ -39,6 +48,52 @@
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\test\java\rms\processors" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\main\java\rms\processors" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.JsonDecisionProcessorTest.testTester">
+    <configuration name="JsonDecisionProcessorTest.testDeveloper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rms-custom-processors-processors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rms.processors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rms.processors" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.JsonDecisionProcessorTest" />
+      <option name="METHOD_NAME" value="testDeveloper" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonDecisionProcessorTest.testTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rms-custom-processors-processors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rms.processors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rms.processors" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.JsonDecisionProcessorTest" />
+      <option name="METHOD_NAME" value="testTester" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JsonDecisionProcessorTest.testTester" />
+        <item itemvalue="JUnit.JsonDecisionProcessorTest.testDeveloper" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -64,5 +119,34 @@
       <updated>1585749594586</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser" timestamp="1585777206518">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585777206518" />
+    <state x="979" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585770017581">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="979" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585770017581" />
+    <state width="2060" height="284" key="GridCell.Tab.0.bottom" timestamp="1585785444959">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2060" height="284" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585785444959" />
+    <state width="2060" height="284" key="GridCell.Tab.0.center" timestamp="1585785444959">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2060" height="284" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585785444959" />
+    <state width="2060" height="284" key="GridCell.Tab.0.left" timestamp="1585785444959">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2060" height="284" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585785444959" />
+    <state width="2060" height="284" key="GridCell.Tab.0.right" timestamp="1585785444959">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2060" height="284" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585785444959" />
   </component>
 </project>
