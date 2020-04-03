@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@rms-frontend/core": ["libs/core/src/index.ts"]
+      "@rms-frontend/core": ["libs/core/src/index.ts"],
+      "@rms-frontend/file-explorer": ["libs/file-explorer/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

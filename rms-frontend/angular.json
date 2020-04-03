@@ -10,7 +10,7 @@
       },
       "root": "apps/s3",
       "sourceRoot": "apps/s3/src",
-      "prefix": "rms-frontend",
+      "prefix": "s3",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -139,7 +139,7 @@
       "projectType": "library",
       "root": "libs/core",
       "sourceRoot": "libs/core/src",
-      "prefix": "rms-frontend",
+      "prefix": "rms",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -272,35 +272,38 @@
         }
       }
     },
-    "lazy-load-e2e": {
-      "root": "apps/lazy-load-e2e",
-      "sourceRoot": "apps/lazy-load-e2e/src",
-      "projectType": "application",
+    "file-explorer": {
+      "projectType": "library",
+      "root": "libs/file-explorer",
+      "sourceRoot": "libs/file-explorer/src",
+      "prefix": "rms-frontend",
       "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/lazy-load-e2e/cypress.json",
-            "tsConfig": "apps/lazy-load-e2e/tsconfig.e2e.json",
-            "devServerTarget": "lazy-load:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "lazy-load:serve:production"
-            }
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/lazy-load-e2e/tsconfig.e2e.json"
+              "libs/file-explorer/tsconfig.lib.json",
+              "libs/file-explorer/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**",
-              "!apps/lazy-load-e2e/**"
+              "!libs/file-explorer/**"
             ]
           }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/file-explorer/jest.config.js",
+            "tsConfig": "libs/file-explorer/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/file-explorer/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }
