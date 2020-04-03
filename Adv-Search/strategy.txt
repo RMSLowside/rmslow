@@ -14,15 +14,25 @@ Desired:
 
 test | "something else"
 
-Single words by themselves should be searchable without quotes (multi-word search terms should still be quoted)
+Single words by themselves should be searchable without quotes (multi-word search terms should still be quoted, probably)
 Also of note, & / | / ! must also be searchable, don't want to lose that.
 
-Current thought:
+Current thoughts:
 - Tracking term boundary by replacing quote with <term> </term>
 - The only way to search for nested quotes is to escape them; that logic is also used elsewhere)
+- case where there are just bunches of words and no operators: assume it is one big string, and add quotes?
+- to differentiate between & as a search term and & as an operator, if in quotes it should be ignored (I believe this is handled in the real impl similarly)
 
 termOpen = false;
 for (c in charArray){
+    if(c is one of the operator characters [&|!]){
+        if(termOpen){
+            replace & with <:amp:>
+            replace | with <:pipe:>
+            replace ! with <:excl:>
+            // these are substituted back in at a later point in the processor
+        }
+    }
     if(c == '"' and is not preceded by '\'){
         if(!termOpen){
             replace quote with <term>
