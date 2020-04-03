@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <span>Lazy Load</span>
+</mat-toolbar>
+<div>
+  Lazy load on button click
+  <div>
+    <button mat-raised-button color="accent" (click)='getLazy1()'>load part 1</button>
+    <button mat-raised-button color="accent" (click)='getLazy2()'>load part 2</button>
+  </div>
+  <div #btnContainer>
+  </div>
+</div>
+<div>
+  <mat-tab-group backgroundColor="accent">
+    <mat-tab label="First">
+      test
+    </mat-tab>
+    <mat-tab label="Second">
+      <div #container2>
+      </div>
+    </mat-tab>
+    <mat-tab label="Third">
+      <div #container2>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
