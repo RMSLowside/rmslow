@@ -8,7 +8,7 @@ import { CoreModule } from '@rms-frontend/core';
 })
 export class Part1Component implements OnInit {
 
-  @Input() name: string;
+  @Input() name: string = '';
 
   constructor() { }
 
@@ -17,10 +17,9 @@ export class Part1Component implements OnInit {
 
 }
 
-
 @NgModule({
   declarations: [Part1Component],
   imports: [CoreModule]
 })
-class QuizCardModule {
+class Part1ComponentModule {
 }
