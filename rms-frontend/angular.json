@@ -165,7 +165,7 @@
       },
       "root": "apps/lazy-load",
       "sourceRoot": "apps/lazy-load/src",
-      "prefix": "rms-frontend",
+      "prefix": "lazy-load",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
