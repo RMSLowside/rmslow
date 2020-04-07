@@ -2,7 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/flows/local/flow.xml.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/models/RulesInputMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/enhance/AddAttributesToFlowFileProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/FetchXmlFromUrlProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/GetRulesEngineResultProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/dao/AddToRmmProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/enhance/AddAttributesToFlowFileProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/http/FetchXmlFromUrlProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/http/GetRulesEngineResultProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/ConvertXmlToJsonProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/VerifyJsonContentsProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flows/flow.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/flows/flow.xml.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/AbstractRmsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/AbstractRmsProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/JsonDecisionProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/JsonDecisionProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scripts/ec2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/ec2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +35,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -41,22 +62,39 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/flows" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flows/local" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\scripts\ec2" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\bin" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools" />
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="rms.processors.json" />
+      <recent name="rms.processors.http" />
+      <recent name="rms.processors.enhance" />
+      <recent name="rms.processors.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\libs" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-libs" />
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\test\java\rms\processors" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\main\java\rms\processors" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="rms.processors.json" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows\local" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\scripts\ec2" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\bin" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.JsonDecisionProcessorTest.testTester">
@@ -64,12 +102,12 @@
       <module name="rms-custom-processors-processors" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rms.processors.*" />
+          <option name="PATTERN" value="rms.processors.json.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="rms.processors" />
-      <option name="MAIN_CLASS_NAME" value="rms.processors.JsonDecisionProcessorTest" />
+      <option name="PACKAGE_NAME" value="rms.processors.json" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.json.JsonDecisionProcessorTest" />
       <option name="METHOD_NAME" value="testDeveloper" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -80,12 +118,12 @@
       <module name="rms-custom-processors-processors" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rms.processors.*" />
+          <option name="PATTERN" value="rms.processors.json.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="rms.processors" />
-      <option name="MAIN_CLASS_NAME" value="rms.processors.JsonDecisionProcessorTest" />
+      <option name="PACKAGE_NAME" value="rms.processors.json" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.json.JsonDecisionProcessorTest" />
       <option name="METHOD_NAME" value="testTester" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -128,10 +166,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser" timestamp="1585777206518">
+    <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser" timestamp="1586279050721">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585777206518" />
+    <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586279050721" />
+    <state x="1128" y="589" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586278590565">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1128" y="589" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586278590565" />
+    <state x="1149" y="596" width="552" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586279980608">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1149" y="596" width="552" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586279980608" />
     <state x="979" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585770017581">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -160,6 +206,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="945" y="398" key="NewModule_or_Project.wizard/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586177198395" />
+    <state x="1196" y="455" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586280483687">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1196" y="455" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586280483687" />
     <state x="662" y="395" key="new project wizard" timestamp="1585912002004">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

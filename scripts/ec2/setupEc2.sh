@@ -49,4 +49,10 @@ yum -y install mysql-server
 systemctl start mysqld
 rm -rf mysql-community-release-el7-5.noarch.rpm
 
+# Setup Crontab
+crontab -l > mycron
+echo "*/10 * * * * aws s3 cp /rms/nifi/conf/flow.xml.gz s3://rmslowdeployment/flow.xml.gz" >> mycron
+crontab mycron
+rm mycron
+
 popd
