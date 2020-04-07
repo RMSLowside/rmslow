@@ -12,7 +12,8 @@ import {
   RenameFolder,
   UploadFiles,
   NavigateTo,
-  NavigateUp
+  NavigateUp,
+  RenameFile
 } from './+state/file.actions';
 import { ExplorerState } from './+state/file.state';
 
@@ -35,7 +36,7 @@ export class AppComponent implements OnInit {
 
   rootSub = this.root$.subscribe(a => {
     this.currentRoot = a;
-    this.canNavigateUp = !!a.parent;
+    this.canNavigateUp = !!a?.parent;
   });
 
   ngOnInit(): void {
@@ -80,7 +81,7 @@ export class AppComponent implements OnInit {
   renameElement(element: FileElement) {
     if (element.isFolder)
       this.store.dispatch(new RenameFolder(element.id, element.name));
-    else this.store.dispatch(new RenameFolder(element.id, element.name));
+    else this.store.dispatch(new RenameFile(element.id, element.name));
   }
 
   navigateUp() {
@@ -115,7 +116,7 @@ export class AppComponent implements OnInit {
 
   popFromPath(path: string) {
     let p = path ? path : '';
-    let split = p.split('/');
+    const split = p.split('/');
     split.splice(split.length - 2, 1);
     p = split.join('/');
     return p;

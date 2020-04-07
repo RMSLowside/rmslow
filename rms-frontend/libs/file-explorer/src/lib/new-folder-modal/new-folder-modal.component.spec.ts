@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewFolderModalComponent } from './new-folder-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CoreModule } from '@rms-frontend/core';
 
 describe('NewFolderModalComponent', () => {
   let component: NewFolderModalComponent;
@@ -8,6 +10,7 @@ describe('NewFolderModalComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule, ReactiveFormsModule, CoreModule],
       declarations: [NewFolderModalComponent]
     }).compileComponents();
   }));

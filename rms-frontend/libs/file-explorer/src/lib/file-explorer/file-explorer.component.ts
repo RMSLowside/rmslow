@@ -27,7 +27,7 @@ export class FileExplorerComponent {
 
   dragged: boolean;
   @Input() fileElements: FileElement[];
-  @Input() canNavigateUp: string;
+  @Input() canNavigateUp: boolean;
   @Input() path: string;
 
   @Output() folderAdded = new EventEmitter<{ name: string }>();
@@ -80,14 +80,8 @@ export class FileExplorerComponent {
     });
   }
 
-  setdraggedFalse() {
-    setTimeout(() => {
-      this.dragged = false;
-    }, 1000);
-  }
   openMenu(event: MouseEvent, element: FileElement, viewChild: MatMenuTrigger) {
     event.preventDefault();
-    console.log('here');
     viewChild.openMenu();
   }
 
@@ -132,10 +126,10 @@ export class FileExplorerComponent {
   }
 
   public fileOver(event) {
-    console.log(event);
+    //Add any fileOver code
   }
 
   public fileLeave(event) {
-    console.log(event);
+    //Add any fileLeave code
   }
 }
