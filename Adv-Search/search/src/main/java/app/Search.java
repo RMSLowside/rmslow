@@ -1,9 +1,18 @@
+package app;
+
+import java.io.Console;
+
 public class Search {
 
     public static String termify(final String inputString){
         String resultString = "";
         boolean termOpen = false;
         boolean quoteTermOpen = false;
+
+        //first check if there are no operators - if that's true, the whole text is one term.
+        if(!inputString.contains(" & ") && !inputString.contains(" | ") && !inputString.contains(" ! ")){
+            return "<term>" + inputString + "</term>";
+        }
 
         for(int i = 0; i < inputString.length(); i++){
             //iterate through characters, check for quotes that aren't escaped
@@ -15,7 +24,7 @@ public class Search {
                 quoteTermOpen = !quoteTermOpen;
                 resultString += "</term>";
             }
-            else if(!quoteTermOpen && !termOpen && "&|!( ".indexOf(inputString.charAt(i)) == -1){
+            else if(!quoteTermOpen && !termOpen && "&|!() ".indexOf(inputString.charAt(i)) == -1){
                 termOpen = !termOpen;
                 resultString += "<term>" + inputString.charAt(i);
             }
@@ -36,28 +45,17 @@ public class Search {
             }
         }
 
-        //Strat 1: if there are no unescaped quotes and no logical operators used at this point, add <term>...</term>
-
         return resultString;
     }
 
     public static void main(final String[] args){
-        final String test1 = "sample search";
-        final String test2 = "\"Hall & Oates\"";   // Here's one of the problem children, searching on a string with a logical operator in it. Enforcing quotes.
-        final String test3 = "object & (\"verbs & stuff\" | things)";
-        final String test4 = "stuff | things | \"stuff \\\"&\\\" things\"";
-        System.out.println("=============================");
-        System.out.println("test1:  " + test1);
-        System.out.println("result: " + termify(test1));
-        System.out.println();
-        System.out.println("test2:  " + test2);
-        System.out.println("result: " + termify(test2));
-        System.out.println();
-        System.out.println("test3:  " + test3);
-        System.out.println("result: " + termify(test3));
-        System.out.println();
-        System.out.println("test4:  " + test4);
-        System.out.println("result: " + termify(test4));
-        System.out.println("=============================");
+        Console console = System.console();
+        String input;
+        boolean keepGoing = true;
+        while(keepGoing){
+            input = console.readLine("Enter the string you want to termify (type 'quit' to quit): ");
+            if(input.equalsIgnoreCase("quit")) keepGoing = false;
+            else console.printf("Result: " + termify(input) + "\n");
+        }
     }
 }
