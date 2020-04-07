@@ -1,7 +1,9 @@
 #!/bin/bash
 
+sudo yum update
+
 cd /
-rm -rf /rms/
+rm -rf rms
 mkdir rms
 
 pushd rms
@@ -16,6 +18,15 @@ echo "export JRE_HOME=/rms/java/jre" >> ~/.bashrc
 echo "export PATH=/rms/java/bin:$PATH" >> ~/.bashrc
 source ~/.bashrc
 
+# Install Git and checkout project
+yum -y install git
+git clone https://github.com/RMSLowside/rmslow.git
+
+# Install Maven
+wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+yum install -y apache-maven
+
 # Install NiFi
 aws s3 cp s3://rmslowdeployment/software/nifi-1.11.4-bin.tar.gz .
 tar -xzvf nifi-1.11.4-bin.tar.gz
@@ -23,14 +34,19 @@ rm nifi-1.11.4-bin.tar.gz
 mv nifi-1.11.4 nifi
 sed -i 's/-Xms512m/-Xms2048m/g' nifi/conf/bootstrap.conf
 sed -i 's/-Xmx512m/-Xmx2048m/g' nifi/conf/bootstrap.conf
-aws s3 cp s3://rmslowdeployment/nifi/flow.xml.gz nifi/conf/flow.xml.gz
-aws s3 cp s3://rmslowdeployment/nifi/rms-custom-processors-nar-1.0-SNAPSHOT.nar nifi/lib/rms-custom-processors-nar-1.0-SNAPSHOT.nar
+cp rmslow/NiFi/flows/flow.xml.gz nifi/conf/flow.xml.gz
+pushd rmslow/NiFi
+mvn clean install
+cp rms-custom-nar/target/rms-custom-processors-nar-1.0-SNAPSHOT.nar nifi/lib/rms-custom-processors-nar-1.0-SNAPSHOT.nar
+popd
 bash nifi/bin/nifi.sh start
 
-# Install MySQL or Run on RDS?
-#aws s3 cp s3://rmslowdeployment/software/mysql-5.7.29-linux-glibc2.12-x86_64.tar.gz .
-#tar -xzvf mysql-5.7.29-linux-glibc2.12-x86_64.tar.gz
-#rm mysql-5.7.29-linux-glibc2.12-x86_64.tar.gz
-#mv mysql-5.7.29-linux-glibc2.12-x86_64 mysql
+# Install MySQL
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum -y update
+yum -y install mysql-server
+systemctl start mysqld
+rm -rf mysql-community-release-el7-5.noarch.rpm
 
 popd
