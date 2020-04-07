@@ -8,7 +8,7 @@ Inside this folder, there is a copy of the generated jar, for use with testing o
 To use this jar:
 (This assumes you have Java installed.)
 - navigate to this folder in a cmd prompt / terminal (.../rmslow/Adv-Search/search)
-- run the following command: "java -cp search-1.0-SNAPSHOT.jar app.Search
+- run the following command: "java -cp search-1.0-SNAPSHOT.jar app.Search"
 - the program will prompt you for an input string. Type a sample input, and press Enter; the program will return the termified version of the input. 
 This process repeats until you submit "quit" as the input (or force-quit, e.g. Ctrl+C).
 
