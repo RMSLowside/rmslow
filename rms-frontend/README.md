@@ -1,39 +1,24 @@
-# Rms-FE
+# Rms-FrontEnd
 
+## Angular
+All of our applications are built with the Angular Framework. Visit [Angular Documentation](https://angular.io/) for more information.
+
+## Applications
+* [S3](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/apps/s3) - An application used to wrap S3 in a more user friendly way. 
+
+## Libraries
+* [Core](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/libs/core) - Core library that has things that all applications and libs need, such as Angular Material.
+
+* [File Explorer](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/libs/file-explorer) - A file explorer library that takes in a list of file elements and shows it on the screen. Currently used by the S3 application.
+
+## Quick Start & Nx Documentation
 This project was generated using [Nx](https://nx.dev).
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" width="450"></p>
-
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
-
-## Quick Start & Documentation
 
 [Nx Documentation](https://nx.dev/angular)
 
 [10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
 
 [Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
-
-## Adding capabilities to your workspace
-
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
-
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are some plugins which you can add to your workspace:
-
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
 
 ## Generate an application
 
@@ -82,3 +67,20 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+
+## Angular Material
+
+Angular Material is the first party component library for Angular application. Visit [Angular Material Documentation](https://material.angular.io/) for more information
+
+## Application/Library structure
+
+Anything that can be put in libs, should be put in libs. For the most part anything in libs should handle state by itself, mostly with just inputs and outputs, possible exceptions will be forms, logger, and user services. Everything should be made with smart and dumb components. Smart components are attached to state and should not have much if any visual parts. They should be containers for dumb components. This keeps our dumb components as reusable as possible. Dumb components should not rely on services and should take in and emit values. Example of a smart component is the [S3 app](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/apps/s3/src/app) The app.component handles all of the business logic and state, but leaves all the view portions to the [File Explorer lib](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/libs/file-explorer).
+
+## NGXS
+
+This project uses NGXS for state management. NGXS is a redux based state management library. A major benefit of a redux based solution is that it provides an immutable single source of truth for state. This makes debugging actions much easier and consistent. To ensure immutability we are leveraging Immer and the NGXS Immer plugin. Visit [NGXS Documentation](https://www.ngxs.io/) for more information.
+
+## Testing
+
+Our test are written and run in Jest.

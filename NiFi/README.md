@@ -85,3 +85,8 @@ __*__ = This is a built in NiFi processor or we can rewrite for more control.
     * java.arg.9=-XX:+UseCodeCacheFlushing
 * Backup all configuration files periodically
 * Do not have any processors at the root level of the UI. Instead make process groups to organize the flow better.
+
+# Connecting to AWS resources
+We can simply use a IAM credentials on a EC2 box to give our processor access to various AWS resources. Each Processing group can add
+"Controller Services", the one we are interested in is called "AWSCredentialsProviderControllerService" and it supports multiple forms of
+ authentication into AWS.
