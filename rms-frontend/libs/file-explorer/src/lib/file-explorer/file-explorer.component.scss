@@ -28,3 +28,12 @@
 .spacer {
   flex: 1 1 auto;
 }
+.element-container {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  padding: 15px;
+  word-break: break-all;
+  overflow-y: hidden;
+  height: 60px;
+}

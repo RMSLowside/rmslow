@@ -9,9 +9,9 @@ import java.util.*;
 
 public abstract class AbstractRmsProcessor extends AbstractProcessor {
 
-    protected static final Relationship REL_SUCCESS = new Relationship.Builder().name("success").build();
-    protected static final Relationship REL_RETRY = new Relationship.Builder().name("retry").build();
-    protected static final Relationship REL_FAILURE = new Relationship.Builder().name("failure").build();
+    public static final Relationship REL_SUCCESS = new Relationship.Builder().name("success").build();
+    public static final Relationship REL_RETRY = new Relationship.Builder().name("retry").build();
+    public static final Relationship REL_FAILURE = new Relationship.Builder().name("failure").build();
 
     private List<PropertyDescriptor> descriptors;
     private Set<Relationship> relationships;

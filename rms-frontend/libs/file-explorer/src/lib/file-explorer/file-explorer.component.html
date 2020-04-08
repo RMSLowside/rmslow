@@ -7,6 +7,14 @@
     </button>
     <span style="margin-left: 8px"> {{ path || 'Files' }} </span>
     <span class="spacer"></span>
+    <span style="font-size: small;" *ngIf="selected.length"
+      >{{ selected.length }} File(s) Selected</span
+    >
+    <button *ngIf="selected.length" mat-icon-button (click)="selected = []">
+      <mat-icon>
+        clear
+      </mat-icon>
+    </button>
     <button mat-icon-button (click)="openNewFolderDialog()">
       <mat-icon>
         create_new_folder
@@ -28,7 +36,7 @@
     <div class="content" fxFlex fxLayout="row">
       <mat-grid-list cols="8" rowHeight="100px" fxFlex>
         <mat-grid-tile
-          *ngFor="let element of fileElements"
+          *ngFor="let element of _fileElements"
           class="file-or-folder"
         >
           <span
@@ -38,8 +46,11 @@
           >
           </span>
           <div
-            style="display: flex; align-content: space-between; flex-direction: column;"
-            (click)="navigate(element)"
+            class="element-container"
+            [ngStyle]="{
+              'background-color': selected.includes(element) ? 'grey' : ''
+            }"
+            (click)="navigate(element, $event)"
             (contextmenu)="menuTrigger.openMenu(); $event.preventDefault()"
           >
             <mat-icon
@@ -73,7 +84,11 @@
         <mat-icon>open_with</mat-icon>
         <span>Move To</span>
       </button>
-      <button mat-menu-item (click)="openRenameDialog(element)">
+      <button
+        mat-menu-item
+        (click)="openRenameDialog(element)"
+        [disabled]="selected.length > 0"
+      >
         <mat-icon>edit</mat-icon>
         <span>Rename</span>
       </button>
@@ -81,14 +96,34 @@
         <mat-icon>delete</mat-icon>
         <span>Delete</span>
       </button>
+      <button
+        mat-menu-item
+        (click)="encrypt(element)"
+        *ngIf="!element.isFolder"
+      >
+        <mat-icon>lock</mat-icon>
+        <span>Encrypt</span>
+      </button>
+      <button
+        mat-menu-item
+        (click)="decrypt(element)"
+        *ngIf="!element.isFolder"
+      >
+        <mat-icon>lock_open</mat-icon>
+        <span>Decrypt</span>
+      </button>
     </ng-template>
   </mat-menu>
 
   <mat-menu #moveToMenu="matMenu">
     <ng-template matMenuContent let-self="self">
-      <ng-container *ngFor="let element of fileElements">
+      <ng-container *ngFor="let element of _fileElements">
         <button
-          *ngIf="element.isFolder && element.id !== self.id"
+          *ngIf="
+            element.isFolder &&
+            element.id !== self.id &&
+            !selected.includes(element)
+          "
           mat-menu-item
           (click)="moveElement(self, element)"
         >

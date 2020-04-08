@@ -14,7 +14,6 @@ import {
   NavigateTo,
   NavigateUp
 } from './file.actions';
-import { of } from 'rxjs';
 
 export const DEFAULT_STATE = {
   explorer: {

@@ -29,8 +29,18 @@
     "core": {
       "tags": []
     },
+    "lazy-load": {
+      "tags": []
+    },
     "file-explorer": {
       "tags": []
+    },
+    "home": {
+      "tags": []
+    },
+    "home-e2e": {
+      "tags": [],
+      "implicitDependencies": ["home"]
     }
   }
 }

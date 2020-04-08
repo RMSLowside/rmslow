@@ -1,6 +1,6 @@
 This is a small Maven project to work out how termifying strings without requiring quotes or the ::: prefix would work.
 
-====================================
+=======
 Using the JAR file for testing:
 ====================================
 Inside this folder, there is a copy of the generated jar, for use with testing out different strings. This program will take a string as input, and return where it thinks the term boundaries are by encasing each term in tags (<term>...</term>).
@@ -12,7 +12,7 @@ To use this jar:
 - the program will prompt you for an input string. Type a sample input, and press Enter; the program will return the termified version of the input. 
 This process repeats until you submit "quit" as the input (or force-quit, e.g. Ctrl+C).
 
-====================================
+=======
 Building and running this project:
 ====================================
 (This assumes you have Maven installed.)

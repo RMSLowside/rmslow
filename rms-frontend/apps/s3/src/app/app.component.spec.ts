@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from '@rms-frontend/core';
 import { FileExplorerModule, FileElement } from '@rms-frontend/file-explorer';
 import { NgxsModule, Store } from '@ngxs/store';
-import { ExplorerState } from './+state/file.state';
 import { of } from 'rxjs';
 
 describe('AppComponent', () => {
@@ -143,6 +142,52 @@ describe('AppComponent', () => {
     expect(store.dispatch).toHaveBeenCalledTimes(1);
     expect(store.dispatch).toHaveBeenCalledWith({ files: [file] });
   });
+  it(`should call uploadFiles and create sub folders`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const file = new FileElement();
+    file.isFolder = false;
+    file.id = '1';
+    file.parent = 'test';
+    const file2 = new FileElement();
+    file2.isFolder = false;
+    file2.id = '1';
+    file2.parent = 'test/new/thing';
+    app.filesUploaded([file, file2]);
+    expect(store.dispatch).toHaveBeenCalledTimes(4);
+  });
+  it(`should encrypt the file and call rename`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const file = new FileElement();
+    file.isFolder = false;
+    file.id = '1';
+    file.name = 'test';
+    app.encrypt(file);
+    expect(store.dispatch).toHaveBeenCalledTimes(1);
+  });
+  it(`should decrypt the file and call rename`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const file = new FileElement();
+    file.isFolder = false;
+    file.id = '1';
+    file.name = 'U2s';
+    app.decrypt(file);
+    expect(store.dispatch).toHaveBeenCalledTimes(1);
+  });
+  it(`should not decrypt the file and alert`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {});
+    const app = fixture.componentInstance;
+    const file = new FileElement();
+    file.isFolder = false;
+    file.id = '1';
+    file.name = 'test';
+    app.decrypt(file);
+    expect(store.dispatch).toHaveBeenCalledTimes(0);
+    expect(alertSpy).toHaveBeenCalledWith(`File not encrypted`);
+  });
   it(`should push to path`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -160,5 +205,18 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     const path = app.popFromPath('first/second/');
     expect(path).toEqual('first/');
+  });
+
+  it(`should alert the file clicked`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {});
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    app.fileSelected(file);
+    expect(alertSpy).toHaveBeenCalledWith(`You clicked ${file.name}`);
   });
 });

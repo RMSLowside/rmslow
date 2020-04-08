@@ -1,11 +1,10 @@
-package rms.processors;
+package rms.processors.json;
 
 import org.apache.nifi.util.MockFlowFile;
 import org.apache.nifi.util.TestRunner;
 import org.apache.nifi.util.TestRunners;
 import org.junit.Before;
 import org.junit.Test;
-import rms.processors.json.JsonDecisionProcessor;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

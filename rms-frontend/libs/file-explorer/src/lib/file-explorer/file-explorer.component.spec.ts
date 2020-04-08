@@ -75,7 +75,8 @@ describe('FileExplorerComponent', () => {
     component = fixture.componentInstance;
     component.canNavigateUp = false;
     component.dragged = false;
-    component.fileElements = [];
+    component._fileElements = [];
+    component.selected = [];
     component.path = 'Files';
     dialog = TestBed.get(MatDialog);
     fixture.detectChanges();
@@ -85,8 +86,19 @@ describe('FileExplorerComponent', () => {
     expect(component).toBeTruthy();
     expect(component.canNavigateUp).toBeFalsy();
     expect(component.dragged).toBeFalsy();
-    expect(component.fileElements).toEqual([]);
+    expect(component._fileElements).toEqual([]);
     expect(component.path).toEqual('Files');
+  });
+
+  it('should set file elements', () => {
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    component.fileElements = [file];
+    expect(component._fileElements).toEqual([file]);
+    expect(component.selected).toEqual([]);
   });
 
   it('should ouput a delete event', () => {
@@ -100,6 +112,38 @@ describe('FileExplorerComponent', () => {
     expect(removedEmitSpy).toHaveBeenLastCalledWith(file);
   });
 
+  it('should ouput 5 delete events', () => {
+    const removedEmitSpy = jest.spyOn(component.elementRemoved, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    component.selected = [file, file, file, file, file];
+    component.deleteElement(file);
+    expect(removedEmitSpy).toHaveBeenLastCalledWith(file);
+    expect(removedEmitSpy).toHaveBeenCalledTimes(5);
+  });
+
+  it('should ouput 2  by adding one delete events', () => {
+    const removedEmitSpy = jest.spyOn(component.elementRemoved, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    const file2 = new FileElement();
+    file.id = '12';
+    file.isFolder = false;
+    file.name = 'test2';
+    file.parent = 'root2';
+
+    component.selected = [file];
+    component.deleteElement(file2);
+    expect(removedEmitSpy).toHaveBeenLastCalledWith(file2);
+    expect(removedEmitSpy).toHaveBeenCalledTimes(2);
+  });
+
   it('should ouput a navigate event', () => {
     const navigateEmitSpy = jest.spyOn(component.navigatedDown, 'emit');
     const file = new FileElement();
@@ -107,20 +151,48 @@ describe('FileExplorerComponent', () => {
     file.isFolder = true;
     file.name = 'test';
     file.parent = 'root';
-    component.navigate(file);
+    const mouseClick = new MouseEvent('click');
+    component.navigate(file, mouseClick);
     expect(navigateEmitSpy).toHaveBeenLastCalledWith(file);
   });
-  it('should not ouput a navigate event, and alert', () => {
+
+  it('should add to selected', () => {
     const navigateEmitSpy = jest.spyOn(component.navigatedDown, 'emit');
-    const alertSpy = jest.spyOn(window, 'alert').mockImplementation(() => {});
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = true;
+    file.name = 'test';
+    file.parent = 'root';
+    const mouseClick = { ctrlKey: true } as MouseEvent;
+    component.navigate(file, mouseClick);
+    expect(navigateEmitSpy).toHaveBeenCalledTimes(0);
+    expect(component.selected).toEqual([file]);
+  });
+
+  it('should remove from selected', () => {
+    const navigateEmitSpy = jest.spyOn(component.navigatedDown, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = true;
+    file.name = 'test';
+    file.parent = 'root';
+    component.selected = [file];
+    const mouseClick = { ctrlKey: true } as MouseEvent;
+    component.navigate(file, mouseClick);
+    expect(navigateEmitSpy).toHaveBeenCalledTimes(0);
+    expect(component.selected).toEqual([]);
+  });
+
+  it('should ouput a file select event,', () => {
+    const fileSelecteEmitSpy = jest.spyOn(component.fileSelected, 'emit');
     const file = new FileElement();
     file.id = '1';
     file.isFolder = false;
     file.name = 'test';
     file.parent = 'root';
-    component.navigate(file);
-    expect(navigateEmitSpy).toHaveBeenCalledTimes(0);
-    expect(alertSpy).toHaveBeenCalledWith(`You clicked ${file.name}`);
+    const mouseClick = new MouseEvent('click');
+    component.navigate(file, mouseClick);
+    expect(fileSelecteEmitSpy).toHaveBeenLastCalledWith(file);
   });
 
   it('should ouput a navigateup event', () => {
@@ -147,6 +219,54 @@ describe('FileExplorerComponent', () => {
       element: file,
       moveTo: file2
     });
+  });
+
+  it('should ouput 5 moved events', () => {
+    const moveEmitSpy = jest.spyOn(component.elementMoved, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = true;
+    file.name = 'test';
+    file.parent = 'root';
+    const file2 = new FileElement();
+    file.id = '12';
+    file.isFolder = true;
+    file.name = 'test';
+    file.parent = 'root';
+    component.selected = [file, file, file, file, file];
+    component.moveElement(file, file2);
+    expect(moveEmitSpy).toHaveBeenLastCalledWith({
+      element: file,
+      moveTo: file2
+    });
+    expect(moveEmitSpy).toHaveBeenCalledTimes(5);
+  });
+
+  it('should ouput 2  by adding one moved events', () => {
+    const moveEmitSpy = jest.spyOn(component.elementMoved, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    const file2 = new FileElement();
+    file.id = '12';
+    file.isFolder = false;
+    file.name = 'test2';
+    file.parent = 'root';
+    const file23 = new FileElement();
+    file.id = '123';
+    file.isFolder = true;
+    file.name = 'test';
+    file.parent = 'root';
+
+    component.selected = [file23];
+    component.moveElement(file, file2);
+    expect(moveEmitSpy).toHaveBeenLastCalledWith({
+      element: file,
+      moveTo: file2
+    });
+    expect(moveEmitSpy).toHaveBeenCalledTimes(2);
   });
 
   it('should open the new folder dialog', () => {
@@ -209,6 +329,28 @@ describe('FileExplorerComponent', () => {
     });
     component.uploadFile(fileUploadEvent);
     expect(fileUploadEmitSpy).toHaveBeenCalledWith(fileElems);
+  });
+
+  it('should ouput a encrypt event', () => {
+    const encryptdEmitSpy = jest.spyOn(component.encryptEmitter, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    component.encrypt(file);
+    expect(encryptdEmitSpy).toHaveBeenLastCalledWith(file);
+  });
+
+  it('should ouput a decrypt event', () => {
+    const decryptEmitSpy = jest.spyOn(component.decryptEmitter, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    component.decrypt(file);
+    expect(decryptEmitSpy).toHaveBeenLastCalledWith(file);
   });
 
   it('should get dropped files, format, and emit FileElements', () => {

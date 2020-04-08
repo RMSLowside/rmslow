@@ -13,6 +13,7 @@ import {
   NavigateUp
 } from './file.actions';
 import { ImmutableContext, ImmutableSelector } from '@ngxs-labs/immer-adapter';
+import { Injectable } from '@angular/core';
 
 export interface ExplorerStateModel {
   files: FileElement[];
@@ -26,6 +27,7 @@ export interface ExplorerStateModel {
     currentRoot: { id: 'root', name: 'Files', isFolder: true, parent: '' }
   }
 })
+@Injectable()
 export class ExplorerState {
   @Selector()
   @ImmutableSelector()
