@@ -11,15 +11,15 @@ export class AppComponent {
   links: KeyValue<string, string>[] = [
     {
       key: 'Main Home',
-      value: `https://RMSLowside.github.io/rmslow/apps/lazy-load/`
+      value: `https://RMSLowside.github.io/rmslow/apps/home/`
     },
     {
       key: 'Kaylee Home',
-      value: `https://saepark90.github.io/rmslow/apps/lazy-load/`
+      value: `https://saepark90.github.io/rmslow/apps/home/`
     },
     {
       key: 'Steve Home',
-      value: `https://smcfall2.github.io/rmslow/apps/lazy-load/`
+      value: `https://smcfall2.github.io/rmslow/apps/home/`
     },
     { key: 'S3 App', value: `${location.origin}/rmslow/apps/s3` },
     { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` }

@@ -16,4 +16,4 @@ done
 cd ..
 ngh
 cd ~
-rm- rf deploy
+rm -rf deploy
