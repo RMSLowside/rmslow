@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flows/local/flow.xml.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/models/RulesInputMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/enhance/AddAttributesToFlowFileProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/FetchXmlFromUrlProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/GetRulesEngineResultProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/dao/AddToRmmProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/enhance/AddAttributesToFlowFileProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/http/FetchXmlFromUrlProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/http/GetRulesEngineResultProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/ConvertXmlToJsonProcessorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/VerifyJsonContentsProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flows/flow.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/flows/flow.xml.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/AbstractRmsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/AbstractRmsProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/JsonDecisionProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/JsonDecisionProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scripts/ec2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/ec2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,19 +56,8 @@
       <recent name="rms.processors.enhance" />
       <recent name="rms.processors.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\libs" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-libs" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\test\java\rms\processors" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rms.processors.json" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="groovy.util.GroovyTestCase" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows\local" />
@@ -95,6 +65,17 @@
       <recent name="C:\Users\adamp\Desktop\rmslow\scripts\ec2" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\bin" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\libs" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-libs" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\test\java\rms\processors" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.JsonDecisionProcessorTest.testTester">

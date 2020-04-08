@@ -37,8 +37,9 @@ sed -i 's/-Xmx512m/-Xmx2048m/g' nifi/conf/bootstrap.conf
 cp rmslow/NiFi/flows/flow.xml.gz nifi/conf/flow.xml.gz
 pushd rmslow/NiFi
 mvn clean install
-cp rms-custom-nar/target/rms-custom-processors-nar-1.0-SNAPSHOT.nar nifi/lib/rms-custom-processors-nar-1.0-SNAPSHOT.nar
+cp rms-custom-nar/target/rms-custom-processors-nar-1.0-SNAPSHOT.nar /rms/nifi/lib/rms-custom-processors-nar-1.0-SNAPSHOT.nar
 popd
+mkdir /rms/nifi-input
 bash nifi/bin/nifi.sh start
 
 # Install MySQL
@@ -49,10 +50,13 @@ yum -y install mysql-server
 systemctl start mysqld
 rm -rf mysql-community-release-el7-5.noarch.rpm
 
+popd
+
 # Setup Crontab
+cd /rms
 crontab -l > mycron
 echo "*/10 * * * * aws s3 cp /rms/nifi/conf/flow.xml.gz s3://rmslowdeployment/flow.xml.gz" >> mycron
 crontab mycron
 rm mycron
 
-popd
+echo "Script done"
