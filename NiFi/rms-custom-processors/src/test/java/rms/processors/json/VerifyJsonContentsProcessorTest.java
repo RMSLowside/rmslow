@@ -81,7 +81,6 @@ public class VerifyJsonContentsProcessorTest {
 
         MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
         assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute("Valid").equals("false"));
-        String b = flowFile.getAttribute("ValidationErrors");
         assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute("ValidationErrors").equals("CreateDate does not match expected format of yyyy-MM-dd"));
     }
 }
