@@ -42,6 +42,7 @@
     "@angular/platform-browser-dynamic": "9.1.0",
     "@angular/router": "9.1.0",
     "@ngxs-labs/immer-adapter": "^3.0.5",
+    "@ngxs/form-plugin": "^3.6.2",
     "@ngxs/store": "^3.6.2",
     "@nrwl/angular": "9.2.1",
     "@types/crypto-js": "^3.1.44",
