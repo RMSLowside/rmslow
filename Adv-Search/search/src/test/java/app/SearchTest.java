@@ -42,4 +42,39 @@ public class SearchTest {
         String expected = "<term>stuff</term> | <term>things</term> | <term>stuff \\\"<:amp:>\\\" things</term>";
         assertEquals(expected, Search.termify(input));
     }
+
+    @Test
+    public void testSingleCharacterWords(){
+        String input = "R & D";
+        String expected = "<term>R</term> & <term>D</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testCloseOps(){
+        String input = "R&D";
+        String expected = "<term>R</term>&<term>D</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testMultiquote(){
+        String input = "\"Cherry Tree\" & \"Apple tree\"";
+        String expected = "<term>Cherry Tree</term> & <term>Apple tree</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testJustAnOperator(){
+        String input = "&";
+        String expected = "&";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testOperatorAndText(){
+        String input = "! cow";
+        String expected = "! <term>cow</term>";
+        assertEquals(expected, Search.termify(input));
+    }
 }
