@@ -25,7 +25,9 @@ Generic element class. Could be a file or a folder.
 - elementMoved - Event that outputs 2 elements, the element that is being movedand the element it is being moved to
 - navigatedDown - Event that outputs an element to navigate to
 - navigatedUp - Event that outputs anevent with no value, used to navigate up one folder
-- fileSelected - Event that outputs the file element that was sellects
+- fileSelected - Event that outputs the file element that was selects
+- encryptEmitter - Event that outputs the file element to encrypt
+- decryptEmitter - Event that outputs the file element to decrypt
 
 # Internal Components
 

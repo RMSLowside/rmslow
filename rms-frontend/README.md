@@ -4,6 +4,7 @@
 All of our applications are built with the Angular Framework. Visit [Angular Documentation](https://angular.io/) for more information.
 
 ## Applications
+* [Home](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/apps/home) - The home application with links to the other apps 
 * [S3](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/apps/s3) - An application used to wrap S3 in a more user friendly way. 
 
 ## Libraries
@@ -12,6 +13,37 @@ All of our applications are built with the Angular Framework. Visit [Angular Doc
 * [File Explorer](https://github.com/RMSLowside/rmslow/tree/master/rms-frontend/libs/file-explorer) - A file explorer library that takes in a list of file elements and shows it on the screen. Currently used by the S3 application.
 
 ## Quick Start & Nx Documentation
+* Install git
+  * sudo apt install git
+* Verify git installation
+  * git --version
+* Setup your box to work with git over ssh
+  * [GitHub Help](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  * [Your keys](https://github.com/settings/keys)
+* Fork the repo by clicking the fork button
+* Pull down your fork
+  * go to your forks page, click the clone/download button 
+  * click use ssh
+  * copy that link
+  * On your local box make a directory ~/git
+  * cd into that directory
+  * git clone theLinkYouCopied
+* Install node and npm
+  * sudo apt install nodejs
+* Verify node and npm
+  * node -v
+  * npm -v
+* Install Angular CLI
+  * npm install -g @angular/cli
+* Verify angular was installed
+  * ng --version
+* Install all npm packages needed
+  * cd into ~/git/rmslow/rms-frontend
+  * npm install
+
+And then you should be good to go!
+
+
 This project was generated using [Nx](https://nx.dev).
 
 [Nx Documentation](https://nx.dev/angular)
@@ -67,6 +99,8 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
+
+Cache busting is implemented by adding meta tags on the index.html so they will force pull new ones each time. All the scripts should be busted each build thanks to Angular's output hashing. This makes all the scripts have a different name each time it is built.
 
 
 ## Angular Material

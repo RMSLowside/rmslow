@@ -1,8 +1,8 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "rmsFrontend", "camelCase"],
-    "component-selector": [true, "element", "rms-frontend", "kebab-case"]
+    "directive-selector": [true, "attribute", "home", "camelCase"],
+    "component-selector": [false, "element", "home", "kebab-case"]
   },
   "linterOptions": {
     "exclude": ["!**/*"]

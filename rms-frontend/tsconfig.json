@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@rms-frontend/core": ["libs/core/src/index.ts"],
-      "@rms-frontend/file-explorer": ["libs/file-explorer/src/index.ts"]
+      "@rms-frontend/file-explorer": ["libs/file-explorer/src/index.ts"],
+      "@rms-frontend/grid": ["libs/grid/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
