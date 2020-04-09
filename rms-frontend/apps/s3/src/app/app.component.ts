@@ -16,6 +16,7 @@ import {
   RenameFile
 } from './+state/file.actions';
 import { ExplorerState } from './+state/file.state';
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 's3-root',
@@ -29,6 +30,8 @@ export class AppComponent implements OnInit {
   currentRoot: FileElement;
   currentPath: string;
   canNavigateUp = false;
+  password = 'testpassword';
+  serverkey = 'randomkey';
 
   @Select(ExplorerState.currentSpace) files$: Observable<FileElement[]>;
 
@@ -100,11 +103,46 @@ export class AppComponent implements OnInit {
   }
 
   filesUploaded(files: FileElement[]) {
+    const pathFolders: FileElement[] = [];
+    const createfFolders: string[] = [];
+    files.forEach((element, totalIndex) => {
+      if (element.parent) {
+        const path = element.parent.split('/');
+        let previd = '';
+        path.forEach((newFolderName, index, array) => {
+          if (!createfFolders.includes(newFolderName)) {
+            createfFolders.push(newFolderName);
+            const folder = new FileElement();
+            folder.isFolder = true;
+            folder.name = newFolderName;
+            if (index === 0) {
+              folder.parent = this.currentRoot?.id || 'root';
+            } else {
+              if (previd.length) folder.parent = previd;
+              else {
+                folder.parent = pathFolders.find(
+                  a => a.name === array[index - 1]
+                ).id;
+              }
+            }
+            folder.id = v4();
+            previd = folder.id;
+            this.store.dispatch(new AddFolder(folder));
+            pathFolders.push(folder);
+          }
+        });
+      }
+    });
     this.store.dispatch(
       new UploadFiles(
         files.map(file => {
           file.id = v4();
-          file.parent = this.currentRoot?.id || 'root';
+          if (file.parent) {
+            const filePath = file.parent.split('/');
+            file.parent = pathFolders.find(
+              folder => folder.name === filePath[filePath.length - 1]
+            ).id;
+          } else file.parent = this.currentRoot?.id || 'root';
           return file;
         })
       )
@@ -124,5 +162,29 @@ export class AppComponent implements OnInit {
     split.splice(split.length - 2, 1);
     p = split.join('/');
     return p;
+  }
+
+  encrypt(file: FileElement) {
+    const text = file.name;
+    const encrypted = CryptoJS.AES.encrypt(text, this.password).toString();
+    file.name = CryptoJS.AES.encrypt(
+      encrypted.toString(),
+      this.serverkey
+    ).toString();
+    this.store.dispatch(new RenameFile(file.id, file.name));
+  }
+
+  decrypt(file: FileElement) {
+    if (file.name.startsWith('U2')) {
+      const encrypted = file.name;
+      let decrypted1 = CryptoJS.AES.decrypt(encrypted, this.serverkey);
+      decrypted1 = decrypted1.toString(CryptoJS.enc.Utf8);
+      const decrypted = CryptoJS.AES.decrypt(
+        decrypted1.toString(),
+        this.password
+      );
+      file.name = decrypted.toString(CryptoJS.enc.Utf8);
+      this.store.dispatch(new RenameFile(file.id, file.name));
+    } else alert(`File not encrypted`);
   }
 }

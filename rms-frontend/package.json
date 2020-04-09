@@ -44,7 +44,9 @@
     "@ngxs-labs/immer-adapter": "^3.0.5",
     "@ngxs/store": "^3.6.2",
     "@nrwl/angular": "9.2.1",
+    "@types/crypto-js": "^3.1.44",
     "core-js": "^2.5.4",
+    "crypto-js": "^4.0.0",
     "immer": "^6.0.3",
     "ngx-file-drop": "^9.0.0",
     "rxjs": "~6.5.4",
@@ -73,5 +75,8 @@
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
     "typescript": "~3.8.3"
+  },
+  "browser": {
+    "crypto": false
   }
 }

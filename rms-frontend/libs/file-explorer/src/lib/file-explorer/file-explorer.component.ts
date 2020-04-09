@@ -3,7 +3,8 @@ import {
   Input,
   Output,
   EventEmitter,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
+  ComponentFactoryResolver
 } from '@angular/core';
 import { FileElement } from '../models/file-element';
 import { MatMenuTrigger } from '@angular/material/menu';
@@ -17,6 +18,7 @@ import {
 } from 'ngx-file-drop';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'rms-file-explorer',
   templateUrl: './file-explorer.component.html',
   styleUrls: ['./file-explorer.component.scss'],
@@ -47,6 +49,8 @@ export class FileExplorerComponent {
   @Output() navigatedDown = new EventEmitter<FileElement>();
   @Output() fileSelected = new EventEmitter<FileElement>();
   @Output() navigatedUp = new EventEmitter();
+  @Output() encryptEmitter = new EventEmitter<FileElement>();
+  @Output() decryptEmitter = new EventEmitter<FileElement>();
 
   deleteElement(element: FileElement) {
     if (this.selected.length) {
@@ -84,7 +88,7 @@ export class FileExplorerComponent {
   }
 
   openNewFolderDialog() {
-    let dialogRef = this.dialog.open(NewFolderModalComponent);
+    const dialogRef = this.dialog.open(NewFolderModalComponent);
     dialogRef.afterClosed().subscribe(res => {
       if (res) {
         this.folderAdded.emit({ name: res });
@@ -93,7 +97,7 @@ export class FileExplorerComponent {
   }
 
   openRenameDialog(element: FileElement) {
-    let dialogRef = this.dialog.open(RenameModalComponent);
+    const dialogRef = this.dialog.open(RenameModalComponent);
     dialogRef.afterClosed().subscribe(res => {
       if (res) {
         element.name = res;
@@ -121,7 +125,7 @@ export class FileExplorerComponent {
     this.filesUploaded.emit(fileArray);
   }
 
-  public dropped(files: NgxFileDropEntry[]) {
+  public dropped(files: NgxFileDropEntry[], element?: FileElement) {
     const fileArray: FileElement[] = [];
     const total = files.length;
     let count = 0;
@@ -130,19 +134,22 @@ export class FileExplorerComponent {
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
         fileEntry.file((file: File) => {
+          let relPath = droppedFile.relativePath;
+          const pathArray = relPath.split('/');
+          pathArray.pop();
+          relPath = pathArray.join('/');
           count++;
           const fileElem = new FileElement();
           fileElem.actualFile = file;
           fileElem.isFolder = false;
           fileElem.name = file.name;
-          fileElem.parent = this.path || 'root';
+          fileElem.parent = relPath;
           fileArray.push(fileElem);
           if (count === total) this.filesUploaded.emit(fileArray);
         });
       } else {
         // It was a directory (empty directories are added, otherwise only files)
         const fileEntry = droppedFile.fileEntry as FileSystemDirectoryEntry;
-        console.log(droppedFile.relativePath, fileEntry);
       }
     }
   }
@@ -153,6 +160,14 @@ export class FileExplorerComponent {
 
   public fileLeave(event) {
     //Add any fileLeave code
+  }
+
+  encrypt(file: FileElement) {
+    this.encryptEmitter.emit(file);
+  }
+
+  decrypt(file: FileElement) {
+    this.decryptEmitter.emit(file);
   }
 
   private toggleInArray(array: any[], element: any) {

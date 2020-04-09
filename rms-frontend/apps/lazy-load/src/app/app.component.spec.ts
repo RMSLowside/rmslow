@@ -1,9 +1,7 @@
-import { TestBed, async, ComponentFixture, fakeAsync, tick } from '@angular/core/testing';
+import { DebugElement } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoreModule } from '@rms-frontend/core';
 import { AppComponent } from './app.component';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-import { debug } from 'util';
 
 
 describe('AppComponent', () => {

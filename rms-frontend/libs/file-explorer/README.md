@@ -37,6 +37,11 @@ Modal used to create a new folder, has an input box for name
 
 Modal used to rename an element, has an input boxforthe new name
 
+# Known issues
+
+- No internal drag and drop. I could not come up with a nice way to make the drag event know the difference between dragging files from the desktop vs dragging internal files/folder.
+- No move to deep directory, would likely need to be passed in under a separate variable.
+
 # Running unit tests
 
 Run `nx test file-explorer` to execute the unit tests.

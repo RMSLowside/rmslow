@@ -331,6 +331,28 @@ describe('FileExplorerComponent', () => {
     expect(fileUploadEmitSpy).toHaveBeenCalledWith(fileElems);
   });
 
+  it('should ouput a encrypt event', () => {
+    const encryptdEmitSpy = jest.spyOn(component.encryptEmitter, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    component.encrypt(file);
+    expect(encryptdEmitSpy).toHaveBeenLastCalledWith(file);
+  });
+
+  it('should ouput a decrypt event', () => {
+    const decryptEmitSpy = jest.spyOn(component.decryptEmitter, 'emit');
+    const file = new FileElement();
+    file.id = '1';
+    file.isFolder = false;
+    file.name = 'test';
+    file.parent = 'root';
+    component.decrypt(file);
+    expect(decryptEmitSpy).toHaveBeenLastCalledWith(file);
+  });
+
   it('should get dropped files, format, and emit FileElements', () => {
     // Not sure how to test this one yet need to make a full NgxFileDropEntry[] and pass it in.
     // const fileUploadEmitSpy = jest.spyOn(component.filesUploaded, 'emit');
