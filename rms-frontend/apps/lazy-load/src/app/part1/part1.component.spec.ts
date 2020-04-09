@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Part1Component } from './part1.component';
+import { CoreModule } from '@rms-frontend/core';
 
 describe('Part1Component', () => {
   let component: Part1Component;
@@ -8,9 +9,14 @@ describe('Part1Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Part1Component ]
+      declarations: [
+        Part1Component
+      ],
+      imports: [
+        CoreModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
