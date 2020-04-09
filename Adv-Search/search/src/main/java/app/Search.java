@@ -1,6 +1,7 @@
 package app;
 
 import java.io.Console;
+import java.util.ArrayList;
 
 public class Search {
 
@@ -71,9 +72,39 @@ public class Search {
         Console console = System.console();
         String input;
         boolean keepGoing = true;
+
+        ArrayList<String> examples = new ArrayList<String>();
+        examples.add("\"Research & Development\"");
+        examples.add("R&D");
+        examples.add("R & D");
+        examples.add("O'Malley & O'Leary");
+        examples.add("\"O'Malley & O'Leary's Pub\"");
+        examples.add("(chocolate & peanut butter) | jelly beans");
+        examples.add("(chocolate & \"peanut butter\") | \"jelly beans\"");
+        examples.add("red & white & blue | patriot");
+        examples.add("red white and blue | patriot");
+        examples.add("https://www.url.com");
+        examples.add("\"Cherry tree\" & \"Apple tree\"");
+        examples.add("! cow");
+        examples.add("happy & joy ! glee");
+        examples.add("(truth & justice) !(lies | crime | violence) &! politics");
+        examples.add("&");
+        examples.add("|");
+        examples.add("!");
+        examples.add("a1 &a2 &a3");
+
         while(keepGoing){
-            input = console.readLine("Enter the string you want to termify (type 'quit' to quit): ");
+            input = console.readLine("Enter the string you want to termify (type 'examples' to show preset tests, 'quit' to quit): ");
             if(input.equalsIgnoreCase("quit")) keepGoing = false;
+            else if(input.equalsIgnoreCase("examples")){
+                System.out.println("===========Presets:============");
+                for(int i=0; i < examples.size(); i++){
+                    System.out.println("String: " + examples.get(i));
+                    System.out.println("Result: " + termify(examples.get(i)));
+                    if(i+1 != examples.size()) System.out.println("-------------------------------");
+                }
+                System.out.println("===============================");
+            }
             else console.printf("Result: " + termify(input) + "\n");
         }
     }
