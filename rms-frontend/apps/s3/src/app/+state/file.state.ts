@@ -18,13 +18,15 @@ import { Injectable } from '@angular/core';
 export interface ExplorerStateModel {
   files: FileElement[];
   currentRoot: FileElement;
+  path: string;
 }
 
 @State<ExplorerStateModel>({
   name: 'explorer',
   defaults: {
     files: [],
-    currentRoot: { id: 'root', name: 'Files', isFolder: true, parent: '' }
+    currentRoot: { id: 'root', name: 'Files', isFolder: true, parent: '' },
+    path: ''
   }
 })
 @Injectable()
@@ -39,6 +41,12 @@ export class ExplorerState {
   @ImmutableSelector()
   static currentRoot(state: ExplorerStateModel) {
     return state.currentRoot;
+  }
+
+  @Selector()
+  @ImmutableSelector()
+  static currentPath(state: ExplorerStateModel) {
+    return state.path;
   }
 
   @Action(UploadFiles)
@@ -148,8 +156,11 @@ export class ExplorerState {
   @Action(NavigateTo)
   @ImmutableContext()
   navigateTo(ctx: StateContext<ExplorerStateModel>, action: NavigateTo) {
+    const state = ctx.getState();
+    const newPath = this.pushToPath(state.path, action.folder.name);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.currentRoot = action.folder;
+      hereState.path = newPath;
       return hereState;
     });
     //Add code to send files to server here
@@ -166,10 +177,27 @@ export class ExplorerState {
       isFolder: true,
       parent: ''
     };
+    const newPath = this.popFromPath(state.path);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.currentRoot = newRoot;
+      hereState.path = newPath;
       return hereState;
     });
     //Add code to send files to server here
+  }
+
+  pushToPath(path: string, folderName: string) {
+    if (path === 'Files') path = '';
+    let p = path ? path : '';
+    p += `${folderName}/`;
+    return p;
+  }
+
+  popFromPath(path: string) {
+    let p = path ? path : '';
+    const split = p.split('/');
+    split.splice(split.length - 2, 1);
+    p = split.join('/');
+    return p;
   }
 }

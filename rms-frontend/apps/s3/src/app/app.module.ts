@@ -5,6 +5,7 @@ import { CoreModule } from '@rms-frontend/core';
 import { AppComponent } from './app.component';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { FileExplorerModule } from '@rms-frontend/file-explorer';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExplorerState } from './+state/file.state';
@@ -17,6 +18,7 @@ import { ExplorerState } from './+state/file.state';
     FormsModule,
     ReactiveFormsModule,
     NgxsModule.forRoot([ExplorerState]),
+    NgxsStoragePluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot()
   ],
   providers: [],

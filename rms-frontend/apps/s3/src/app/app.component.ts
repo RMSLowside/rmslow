@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
   title = 's3';
   fileElements: Observable<FileElement[]>;
   currentRoot: FileElement;
-  currentPath: string;
   canNavigateUp = false;
   password = 'testpassword';
   serverkey = 'randomkey';
@@ -37,6 +36,8 @@ export class AppComponent implements OnInit {
 
   @Select(ExplorerState.currentRoot) root$: Observable<FileElement>;
 
+  @Select(ExplorerState.currentPath) currentPath$: Observable<string>;
+
   rootSub = this.root$.subscribe(a => {
     this.currentRoot = a;
     this.canNavigateUp = !!a?.parent;
@@ -44,14 +45,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const initialFolders: FileElement[] = [];
-    for (let i = 0; i < 10; i++) {
-      const folder = new FileElement();
-      folder.isFolder = true;
-      folder.name = `Folder${i}`;
-      folder.parent = 'root';
-      folder.id = v4();
-      initialFolders.push(folder);
-    }
+    if (this.store.selectSnapshot(state => state.explorer.files.length) === 0)
+      for (let i = 0; i < 10; i++) {
+        const folder = new FileElement();
+        folder.isFolder = true;
+        folder.name = `Folder${i}`;
+        folder.parent = 'root';
+        folder.id = v4();
+        initialFolders.push(folder);
+      }
     initialFolders.forEach(element => {
       this.store.dispatch(new AddFolder(element));
     });
@@ -89,12 +91,10 @@ export class AppComponent implements OnInit {
 
   navigateUp() {
     this.store.dispatch(new NavigateUp());
-    this.currentPath = this.popFromPath(this.currentPath) || 'Files';
   }
 
   navigateToFolder(element: FileElement) {
     this.store.dispatch(new NavigateTo(element));
-    this.currentPath = this.pushToPath(this.currentPath, element.name);
     this.canNavigateUp = true;
   }
 
@@ -147,21 +147,6 @@ export class AppComponent implements OnInit {
         })
       )
     );
-  }
-
-  pushToPath(path: string, folderName: string) {
-    if (path === 'Files') path = '';
-    let p = path ? path : '';
-    p += `${folderName}/`;
-    return p;
-  }
-
-  popFromPath(path: string) {
-    let p = path ? path : '';
-    const split = p.split('/');
-    split.splice(split.length - 2, 1);
-    p = split.join('/');
-    return p;
   }
 
   encrypt(file: FileElement) {

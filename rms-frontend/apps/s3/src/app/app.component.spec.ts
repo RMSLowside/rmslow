@@ -21,7 +21,7 @@ describe('AppComponent', () => {
     }).compileComponents();
     store = TestBed.inject(Store);
     spyOn(store, 'select').and.returnValue(of(null));
-    spyOn(store, 'selectSnapshot').and.returnValue(null);
+    spyOn(store, 'selectSnapshot').and.returnValue(0);
     spyOn(store, 'dispatch').and.returnValue(null);
   }));
 
@@ -187,24 +187,6 @@ describe('AppComponent', () => {
     app.decrypt(file);
     expect(store.dispatch).toHaveBeenCalledTimes(0);
     expect(alertSpy).toHaveBeenCalledWith(`File not encrypted`);
-  });
-  it(`should push to path`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    const path = app.pushToPath('first/', 'second');
-    expect(path).toEqual('first/second/');
-  });
-  it(`should make the path the second arg`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    const path = app.pushToPath('Files', 'second');
-    expect(path).toEqual('second/');
-  });
-  it(`should pop the last part of the path`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    const path = app.popFromPath('first/second/');
-    expect(path).toEqual('first/');
   });
 
   it(`should alert the file clicked`, () => {

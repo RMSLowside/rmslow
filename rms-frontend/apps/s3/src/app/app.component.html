@@ -4,7 +4,7 @@
   >
     <rms-file-explorer
       [fileElements]="files$ | async"
-      [path]="currentPath"
+      [path]="(currentPath$ | async) || 'Files'"
       [canNavigateUp]="canNavigateUp"
       (folderAdded)="addFolder($event)"
       (elementRemoved)="removeElement($event)"

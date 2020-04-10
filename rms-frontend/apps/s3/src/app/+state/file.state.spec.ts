@@ -203,4 +203,19 @@ describe('Explorer', () => {
       parent: ''
     });
   });
+  it(`should push to path`, () => {
+    const fixture = TestBed.inject(ExplorerState);
+    const path = fixture.pushToPath('first/', 'second');
+    expect(path).toEqual('first/second/');
+  });
+  it(`should make the path the second arg`, () => {
+    const fixture = TestBed.inject(ExplorerState);
+    const path = fixture.pushToPath('Files', 'second');
+    expect(path).toEqual('second/');
+  });
+  it(`should pop the last part of the path`, () => {
+    const fixture = TestBed.inject(ExplorerState);
+    const path = fixture.popFromPath('first/second/');
+    expect(path).toEqual('first/');
+  });
 });
