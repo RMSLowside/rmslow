@@ -59,9 +59,9 @@ public class ConvertXmlToJsonProcessor extends AbstractRmsProcessor {
 
         // Attach original XML as attribute
 
-        // Convert to JSON Schema.
+        // Extract metadata and convert to JSON Schema.
 
-        // CHange content to
+        // Change content to JSON messages
 
         processSession.transfer(flowFile, REL_SUCCESS);
     }
