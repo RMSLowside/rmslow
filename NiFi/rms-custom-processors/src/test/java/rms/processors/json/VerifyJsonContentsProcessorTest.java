@@ -10,6 +10,8 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 import static junit.framework.TestCase.assertTrue;
+import static rms.processors.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
+import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 
 public class VerifyJsonContentsProcessorTest {
     private TestRunner testRunner;
@@ -48,8 +50,8 @@ public class VerifyJsonContentsProcessorTest {
         assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
 
         MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
-        assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute("Valid").equals("false"));
-        assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute("ValidationErrors").contains("Unrecognized field \"aThing\""));
+        assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute(ATTRIBUTE_IS_VALID).equals("false"));
+        assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).contains("Unrecognized field \"aThing\""));
     }
 
     @Test
@@ -64,8 +66,8 @@ public class VerifyJsonContentsProcessorTest {
         assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
 
         MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
-        assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute("Valid").equals("false"));
-        assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute("ValidationErrors").equals("GUIDE is null or empty"));
+        assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute(ATTRIBUTE_IS_VALID).equals("false"));
+        assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).equals("GUIDE is null or empty"));
     }
 
     @Test
@@ -80,7 +82,7 @@ public class VerifyJsonContentsProcessorTest {
         assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
 
         MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
-        assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute("Valid").equals("false"));
-        assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute("ValidationErrors").equals("CreateDate does not match expected format of yyyy-MM-dd"));
+        assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute(ATTRIBUTE_IS_VALID).equals("false"));
+        assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).equals("CreateDate does not match expected format of yyyy-MM-dd"));
     }
 }
