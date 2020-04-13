@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flows/flow.xml.gz" beforeDir="false" afterPath="$PROJECT_DIR$/flows/flow.xml.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/utilities/RmsEnums.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/utilities/RmsEnums.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/ConvertXmlToJsonProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/ConvertXmlToJsonProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,20 +20,13 @@
       <list>
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1ZwULZFr03Ea8GYmNF0CtlCAGvU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -36,7 +34,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -81,8 +78,8 @@
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\rms-custom-processors-processors\src\test\java\rms\processors" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VerifyJsonContentsProcessorTest">
-    <configuration name="JsonDecisionProcessorTest.testTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConvertXmlToJsonProcessorTest">
+    <configuration name="ConvertXmlToJsonProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rms-custom-processors-processors" />
       <extension name="coverage">
         <pattern>
@@ -91,8 +88,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="rms.processors.json" />
-      <option name="MAIN_CLASS_NAME" value="rms.processors.json.JsonDecisionProcessorTest" />
-      <option name="METHOD_NAME" value="testTester" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.json.ConvertXmlToJsonProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConvertXmlToJsonProcessorTest.testInvalidSchema" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rms-custom-processors-processors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rms.processors.json.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rms.processors.json" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.json.ConvertXmlToJsonProcessorTest" />
+      <option name="METHOD_NAME" value="testInvalidSchema" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConvertXmlToJsonProcessorTest.testKnownSchema" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rms-custom-processors-processors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rms.processors.json.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rms.processors.json" />
+      <option name="MAIN_CLASS_NAME" value="rms.processors.json.ConvertXmlToJsonProcessorTest" />
+      <option name="METHOD_NAME" value="testKnownSchema" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,59 +157,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VerifyJsonContentsProcessorTest.testInvalidJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rms-custom-processors-processors" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rms.processors.json.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rms.processors.json" />
-      <option name="MAIN_CLASS_NAME" value="rms.processors.json.VerifyJsonContentsProcessorTest" />
-      <option name="METHOD_NAME" value="testInvalidJson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VerifyJsonContentsProcessorTest.testValidJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rms-custom-processors-processors" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="rms.processors.json.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="rms.processors.json" />
-      <option name="MAIN_CLASS_NAME" value="rms.processors.json.VerifyJsonContentsProcessorTest" />
-      <option name="METHOD_NAME" value="testValidJson" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConvertXmlToJsonProcessorTest" />
+        <item itemvalue="JUnit.ConvertXmlToJsonProcessorTest.testInvalidSchema" />
+        <item itemvalue="JUnit.ConvertXmlToJsonProcessorTest.testKnownSchema" />
         <item itemvalue="JUnit.VerifyJsonContentsProcessorTest" />
         <item itemvalue="JUnit.VerifyJsonContentsProcessorTest.testInvalidDate" />
-        <item itemvalue="JUnit.VerifyJsonContentsProcessorTest.testInvalidJson" />
-        <item itemvalue="JUnit.VerifyJsonContentsProcessorTest.testValidJson" />
-        <item itemvalue="JUnit.JsonDecisionProcessorTest.testTester" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -220,26 +204,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="979" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1585770017581" />
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586779820777">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586779820777" />
     <state x="1060" y="409" key="FileChooserDialogImpl" timestamp="1586177191752">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="409" key="FileChooserDialogImpl/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586177191752" />
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1586445684998">
+    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1586794832729">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586445684998" />
-    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1586445684998">
+    <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586794832729" />
+    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1586794832729">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586445684998" />
-    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1586445684998">
+    <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586794832729" />
+    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1586794832729">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586445684998" />
-    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1586445684998">
+    <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586794832729" />
+    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1586794832729">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586445684998" />
+    <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586794832729" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1586445681725">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

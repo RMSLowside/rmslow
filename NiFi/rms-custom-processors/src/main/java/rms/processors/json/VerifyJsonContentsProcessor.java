@@ -83,17 +83,18 @@ public class VerifyJsonContentsProcessor extends AbstractRmsProcessor {
 
         log.info("Reading the Flow File content.");
 
+
+        Charset charset = Charset.forName(context.getProperty(CHARACTER_SET).getValue());
+        final int maxBufferSize = context.getProperty(MAX_BUFFER_SIZE).asDataSize(DataUnit.B).intValue();
+
+        byte[] buffer = new byte[maxBufferSize];
+        session.read(flowFile, inputStream -> StreamUtils.fillBuffer(inputStream, buffer, false));
+        final long len = Math.min(buffer.length, flowFile.getSize());
+        String fullText = new String(buffer, 0, (int) len, charset);
+
+        log.info("Converting Flow File content to JSON.");
+
         try {
-            Charset charset = Charset.forName(context.getProperty(CHARACTER_SET).getValue());
-            final int maxBufferSize = context.getProperty(MAX_BUFFER_SIZE).asDataSize(DataUnit.B).intValue();
-
-            byte[] buffer = new byte[maxBufferSize];
-            session.read(flowFile, inputStream -> StreamUtils.fillBuffer(inputStream, buffer, false));
-            final long len = Math.min(buffer.length, flowFile.getSize());
-            String fullText = new String(buffer, 0, (int) len, charset);
-
-            log.info("Converting Flow File content to JSON.");
-
             RulesInputMessage message = mapper.readValue(fullText, RulesInputMessage.class);
             message.validate();
         } catch (Exception e) {
@@ -101,8 +102,8 @@ public class VerifyJsonContentsProcessor extends AbstractRmsProcessor {
 
             session.putAttribute(flowFile, ATTRIBUTE_IS_VALID, "false");
             session.putAttribute(flowFile, ATTRIBUTE_VALIDATION_ERRORS, e.getMessage());
-
             session.transfer(flowFile, REL_FAILURE);
+
             return;
         }
 
