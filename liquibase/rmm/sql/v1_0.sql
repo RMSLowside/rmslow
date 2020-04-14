@@ -2,9 +2,8 @@
 
 --changeset kimmela:rmsl-48
 CREATE DATABASE rmm;
-USE rmm;
 
-create table records (
+CREATE table rmm.records (
     guide varchar(255) primary key,
     ruleId int NOT NULL,
     rcsId int NOT NULL,
@@ -16,7 +15,7 @@ create table records (
     INDEX disposition (dispositionDate)
 )
 
-create table holds (
+CREATE table rmm.holds (
     guide varchar(255) primary key,
     releaseDate date,
     INDEX release (releaseDate)
