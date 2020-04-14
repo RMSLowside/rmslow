@@ -1,9 +1,9 @@
 --liquibase formatted sql
 
 --changeset kimmela:rmsl-48
-CREATE DATABASE rmm;
+USE rmm;
 
-CREATE table rmm.records (
+CREATE table records (
     guide varchar(255) primary key,
     ruleId int NOT NULL,
     rcsId int NOT NULL,
@@ -15,7 +15,7 @@ CREATE table rmm.records (
     INDEX disposition (dispositionDate)
 )
 
-CREATE table rmm.holds (
+CREATE table holds (
     guide varchar(255) primary key,
     releaseDate date,
     INDEX release (releaseDate)
