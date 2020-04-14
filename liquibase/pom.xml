@@ -33,7 +33,7 @@
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <configuration>
-                    <propertyFile>property/liquibase.properties</propertyFile>
+                    <propertyFile>rmm/property/liquibase.properties</propertyFile>
                 </configuration>
                 <executions>
                     <execution>

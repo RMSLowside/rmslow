@@ -1,6 +1,9 @@
 --liquibase formatted sql
 
 --changeset kimmela:rmsl-48
+CREATE DATABASE rmm;
+USE rmm;
+
 create table records (
     guide varchar(255) primary key,
     ruleId int NOT NULL,
