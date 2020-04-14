@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../liquibase/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../liquibase/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../liquibase/property/liquibase.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../liquibase/rmm/changelog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../liquibase/rmm/sql/create-tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liquibase/property/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../liquibase/rmm/property/liquibase.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +52,11 @@
       <recent name="rms.processors.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm" />
       <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\libs" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-libs" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rms.processors.json" />
