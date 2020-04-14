@@ -33,7 +33,11 @@
                 <groupId>org.liquibase</groupId>
                 <artifactId>liquibase-maven-plugin</artifactId>
                 <configuration>
-                    <propertyFile>rmm/property/liquibase.properties</propertyFile>
+                    <changeLogFile>rmm/changelog.xml</changeLogFile>
+                    <driver>com.mysql.cj.jdbc.Driver</driver>
+                    <url>jdbc:mysql://localhost:3306/rmm?createDatabaseIfNotExist=true</url>
+                    <username>root</username>
+                    <password></password>
                 </configuration>
                 <executions>
                     <execution>
