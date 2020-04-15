@@ -119,4 +119,11 @@ public class SearchTest {
         String expected = "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
         assertEquals(expected, Search.termify(input));        
     }
+
+    @Test
+    public void testQueryWithTwoOperatorsAtSameLevelButInDifferentPlaces(){
+        String input = "((a & b) | (c | d))";
+        String expected = "((<term>a</term> & <term>b</term>) | (<term>c</term> | <term>d</term>))";
+        assertEquals(expected, Search.termify(input));
+    }
 }

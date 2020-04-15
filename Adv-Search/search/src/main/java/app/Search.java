@@ -109,8 +109,13 @@ public class Search {
             }
             else if(resultString.charAt(i) == ')'){
                 parensLevel--;
+                //Unless we're in the negative...
                 if(parensLevel < 0){
                     return "Error: There are unclosed parentheses in this string; make sure all parentheses are correctly closed.";
+                }
+                else {
+                    //...then finding a ')' means we've closed the group, and we can clear the operator directly above this one
+                    operatorLevels.set(parensLevel + 1, "");
                 }
             }
             if("&|!".indexOf(resultString.charAt(i)) != -1){
@@ -120,14 +125,17 @@ public class Search {
                     return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
                 }
                 //Ambiguous check: if an operator found on a given group level (aka, parentheses level) is a mix of AND and OR together, this fails
-                //Note: ! counts as an AND operator
+                //Note: ! counts as an AND-type operator (AND NOT)
                 //- first, set the operator level if it hasn't been set yet
                 if(operatorLevels.get(parensLevel).equals("")){
                     operatorLevels.set(parensLevel, String.valueOf(resultString.charAt(i)));
                 }
                 //- otherwise, if the operator found is NOT equal to the one we've already found at this level, the query is ambiguous
                 else if(!operatorLevels.get(parensLevel).equals(String.valueOf(resultString.charAt(i)))) {
-                    return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
+                    if("&!".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!".indexOf(String.valueOf(resultString.charAt(i))) != -1){
+                        // Do nothing, because & and ! are both AND-type ops
+                    }
+                    else return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
                 }
                 opActive = true;
             }
