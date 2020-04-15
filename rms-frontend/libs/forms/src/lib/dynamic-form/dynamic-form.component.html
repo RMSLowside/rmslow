@@ -1,0 +1,22 @@
+<div>
+  <!-- {{(form$ | async) | json}} -->
+
+  <form [formGroup]="newNovelForm" [ngxsForm]="novels.newNovelForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="novelName" />
+    <button type="submit">Create</button>
+  </form>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+    <div *ngFor="let question of questions" class="form-row">
+      <app-question [question]="question" [form]="form"></app-question>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" [disabled]="!form.valid">Save</button>
+    </div>
+  </form>
+
+  <div *ngIf="payLoad" class="form-row">
+    <strong>Saved the following values</strong><br>{{payLoad}}
+  </div>
+</div>

@@ -44,6 +44,16 @@
     "home-e2e": {
       "tags": [],
       "implicitDependencies": ["home"]
+    },
+    "forms": {
+      "tags": []
+    },
+    "ngxs-forms": {
+      "tags": []
+    },
+    "ngxs-forms-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ngxs-forms"]
     }
   }
 }

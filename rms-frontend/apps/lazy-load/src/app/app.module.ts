@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from '@rms-frontend/core';
-
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    CoreModule
+    CoreModule,
+    FormsModule,
+    ReactiveFormsModule    
   ],
   providers: [],
   bootstrap: [
