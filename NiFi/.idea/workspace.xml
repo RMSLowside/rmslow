@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/models/Actions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/models/RulesDecisionMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/FetchXmlFromUrlProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/FetchXmlFromUrlProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/GetRulesEngineResultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/GetRulesEngineResultProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/utilities/RmsEnums.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/utilities/RmsEnums.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

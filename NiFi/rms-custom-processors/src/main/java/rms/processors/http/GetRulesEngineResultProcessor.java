@@ -1,6 +1,5 @@
 package rms.processors.http;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.behavior.ReadsAttributes;
@@ -19,15 +18,18 @@ import org.apache.nifi.processor.Relationship;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.stream.io.StreamUtils;
+import rms.models.Actions;
+import rms.models.RulesDecisionMessage;
 import rms.models.RulesInputMessage;
 import rms.processors.AbstractRmsProcessor;
 
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_RULES_DECISION;
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
+import static rms.processors.utilities.RmsEnums.*;
 
 @Tags({"rms", "json", "rules", "https"})
 @SeeAlso({})
@@ -80,10 +82,32 @@ public class GetRulesEngineResultProcessor extends AbstractRmsProcessor {
         }
 
         String jsonContent = getFlowFileContent(flowFile, context, session);
-        RulesInputMessage message = null;
+        RulesInputMessage message;
         try {
             message = mapper.readValue(jsonContent, RulesInputMessage.class);
             message.validate();
+
+            // TODO call the actual API endpoint on day
+            // For now make a fake result
+            HashMap<String, String> fakeValues = new HashMap<>();
+            fakeValues.put(VALUE_RCS_ID, "54");
+            fakeValues.put(VALUE_RCS_NAME, "FRCS-Q2a");
+
+            Actions fakeAction = new Actions();
+            fakeAction.setAction(ACTION_ADD_TO_RMM);
+            fakeAction.setValues(fakeValues);
+
+            ArrayList<Actions> allFakeActions = new ArrayList<>();
+            allFakeActions.add(fakeAction);
+
+            RulesDecisionMessage fakeResult = new RulesDecisionMessage();
+            fakeResult.setRulesInputMessage(message);
+            fakeResult.setActions(allFakeActions);
+
+            // Take the result and put it as an attribute on the flow file.
+            session.putAttribute(flowFile, ATTRIBUTE_RULES_DECISION, mapper.writeValueAsString(fakeResult));
+
+            session.transfer(flowFile, REL_SUCCESS);
         } catch (Exception e) {
             log.error(e.getMessage());
 
@@ -92,11 +116,6 @@ public class GetRulesEngineResultProcessor extends AbstractRmsProcessor {
 
             return;
         }
-
-        // TODO call the actual API endpoint on day
-
-        // Take the result and put it as an attribute on the flowfile.
-
     }
 
     private String getFlowFileContent(FlowFile flowFile, ProcessContext context, ProcessSession session) {
