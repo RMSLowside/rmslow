@@ -1,6 +1,11 @@
 package rms.processors.http;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.nifi.annotation.behavior.InputRequirement;
+import org.apache.nifi.annotation.behavior.ReadsAttributes;
+import org.apache.nifi.annotation.behavior.WritesAttributes;
+import org.apache.nifi.annotation.documentation.CapabilityDescription;
+import org.apache.nifi.annotation.documentation.SeeAlso;
 import org.apache.nifi.annotation.documentation.Tags;
 import org.apache.nifi.components.PropertyDescriptor;
 import org.apache.nifi.flowfile.FlowFile;
@@ -26,7 +31,12 @@ import java.util.concurrent.ThreadLocalRandom;
 import static rms.processors.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
 import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 
-@Tags({"rms"})
+@Tags({"rms", "xml", "https"})
+@SeeAlso({})
+@CapabilityDescription("Fetch a XML document from a URL and set the Flow File's content.")
+@InputRequirement(InputRequirement.Requirement.INPUT_REQUIRED)
+@ReadsAttributes({})
+@WritesAttributes({})
 public class FetchXmlFromUrlProcessor extends AbstractRmsProcessor {
 
     public static final PropertyDescriptor MAX_BUFFER_SIZE = new PropertyDescriptor.Builder()
@@ -79,9 +89,6 @@ public class FetchXmlFromUrlProcessor extends AbstractRmsProcessor {
             message = mapper.readValue(content, PublisherJsonMessage.class);
         } catch (Exception e) {
             log.error("Failed to map text to expected POJO due to " + e.getMessage());
-
-            session.putAttribute(flowFile, ATTRIBUTE_IS_VALID, "false");
-            session.putAttribute(flowFile, ATTRIBUTE_VALIDATION_ERRORS, e.getMessage());
             session.transfer(flowFile, REL_FAILURE);
 
             return;

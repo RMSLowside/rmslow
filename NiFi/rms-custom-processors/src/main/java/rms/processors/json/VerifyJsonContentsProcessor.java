@@ -31,7 +31,7 @@ import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 @Tags({"rms", "json", "validation"})
 @SeeAlso({})
 @CapabilityDescription("Validate flow file content against the RMS Rules Input Schema")
-@InputRequirement(InputRequirement.Requirement.INPUT_ALLOWED)
+@InputRequirement(InputRequirement.Requirement.INPUT_REQUIRED)
 @ReadsAttributes({})
 @WritesAttributes({
         @WritesAttribute(attribute = ATTRIBUTE_IS_VALID, description = "Is the JSON message schema valid."),
