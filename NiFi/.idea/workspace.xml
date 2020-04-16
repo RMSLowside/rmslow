@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/models/PublisherJsonMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/models/BasicJsonMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/enhance/AddAttributesToFlowFileProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/FetchXmlFromUrlProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/FetchXmlFromUrlProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/ConvertXmlToJsonProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/JsonDecisionProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/json/VerifyJsonContentsProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/resources/META-INF/services/org.apache.nifi.processor.Processor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/enhance/AddAttributesToFlowFileProcessorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/http/FetchXmlFromUrlProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/http/FetchXmlFromUrlProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/ConvertXmlToJsonProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/ConvertXmlToJsonProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/JsonDecisionProcessorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/VerifyJsonContentsProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/json/VerifyJsonContentsProcessorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
