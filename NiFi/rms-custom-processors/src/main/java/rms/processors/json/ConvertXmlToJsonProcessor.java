@@ -54,7 +54,7 @@ public class ConvertXmlToJsonProcessor extends AbstractRmsProcessor {
             .defaultValue("UTF-8")
             .build();
 
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper mapper = new ObjectMapper();
     private XPath documentXpath;
     private Document documentXml;
 
@@ -97,7 +97,7 @@ public class ConvertXmlToJsonProcessor extends AbstractRmsProcessor {
         // Write the JSON to a flow file
         FlowFile outputFlowFile = session.write(flowFile, (in, out) -> {
             try (OutputStream outputStream = new BufferedOutputStream(out)) {
-                outputStream.write(objectMapper.writeValueAsBytes(rulesInputMessage));
+                outputStream.write(mapper.writeValueAsBytes(rulesInputMessage));
             }
         });
 

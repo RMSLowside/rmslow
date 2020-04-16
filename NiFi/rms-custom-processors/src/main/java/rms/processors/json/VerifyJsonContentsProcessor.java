@@ -83,7 +83,6 @@ public class VerifyJsonContentsProcessor extends AbstractRmsProcessor {
 
         log.info("Reading the Flow File content.");
 
-
         Charset charset = Charset.forName(context.getProperty(CHARACTER_SET).getValue());
         final int maxBufferSize = context.getProperty(MAX_BUFFER_SIZE).asDataSize(DataUnit.B).intValue();
 
