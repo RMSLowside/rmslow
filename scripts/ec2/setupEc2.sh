@@ -50,6 +50,10 @@ yum -y install mysql-server
 systemctl start mysqld
 rm -rf mysql-community-release-el7-5.noarch.rpm
 
+pushd rmslow/liquibase
+mvn clean install
+
+popd
 popd
 
 # Setup Crontab

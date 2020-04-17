@@ -25,14 +25,17 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Set;
 
+import static rms.processors.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
+import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
+
 @Tags({"rms", "json", "validation"})
 @SeeAlso({})
 @CapabilityDescription("Validate flow file content against the RMS Rules Input Schema")
-@InputRequirement(InputRequirement.Requirement.INPUT_ALLOWED)
+@InputRequirement(InputRequirement.Requirement.INPUT_REQUIRED)
 @ReadsAttributes({})
 @WritesAttributes({
-        @WritesAttribute(attribute = "Valid", description = "Is the JSON message schema valid."),
-        @WritesAttribute(attribute = "ValidationErrors", description = "If JSON is not valid, the error will be written here.")
+        @WritesAttribute(attribute = ATTRIBUTE_IS_VALID, description = "Is the JSON message schema valid."),
+        @WritesAttribute(attribute = ATTRIBUTE_VALIDATION_ERRORS, description = "If JSON is not valid, the error will be written here.")
 })
 public class VerifyJsonContentsProcessor extends AbstractRmsProcessor {
 
@@ -58,7 +61,7 @@ public class VerifyJsonContentsProcessor extends AbstractRmsProcessor {
     @Override
     protected void addSupportedRelationships(Set<Relationship> relationships) {
         relationships.add(new Relationship.Builder().name(REL_SUCCESS.getName()).description("All FlowFiles that have schema valid JSON content are routed to this relationship.").build());
-        relationships.add(new Relationship.Builder().name(REL_FAILURE.getName()).description("All FlowFiles that doo not have schema valid JSON content are routed to this relationship.").build());
+        relationships.add(new Relationship.Builder().name(REL_FAILURE.getName()).description("All FlowFiles that do not have schema valid JSON content are routed to this relationship.").build());
     }
 
     @Override
@@ -80,30 +83,30 @@ public class VerifyJsonContentsProcessor extends AbstractRmsProcessor {
 
         log.info("Reading the Flow File content.");
 
+        Charset charset = Charset.forName(context.getProperty(CHARACTER_SET).getValue());
+        final int maxBufferSize = context.getProperty(MAX_BUFFER_SIZE).asDataSize(DataUnit.B).intValue();
+
+        byte[] buffer = new byte[maxBufferSize];
+        session.read(flowFile, inputStream -> StreamUtils.fillBuffer(inputStream, buffer, false));
+        final long len = Math.min(buffer.length, flowFile.getSize());
+        String fullText = new String(buffer, 0, (int) len, charset);
+
+        log.info("Converting Flow File content to JSON.");
+
         try {
-            Charset charset = Charset.forName(context.getProperty(CHARACTER_SET).getValue());
-            final int maxBufferSize = context.getProperty(MAX_BUFFER_SIZE).asDataSize(DataUnit.B).intValue();
-
-            byte[] buffer = new byte[maxBufferSize];
-            session.read(flowFile, inputStream -> StreamUtils.fillBuffer(inputStream, buffer, false));
-            final long len = Math.min(buffer.length, flowFile.getSize());
-            String fullText = new String(buffer, 0, (int) len, charset);
-
-            log.info("Converting Flow File content to JSON.");
-
             RulesInputMessage message = mapper.readValue(fullText, RulesInputMessage.class);
             message.validate();
         } catch (Exception e) {
             log.error("Failed to map text to expected POJO due to " + e.getMessage());
 
-            session.putAttribute(flowFile, "Valid", "false");
-            session.putAttribute(flowFile, "ValidationErrors", e.getMessage());
-
+            session.putAttribute(flowFile, ATTRIBUTE_IS_VALID, "false");
+            session.putAttribute(flowFile, ATTRIBUTE_VALIDATION_ERRORS, e.getMessage());
             session.transfer(flowFile, REL_FAILURE);
+
             return;
         }
 
-        session.putAttribute(flowFile, "Valid", "true");
+        session.putAttribute(flowFile, ATTRIBUTE_IS_VALID, "true");
         session.transfer(flowFile, REL_SUCCESS);
     }
 }

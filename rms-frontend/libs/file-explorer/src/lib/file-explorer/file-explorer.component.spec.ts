@@ -50,7 +50,6 @@ class MatDialogMock {
 describe('FileExplorerComponent', () => {
   let component: FileExplorerComponent;
   let fixture: ComponentFixture<FileExplorerComponent>;
-  let dialog: MatDialogMock;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -78,7 +77,6 @@ describe('FileExplorerComponent', () => {
     component._fileElements = [];
     component.selected = [];
     component.path = 'Files';
-    dialog = TestBed.get(MatDialog);
     fixture.detectChanges();
   });
 
@@ -270,9 +268,9 @@ describe('FileExplorerComponent', () => {
   });
 
   it('should open the new folder dialog', () => {
-    spyOn(dialog, 'open').and.callThrough();
+    spyOn(component.dialog, 'open').and.callThrough();
     component.openNewFolderDialog();
-    expect(dialog.open).toHaveBeenCalled();
+    expect(component.dialog.open).toHaveBeenCalled();
   });
 
   it('should open the new folder dialog, and output a new folder', () => {
@@ -281,12 +279,12 @@ describe('FileExplorerComponent', () => {
     });
     const newFolderEmitSpy = jest.spyOn(component.folderAdded, 'emit');
     component.openNewFolderDialog();
-    expect(dialog.open).toHaveBeenCalled();
+    expect(component.dialog.open).toHaveBeenCalled();
     expect(newFolderEmitSpy).toHaveBeenCalledWith({ name: 'NewFolder' });
   });
 
   it('should open the rename dialog', () => {
-    spyOn(dialog, 'open').and.callThrough();
+    spyOn(component.dialog, 'open').and.callThrough();
     const renameEmitSpy = jest.spyOn(component.elementRenamed, 'emit');
     const file = new FileElement();
     file.id = '1';
@@ -294,7 +292,7 @@ describe('FileExplorerComponent', () => {
     file.name = 'test';
     file.parent = 'root';
     component.openRenameDialog(file);
-    expect(dialog.open).toHaveBeenCalled();
+    expect(component.dialog.open).toHaveBeenCalled();
     expect(renameEmitSpy).toHaveBeenCalledTimes(0);
   });
 
@@ -314,7 +312,7 @@ describe('FileExplorerComponent', () => {
     renamed.name = 'NewName';
     renamed.parent = 'root';
     component.openRenameDialog(file);
-    expect(dialog.open).toHaveBeenCalled();
+    expect(component.dialog.open).toHaveBeenCalled();
     expect(renameEmitSpy).toHaveBeenCalledWith(renamed);
   });
 

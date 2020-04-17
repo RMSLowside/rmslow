@@ -1,22 +1,14 @@
-<div style="height: 100%; width: 100%; box-sizing: border-box;">
-  <mat-card
-    style="height: 100%; width: 100%; box-sizing: border-box; padding:0"
-  >
-    <rms-file-explorer
-      [fileElements]="files$ | async"
-      [path]="(currentPath$ | async) || 'Files'"
-      [canNavigateUp]="canNavigateUp"
-      (folderAdded)="addFolder($event)"
-      (elementRemoved)="removeElement($event)"
-      (navigatedDown)="navigateToFolder($event)"
-      (navigatedUp)="navigateUp()"
-      (elementRenamed)="renameElement($event)"
-      (elementMoved)="moveElement($event)"
-      (filesUploaded)="filesUploaded($event)"
-      (fileSelected)="fileSelected($event)"
-      (encryptEmitter)="encrypt($event)"
-      (decryptEmitter)="decrypt($event)"
-    >
-    </rms-file-explorer>
-  </mat-card>
+<div
+  class="{{ theme$ | async }}-theme main"
+  style="display: flex; flex-direction: row; height: 100%;"
+>
+  <div style="flex:1 1 auto; padding: 0;margin: 0;">
+    <ng-container #header> </ng-container>
+    <ng-template #loggedIn>
+      <router-outlet></router-outlet>
+    </ng-template>
+    <rms-pre-auth
+      *ngIf="(authed$ | async) === undefined; else loggedIn"
+    ></rms-pre-auth>
+  </div>
 </div>

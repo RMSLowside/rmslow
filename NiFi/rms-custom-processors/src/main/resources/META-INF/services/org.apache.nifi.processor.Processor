@@ -1,7 +1,5 @@
-rms.processors.json.JsonDecisionProcessor
 rms.processors.json.ConvertXmlToJsonProcessor
 rms.processors.json.VerifyJsonContentsProcessor
 rms.processors.dao.AddToRmmProcessor
 rms.processors.http.FetchXmlFromUrlProcessor
 rms.processors.http.GetRulesEngineResultProcessor
-rms.processors.enhance.AddAttributesToFlowFileProcessor

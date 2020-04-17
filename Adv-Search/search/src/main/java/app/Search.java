@@ -48,7 +48,6 @@ public class Search {
                 resultString += "</term>";
             }
             else if(!quoteTermOpen && !termOpen && restrictedChars.indexOf(inputString.charAt(i)) == -1){
-                // termOpen = !termOpen;
                 resultString += "<term>" + inputString.charAt(i);
                 if(i+1 == inputString.length() || restrictedChars.indexOf(inputString.charAt(i+1)) != -1){
                     resultString += "</term>";
@@ -62,6 +61,86 @@ public class Search {
             }
             else {
                 resultString += inputString.charAt(i);
+            }
+        }
+
+        //-----------Post-processing------------
+        // Check for the following validation error flags:
+        // - neighboring terms
+        // - neighboring operators
+        // - unclosed / missing quotes (not escaped ones)
+        // - unclosed / missing parens
+        // - query ambiguity
+
+        return Search.validate(resultString);
+    }
+
+    public static String validate(String resultString){
+        boolean termSwitch = false;
+        int parensLevel = 0;
+        boolean termActive = false;
+        boolean opActive = false;
+        ArrayList<String> operatorLevels = new ArrayList<String>();
+        operatorLevels.add("");
+
+        for(int i=0; i < resultString.length(); i++){
+            if(resultString.charAt(i) == '<'){
+                opActive = false;
+                if(termSwitch == false && resultString.charAt(i+1) == '/'){
+                    return "Error: There are unclosed quotes in this string; make sure all non-escaped quotes are closed.";
+                }
+                else if(resultString.charAt(i+1) == 't'){
+                    termSwitch = true;
+                    if(termSwitch && termActive){
+                        return "Error: There are neighboring terms in this string; an operator should be between every term.";
+                    }
+                } 
+                else if(resultString.charAt(i+1) == '/'){
+                    termSwitch = false;
+                    opActive = false;
+                    termActive = true;
+                }
+            }
+            else if(resultString.charAt(i) == '('){
+                parensLevel++;
+                if(operatorLevels.size() == parensLevel){
+                    operatorLevels.add("");
+                }
+            }
+            else if(resultString.charAt(i) == ')'){
+                parensLevel--;
+                //Unless we're in the negative...
+                if(parensLevel < 0){
+                    return "Error: There are unclosed parentheses in this string; make sure all parentheses are correctly closed.";
+                }
+                else {
+                    //...then finding a ')' means we've closed the group, and we can clear the operator directly above this one
+                    operatorLevels.set(parensLevel + 1, "");
+                }
+            }
+            if("&|!".indexOf(resultString.charAt(i)) != -1){
+                termActive = false;
+                //If an operator is found next to another operator, this fails
+                if(opActive){
+                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
+                }
+                //Ambiguous check: if an operator found on a given group level (aka, parentheses level) is a mix of AND and OR together, this fails
+                //Note: ! counts as an AND-type operator (AND NOT)
+                //- first, set the operator level if it hasn't been set yet
+                if(operatorLevels.get(parensLevel).equals("")){
+                    operatorLevels.set(parensLevel, String.valueOf(resultString.charAt(i)));
+                }
+                //- otherwise, if the operator found is NOT equal to the one we've already found at this level, the query is ambiguous
+                else if(!operatorLevels.get(parensLevel).equals(String.valueOf(resultString.charAt(i)))) {
+                    if("&!".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!".indexOf(String.valueOf(resultString.charAt(i))) != -1){
+                        // Do nothing, because & and ! are both AND-type ops
+                    }
+                    else return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
+                }
+                opActive = true;
+            }
+            if(i == resultString.length() - 1 && parensLevel > 0){
+                return "Error: There are unclosed parentheses in this string; make sure all parentheses are correctly closed.";
             }
         }
 

@@ -44,7 +44,6 @@ export class ExplorerState {
   }
 
   @Selector()
-  @ImmutableSelector()
   static currentPath(state: ExplorerStateModel) {
     return state.path;
   }

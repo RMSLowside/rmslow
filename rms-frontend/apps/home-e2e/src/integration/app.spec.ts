@@ -1,7 +1,8 @@
 import { getGreeting } from '../support/app.po';
 
 describe('home', () => {
-  beforeEach(() => cy.visit('/'));
+  // Can Change the visit to any of the URLS. Probably best to use the main one
+  beforeEach(() => cy.visit('https://smcfall2.github.io/rmslow/apps/home/'));
 
   it('should display welcome message', () => {
     // Custom command example, see `../support/commands.ts` file

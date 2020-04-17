@@ -26,7 +26,7 @@
               "apps/s3/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "libs/shared-assets/styles.scss",
               "apps/s3/src/styles.scss"
             ],
             "scripts": [
@@ -197,7 +197,7 @@
               "apps/lazy-load/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "libs/shared-assets/styles.scss",
               "apps/lazy-load/src/styles.scss"
             ],
             "scripts": []
@@ -334,7 +334,8 @@
               "apps/home/src/assets"
             ],
             "styles": [
-              "apps/home/src/styles.scss"
+              "apps/home/src/styles.scss",
+              "libs/shared-assets/styles.scss"
             ],
             "scripts": []
           },
@@ -468,6 +469,41 @@
             "tsConfig": "libs/grid/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/grid/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "header": {
+      "projectType": "library",
+      "root": "libs/header",
+      "sourceRoot": "libs/header/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/header/tsconfig.lib.json",
+              "libs/header/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/header/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/header/jest.config.js",
+            "tsConfig": "libs/header/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/header/src/test-setup.ts"
           }
         }
       },
@@ -648,7 +684,7 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@ngxs/schematics"
   },
   "schematics": {
     "@nrwl/angular:application": {
