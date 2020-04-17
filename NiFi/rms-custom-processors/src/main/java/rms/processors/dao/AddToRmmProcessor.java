@@ -17,6 +17,7 @@ import org.apache.nifi.processor.Relationship;
 import org.apache.nifi.processor.exception.ProcessException;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.stream.io.StreamUtils;
+import rms.exceptions.RmsGeneralException;
 import rms.models.Actions;
 import rms.models.RulesDecisionMessage;
 import rms.models.RulesInputMessage;
@@ -124,7 +125,9 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
                 }
             }
         } catch (Exception e) {
-            log.error("Failed to map text to expected POJO due to " + e.getMessage());
+            log.error("Failed process record due to: " + e.getMessage());
+
+            session.putAttribute(flowFile, ATTRIBUTE_VALIDATION_ERRORS, "Failed process record due to: " + e.getMessage());
             session.transfer(flowFile, REL_FAILURE);
 
             return;
@@ -133,7 +136,7 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         session.transfer(flowFile, REL_SUCCESS);
     }
 
-    private void addToRmm(RulesInputMessage rulesInputMessage, Actions action, ProcessContext context) throws ParseException, SQLException, ClassNotFoundException {
+    private void addToRmm(RulesInputMessage rulesInputMessage, Actions action, ProcessContext context) throws ParseException, SQLException, ClassNotFoundException, RmsGeneralException {
         String guide = rulesInputMessage.getGuide();
         String createDate = rulesInputMessage.getCreateDate();
         String producer = rulesInputMessage.getProducer(); // This is recordSystemId for now
@@ -167,7 +170,9 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         insertStatement.setString(5, createDate);
         insertStatement.setString(6, dispositionDate);
 
-        insertStatement.execute();
+       if(!insertStatement.execute()){
+            throw new RmsGeneralException("Failed to insert the row into MySQL.");
+       }
 
         insertStatement.close();
         connection.close();
