@@ -92,6 +92,7 @@ public class GetRulesEngineResultProcessor extends AbstractRmsProcessor {
             HashMap<String, String> fakeValues = new HashMap<>();
             fakeValues.put(VALUE_RCS_ID, "54");
             fakeValues.put(VALUE_RCS_NAME, "FRCS-Q2a");
+            fakeValues.put(VALUE_RULE_MATCHED_ID, "13");
 
             Actions fakeAction = new Actions();
             fakeAction.setAction(ACTION_ADD_TO_RMM);
