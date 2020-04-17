@@ -1,14 +1,14 @@
 import { async, TestBed } from '@angular/core/testing';
-import { FormsModule } from './forms.module';
+import { DynamicFormsModule } from './forms.module';
 
 describe('FormsModule', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule]
+      imports: [DynamicFormsModule]
     }).compileComponents();
   }));
 
   it('should create', () => {
-    expect(FormsModule).toBeDefined();
+    expect(DynamicFormsModule).toBeDefined();
   });
 });

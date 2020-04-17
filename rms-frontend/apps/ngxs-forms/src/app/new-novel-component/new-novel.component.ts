@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { NovelsState, FormState } from '../+state/forms.state'
+import { NovelsState } from '../+state/forms.state'
 import { Observable } from 'rxjs';
 import { Select } from '@ngxs/store';
 
@@ -10,10 +10,8 @@ import { Select } from '@ngxs/store';
   styleUrls: ['./new-novel.component.scss']
 })
 export class NewNovelComponent implements OnInit {
-
-
   @Select(NovelsState) form$: Observable<any>;
-  @Select(FormState) questions$: Observable<any>;
+  
   newNovelForm = new FormGroup({
     novelName: new FormControl()
   });

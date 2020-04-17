@@ -1,22 +1,36 @@
-import { Component, OnInit, NgModule, Input } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { QuestionBase } from '../model/question-base';
-import { QuestionService } from 'apps/lazy-load/src/app/+state/question.service';
 
 @Component({
-  selector: 'rms-frontend-dynamic-form-modal',
+  selector: 'rms-dynamic-form-modal',
   templateUrl: './dynamic-form-modal.component.html',
   styleUrls: ['./dynamic-form-modal.component.scss']
 })
 export class DynamicFormModalComponent implements OnInit {
-  @Input() forms: any;
+  @Input() questions: QuestionBase<any>[];
+  @Input() clearOnDestroy: boolean;
+  @Output() outputEvent: EventEmitter<any> = new EventEmitter<any>();
+  form: FormGroup;
 
-  questions$: Observable<QuestionBase<any>[]>;
-
-  constructor(service: QuestionService) {
-    this.questions$ = service.getQuestions();
-  }
+  constructor() { }
 
   ngOnInit(): void {
+    this.form = this.toFormGroup(this.questions);
+  }
+
+  saveAsDraft() {
+    this.outputEvent.emit(this.form.value);
+  }
+
+  toFormGroup(questions: QuestionBase<string>[]) {
+    let group: any = {};
+
+    questions.forEach(question => {
+      group[question.key] = question.required ? new FormControl(question.value || '', Validators.required)
+        : new FormControl(question.value || '');
+    });
+
+    return new FormGroup(group);
   }
 }

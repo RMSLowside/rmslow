@@ -1,10 +1,17 @@
-<div>
+<div style="height: 100px; padding-top: 30px;">
   Forms plugin example
-  <br />
+  <br>
   <new-novel-form></new-novel-form>
 </div>
 
 <div style="height: 300px; padding-top: 30px;">
+  <div *ngFor="let draft of (drafts$ | async)" class="form-row">
+    <span (click)="fillForm(draft)">{{draft | json}}</span>
+  </div>
+  {{(test$ | async) | json}}
+  <mat-checkbox color="primary" [(ngModel)]="checked">Clear ngxsform on destroy</mat-checkbox>
+  <br>
   Open dynamic forms
-  <button mat-raised-button color="accent" (click)='openForms()'>load part 1</button>
+  <br>
+  <button mat-raised-button color="accent" (click)='openForms()'>open Forms</button>
 </div>
