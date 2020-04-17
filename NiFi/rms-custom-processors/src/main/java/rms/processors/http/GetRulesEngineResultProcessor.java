@@ -30,7 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import static rms.processors.utilities.RmsEnums.*;
+import static rms.utilities.RmsEnums.*;
 
 @Tags({"rms", "json", "rules", "https"})
 @SeeAlso({})

@@ -1,4 +1,4 @@
-package rms.processors.utilities;
+package rms.utilities;
 
 public class RmsEnums {
     public static final String ATTRIBUTE_IS_VALID = "rms.valid";

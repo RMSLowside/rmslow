@@ -37,7 +37,7 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Set;
 
-import static rms.processors.utilities.RmsEnums.*;
+import static rms.utilities.RmsEnums.*;
 
 @Tags({"rms", "xml", "json", "convert"})
 @SeeAlso({})

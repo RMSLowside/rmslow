@@ -10,7 +10,7 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 import static junit.framework.TestCase.assertTrue;
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
+import static rms.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 
 public class GetRulesEngineResultProcessorTest {
     private TestRunner testRunner;

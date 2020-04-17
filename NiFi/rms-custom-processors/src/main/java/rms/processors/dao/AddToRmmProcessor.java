@@ -32,7 +32,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static rms.processors.utilities.RmsEnums.*;
+import static rms.utilities.RmsEnums.*;
 
 @Tags({"rms", "mysql", "dao"})
 @SeeAlso({})
@@ -155,13 +155,7 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         String dispositionDate = sdf.format(calendar.getTime());
 
         // Insert into records table
-        String url = context.getProperty(DB_CONN).getValue();
-        String user = context.getProperty(DB_USER).getValue();
-        String password = context.getProperty(DB_PASSWORD).getValue();
-
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
-
+        Connection connection = getConnection(context);
         PreparedStatement insertStatement = connection.prepareStatement(
                 "INSERT INTO records (guide, recordSystemGuide, ruleId, rcsId, decisionDate, documentCreateDate, dispositionDate) " +
                         "VALUES (?,?,?,?,now(),?,?)");
@@ -177,6 +171,15 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
 
         insertStatement.close();
         connection.close();
+    }
+
+    public Connection getConnection(ProcessContext context) throws ClassNotFoundException, SQLException {
+        String url = context.getProperty(DB_CONN).getValue();
+        String user = context.getProperty(DB_USER).getValue();
+        String password = context.getProperty(DB_PASSWORD).getValue();
+
+        Class.forName("com.mysql.jdbc.Driver");
+        return DriverManager.getConnection(url, user, password);
     }
 
     private String getFlowFileContent(FlowFile flowFile, ProcessContext context, ProcessSession session) {

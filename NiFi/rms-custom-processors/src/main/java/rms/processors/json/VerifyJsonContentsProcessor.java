@@ -25,8 +25,8 @@ import java.nio.charset.Charset;
 import java.util.List;
 import java.util.Set;
 
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
+import static rms.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
+import static rms.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 
 @Tags({"rms", "json", "validation"})
 @SeeAlso({})
