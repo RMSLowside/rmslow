@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/validators/RmsValidators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/GetRulesEngineResultProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/http/GetRulesEngineResultProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/utilities/RmsEnums.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/utilities/RmsEnums.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -206,6 +209,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1587034896285" />
+    <state x="1085" y="507" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1587130832087">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1085" y="507" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1587130832087" />
     <state x="735" y="338" key="DBNavigator.ProjectSettingsDialog" timestamp="1586878548393">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -21,6 +21,7 @@ import rms.models.Actions;
 import rms.models.RulesDecisionMessage;
 import rms.models.RulesInputMessage;
 import rms.processors.AbstractRmsProcessor;
+import rms.validators.RmsValidators;
 
 import java.nio.charset.Charset;
 import java.sql.Connection;
@@ -62,6 +63,7 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
             .name("Database connection string")
             .description("The connection string to the RMM database")
             .required(true)
+            .addValidator(StandardValidators.NON_BLANK_VALIDATOR)
             .defaultValue("jdbc:mysql://localhost:3306/rmm")
             .build();
 
@@ -69,14 +71,15 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
             .name("Database user name")
             .description("The database user to use")
             .required(true)
+            .addValidator(StandardValidators.NON_BLANK_VALIDATOR)
             .defaultValue("root")
             .build();
 
     public static final PropertyDescriptor DB_PASSWORD = new PropertyDescriptor.Builder()
             .name("Database password")
             .description("The password for the user to the database")
-            .required(true)
             .defaultValue("")
+            .addValidator(RmsValidators.EMPTY_VALUE_ALLOWED_VALIDATOR)
             .build();
 
     private static final ObjectMapper mapper = new ObjectMapper();
@@ -130,14 +133,12 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         session.transfer(flowFile, REL_SUCCESS);
     }
 
-    private void addToRmm(RulesInputMessage rulesInputMessage, Actions action, ProcessContext context) throws ParseException, SQLException {
+    private void addToRmm(RulesInputMessage rulesInputMessage, Actions action, ProcessContext context) throws ParseException, SQLException, ClassNotFoundException {
         String guide = rulesInputMessage.getGuide();
         String createDate = rulesInputMessage.getCreateDate();
         String producer = rulesInputMessage.getProducer(); // This is recordSystemId for now
         String rcsId = action.getValues().get(VALUE_RCS_ID);
-        String rcsName = action.getValues().get(VALUE_RCS_NAME);
         String ruleMatchedId = action.getValues().get(VALUE_RULE_MATCHED_ID);
-        String decisionDate = "now()";
 
         // TODO call RCS with the rcsID to get the disposition YEARS and MONTHS. For now we fake this.
         int dispositionYears = 50;
@@ -158,7 +159,9 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         String user = context.getProperty(DB_USER).getValue();
         String password = context.getProperty(DB_PASSWORD).getValue();
 
+        Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection(url, user, password);
+
         PreparedStatement insertStatement = connection.prepareStatement(
                 "INSERT INTO records (guide, recordSystemGuide, ruleId, rcsId, decisionDate, documentCreateDate, dispositionDate) " +
                         "VALUES (?,?,?,?,now(),?,?)");
@@ -171,7 +174,6 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         insertStatement.setString(6, dispositionDate);
 
         insertStatement.execute();
-        connection.commit();
 
         insertStatement.close();
         connection.close();
