@@ -7,6 +7,8 @@ import { NovelsState, FormState } from './+state/forms.state'
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { NewNovelComponent } from './new-novel-component/new-novel.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NewNovelComponent
   ],
   imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
     CoreModule,
     FormsModule,
     ReactiveFormsModule,

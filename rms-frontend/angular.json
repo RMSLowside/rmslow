@@ -197,6 +197,7 @@
               "apps/lazy-load/src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "libs/shared-assets/styles.scss",
               "apps/lazy-load/src/styles.scss"
             ],

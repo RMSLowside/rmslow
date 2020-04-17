@@ -27,7 +27,8 @@ export class AppComponent {
       value: `https://smcfall2.github.io/rmslow/apps/home/`
     },
     { key: 'S3 App', value: `${location.origin}/rmslow/apps/s3` },
-    { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` }
+    { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` },
+    { key: 'NGXS Form App', value: `${location.origin}/rmslow/apps/ngxs-forms` }
   ];
   @Select(GlobalState.getTheme) theme$: Observable<string>;
 
