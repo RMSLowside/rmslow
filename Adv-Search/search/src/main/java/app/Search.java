@@ -24,15 +24,32 @@ public class Search {
             }
             else {
                 //check if character is an operator, replace with placeholder if inside a term
-                if((quoteTermOpen) && "&|!".indexOf(inputString.charAt(i)) != -1){
-                    if(inputString.charAt(i) == '&') inputString = inputString.substring(0, i) + "<:amp:>" + inputString.substring(i+1);
-                    if(inputString.charAt(i) == '|') inputString = inputString.substring(0, i) + "<:pipe:>" + inputString.substring(i+1);
-                    if(inputString.charAt(i) == '!') inputString = inputString.substring(0, i) + "<:excl:>" + inputString.substring(i+1);
+                if(quoteTermOpen){
+                    if("&|!".indexOf(inputString.charAt(i)) != -1){
+                        if(inputString.charAt(i) == '&') inputString = inputString.substring(0, i) + "<:amp:>" + inputString.substring(i+1);
+                        if(inputString.charAt(i) == '|') inputString = inputString.substring(0, i) + "<:pipe:>" + inputString.substring(i+1);
+                        if(inputString.charAt(i) == '!') inputString = inputString.substring(0, i) + "<:excl:>" + inputString.substring(i+1);
+                    }
+                    //check for whole word all-caps AND
+                    else if(inputString.substring(i).startsWith("AND")){
+                        i += 3;
+                    }
+                    //check for whole word all-caps OR
+                    else if(inputString.substring(i).startsWith("OR")){
+                        i += 2;
+                    }
+                    //check for whole word all-caps NOT
+                    else if(inputString.substring(i).startsWith("NOT")){
+                        i += 3;
+                    }
                 }
             }
         }
-
-        //first check if there are no operators - if that's true, the whole text is one term.
+        //replace all caps-only variants of operators
+        inputString = inputString.replaceAll(" AND NOT ", " ! ").replaceAll(" NOT ", " ! ").replaceAll(" AND ", " & ").replaceAll(" OR ", " | ");
+        //replace instances of &! with just !
+        inputString = inputString.replaceAll("&!", "!").replaceAll("& !", "!");
+        //check if there are no operators - if that's true, the whole text is one term.
         if(!inputString.contains("&") && !inputString.contains("|") && !inputString.contains("!") && !inputString.contains("\"")){
             return "<term>" + inputString + "</term>";
         }
@@ -144,7 +161,7 @@ public class Search {
             }
         }
 
-        return resultString;
+        return resultString.replaceAll("<:amp:>", "&").replaceAll("<:pipe:>", "|").replaceAll("<:excl:>", "!");
     }
 
     public static void main(final String[] args){
@@ -171,6 +188,9 @@ public class Search {
         examples.add("|");
         examples.add("!");
         examples.add("a1 &a2 &a3");
+        examples.add("1 AND 2 AND (3 OR 4) AND NOT 5");
+        examples.add("123 NOT 456");
+        examples.add("STANDARD & \"OR\" AND \"AND\"");
 
         while(keepGoing){
             input = console.readLine("Enter the string you want to termify (type 'examples' to show preset tests, 'quit' to quit): ");

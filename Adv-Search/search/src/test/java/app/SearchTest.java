@@ -25,21 +25,21 @@ public class SearchTest {
     @Test
     public void testQuotedString(){
         String input = "\"Hall & Oates\"";
-        String expected = "<term>Hall <:amp:> Oates</term>";
+        String expected = "<term>Hall & Oates</term>";
         assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testComplexQuery(){
         String input = "object & (\"verbs & stuff\" | things)";
-        String expected = "<term>object</term> & (<term>verbs <:amp:> stuff</term> | <term>things</term>)";
+        String expected = "<term>object</term> & (<term>verbs & stuff</term> | <term>things</term>)";
         assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testComplexQueryWithEscapedQuotes(){
         String input = "stuff | things | \"stuff \\\"&\\\" things\"";
-        String expected = "<term>stuff</term> | <term>things</term> | <term>stuff \\\"<:amp:>\\\" things</term>";
+        String expected = "<term>stuff</term> | <term>things</term> | <term>stuff \\\"&\\\" things</term>";
         assertEquals(expected, Search.termify(input));
     }
 
@@ -126,4 +126,26 @@ public class SearchTest {
         String expected = "((<term>a</term> & <term>b</term>) | (<term>c</term> | <term>d</term>))";
         assertEquals(expected, Search.termify(input));
     }
+
+    @Test
+    public void testOperatorVariants(){
+        String input = "term1 AND term2";
+        String expected = "<term>term1</term> & <term>term2</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testMixAndMatch(){
+        String input = "a & b AND c&(d | e OR f) AND NOT g";
+        String expected = "<term>a</term> & <term>b</term> & <term>c</term>&(<term>d</term> | <term>e</term> | <term>f</term>) ! <term>g</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testEmbeddedOperatorsInStrings(){
+        String input = "STANDARD & \"What if I wanna type AND, OR, and NOT, huh!?\"";
+        String expected = "<term>STANDARD</term> & <term>What if I wanna type AND, OR, and NOT, huh!?</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
 }
