@@ -23,6 +23,8 @@ import rms.models.RulesDecisionMessage;
 import rms.models.RulesInputMessage;
 import rms.processors.AbstractRmsProcessor;
 
+import java.io.BufferedOutputStream;
+import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -36,9 +38,7 @@ import static rms.processors.utilities.RmsEnums.*;
 @CapabilityDescription("Send a RulesInputMessage JSON to the Rules Engine API to get a rules decision.")
 @InputRequirement(InputRequirement.Requirement.INPUT_REQUIRED)
 @ReadsAttributes({})
-@WritesAttributes({
-        @WritesAttribute(attribute = ATTRIBUTE_RULES_DECISION, description = "The Rules Engine Output")
-})
+@WritesAttributes({})
 public class GetRulesEngineResultProcessor extends AbstractRmsProcessor {
 
     public static final PropertyDescriptor MAX_BUFFER_SIZE = new PropertyDescriptor.Builder()
@@ -104,10 +104,14 @@ public class GetRulesEngineResultProcessor extends AbstractRmsProcessor {
             fakeResult.setRulesInputMessage(message);
             fakeResult.setActions(allFakeActions);
 
-            // Take the result and put it as an attribute on the flow file.
-            session.putAttribute(flowFile, ATTRIBUTE_RULES_DECISION, mapper.writeValueAsString(fakeResult));
+            // Write the Rules Decision JSON to a flow file
+            FlowFile outputFlowFile = session.write(flowFile, (in, out) -> {
+                try (OutputStream outputStream = new BufferedOutputStream(out)) {
+                    outputStream.write(mapper.writeValueAsBytes(fakeResult));
+                }
+            });
 
-            session.transfer(flowFile, REL_SUCCESS);
+            session.transfer(outputFlowFile, REL_SUCCESS);
         } catch (Exception e) {
             log.error(e.getMessage());
 
