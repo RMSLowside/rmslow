@@ -34,8 +34,8 @@ public class VerifyJsonContentsProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 1 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 1);
-        assertTrue("Did not have 0 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 0);
+        assertTrue("Did not have 1 SUCCESS", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_SUCCESS).size() == 1);
+        assertTrue("Did not have 0 FAILURE", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).size() == 0);
     }
 
     @Test
@@ -46,10 +46,10 @@ public class VerifyJsonContentsProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 0);
-        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
+        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_SUCCESS).size() == 0);
+        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).size() == 1);
 
-        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
+        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).get(0);
         assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute(ATTRIBUTE_IS_VALID).equals("false"));
         assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).contains("Unrecognized field \"aThing\""));
     }
@@ -62,10 +62,10 @@ public class VerifyJsonContentsProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 0);
-        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
+        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_SUCCESS).size() == 0);
+        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).size() == 1);
 
-        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
+        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).get(0);
         assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute(ATTRIBUTE_IS_VALID).equals("false"));
         assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).equals("GUIDE is null or empty"));
     }
@@ -78,10 +78,10 @@ public class VerifyJsonContentsProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 0);
-        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
+        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_SUCCESS).size() == 0);
+        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).size() == 1);
 
-        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
+        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(VerifyJsonContentsProcessor.REL_FAILURE).get(0);
         assertTrue("Did not have correct 'Valid' attribute", flowFile.getAttribute(ATTRIBUTE_IS_VALID).equals("false"));
         assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).equals("CreateDate does not match expected format of yyyy-MM-dd"));
     }

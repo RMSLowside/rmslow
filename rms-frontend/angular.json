@@ -21,17 +21,12 @@
             "polyfills": "apps/s3/src/polyfills.ts",
             "tsConfig": "apps/s3/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/s3/src/favicon.ico",
-              "apps/s3/src/assets"
-            ],
+            "assets": ["apps/s3/src/favicon.ico", "apps/s3/src/assets"],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "libs/shared-assets/styles.scss",
               "apps/s3/src/styles.scss"
             ],
-            "scripts": [
-              "./node_modules/crypto-js/crypto-js.js"
-            ]
+            "scripts": ["./node_modules/crypto-js/crypto-js.js"]
           },
           "configurations": {
             "production": {
@@ -88,10 +83,7 @@
               "apps/s3/tsconfig.app.json",
               "apps/s3/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/s3/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/s3/**"]
           }
         },
         "test": {
@@ -126,13 +118,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/s3-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/s3-e2e/**"
-            ]
+            "tsConfig": ["apps/s3-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/s3-e2e/**"]
           }
         }
       }
@@ -150,10 +137,7 @@
               "libs/core/tsconfig.lib.json",
               "libs/core/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/core/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/core/**"]
           }
         },
         "test": {
@@ -197,7 +181,7 @@
               "apps/lazy-load/src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "libs/shared-assets/styles.scss",
               "apps/lazy-load/src/styles.scss"
             ],
             "scripts": []
@@ -257,10 +241,7 @@
               "apps/lazy-load/tsconfig.app.json",
               "apps/lazy-load/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/lazy-load/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/lazy-load/**"]
           }
         },
         "test": {
@@ -287,10 +268,7 @@
               "libs/file-explorer/tsconfig.lib.json",
               "libs/file-explorer/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/file-explorer/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/file-explorer/**"]
           }
         },
         "test": {
@@ -329,12 +307,11 @@
             "polyfills": "apps/home/src/polyfills.ts",
             "tsConfig": "apps/home/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/home/src/favicon.ico",
-              "apps/home/src/assets"
-            ],
+
+            "assets": ["apps/home/src/favicon.ico", "apps/home/src/assets"],
             "styles": [
-              "apps/home/src/styles.scss"
+              "apps/home/src/styles.scss",
+              "libs/shared-assets/styles.scss"
             ],
             "scripts": []
           },
@@ -393,10 +370,7 @@
               "apps/home/tsconfig.app.json",
               "apps/home/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/home/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/home/**"]
           }
         },
         "test": {
@@ -431,13 +405,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/home-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/home-e2e/**"
-            ]
+            "tsConfig": ["apps/home-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/home-e2e/**"]
           }
         }
       }
@@ -455,10 +424,7 @@
               "libs/grid/tsconfig.lib.json",
               "libs/grid/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/grid/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/grid/**"]
           }
         },
         "test": {
@@ -468,6 +434,38 @@
             "tsConfig": "libs/grid/tsconfig.spec.json",
             "passWithNoTests": true,
             "setupFile": "libs/grid/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "header": {
+      "projectType": "library",
+      "root": "libs/header",
+      "sourceRoot": "libs/header/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/header/tsconfig.lib.json",
+              "libs/header/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/header/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/header/jest.config.js",
+            "tsConfig": "libs/header/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/header/src/test-setup.ts"
           }
         }
       },

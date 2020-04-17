@@ -1,0 +1,16 @@
+<rms-file-explorer
+  [fileElements]="files$ | async"
+  [path]="(currentPath$ | async) || 'Files'"
+  [canNavigateUp]="canNavigateUp"
+  (folderAdded)="addFolder($event)"
+  (elementRemoved)="removeElement($event)"
+  (navigatedDown)="navigateToFolder($event)"
+  (navigatedUp)="navigateUp()"
+  (elementRenamed)="renameElement($event)"
+  (elementMoved)="moveElement($event)"
+  (filesUploaded)="filesUploaded($event)"
+  (fileSelected)="fileSelected($event)"
+  (encryptEmitter)="encrypt($event)"
+  (decryptEmitter)="decrypt($event)"
+>
+</rms-file-explorer>

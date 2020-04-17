@@ -32,8 +32,8 @@ public class ConvertXmlToJsonProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 1 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 1);
-        assertTrue("Did not have 0 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 0);
+        assertTrue("Did not have 1 SUCCESS", testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_SUCCESS).size() == 1);
+        assertTrue("Did not have 0 FAILURE", testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_FAILURE).size() == 0);
     }
 
     @Test
@@ -44,10 +44,10 @@ public class ConvertXmlToJsonProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 0);
-        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
+        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_SUCCESS).size() == 0);
+        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_FAILURE).size() == 1);
 
-        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
+        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_FAILURE).get(0);
         assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).equals("Producer is null or empty"));
     }
 
@@ -59,10 +59,10 @@ public class ConvertXmlToJsonProcessorTest {
         testRunner.run();
 
         testRunner.assertQueueEmpty();
-        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_SUCCESS).size() == 0);
-        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).size() == 1);
+        assertTrue("Did not have 0 SUCCESS", testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_SUCCESS).size() == 0);
+        assertTrue("Did not have 1 FAILURE", testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_FAILURE).size() == 1);
 
-        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(JsonDecisionProcessor.REL_FAILURE).get(0);
+        MockFlowFile flowFile = testRunner.getFlowFilesForRelationship(ConvertXmlToJsonProcessor.REL_FAILURE).get(0);
         assertTrue("Did not have correct 'ValidationErrors' attribute", flowFile.getAttribute(ATTRIBUTE_VALIDATION_ERRORS).equals("Unknown schema version."));
     }
 }

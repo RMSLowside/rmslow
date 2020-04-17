@@ -44,6 +44,9 @@
     "home-e2e": {
       "tags": [],
       "implicitDependencies": ["home"]
+    },
+    "header": {
+      "tags": []
     }
   }
 }

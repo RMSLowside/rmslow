@@ -1,6 +1,11 @@
 package rms.processors.json;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.nifi.annotation.behavior.InputRequirement;
+import org.apache.nifi.annotation.behavior.ReadsAttributes;
+import org.apache.nifi.annotation.behavior.WritesAttributes;
+import org.apache.nifi.annotation.documentation.CapabilityDescription;
+import org.apache.nifi.annotation.documentation.SeeAlso;
 import org.apache.nifi.annotation.documentation.Tags;
 import org.apache.nifi.components.PropertyDescriptor;
 import org.apache.nifi.flowfile.FlowFile;
@@ -35,6 +40,11 @@ import java.util.Set;
 import static rms.processors.utilities.RmsEnums.*;
 
 @Tags({"rms", "xml", "json", "convert"})
+@SeeAlso({})
+@CapabilityDescription("Convert a XML document into the standard RMS rules engine ingest object.")
+@InputRequirement(InputRequirement.Requirement.INPUT_REQUIRED)
+@ReadsAttributes({})
+@WritesAttributes({})
 public class ConvertXmlToJsonProcessor extends AbstractRmsProcessor {
 
     public static final PropertyDescriptor MAX_BUFFER_SIZE = new PropertyDescriptor.Builder()
@@ -54,7 +64,7 @@ public class ConvertXmlToJsonProcessor extends AbstractRmsProcessor {
             .defaultValue("UTF-8")
             .build();
 
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper mapper = new ObjectMapper();
     private XPath documentXpath;
     private Document documentXml;
 
@@ -97,7 +107,7 @@ public class ConvertXmlToJsonProcessor extends AbstractRmsProcessor {
         // Write the JSON to a flow file
         FlowFile outputFlowFile = session.write(flowFile, (in, out) -> {
             try (OutputStream outputStream = new BufferedOutputStream(out)) {
-                outputStream.write(objectMapper.writeValueAsBytes(rulesInputMessage));
+                outputStream.write(mapper.writeValueAsBytes(rulesInputMessage));
             }
         });
 
