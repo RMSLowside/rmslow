@@ -31,7 +31,6 @@ CREATE TABLE upcoming_dispositions_30_days (
     dispositionDate date NOT NULL
 )//
 
---endDelimiter "//"
 CREATE PROCEDURE populate_record_system_metrics()
 BEGIN
     INSERT INTO record_system_metrics(runDate, recordSystemGuide, recordCount)
