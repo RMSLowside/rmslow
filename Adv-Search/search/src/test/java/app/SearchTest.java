@@ -148,4 +148,11 @@ public class SearchTest {
         assertEquals(expected, Search.termify(input));
     }
 
+    @Test
+    public void testQuotedFullTextOps() {
+        String input = "STANDARD & \"OR\" AND \"AND\"";
+        String expected = "<term>STANDARD</term> & <term>OR</term> & <term>AND</term>";
+        assertEquals(expected, Search.termify(input));
+    }
+
 }

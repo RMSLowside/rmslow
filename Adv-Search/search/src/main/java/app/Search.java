@@ -32,15 +32,15 @@ public class Search {
                     }
                     //check for whole word all-caps AND
                     else if(inputString.substring(i).startsWith("AND")){
-                        i += 3;
+                        i += 2;
                     }
                     //check for whole word all-caps OR
                     else if(inputString.substring(i).startsWith("OR")){
-                        i += 2;
+                        i += 1;
                     }
                     //check for whole word all-caps NOT
                     else if(inputString.substring(i).startsWith("NOT")){
-                        i += 3;
+                        i += 2;
                     }
                 }
             }
