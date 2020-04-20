@@ -170,7 +170,10 @@ public class AddToRmmProcessor extends AbstractRmsProcessor {
         insertStatement.setString(5, createDate);
         insertStatement.setString(6, dispositionDate);
 
-        insertStatement.execute();
+        if(insertStatement.executeUpdate() < 1){
+            throw new RmsGeneralException("Failed to insert the row into MySQL.");
+        }
+
         insertStatement.close();
         connection.close();
     }
