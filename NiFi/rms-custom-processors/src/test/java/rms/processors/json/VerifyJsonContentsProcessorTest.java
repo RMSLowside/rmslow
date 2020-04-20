@@ -10,8 +10,8 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
 import static junit.framework.TestCase.assertTrue;
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
+import static rms.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
+import static rms.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 
 public class VerifyJsonContentsProcessorTest {
     private TestRunner testRunner;

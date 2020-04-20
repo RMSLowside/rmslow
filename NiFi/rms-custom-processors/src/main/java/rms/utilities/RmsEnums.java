@@ -1,4 +1,4 @@
-package rms.processors.utilities;
+package rms.utilities;
 
 public class RmsEnums {
     public static final String ATTRIBUTE_IS_VALID = "rms.valid";
@@ -11,4 +11,5 @@ public class RmsEnums {
 
     public static final String VALUE_RCS_ID = "RCS_ID";
     public static final String VALUE_RCS_NAME = "RCS_NAME";
+    public static final String VALUE_RULE_MATCHED_ID = "RULE_MATCHED_ID";
 }
