@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../liquibase/rmm/sql/v1_1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/dao/AddToRmmProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rms-custom-processors/src/test/java/rms/processors/dao/AddToRmmProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../liquibase/rmm/changelog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../liquibase/rmm/changelog.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +44,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../liquibase" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../liquibase/rmm/sql" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -56,27 +57,27 @@
       <recent name="rms.processors.enhance" />
       <recent name="rms.processors.dao" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="rms" />
+      <recent name="rms.processors.json" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows\local" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\scripts\ec2" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
       <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm" />
       <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\libs" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="rms" />
-      <recent name="rms.processors.json" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-      <recent name="groovy.util.GroovyTestCase" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows\local" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\scripts\ec2" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\bin" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AddToRmmProcessorTest">
@@ -289,11 +290,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java</url>
-          <line>181</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/rms-custom-processors/src/main/java/rms/processors/dao/AddToRmmProcessor.java</url>
           <line>165</line>
