@@ -47,7 +47,7 @@ public class AddToRmmProcessorTest {
     public void testValidJson() throws SQLException {
         Mockito.when(mockConnection.prepareStatement(Mockito.anyString())).thenReturn(mockStatement);
         doNothing().when(mockStatement).setString(Mockito.anyInt(), Mockito.anyString());
-        Mockito.when(mockStatement.execute()).thenReturn(true);
+        Mockito.when(mockStatement.executeUpdate()).thenReturn(1);
 
         InputStream content = new ByteArrayInputStream(VALID_JSON.getBytes());
 
@@ -63,7 +63,7 @@ public class AddToRmmProcessorTest {
     public void testInvalidJson() throws SQLException {
         Mockito.when(mockConnection.prepareStatement(Mockito.anyString())).thenReturn(mockStatement);
         doNothing().when(mockStatement).setString(Mockito.anyInt(), Mockito.anyString());
-        Mockito.when(mockStatement.execute()).thenReturn(true);
+        Mockito.when(mockStatement.executeUpdate()).thenReturn(1);
 
         InputStream content = new ByteArrayInputStream(INVALID_JSON.getBytes());
 
@@ -83,7 +83,7 @@ public class AddToRmmProcessorTest {
     public void testFailedMysqlInsert() throws SQLException {
         Mockito.when(mockConnection.prepareStatement(Mockito.anyString())).thenReturn(mockStatement);
         doNothing().when(mockStatement).setString(Mockito.anyInt(), Mockito.anyString());
-        Mockito.when(mockStatement.execute()).thenReturn(false);
+        Mockito.when(mockStatement.executeUpdate()).thenReturn(0);
 
         InputStream content = new ByteArrayInputStream(VALID_JSON.getBytes());
 
