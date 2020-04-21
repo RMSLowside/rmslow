@@ -3,6 +3,11 @@
 --changeset kimmela:rmsl-50 endDelimiter://
 USE rmm//
 
+CREATE TABLE record_metrics (
+    runDate date NOT NULL,
+    recordCount int NOT NULL
+)//
+
 CREATE TABLE record_system_metrics (
     runDate date NOT NULL,
     recordSystemGuide varchar(255) NOT NULL,
@@ -30,6 +35,20 @@ CREATE TABLE upcoming_dispositions_30_days (
     recordSystemGuide varchar(255) NOT NULL,
     dispositionDate date NOT NULL
 )//
+
+CREATE TABLE past_due_dispositions (
+    guide varchar(255) primary key,
+    recordSystemGuide varchar(255) NOT NULL,
+    dispositionDate date NOT NULL,
+    daysOverDue int NOT NULL
+)//
+
+CREATE PROCEDURE populate_record_metrics()
+BEGIN
+    INSERT INTO record_metrics(runDate, recordCount)
+    SELECT CURDATE(), COUNT(*) AS count
+    FROM records;
+END//
 
 CREATE PROCEDURE populate_record_system_metrics()
 BEGIN
@@ -59,4 +78,14 @@ BEGIN
     SELECT guide, recordSystemGuide, dispositionDate
     FROM records
     WHERE dispositionDate BETWEEN CURDATE() AND CURDATE() + INTERVAL 30 DAY;
+END//
+
+CREATE PROCEDURE populate_past_due_dispositions()
+BEGIN
+    TRUNCATE TABLE past_due_dispositions;
+
+    INSERT INTO past_due_dispositions(guide, recordSystemGuide, dispositionDate, daysOverDue)
+    SELECT guide, recordSystemGuide, dispositionDate, DATEDIFF(CURDATE(), dispositionDate)
+    FROM records
+    WHERE dispositionDate < CURDATE() AND dispositionAppliedBy IS NULL;
 END//
