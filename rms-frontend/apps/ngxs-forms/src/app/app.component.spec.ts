@@ -14,10 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ngxs-forms'`, () => {
+  it(`should have as title 'ngxsForms'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ngxs-forms');
+    expect(app.title).toEqual('ngxsForms');
   });
 
   it('should render title', () => {

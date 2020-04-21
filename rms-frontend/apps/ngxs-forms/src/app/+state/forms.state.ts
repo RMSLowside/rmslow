@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Action, State, Selector, StateContext } from '@ngxs/store';
-import { ToFormGroup, SetFormQuestions, SaveToDraft, SetFormsGroup } from './forms.actions';
+import { ImmutableContext } from '@ngxs-labs/immer-adapter';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { QuestionBase } from '@rms-frontend/forms';
-import { ImmutableContext, ImmutableSelector } from '@ngxs-labs/immer-adapter';
+import { SaveToDraft, SetFormsGroup } from './forms.actions';
 
 interface NovelsStateModel {
   newNovelForm: {
@@ -53,7 +52,7 @@ interface FormStateModel {
 export class FormState {
 
   @Action(SaveToDraft)
-  @ImmutableContext()
+  // @ImmutableContext()
   saveToDraft(ctx: StateContext<FormStateModel>, model: any) {
     const state = ctx.getState();
     const drafts = state.drafts;
@@ -63,15 +62,6 @@ export class FormState {
       return st;
     });
   }
-
-  @Action(SetFormQuestions)
-  setFormQuestions(ctx: StateContext<FormStateModel>, questions: any) {
-    ctx.setState((st: FormStateModel) => {
-      st.questions = questions;
-      return st;
-    });
-  }
-
   @Action(SetFormsGroup)
   setFormsGroup(ctx: StateContext<FormStateModel>, model: any) {
     ctx.setState((st: FormStateModel) => {
@@ -81,7 +71,6 @@ export class FormState {
   }
 
   @Selector()
-  // @ImmutableSelector()
   static formGroup(state: FormStateModel) {
     return state.formGroup;
   }

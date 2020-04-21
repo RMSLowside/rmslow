@@ -1,4 +1,4 @@
-<!-- {{(form$ | async) | json}} -->
+{{(form$ | async) | json}}
 
 <form [formGroup]="newNovelForm" ngxsForm="novels.newNovelForm" (ngSubmit)="onSubmit()">
     <input type="text" formControlName="novelName" />
