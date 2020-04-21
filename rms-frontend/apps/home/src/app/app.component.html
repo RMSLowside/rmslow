@@ -1,8 +1,5 @@
-<div
-  class="{{ theme$ | async }}-theme main"
-  style="display: flex; flex-direction: row; height: 100%;"
->
-  <div style="flex:1 1 auto; padding: 0;margin: 0;">
+<div class="{{ theme$ | async }}-theme main" fxLayout="row">
+  <div fxFill>
     <rms-frontend-header
       [title]="'Home'"
       (themeChange)="themeChange($event)"

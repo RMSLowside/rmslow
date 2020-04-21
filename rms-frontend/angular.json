@@ -114,13 +114,10 @@
           "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/s3-e2e/cypress.json",
-            "tsConfig": "apps/s3-e2e/tsconfig.e2e.json",
-            "devServerTarget": "s3:serve"
+            "tsConfig": "apps/s3-e2e/tsconfig.e2e.json"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "s3:serve:production"
-            }
+            "production": {}
           }
         },
         "lint": {
@@ -421,13 +418,10 @@
           "builder": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/home-e2e/cypress.json",
-            "tsConfig": "apps/home-e2e/tsconfig.e2e.json",
-            "devServerTarget": "home:serve"
+            "tsConfig": "apps/home-e2e/tsconfig.e2e.json"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "home:serve:production"
-            }
+            "production": {}
           }
         },
         "lint": {

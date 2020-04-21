@@ -28,8 +28,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
-import static rms.processors.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
+import static rms.utilities.RmsEnums.ATTRIBUTE_IS_VALID;
+import static rms.utilities.RmsEnums.ATTRIBUTE_VALIDATION_ERRORS;
 
 @Tags({"rms", "xml", "https"})
 @SeeAlso({})

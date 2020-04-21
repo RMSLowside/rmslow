@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PreAuthComponent } from './pre-auth.component';
 import { CoreModule } from '../core.module';
+import { NgxsModule } from '@ngxs/store';
 
 describe('PreAuthComponent', () => {
   let component: PreAuthComponent;
@@ -10,7 +11,7 @@ describe('PreAuthComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [],
-      imports: [CoreModule]
+      imports: [CoreModule, NgxsModule.forRoot([])]
     }).compileComponents();
   }));
 

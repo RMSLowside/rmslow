@@ -9,11 +9,6 @@ import { ExplorerState } from '../+state/file.state';
 
 @NgModule({
   declarations: [ExplorerComponent],
-  imports: [
-    CommonModule,
-    ExplorerRoutingModule,
-    FileExplorerModule,
-    NgxsModule.forFeature([ExplorerState])
-  ]
+  imports: [CommonModule, ExplorerRoutingModule, FileExplorerModule]
 })
 export class ExplorerModule {}

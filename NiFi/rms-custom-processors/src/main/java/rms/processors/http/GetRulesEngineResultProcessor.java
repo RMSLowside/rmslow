@@ -3,7 +3,6 @@ package rms.processors.http;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.nifi.annotation.behavior.InputRequirement;
 import org.apache.nifi.annotation.behavior.ReadsAttributes;
-import org.apache.nifi.annotation.behavior.WritesAttribute;
 import org.apache.nifi.annotation.behavior.WritesAttributes;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
 import org.apache.nifi.annotation.documentation.SeeAlso;
@@ -31,7 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import static rms.processors.utilities.RmsEnums.*;
+import static rms.utilities.RmsEnums.*;
 
 @Tags({"rms", "json", "rules", "https"})
 @SeeAlso({})
@@ -92,6 +91,7 @@ public class GetRulesEngineResultProcessor extends AbstractRmsProcessor {
             HashMap<String, String> fakeValues = new HashMap<>();
             fakeValues.put(VALUE_RCS_ID, "54");
             fakeValues.put(VALUE_RCS_NAME, "FRCS-Q2a");
+            fakeValues.put(VALUE_RULE_MATCHED_ID, "13");
 
             Actions fakeAction = new Actions();
             fakeAction.setAction(ACTION_ADD_TO_RMM);

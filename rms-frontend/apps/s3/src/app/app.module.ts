@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxsModule.forRoot([GlobalState, AuthState, ExplorerState]),
     NgxsStoragePluginModule.forRoot({
       key: [GlobalState, ExplorerState]
     }),
