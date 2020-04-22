@@ -3,10 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard, UnauthComponent } from '@rms-frontend/core';
 
 const routes: Routes = [
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'routeTwo',
+    loadChildren: () =>
+      import('./route-two/route-two.module').then(m => m.RouteTwoModule)
+  },
   { path: 'unauth', component: UnauthComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
