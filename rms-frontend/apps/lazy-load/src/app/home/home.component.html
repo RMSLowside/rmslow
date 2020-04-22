@@ -1,23 +1,29 @@
-<mat-toolbar>
+<div fxLayout="column" fxLayoutGap="40px">
+  <mat-toolbar>
   <span>Lazy Load</span>
 </mat-toolbar>
-<div style="height: 300px;">
+<div>
+Lazy load from a route
+<button mat-raised-button color="accent" routerLink="/routeTwo">
+  lazy route
+</button>
+
+</div>
+<div fxLayout="column" fxLayoutGap="10px">
   Lazy load on button click to a container
-  <div>
+  <div fxLayout="row" fxLayoutGap="40px">
     <button mat-raised-button color="accent" (click)="lazyLoadPart2()">
       load part 1
     </button>
     <button mat-raised-button color="accent" (click)="lazyLoadPart3()">
       load part 2
     </button>
-    <button mat-raised-button color="accent" routerLink="/routeTwo">
-      lazy route
-    </button>
+
   </div>
   <div #btnContainer></div>
 </div>
 
-<div style="height: 300px; padding-top: 30px;">
+<div>
   Lazy load tab content
   <mat-tab-group
     backgroundColor="accent"
@@ -39,4 +45,5 @@
       </ng-template>
     </mat-tab>
   </mat-tab-group>
+</div>
 </div>
