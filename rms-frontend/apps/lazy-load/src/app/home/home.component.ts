@@ -13,6 +13,7 @@ import { Part2Component } from './part2/part2.component';
 import { Part3Component } from './part3/part3.component';
 import { FileExplorerComponent } from '@rms-frontend/file-explorer';
 import { GridComponent } from 'libs/grid/src/lib/grid/grid.component';
+import { TabContent1Component } from './tab-content1/tab-content1.component';
 
 @Component({
   selector: 'lazy-load-home',
@@ -33,6 +34,7 @@ export class HomeComponent implements AfterViewInit {
   threeRef: ComponentRef<Part3Component>;
   fileRef: ComponentRef<FileExplorerComponent>;
   gridRef: ComponentRef<GridComponent>;
+  tab1Ref: ComponentRef<TabContent1Component>;
 
   constructor(
     private cfr: ComponentFactoryResolver,
@@ -43,6 +45,55 @@ export class HomeComponent implements AfterViewInit {
     //viewContainerRef clear function doesn't clear static component so if inital component needs to be displayed create the component them manually.
     this.lazyLoadComponent1();
     this.lazyLoadTabContent1();
+  }
+
+  tabSelectionChanged(event) {
+    const selectedTabName = event.tab.textLabel;
+
+    switch (selectedTabName) {
+      case 'Frst':
+        this.lazyLoadTabContent1();
+        break;
+
+      case 'Grid':
+        this.lazyLoadGrid();
+        break;
+      case 'File Explorer':
+        this.lazyLoadFileExplorer();
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  async lazyLoadTabContent1() {
+    const { TabContent1Component } = await import(
+      './tab-content1/tab-content1.component'
+    );
+    const factory = this.cfr.resolveComponentFactory(TabContent1Component);
+    this.tab1Ref = this.container1.createComponent(factory);
+    this.tab1Ref.hostView.detectChanges();
+  }
+
+  async lazyLoadGrid() {
+    const { GridComponent } = await import('@rms-frontend/grid');
+    const factory = this.cfr.resolveComponentFactory(GridComponent);
+    this.gridRef = this.container2.createComponent(factory);
+    this.gridRef.hostView.detectChanges();
+    this.gridRef.instance.columns = ['position', 'name', 'weight', 'symbol'];
+    this.gridRef.instance.data = [
+      { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
+      { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
+      { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
+      { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
+      { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
+      { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
+      { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
+      { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
+      { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
+      { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
+    ];
   }
 
   async lazyLoadComponent1() {
@@ -57,7 +108,7 @@ export class HomeComponent implements AfterViewInit {
     this.oneRef.hostView.detectChanges();
   }
 
-  async lazyLoadFileExplorerModule() {
+  async lazyLoadFileExplorer() {
     const { FileExplorerComponent } = await import(
       '@rms-frontend/file-explorer'
     );
@@ -67,92 +118,25 @@ export class HomeComponent implements AfterViewInit {
     this.fileRef.hostView.detectChanges();
   }
 
-  async getLazy1() {
-    this.btnContainer.clear(); // clear existing component  will not clear static componentu
-    const name = 'test';
-    import('./part2/part2.component').then(({ Part2Component }) => {
-      const component = this.cfr.resolveComponentFactory(Part2Component);
-      const componentRef = this.btnContainer.createComponent(component);
-      componentRef.instance.name = name;
-    });
-  }
-
-  async getLazy2() {
-    this.btnContainer.clear(); // clear existing component in the container
-    const { Part3Component } = await import('./part3/part3.component');
-    this.btnContainer.createComponent(
-      this.cfr.resolveComponentFactory(Part3Component)
-    );
-  }
-
-  tabSelectionChanged(event) {
-    let selectedTabName = event.tab.textLabel;
-
-    switch (selectedTabName) {
-      case 'Frst':
-        this.lazyLoadTabContent1();
-        break;
-
-      case 'Grid':
-        this.lazyLoadTabContent2();
-        break;
-      case 'File Explorer':
-        this.lazyLoadFileExplorerModule();
-        break;
-
-      default:
-        break;
+  async lazyLoadPart2() {
+    if (this.btnContainer) {
+      this.btnContainer.clear(); // clear existing component  will not clear static componentu
     }
+    const name = 'test';
+    const { Part2Component } = await import('./part2/part2.component');
+    const factory = this.cfr.resolveComponentFactory(Part2Component);
+    this.twoRef = this.btnContainer.createComponent(factory);
+    this.twoRef.instance.name = name;
+    this.twoRef.hostView.detectChanges();
   }
 
-  async lazyLoadTabContent1() {
-    this.container1.clear();
-    import('./tab-content1/tab-content1.component').then(
-      ({ TabContent1Component }) => {
-        const component = this.cfr.resolveComponentFactory(
-          TabContent1Component
-        );
-        const componentRef = this.container1.createComponent(component);
-      }
-    );
-  }
-
-  async lazyLoadTabContent2() {
-    this.container2.clear();
-    import('@rms-frontend/grid').then(({ GridModule }) => {
-      import('libs/grid/src/lib/grid/grid.component').then(
-        ({ GridComponent }) => {
-          const component = this.cfr.resolveComponentFactory(GridComponent);
-          const componentRef = this.container2.createComponent(component);
-          componentRef.instance.columns = [
-            'position',
-            'name',
-            'weight',
-            'symbol'
-          ];
-          componentRef.instance.data = [
-            { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-            { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-            { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-            { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-            { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-            { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-            { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-            { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-            { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-            { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }
-          ];
-        }
-      );
-    });
-  }
-
-  async lazyLoadTabContent3() {
-    this.container3.clear();
-    import('./part1/part1.component').then(({ Part1Component }) => {
-      const component = this.cfr.resolveComponentFactory(Part1Component);
-      const componentRef = this.container3.createComponent(component);
-      componentRef.instance.name = name;
-    });
+  async lazyLoadPart3() {
+    if (this.btnContainer) {
+      this.btnContainer.clear(); // clear existing component  will not clear static componentu
+    }
+    const { Part3Component } = await import('./part3/part3.component');
+    const factory = this.cfr.resolveComponentFactory(Part3Component);
+    this.threeRef = this.btnContainer.createComponent(factory);
+    this.threeRef.hostView.detectChanges();
   }
 }
