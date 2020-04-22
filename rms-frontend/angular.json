@@ -252,6 +252,30 @@
         }
       }
     },
+    "lazy-load-e2e": {
+      "root": "apps/lazy-load-e2e",
+      "sourceRoot": "apps/lazy-load-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/lazy-load-e2e/cypress.json",
+            "tsConfig": "apps/lazy-load-e2e/tsconfig.e2e.json"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/lazy-load-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/lazy-load-e2e/**"]
+          }
+        }
+      }
+    },
     "file-explorer": {
       "projectType": "library",
       "root": "libs/file-explorer",
