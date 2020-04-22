@@ -5,13 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CoreModule } from '@rms-frontend/core';
 
-
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    CoreModule,
-    HomeRoutingModule
-  ]
+  imports: [CommonModule, CoreModule, HomeRoutingModule]
 })
-export class HomeModule { }
+export class HomeModule {}
