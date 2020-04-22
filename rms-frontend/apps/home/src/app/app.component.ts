@@ -26,6 +26,10 @@ export class AppComponent {
       key: 'Steve Home',
       value: `https://smcfall2.github.io/rmslow/apps/home/`
     },
+    {
+      key: 'Daniel Home',
+      value: `https://flare891.github.io/rmslow/apps/home`
+    },
     { key: 'S3 App', value: `${location.origin}/rmslow/apps/s3` },
     { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` }
   ];
