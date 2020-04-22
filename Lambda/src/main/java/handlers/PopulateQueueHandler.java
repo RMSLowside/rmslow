@@ -25,7 +25,7 @@ public class PopulateQueueHandler implements RequestHandler<Object, String> {
         AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
 
         // Send messages to Direct Queue...
-        int numberOfMessages = new Random().nextInt(1000);
+        int numberOfMessages = new Random().nextInt(200);
         context.getLogger().log("Adding " + numberOfMessages + " messages to 'records-ingest-queue'");
 
         ArrayList<SendMessageBatchRequestEntry> queueMessages = new ArrayList<>();
@@ -76,7 +76,7 @@ public class PopulateQueueHandler implements RequestHandler<Object, String> {
         }
 
         // Send to Fake queue
-        numberOfMessages = new Random().nextInt(1000);
+        numberOfMessages = new Random().nextInt(200);
         context.getLogger().log("Adding " + numberOfMessages + " messages to 'fake-outside-queue'");
 
         queueMessages = new ArrayList<>();
