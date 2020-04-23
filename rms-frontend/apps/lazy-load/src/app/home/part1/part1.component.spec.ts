@@ -9,14 +9,9 @@ describe('Part1Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        Part1Component
-      ],
-      imports: [
-        CoreModule
-      ]
-    })
-      .compileComponents();
+      declarations: [Part1Component],
+      imports: [CoreModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

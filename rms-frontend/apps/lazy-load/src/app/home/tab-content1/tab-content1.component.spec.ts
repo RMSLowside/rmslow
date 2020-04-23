@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TabContent1Component } from './tab-content1.component';
+import { CoreModule } from '@rms-frontend/core';
 
 describe('TabContent1Component', () => {
   let component: TabContent1Component;
@@ -8,9 +9,9 @@ describe('TabContent1Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TabContent1Component ]
-    })
-    .compileComponents();
+      declarations: [TabContent1Component],
+      imports: [CoreModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
