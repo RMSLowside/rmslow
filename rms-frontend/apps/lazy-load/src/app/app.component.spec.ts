@@ -51,4 +51,11 @@ describe('AppComponent', () => {
   it(`should have as title 'lazy-load'`, () => {
     expect(app.title).toEqual('lazy-load');
   });
+  it(`should load the header`, () => {
+    fixture.detectChanges();
+    app.loadHeader();
+    setTimeout(() => {
+      expect(app.headerRef).toBeDefined();
+    }, 50);
+  });
 });

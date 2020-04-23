@@ -27,17 +27,17 @@
       backgroundColor="accent"
       (selectedTabChange)="tabSelectionChanged($event)"
     >
-      <mat-tab label="First">
+      <mat-tab label="First" id="first">
         <ng-template matTabContent>
           <div #container1></div>
         </ng-template>
       </mat-tab>
-      <mat-tab label="Grid">
+      <mat-tab label="Grid" id="grid">
         <ng-template matTabContent>
           <div #container2></div>
         </ng-template>
       </mat-tab>
-      <mat-tab label="File Explorer">
+      <mat-tab label="File Explorer" id="file">
         <ng-template matTabContent>
           <div #container3></div>
         </ng-template>
