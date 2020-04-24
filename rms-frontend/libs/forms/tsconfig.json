@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "jest"]
+  },
+  "include": ["**/*.ts", "../../apps/lazy-load/src/app/+state/question-control.service.ts", "../../apps/lazy-load/src/app/+state/question.service.ts"]
+}

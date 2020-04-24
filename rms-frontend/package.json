@@ -42,6 +42,7 @@
     "@angular/platform-browser-dynamic": "9.1.0",
     "@angular/router": "9.1.0",
     "@ngxs-labs/immer-adapter": "^3.0.5",
+    "@ngxs/form-plugin": "^3.6.2",
     "@ngxs/devtools-plugin": "^3.3.2",
     "@ngxs/logger-plugin": "^3.3.2",
     "@ngxs/schematics": "0.0.1-alpha.5",
