@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { KeyValue } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { HelpComponent, HelpModalBase } from '@rms-frontend/help-modal';
+import { HelpComponent } from '@rms-frontend/help-modal';
 
 @Component({
   selector: 'rms-frontend-header',
@@ -10,6 +10,7 @@ import { HelpComponent, HelpModalBase } from '@rms-frontend/help-modal';
 })
 export class HeaderComponent {
   @Input() title: string;
+  @Input() helpContent: any = [];
   @Output() themeChange = new EventEmitter<string>();
   constructor(public dialog: MatDialog) { }
 
@@ -31,7 +32,7 @@ export class HeaderComponent {
   ];
 
   openHelpModal() {
-    // ccheck if help modal is already open
+    // check if help modal is already open
     if (this.dialog.openDialogs.findIndex(x => x.id === 'help-modal') == -1) {
       const dialogRef = this.dialog.open(HelpComponent,
         {
@@ -41,20 +42,10 @@ export class HeaderComponent {
           position: { top: '70px', right: '10px' }
         });
       dialogRef.componentInstance.title = 'Home Page Help Modal';
-      dialogRef.componentInstance.contents = this.getHelpContent()
+      dialogRef.componentInstance.contents = this.helpContent;
       dialogRef.afterClosed().subscribe(res => {
         console.log('help modal closed');
       });
     }
-  }
-
-  getHelpContent() {
-    const helpContent = [
-      new HelpModalBase('text', 'test1', 'test help content'),
-      new HelpModalBase('link', 'link to main home page ', 'https://rmslowside.github.io/rmslow/apps/home/'),
-      new HelpModalBase('text', 'test3', 'test help content'),
-    ]
-
-    return helpContent;
   }
 }

@@ -4,6 +4,7 @@ import { Store, Select } from '@ngxs/store';
 import { GlobalState, SetTheme } from '@rms-frontend/core';
 import { Observable } from 'rxjs';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { HelpBase, HelpText, HelpLink } from '@rms-frontend/help-modal';
 
 @Component({
   selector: 'home-root',
@@ -11,7 +12,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public overlayContainer: OverlayContainer, public store: Store) {}
+  constructor(public overlayContainer: OverlayContainer, public store: Store) { }
   title = 'Home';
   links: KeyValue<string, string>[] = [
     {
@@ -38,5 +39,27 @@ export class AppComponent {
   });
   themeChange(theme) {
     this.store.dispatch(new SetTheme(theme));
+  }
+
+  getHelpModalContent() {        
+    const helpContent = [
+      new HelpText({
+        title: 'test1',
+        order: 2,
+        text: 'test help content'
+      }),
+      new HelpLink({
+        title: 'link to main home page ',
+        order: 3,
+        link: 'https://rmslowside.github.io/rmslow/apps/home/'
+      }),
+      new HelpText({
+        title: 'test3',
+        order: 1,
+        text: 'test help content'
+      })
+    ]
+
+    return helpContent;
   }
 }
