@@ -1,37 +1,38 @@
 <h1 mat-dialog-title cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle>{{title}}</h1>
-<div mat-dialog-content style="padding-top: 10px; padding-bottom: 10px;">
-    <div *ngFor="let content of contents">
-        <div [ngSwitch]="content.type">
-            <mat-accordion *ngSwitchCase="'text'" style="padding-top: 20px">
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
+<div mat-dialog-content style="padding-top: 20px; padding-bottom: 20px;">
+    <div>
+        <!-- {{indexOfelement}} -->
+        <div>
+            <!-- if index is 1 then set padding on top..-->
+            <!-- <div style="padding-top: 20px"> -->
+            <mat-accordion>
+                <mat-expansion-panel *ngFor="let content of contents;let indexOfelement=index;"
+                    [hideToggle]="content.type=='link'">
+                    <mat-expansion-panel-header *ngIf="content.type=='text'">
                         <mat-panel-title>
                             {{content.title}}
                         </mat-panel-title>
                     </mat-expansion-panel-header>
+                    <mat-expansion-panel-header *ngIf="content.type=='link'" #noexpand
+                        (click)="noexpand._toggle();goToPage(content.content)" style="padding-right: 15px;">
+                        <mat-panel-title>
+                            {{content.title}}
+                        </mat-panel-title>
+                        <mat-icon style="font-size: 18px; color: #7e7e7e;">open_in_new</mat-icon>
+                    </mat-expansion-panel-header>
 
-                    <mat-form-field>
-                        <mat-label>First name</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-
-                    <mat-form-field>
-                        <mat-label>Age</mat-label>
-                        <input matInput type="number" min="1">
-                    </mat-form-field>
+                    {{content.content}}
+                    <!-- display create content component to display content depending on type -->
                 </mat-expansion-panel>
             </mat-accordion>
-            <div *ngSwitchCase="'link'" style="padding-top: 20px">
-                <mat-card>
-                    <div style="display: inline-block;">
-                        Link card
-                        <mat-icon>open_in_new</mat-icon>
-                    </div>
-                </mat-card>
-            </div>
         </div>
     </div>
 </div>
 <div mat-dialog-actions>
+    <!--If user is editor then allow to edit.
+    Possible option is store the help files
+    1. config json file that can be updated and read through ngxs state.  https://devblogs.microsoft.com/premier-developer/angular-how-to-editable-config-files/
+    2. store -->
+    <button mat-raised-button>Edit</button>
     <button mat-raised-button mat-dialog-close>Close</button>
 </div>

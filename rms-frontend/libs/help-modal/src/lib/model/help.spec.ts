@@ -1,7 +1,7 @@
-import { Help } from './help';
+import { HelpModalBase } from './help';
 
 describe('Help', () => {
   it('should create an instance', () => {
-    expect(new Help()).toBeTruthy();
+    expect(new HelpModalBase()).toBeTruthy();
   });
 });

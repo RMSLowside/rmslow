@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { KeyValue } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { HelpComponent, Help } from '@rms-frontend/help-modal';
+import { HelpComponent, HelpModalBase } from '@rms-frontend/help-modal';
 
 @Component({
   selector: 'rms-frontend-header',
@@ -49,11 +49,12 @@ export class HeaderComponent {
   }
 
   getHelpContent() {
-    const helpContnet = [
-      new Help('text', 'test1', 'test help content,'),
-      new Help('link', 'test2', 'test help content')
+    const helpContent = [
+      new HelpModalBase('text', 'test1', 'test help content'),
+      new HelpModalBase('link', 'link to main home page ', 'https://rmslowside.github.io/rmslow/apps/home/'),
+      new HelpModalBase('text', 'test3', 'test help content'),
     ]
 
-    return helpContnet;
+    return helpContent;
   }
 }
