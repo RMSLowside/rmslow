@@ -1,0 +1,11 @@
+<div>
+  <input type="text" style="width: 400px;" [(ngModel)]="startQuery" placeholder="Starting Query">
+</div>
+<br/>
+<div>
+  <rms-range [query]="startQuery" (dateEmit)="onEmit($event)"></rms-range>
+</div>
+<br/>
+<div>
+  <input type="text" style="width: 400px;" [(ngModel)]="endQuery" placeholder="Result Query">
+</div>

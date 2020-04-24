@@ -47,6 +47,16 @@
     },
     "header": {
       "tags": []
+    },
+    "date-translation": {
+      "tags": []
+    },
+    "date-translation-e2e": {
+      "tags": [],
+      "implicitDependencies": ["date-translation"]
+    },
+    "date-range": {
+      "tags": []
     }
   }
 }
