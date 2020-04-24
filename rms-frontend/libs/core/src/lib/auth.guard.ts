@@ -9,12 +9,13 @@ import { first, takeUntil } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthGuard implements CanLoad {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private store: Store) {}
   @Select(AuthState.isAuthenticated) authed$: Observable<boolean>;
 
   canLoad() {
     const sub = new Subject<boolean>();
     const loggedIn = new Subject<any>();
+    if (this.store.selectSnapshot(AuthState.isAuthenticated)) return true;
     this.authed$.pipe(takeUntil(loggedIn)).subscribe(a => {
       if (a !== undefined) {
         if (a) sub.next(a);

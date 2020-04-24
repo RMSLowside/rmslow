@@ -7,19 +7,15 @@ import { CoreModule } from '@rms-frontend/core';
   styleUrls: ['./part1.component.scss']
 })
 export class Part1Component implements OnInit {
-
   @Input() name: string = '';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
 
 @NgModule({
   declarations: [Part1Component],
   imports: [CoreModule]
 })
-class Part1ComponentModule {
-}
+class Part1ComponentModule {}

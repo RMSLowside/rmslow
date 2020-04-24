@@ -39,6 +39,10 @@
     "lazy-load": {
       "tags": []
     },
+    "lazy-load-e2e": {
+      "tags": [],
+      "implicitDependencies": ["lazy-load"]
+    },
     "file-explorer": {
       "tags": []
     },

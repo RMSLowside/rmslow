@@ -3,21 +3,33 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CoreModule } from '@rms-frontend/core';
 import { AppComponent } from './app.component';
 
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxsModule, Store } from '@ngxs/store';
+import { HeaderModule, HeaderComponent } from '@rms-frontend/header';
+import { BrowserModule } from '@angular/platform-browser';
 
 describe('AppComponent', () => {
+  let store: Store;
   let fixture: ComponentFixture<AppComponent>;
   let debugElement: DebugElement;
   let app: AppComponent;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+      declarations: [AppComponent],
       imports: [
-        CoreModule
+        CoreModule,
+        HeaderModule,
+        RouterTestingModule.withRoutes([]),
+        NgxsModule.forRoot([])
       ]
-    }).compileComponents();
+    })
+      .overrideModule(BrowserModule, {
+        set: { entryComponents: [HeaderComponent] }
+      })
+      .compileComponents();
+    store = TestBed.inject(Store);
+    spyOn(store, 'dispatch').and.returnValue(null);
   }));
 
   beforeEach(() => {
@@ -39,13 +51,11 @@ describe('AppComponent', () => {
   it(`should have as title 'lazy-load'`, () => {
     expect(app.title).toEqual('lazy-load');
   });
-
-  it(`lazyLoadComponent1 and lazyLoadTabContent1 should have been called`, async(() => {
-    spyOn(app, 'lazyLoadComponent1');
-    spyOn(app, 'lazyLoadTabContent1');
+  it(`should load the header`, () => {
     fixture.detectChanges();
-
-    expect(app.lazyLoadComponent1).toHaveBeenCalled();
-    expect(app.lazyLoadTabContent1).toHaveBeenCalled();
-  })); 
+    app.loadHeader();
+    setTimeout(() => {
+      expect(app.headerRef).toBeDefined();
+    }, 50);
+  });
 });

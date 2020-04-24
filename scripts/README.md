@@ -8,6 +8,7 @@ Will checkout upstream master, force your master to match, discarding any of you
 Will discard any of your local branches other than master, and will fetch prune to git rid of any deleted origin branches
 
 ## deployToPages.sh
+For any of the deploys you need to install the ngh cli like so: npm install -g angular-cli-ghpages
 Pass in an app name and it will build it and deploy it to your Github Pages
 
 ## deployAllToPages.sh

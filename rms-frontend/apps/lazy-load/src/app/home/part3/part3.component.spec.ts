@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Part3Component } from './part3.component';
+import { CoreModule } from '@rms-frontend/core';
 
 describe('Part3Component', () => {
   let component: Part3Component;
@@ -8,9 +9,9 @@ describe('Part3Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Part3Component ]
-    })
-    .compileComponents();
+      declarations: [Part3Component],
+      imports: [CoreModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

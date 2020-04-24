@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Part2Component } from './part2.component';
+import { RouteTwoComponent } from './route-two.component';
 
-describe('Part2Component', () => {
-  let component: Part2Component;
-  let fixture: ComponentFixture<Part2Component>;
+describe('RouteTwoComponent', () => {
+  let component: RouteTwoComponent;
+  let fixture: ComponentFixture<RouteTwoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Part2Component ]
+      declarations: [ RouteTwoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Part2Component);
+    fixture = TestBed.createComponent(RouteTwoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

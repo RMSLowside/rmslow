@@ -9,6 +9,7 @@
         <module name="Drools" />
         <module name="rms-custom-processors-nar" />
         <module name="rms-custom-processors-processors" />
+        <module name="Lambda" />
       </profile>
     </annotationProcessing>
   </component>
