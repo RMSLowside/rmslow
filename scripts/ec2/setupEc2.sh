@@ -60,6 +60,12 @@ popd
 cd /rms
 crontab -l > mycron
 echo "*/10 * * * * aws s3 cp /rms/nifi/conf/flow.xml.gz s3://rmslowdeployment/flow.xml.gz" >> mycron
+echo "0 * * * * mysql -u root -e 'use rmm; call populate_record_metrics();'" >> mycron
+echo "1 * * * * mysql -u root -e 'use rmm; call populate_record_system_metrics();'" >> mycron
+echo "2 * * * * mysql -u root -e 'use rmm; call populate_rcs_metrics();'" >> mycron
+echo "3 * * * * mysql -u root -e 'use rmm; call populate_upcoming_dispositions_30_days();'" >> mycron
+echo "4 * * * * mysql -u root -e 'use rmm; call populate_upcoming_dispositions_90_days();'" >> mycron
+echo "5 * * * * mysql -u root -e 'use rmm; call populate_past_due_dispositions();'" >> mycron
 crontab mycron
 rm mycron
 

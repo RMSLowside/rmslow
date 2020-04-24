@@ -1,0 +1,12 @@
+<div>
+  <h1 mat-dialog-title></h1>
+
+  <mat-dialog-content>
+    <dynamic-form [form]="form" [questions]="questions" [clearOnDestroy]="clearOnDestroy"></dynamic-form>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="saveAsDraft()">Save Draft</button>
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+  </mat-dialog-actions>
+</div>

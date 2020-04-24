@@ -1,36 +1,11 @@
-<mat-toolbar>
-  <span>Lazy Load</span>
-</mat-toolbar>
-<div style="height: 300px;">
-  Lazy load on button click to a container
-  <div>
-    <button mat-raised-button color="accent" (click)='getLazy1()'>load part 1</button>
-    <button mat-raised-button color="accent" (click)='getLazy2()'>load part 2</button>
+<div class="{{ theme$ | async }}-theme main" fxLayout="row" fxFlex="1 1 auto">
+  <div fxFlex="1 1 auto" style="padding: 0;margin: 0;">
+    <ng-container #header> </ng-container>
+    <ng-template #loggedIn>
+      <router-outlet></router-outlet>
+    </ng-template>
+    <rms-pre-auth
+      *ngIf="(authed$ | async) === undefined; else loggedIn"
+    ></rms-pre-auth>
   </div>
-  <div #btnContainer>
-  </div>
-</div>
-
-<div style="height: 300px; padding-top: 30px;">
-  Lazy load tab content
-  <mat-tab-group backgroundColor="accent" (selectedTabChange)="tabSelectionChanged($event)">
-    <mat-tab label="First">
-      <ng-template matTabContent>
-        <div #container1>
-        </div>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="Grid">
-      <ng-template matTabContent>
-        <div #container2>
-        </div>
-      </ng-template>
-    </mat-tab>
-    <mat-tab label="File Explorer">
-      <ng-template matTabContent>
-        <div #container3>
-        </div>
-      </ng-template>
-    </mat-tab>
-  </mat-tab-group>
 </div>

@@ -14,7 +14,12 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
@@ -24,13 +29,19 @@
     },
     "s3-e2e": {
       "tags": [],
-      "implicitDependencies": ["s3"]
+      "implicitDependencies": [
+        "s3"
+      ]
     },
     "core": {
       "tags": []
     },
     "lazy-load": {
       "tags": []
+    },
+    "lazy-load-e2e": {
+      "tags": [],
+      "implicitDependencies": ["lazy-load"]
     },
     "file-explorer": {
       "tags": []
@@ -43,7 +54,21 @@
     },
     "home-e2e": {
       "tags": [],
-      "implicitDependencies": ["home"]
+      "implicitDependencies": [
+        "home"
+      ]
+    },
+    "forms": {
+      "tags": []
+    },
+    "ngxs-forms": {
+      "tags": []
+    },
+    "ngxs-forms-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "ngxs-forms"
+      ]
     },
     "header": {
       "tags": []
