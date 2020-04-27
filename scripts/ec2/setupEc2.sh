@@ -31,7 +31,7 @@ yum install -y apache-maven
 aws s3 cp s3://rmslowdeployment/software/nifi-1.11.4-bin.tar.gz .
 tar -xzvf nifi-1.11.4-bin.tar.gz
 rm nifi-1.11.4-bin.tar.gz
-mv nifi-1.11.4 nifi0
+mv nifi-1.11.4 nifi
 sed -i 's/-Xms512m/-Xms2048m/g' nifi/conf/bootstrap.conf
 sed -i 's/-Xmx512m/-Xmx2048m/g' nifi/conf/bootstrap.conf
 sed -i 's/nifi.remote.input.host=/nifi.remote.input.host=localhost/g' nifi/conf/nifi.properties
