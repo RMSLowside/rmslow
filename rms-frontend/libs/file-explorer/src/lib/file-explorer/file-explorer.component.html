@@ -109,6 +109,15 @@
 
   <mat-menu #moveToMenu="matMenu">
     <ng-template matMenuContent let-self="self">
+      <ng-container>
+        <button
+          *ngIf="canNavigateUp"
+          mat-menu-item
+          (click)="moveElement(self, null)"
+        >
+          Parent
+        </button>
+      </ng-container>
       <ng-container *ngFor="let element of _fileElements">
         <button
           *ngIf="
