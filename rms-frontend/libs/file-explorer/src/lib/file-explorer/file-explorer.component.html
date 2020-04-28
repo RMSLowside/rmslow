@@ -30,7 +30,11 @@
   <div class="container">
     <div class="content" fxFlex fxLayout="row wrap">
       <div
-        *ngFor="let element of _fileElements | orderBy: false:'name'"
+        *ngFor="
+          let element of _fileElements
+            | orderBy: 'asc':'name'
+            | orderBy: 'desc':'isFolder'
+        "
         class="file-or-folder"
       >
         <span
