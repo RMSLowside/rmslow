@@ -29,7 +29,10 @@
 
   <div class="container">
     <div class="content" fxFlex fxLayout="row wrap">
-      <div *ngFor="let element of _fileElements" class="file-or-folder">
+      <div
+        *ngFor="let element of _fileElements | orderBy: false:'name'"
+        class="file-or-folder"
+      >
         <span
           [matMenuTriggerFor]="rootMenu"
           [matMenuTriggerData]="{ element: element }"
