@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +41,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lambda" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/flows" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -59,26 +58,26 @@
       <recent name="" />
       <recent name="groovy.util.GroovyTestCase" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="rms" />
+      <recent name="rms.processors.json" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\Lambda" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows\local" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="models" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
       <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm" />
       <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\libs" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="rms" />
-      <recent name="rms.processors.json" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\adamp\Desktop\rmslow\Lambda" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows\local" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AddToRmmProcessorTest">
