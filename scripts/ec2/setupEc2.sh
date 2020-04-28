@@ -41,7 +41,7 @@ cp rms-custom-nar/target/rms-custom-processors-nar-1.0-SNAPSHOT.nar /rms/nifi/li
 popd
 mkdir /rms/nifi-input
 cp -r nifi nifi2
-sed -i 's/nifi.web.http.port=8080/nifi.web.http.port=8081/g' nifi2/conf/nifi.properties
+sed -i 's/nifi.web.http.port=8080/nifi.web.http.port=9090/g' nifi2/conf/nifi.properties
 sed -i 's/nifi.remote.input.host=/nifi.remote.input.host=localhost/g' nifi2/conf/nifi.properties
 sed -i 's/nifi.remote.input.socket.port=/nifi.remote.input.socket.port=10000/g' nifi2/conf/nifi.properties
 sed -i 's/nifi.remote.input.http.enabled=false/nifi.remote.input.http.enabled=true/g' nifi2/conf/nifi.properties
