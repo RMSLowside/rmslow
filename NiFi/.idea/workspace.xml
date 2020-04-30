@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/core/src/lib/ellipsis.pipe.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/core/src/lib/ellipsis.pipe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/core/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/core/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/file-explorer/src/lib/file-explorer.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/file-explorer/src/lib/file-explorer.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/file-explorer/src/lib/file-explorer/file-explorer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/file-explorer/src/lib/file-explorer/file-explorer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/file-explorer/src/lib/file-explorer/file-explorer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/file-explorer/src/lib/file-explorer/file-explorer.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

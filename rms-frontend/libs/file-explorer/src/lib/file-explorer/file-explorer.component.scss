@@ -22,3 +22,8 @@
 .small-font {
   font-size: small;
 }
+
+::ng-deep .tooltip {
+  word-break: break-all !important;
+  white-space: normal !important;
+}
