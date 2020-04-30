@@ -52,6 +52,8 @@
           }"
           (click)="navigate(element, $event)"
           (contextmenu)="menuTrigger.openMenu(); $event.preventDefault()"
+          matTooltip="{{element.name}}"
+          matTooltipPosition="below"
         >
           <mat-icon
             color="primary"
@@ -68,7 +70,7 @@
             insert_drive_file
           </mat-icon>
 
-          <span>{{ element.name }}</span>
+          <span>{{ element.name | ellipsis:20 }}</span>
         </div>
       </div>
     </div>

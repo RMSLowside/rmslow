@@ -8,3 +8,4 @@ export * from './lib/auth.guard';
 export * from './lib/pre-auth/pre-auth.component';
 export * from './lib/unauth/unauth.component';
 export * from './lib/order-by.pipe';
+export * from './lib/ellipsis.pipe';
