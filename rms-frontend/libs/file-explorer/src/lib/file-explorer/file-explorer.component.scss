@@ -21,9 +21,16 @@
 
 .small-font {
   font-size: small;
+  word-break: break-all;
 }
 
 ::ng-deep .tooltip {
+  word-break: break-all !important;
+  white-space: normal !important;
+}
+
+.wrap-path {
+  max-width: 80%;
   word-break: break-all !important;
   white-space: normal !important;
 }
