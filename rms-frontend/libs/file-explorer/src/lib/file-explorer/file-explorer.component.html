@@ -5,7 +5,9 @@
         arrow_back
       </mat-icon>
     </button>
-    <span class="wrap-path"> {{ path | ellipsis:100 || 'Files' }} </span>
+    <span class="wrap-path" matTooltip="{{ path }}"
+          matTooltipPosition="below"
+          matTooltipClass='tooltip2'> {{ path | ellipsis:100 || 'Files' }} </span>
     <span fxFlex="1 1 auto"></span>
       <div class="small-font" *ngIf="selected.length">
         {{ selected.length }} File(s) Selected
