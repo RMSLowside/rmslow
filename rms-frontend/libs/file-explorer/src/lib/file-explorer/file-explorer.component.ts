@@ -44,7 +44,7 @@ export class FileExplorerComponent {
   @Output() elementRenamed = new EventEmitter<FileElement>();
   @Output() elementMoved = new EventEmitter<{
     element: FileElement;
-    moveTo: FileElement;
+    moveTo?: FileElement;
   }>();
   @Output() navigatedDown = new EventEmitter<FileElement>();
   @Output() fileSelected = new EventEmitter<FileElement>();

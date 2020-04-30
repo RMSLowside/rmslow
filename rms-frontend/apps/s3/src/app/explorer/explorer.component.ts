@@ -78,9 +78,10 @@ export class ExplorerComponent implements OnInit, OnDestroy {
   }
 
   moveElement(event: { element: FileElement; moveTo: FileElement }) {
+    const newParent = event.moveTo?.id || this.currentRoot.parent;
     if (event.element.isFolder)
-      this.store.dispatch(new MoveFolder(event.element.id, event.moveTo.id));
-    else this.store.dispatch(new MoveFile(event.element.id, event.moveTo.id));
+      this.store.dispatch(new MoveFolder(event.element.id, newParent));
+    else this.store.dispatch(new MoveFile(event.element.id, newParent));
   }
 
   renameElement(element: FileElement) {

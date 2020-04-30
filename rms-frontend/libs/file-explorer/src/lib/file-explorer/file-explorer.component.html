@@ -29,7 +29,14 @@
 
   <div class="container">
     <div class="content" fxFlex fxLayout="row wrap">
-      <div *ngFor="let element of _fileElements" class="file-or-folder">
+      <div
+        *ngFor="
+          let element of _fileElements
+            | orderBy: 'asc':'name'
+            | orderBy: 'desc':'isFolder'
+        "
+        class="file-or-folder"
+      >
         <span
           [matMenuTriggerFor]="rootMenu"
           [matMenuTriggerData]="{ element: element }"
@@ -109,6 +116,15 @@
 
   <mat-menu #moveToMenu="matMenu">
     <ng-template matMenuContent let-self="self">
+      <ng-container>
+        <button
+          *ngIf="canNavigateUp"
+          mat-menu-item
+          (click)="moveElement(self, null)"
+        >
+          Parent
+        </button>
+      </ng-container>
       <ng-container *ngFor="let element of _fileElements">
         <button
           *ngIf="
