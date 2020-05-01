@@ -14,6 +14,7 @@ import { Part3Component } from './part3/part3.component';
 import { FileExplorerComponent } from '@rms-frontend/file-explorer';
 import { GridComponent } from 'libs/grid/src/lib/grid/grid.component';
 import { TabContent1Component } from './tab-content1/tab-content1.component';
+import { Store } from '@ngxs/store';
 
 @Component({
   selector: 'lazy-load-home',
@@ -38,6 +39,7 @@ export class HomeComponent implements AfterViewInit {
 
   constructor(
     private cfr: ComponentFactoryResolver,
+    private store: Store,
     private injector: Injector
   ) {}
 

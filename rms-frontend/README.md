@@ -120,7 +120,7 @@ Anything that can be put in libs, should be put in libs. For the most part anyth
 
 ## NGXS
 
-This project uses NGXS for state management. NGXS is a redux based state management library. A major benefit of a redux based solution is that it provides an immutable single source of truth for state. This makes debugging actions much easier and consistent. To ensure immutability we are leveraging Immer and the NGXS Immer plugin. Visit [NGXS Documentation](https://www.ngxs.io/) for more information.
+This project uses NGXS for state management. NGXS is a redux based state management library. A major benefit of a redux based solution is that it provides an immutable single source of truth for state. This makes debugging actions much easier and consistent. To ensure immutability we are leveraging Immer and the NGXS Immer plugin. Visit [NGXS Documentation](https://www.ngxs.io/) for more information. During the work under [RMSL-68](https://rms-lowside.atlassian.net/browse/RMSL-68) it was decided that the [NGXS Entity State Adapter](https://www.npmjs.com/package/@ngxs-labs/entity-state) would not be helpful. Entity Adapter is realy nice for providing pre-made actions and events for single item type, flat states. The majority of our state objects are a bit too complex for the rigid structure needed for the Entity Adapter to work. We could use it for some of our state objects it could work, but for consistency we are not going to be using the Entity State Adapter.
 
 ## Unit testing
 
