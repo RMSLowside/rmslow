@@ -46,18 +46,18 @@ export class HelpEditComponent implements OnInit {
     });
   }
 
-  drop(event: CdkDragDrop<string[]>) {
-    moveItemInArray(this.contents, event.previousIndex, event.currentIndex);
+  drop(event: CdkDragDrop<string[]>) {        
     const item = this.items.at(event.previousIndex);
-
     this.items.removeAt(event.previousIndex);
     this.items.insert(event.currentIndex, item);
   }
 
   removeHelpCard(index) {
-    this.items = this.form.get('items') as FormArray;
-    this.items.removeAt(index);
-
+    // if there is only one item left don't delete
+    if (this.items.controls.length > 1) {
+      this.items = this.form.get('items') as FormArray;
+      this.items.removeAt(index);
+    }
   }
 
   addHelpCard(index) {

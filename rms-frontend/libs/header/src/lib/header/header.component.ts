@@ -59,8 +59,7 @@ export class HeaderComponent {
     }
   }
 
-  HelpContentChange(value) {
-    console.log(value);
+  HelpContentChange(value) {    
     this.helpChange.emit(value);
   }
 }

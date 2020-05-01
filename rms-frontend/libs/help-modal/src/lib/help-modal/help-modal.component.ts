@@ -29,8 +29,7 @@ export class HelpModalComponent implements OnInit {
     this.loading = false;
   }
 
-  goToPage(link) {
-    console.log(link);
+  goToPage(link) {    
     window.location.href = link;
   }
 
@@ -38,14 +37,12 @@ export class HelpModalComponent implements OnInit {
     this.editMode = true;
   }
 
-  updateContent() {
-    console.log(this.contents);
+  updateContent() {    
     this.editMode = false;
     this.updateHelpContent.emit(this.contents);
   }
 
-  contentChanged(contents) {
-    console.log(contents);
+  contentChanged(contents) {    
     this.contents = contents;
   }
 }
