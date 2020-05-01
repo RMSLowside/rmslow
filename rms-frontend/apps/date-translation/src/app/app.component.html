@@ -1,11 +1,11 @@
-<div>
-  <input type="text" style="width: 400px;" [(ngModel)]="startQuery" placeholder="Starting Query">
-</div>
-<br/>
-<div>
-  <rms-range [query]="startQuery" (dateEmit)="onEmit($event)"></rms-range>
-</div>
-<br/>
-<div>
-  <input type="text" style="width: 400px;" [(ngModel)]="endQuery" placeholder="Result Query">
+<div class="{{ theme$ | async }}-theme main" fxLayout="row">
+  <div fxFill style="padding: 0;margin: 0;">
+    <ng-container #header> </ng-container>
+    <ng-template #loggedIn>
+      <router-outlet></router-outlet>
+    </ng-template>
+    <rms-pre-auth
+      *ngIf="(authed$ | async) === undefined; else loggedIn"
+    ></rms-pre-auth>
+  </div>
 </div>

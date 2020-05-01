@@ -1,16 +1,18 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { DIR_DOCUMENT } from '@angular/cdk/bidi';
+import { DateService } from '../date.service';
+import { Select, Store } from '@ngxs/store';
+import { QueryState } from '../+state/query.state';
+import { Observable } from 'rxjs';
+import { updateEndQuery } from '../+state/query.actions';
 
 @Component({
   selector: 'rms-range',
   templateUrl: './range.component.html',
   styleUrls: ['./range.component.css']
 })
-export class RangeComponent {
-
-  @Input() query: string;
-  @Output() dateEmit = new EventEmitter<string>();
+export class RangeComponent implements OnDestroy {
+  currentStartQuery: string;
   startDate: Date;
   endDate: Date;
   minSDate: Date;
@@ -19,8 +21,20 @@ export class RangeComponent {
   maxEDate: Date;
   sDate: string;
   eDate: string;
+  service: DateService;
 
-  constructor() {
+  @Select(QueryState.startQuery) startQuery$: Observable<string>;
+  @Select(QueryState.endQuery) endQuery$: Observable<string>;
+
+  startQuerySub = this.startQuery$.subscribe(a => {
+    this.currentStartQuery = a;
+  });
+
+  ngOnDestroy(): void {
+    this.startQuerySub.unsubscribe();
+  }
+
+  constructor(public store: Store) {
     this.startDate = new Date(2010, 0, 1);
     this.endDate = new Date();
     this.minSDate = new Date(1970, 0, 1);
@@ -32,17 +46,17 @@ export class RangeComponent {
   updateStart(event: MatDatepickerInputEvent<Date>){
     this.startDate = event.value;
     this.minEDate = event.value;
-    this.sDate = `${this.startDate.getFullYear()}-${this.startDate.getMonth()}-${this.startDate.getDate()}`;
-    this.eDate = `${this.endDate.getFullYear()}-${this.endDate.getMonth()}-${this.endDate.getDate()}`;
-    this.dateEmit.emit(this.query.replace("\[D\]", `RANGE(${this.sDate}, ${this.eDate})`));
+    this.sDate = this.service.calcDate(this.startDate);
+    this.eDate = this.service.calcDate(this.endDate);
+    this.store.dispatch(new updateEndQuery(this.service.buildDateString(this.currentStartQuery, this.startDate, this.endDate, "A")));
   }
 
   updateEnd(event: MatDatepickerInputEvent<Date>){
     this.endDate = event.value;
     this.maxSDate = event.value;
-    this.sDate = `${this.startDate.getFullYear()}-${this.startDate.getMonth()}-${this.startDate.getDate()}`;
-    this.eDate = `${this.endDate.getFullYear()}-${this.endDate.getMonth()}-${this.endDate.getDate()}`;
-    this.dateEmit.emit(this.query.replace("\[D\]", `RANGE(${this.sDate}, ${this.eDate})`));
+    this.sDate = this.service.calcDate(this.startDate);
+    this.eDate = this.service.calcDate(this.endDate);
+    this.store.dispatch(new updateEndQuery(this.service.buildDateString(this.currentStartQuery, this.startDate, this.endDate, "A")));
   }
 
 }
