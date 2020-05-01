@@ -12,6 +12,8 @@ export class HeaderComponent {
   @Input() title: string;
   @Input() helpContent: any = [];
   @Output() themeChange = new EventEmitter<string>();
+  @Output() helpChange = new EventEmitter<string>();
+
   constructor(public dialog: MatDialog) { }
 
   links: KeyValue<string, string>[] = [
@@ -48,9 +50,17 @@ export class HeaderComponent {
         });
       dialogRef.componentInstance.title = 'Home Page Help Modal';
       dialogRef.componentInstance.contents = this.helpContent;
+      dialogRef.componentInstance.updateHelpContent.subscribe(value => {
+        this.HelpContentChange(value);
+      });
       dialogRef.afterClosed().subscribe(res => {
         console.log('help modal closed');
       });
     }
+  }
+
+  HelpContentChange(value) {
+    console.log(value);
+    this.helpChange.emit(value);
   }
 }

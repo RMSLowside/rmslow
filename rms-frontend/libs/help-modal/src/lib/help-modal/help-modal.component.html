@@ -32,7 +32,8 @@
                 </div> -->
             </mat-expansion-panel>
         </mat-accordion>
-        <rms-frontend-help-edit [contents]="contents" (contentChange)="contentChanged($event)" *ngIf="editMode && isEditor"></rms-frontend-help-edit>
+        <rms-frontend-help-edit [contents]="contents" (contentChange)="contentChanged($event)"
+            *ngIf="editMode && isEditor"></rms-frontend-help-edit>
     </div>
     <div mat-dialog-actions>
         <button mat-raised-button *ngIf="isEditor && !editMode" (click)="OpenHelpEditor()">Edit</button>

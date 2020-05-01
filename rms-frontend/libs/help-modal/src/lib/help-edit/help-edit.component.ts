@@ -23,14 +23,22 @@ export class HelpEditComponent implements OnInit {
 
     this.items = this.form.get('items') as FormArray;
 
-    this.contents.forEach(item => {
+    if (this.contents.length > 0)
+      this.contents.forEach(item => {
+        this.items.push(this.formBuilder.group({
+          type: new FormControl(item.type || 'text'),
+          title: new FormControl(item.title || ''),
+          value: new FormControl(item.value || ''),
+          order: new FormControl(item.order)
+        }));
+      });
+    else
       this.items.push(this.formBuilder.group({
-        type: new FormControl(item.type || 'text'),
-        title: new FormControl(item.title || ''),
-        value: new FormControl(item.value || ''),
-        order: new FormControl(item.order)
-      }));
-    });
+        type: 'text',
+        title: '',
+        value: '',
+        order: ''
+      }))
 
     this.form.get('items').valueChanges.subscribe(x => {
       this.contents = this.reorder(x)
@@ -40,6 +48,10 @@ export class HelpEditComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.contents, event.previousIndex, event.currentIndex);
+    const item = this.items.at(event.previousIndex);
+
+    this.items.removeAt(event.previousIndex);
+    this.items.insert(event.currentIndex, item);
   }
 
   removeHelpCard(index) {

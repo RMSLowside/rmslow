@@ -5,7 +5,7 @@ import { Select, Store } from '@ngxs/store';
 import { DropdownQuestion, QuestionBase, TextboxQuestion } from '@rms-frontend/forms';
 import { DynamicFormModalComponent } from 'libs/forms/src/lib/dynamic-form-modal/dynamic-form-modal.component';
 import { Observable } from 'rxjs';
-import { SaveToDraft, SetFormsGroup, GetHelpContent } from './+state/forms.actions';
+import { SaveToDraft, SetFormsGroup, GetHelpContent, SetHelpContent } from './+state/forms.actions';
 import { FormState } from './+state/forms.state';
 import { GlobalState, SetTheme, Login, AuthState } from '@rms-frontend/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
@@ -113,5 +113,9 @@ export class AppComponent implements OnInit {
 
   themeChange(theme) {
     this.store.dispatch(new SetTheme(theme));
+  }
+
+  helpChange(value){
+    this.store.dispatch(new SetHelpContent(value));
   }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ImmutableContext } from '@ngxs-labs/immer-adapter';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { QuestionBase } from '@rms-frontend/forms';
-import { SaveToDraft, SetFormsGroup } from './forms.actions';
+import { SaveToDraft, SetFormsGroup, GetHelpContent, SetHelpContent } from './forms.actions';
 
 interface NovelsStateModel {
   newNovelForm: {
@@ -35,6 +35,7 @@ interface FormStateModel {
   },
   questions: QuestionBase<string>[];
   drafts: any[];
+  helpContent: any[];
 }
 
 @State<FormStateModel>({
@@ -44,7 +45,8 @@ interface FormStateModel {
     formGroup: {
       model: undefined
     },
-    drafts: []
+    drafts: [],
+    helpContent: []
   }
 })
 
@@ -62,10 +64,22 @@ export class FormState {
       return st;
     });
   }
+
   @Action(SetFormsGroup)
   setFormsGroup(ctx: StateContext<FormStateModel>, model: any) {
     ctx.setState((st: FormStateModel) => {
       st.formGroup = model;
+      return st;
+    });
+  }
+  
+  @Action(SetHelpContent)
+  setHelpContent(ctx: StateContext<FormStateModel>, model: any) {
+    const state = ctx.getState();
+    const helpContent = state.helpContent;
+    helpContent.push(model);
+    ctx.setState((st: FormStateModel) => {
+      st.helpContent = helpContent;
       return st;
     });
   }
@@ -80,4 +94,8 @@ export class FormState {
     return state.drafts;
   }
 
+  @Selector()
+  static helpContents(state: FormStateModel) {
+    return state.helpContent;
+  }
 }
