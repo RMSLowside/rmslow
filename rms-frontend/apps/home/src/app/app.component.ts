@@ -4,7 +4,7 @@ import { Store, Select } from '@ngxs/store';
 import { GlobalState, SetTheme } from '@rms-frontend/core';
 import { Observable } from 'rxjs';
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { HelpBase, HelpText, HelpLink } from '@rms-frontend/help-modal';
+import { HelpBase } from '@rms-frontend/help-modal';
 
 @Component({
   selector: 'home-root',
@@ -48,20 +48,23 @@ export class AppComponent {
 
   getHelpModalContent() {        
     const helpContent = [
-      new HelpText({
+      new HelpBase({
+        type: 'text',
         title: 'test1',
         order: 2,
-        text: 'test help content'
+        value: 'test help content'
       }),
-      new HelpLink({
+      new HelpBase({
+        type: 'link',
         title: 'link to main home page ',
         order: 3,
-        link: 'https://rmslowside.github.io/rmslow/apps/home/'
+        value: 'https://rmslowside.github.io/rmslow/apps/home/'
       }),
-      new HelpText({
-        title: 'test3',
+      new HelpBase({
+        type: 'text',
+        title: 'Home page',
         order: 1,
-        text: 'test help content'
+        value: 'Contains help file content'
       })
     ]
 

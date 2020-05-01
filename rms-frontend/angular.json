@@ -597,8 +597,8 @@
               "apps/ngxs-forms/src/assets"
             ],
             "styles": [
-              "libs/shared-assets/styles.scss",
-              "apps/ngxs-forms/src/styles.scss"
+              "apps/ngxs-forms/src/styles.scss",
+              "libs/shared-assets/styles.scss"
             ],
             "scripts": []
           },

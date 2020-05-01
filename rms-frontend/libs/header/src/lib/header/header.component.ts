@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { KeyValue } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { HelpComponent } from '@rms-frontend/help-modal';
+import { HelpModalComponent } from '@rms-frontend/help-modal';
 
 @Component({
   selector: 'rms-frontend-header',
@@ -38,11 +38,12 @@ export class HeaderComponent {
   openHelpModal() {
     // check if help modal is already open
     if (this.dialog.openDialogs.findIndex(x => x.id === 'help-modal') == -1) {
-      const dialogRef = this.dialog.open(HelpComponent,
+      const dialogRef = this.dialog.open(HelpModalComponent,
         {
           id: 'help-modal',
           hasBackdrop: false,
-          width: '500px',
+          minWidth: '500px',
+          minHeight: '400px',
           position: { top: '70px', right: '10px' }
         });
       dialogRef.componentInstance.title = 'Home Page Help Modal';

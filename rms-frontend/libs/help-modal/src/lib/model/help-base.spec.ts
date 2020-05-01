@@ -1,4 +1,4 @@
-import { HelpBase } from './helpBase';
+import { HelpBase } from './help-base';
 
 describe('Help', () => {
   it('should create an instance', () => {
