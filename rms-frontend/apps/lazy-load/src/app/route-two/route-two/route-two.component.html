@@ -1,4 +1,10 @@
-<p>route-two works!</p>
-<button mat-raised-button color="accent" routerLink="/home">
-  Lazy-App Home
-</button>
+<div fxFlex>
+  <p>route-two works!</p>
+  <button mat-raised-button color="accent" routerLink="/home">
+    Lazy-App Home
+  </button>
+  <rms-frontend-history-list
+    [histories]="histories$ | async"
+    [canEdit]="true"
+  ></rms-frontend-history-list>
+</div>

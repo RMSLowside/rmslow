@@ -6,7 +6,6 @@ import { RenameModalComponent } from './rename-modal/rename-modal.component';
 import { NewFolderModalComponent } from './new-folder-modal/new-folder-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxFileDropModule } from 'ngx-file-drop';
-import { OrderByPipe } from '@rms-frontend/core';
 import { EllipsisPipe } from '@rms-frontend/core';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { EllipsisPipe } from '@rms-frontend/core';
     FileExplorerComponent,
     RenameModalComponent,
     NewFolderModalComponent,
-    OrderByPipe,
     EllipsisPipe
   ],
   exports: [FileExplorerComponent]

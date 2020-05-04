@@ -36,6 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { PreAuthComponent } from './pre-auth/pre-auth.component';
 import { UnauthComponent } from './unauth/unauth.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   imports: [
@@ -107,8 +108,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSortModule,
     MatPaginatorModule,
     PreAuthComponent,
+    OrderByPipe,
     FlexLayoutModule
   ],
-  declarations: [PreAuthComponent, UnauthComponent]
+  declarations: [PreAuthComponent, UnauthComponent, OrderByPipe]
 })
 export class CoreModule {}

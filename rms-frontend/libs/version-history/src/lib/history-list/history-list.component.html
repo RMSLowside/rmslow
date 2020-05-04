@@ -1,0 +1,7 @@
+<div fxFlex flexlayout="column">
+  <rms-frontend-history-segment
+    *ngFor="let history of histories | orderBy: 'asc':'version'"
+    [history]="history"
+    [canEdit]="canEdit"
+  ></rms-frontend-history-segment>
+</div>

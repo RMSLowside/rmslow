@@ -10,6 +10,7 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
 import { AppRoutingModule } from './app-routing.module';
+import { HistoryState } from './+state/history/history.state';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgxsModule.forRoot([GlobalState, AuthState]),
+    NgxsModule.forRoot([GlobalState, AuthState, HistoryState]),
     NgxsRouterPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot({
       key: [GlobalState]

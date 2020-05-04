@@ -1,0 +1,17 @@
+<mat-card class="segment">
+  <mat-card-header
+    ><mat-card-title>
+      {{ history.user }} updated {{ history.field }}
+      {{ history.date | date }}</mat-card-title
+    ></mat-card-header
+  >
+  <mat-card-content
+    ><div fxFlex fxLayout="row" fxLayoutAlign="start center">
+      <div>{{ history.oldValue }}</div>
+      <mat-icon aria-hidden="false" aria-label="Example home icon"
+        >arrow_forward</mat-icon
+      >
+      <div>{{ history.newValue }}</div>
+    </div></mat-card-content
+  >
+</mat-card>
