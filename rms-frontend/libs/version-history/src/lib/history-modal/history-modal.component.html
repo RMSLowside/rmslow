@@ -12,5 +12,6 @@
   <rms-frontend-history-list
     [histories]="histories | async"
     [canEdit]="canEdit"
+    (revertChange)="emit($event)"
   ></rms-frontend-history-list>
 </mat-dialog-content>

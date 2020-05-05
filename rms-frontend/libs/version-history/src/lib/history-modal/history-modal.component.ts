@@ -13,4 +13,8 @@ export class HistoryModalComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  emit(history: VersionHistory) {
+    console.log(history);
+  }
 }

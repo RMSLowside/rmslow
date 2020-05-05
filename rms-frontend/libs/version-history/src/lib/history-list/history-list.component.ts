@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { VersionHistory } from '../version-history';
 import { FormControl } from '@angular/forms';
 
@@ -10,6 +10,7 @@ import { FormControl } from '@angular/forms';
 export class HistoryListComponent implements OnInit {
   @Input() histories: VersionHistory[];
   @Input() canEdit: boolean;
+  @Output() revertChange = new EventEmitter<VersionHistory>();
   fieldFilter = new FormControl();
   userFilter = new FormControl();
   sort = new FormControl();

@@ -1,9 +1,14 @@
 <mat-card class="segment">
-  <mat-card-content fxLayout="column">
-    <span
-      ><strong>{{ history.user }}</strong> updated
-      <strong>{{ history.field }}</strong> {{ history.date | date }}</span
-    >
+  <mat-card-content fxLayout="column"
+    ><div fxLayout="row">
+      <span
+        ><strong>{{ history.user }}</strong> updated
+        <strong>{{ history.field }}</strong> {{ history.date | date }}</span
+      ><span fxFlex="1 1 auto"></span
+      ><button mat-icon-button (click)="revertChange.emit(history)">
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="start center">
       <p>{{ history.oldValue }}</p>
       <mat-icon
