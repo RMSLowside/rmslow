@@ -4,6 +4,8 @@ import { VersionHistory } from '@rms-frontend/version-history';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { HistoryAction } from '../../+state/history/history.actions';
+import { MatDialog } from '@angular/material/dialog';
+import { HistoryModalComponent } from '@rms-frontend/version-history';
 
 @Component({
   selector: 'lazy-load-route-two',
@@ -13,7 +15,7 @@ import { HistoryAction } from '../../+state/history/history.actions';
 export class RouteTwoComponent implements OnInit {
   @Select(HistoryState.getHistories) histories$: Observable<VersionHistory[]>;
 
-  constructor(public store: Store) {}
+  constructor(public store: Store, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     const intialHistories: VersionHistory[] = [];
@@ -33,5 +35,11 @@ export class RouteTwoComponent implements OnInit {
         intialHistories.push(history);
       }
     this.store.dispatch(new HistoryAction(intialHistories));
+  }
+  openHistory() {
+    const dialogRef = this.dialog.open(HistoryModalComponent);
+    dialogRef.componentInstance.histories = this.histories$;
+    dialogRef.componentInstance.canEdit = true;
+    dialogRef.afterClosed().subscribe(res => {});
   }
 }

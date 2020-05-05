@@ -10,6 +10,7 @@
 
 .dark-theme {
   @include angular-material-theme($dark-app-theme);
+  --alternate-card-color: #494949;
 }
 .dark-theme.main {
   background-color: #333;
