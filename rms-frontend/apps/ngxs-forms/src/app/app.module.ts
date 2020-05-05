@@ -20,12 +20,12 @@ import { HeaderModule } from '@rms-frontend/header'
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
+    HeaderModule,
     FormsModule,
     ReactiveFormsModule,
     NgxsModule.forRoot([GlobalState, NovelsState, FormState]),
     NgxsStoragePluginModule.forRoot(),
-    NgxsFormPluginModule.forRoot(),
-    HeaderModule
+    NgxsFormPluginModule.forRoot()    
   ],
   providers: [],
   bootstrap: [AppComponent]

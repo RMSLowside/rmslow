@@ -682,6 +682,38 @@
           "style": "scss"
         }
       }
+    },
+    "help-modal": {
+      "projectType": "library",
+      "root": "libs/help-modal",
+      "sourceRoot": "libs/help-modal/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/help-modal/tsconfig.lib.json",
+              "libs/help-modal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/help-modal/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/help-modal/jest.config.js",
+            "tsConfig": "libs/help-modal/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/help-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

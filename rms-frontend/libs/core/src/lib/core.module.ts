@@ -37,6 +37,7 @@ import { PreAuthComponent } from './pre-auth/pre-auth.component';
 import { UnauthComponent } from './unauth/unauth.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { OrderByPipe } from './order-by.pipe';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   imports: [
@@ -72,7 +73,8 @@ import { OrderByPipe } from './order-by.pipe';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DragDropModule
   ],
   exports: [
     CommonModule,
@@ -109,6 +111,7 @@ import { OrderByPipe } from './order-by.pipe';
     MatPaginatorModule,
     PreAuthComponent,
     OrderByPipe,
+    DragDropModule,
     FlexLayoutModule
   ],
   declarations: [PreAuthComponent, UnauthComponent, OrderByPipe]

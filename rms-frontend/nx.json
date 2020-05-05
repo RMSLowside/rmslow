@@ -64,6 +64,9 @@
     },
     "version-history": {
       "tags": []
+    },
+    "help-modal": {
+      "tags": []
     }
   }
 }

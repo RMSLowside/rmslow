@@ -1,6 +1,7 @@
 <div class="{{ theme$ | async }}-theme main" style="display: flex; flex-direction: row; height: 100%;">
   <div style="flex:1 1 auto; padding: 0;margin: 0;">
-    <rms-frontend-header [title]="title" (themeChange)="themeChange($event)"></rms-frontend-header>
+    <rms-frontend-header [title]="title" (themeChange)="themeChange($event)" [helpContent]="helpContent$ | async"
+      (helpChange)="helpChange($event)"></rms-frontend-header>
 
     <div style="padding: 20px;">
       <mat-card>

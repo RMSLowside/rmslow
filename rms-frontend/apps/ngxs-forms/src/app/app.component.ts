@@ -5,7 +5,7 @@ import { Select, Store } from '@ngxs/store';
 import { DropdownQuestion, QuestionBase, TextboxQuestion } from '@rms-frontend/forms';
 import { DynamicFormModalComponent } from 'libs/forms/src/lib/dynamic-form-modal/dynamic-form-modal.component';
 import { Observable } from 'rxjs';
-import { SaveToDraft, SetFormsGroup } from './+state/forms.actions';
+import { SaveToDraft, SetFormsGroup, GetHelpContent, SetHelpContent } from './+state/forms.actions';
 import { FormState } from './+state/forms.state';
 import { GlobalState, SetTheme, Login, AuthState } from '@rms-frontend/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
@@ -23,7 +23,8 @@ export class AppComponent implements OnInit {
   @Select(FormState) test$: Observable<any>;
   @Select(FormState.formGroup) formGroup$: Observable<FormGroup>;
   @Select(FormState.drafts) drafts$: Observable<any>;
-
+  @Select(FormState.helpContents) helpContent$: Observable<any>;
+  
   constructor(
     public dialog: MatDialog,
     public store: Store,
@@ -35,8 +36,9 @@ export class AppComponent implements OnInit {
     this.overlayContainer.getContainerElement().classList.remove('light-theme');
     this.overlayContainer.getContainerElement().classList.add(`${a}-theme`);
   });
-  
+
   ngOnInit(): void {
+    this.store.dispatch(new GetHelpContent());
   }
 
   openForms() {
@@ -111,5 +113,9 @@ export class AppComponent implements OnInit {
 
   themeChange(theme) {
     this.store.dispatch(new SetTheme(theme));
+  }
+
+  helpChange(value){
+    this.store.dispatch(new SetHelpContent(value));
   }
 }
