@@ -1,7 +1,7 @@
 module.exports = {
-  name: 's3',
+  name: 'Rules Engine',
   preset: '../../jest.config.js',
-  coverageDirectory: '../../coverage/apps/s3',
+  coverageDirectory: '../../coverage/apps/rules-engine',
   snapshotSerializers: [
     'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
     'jest-preset-angular/build/AngularSnapshotSerializer.js',
