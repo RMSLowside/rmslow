@@ -5,49 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/cypress.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/src/fixtures/example.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/src/integration/app.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/src/plugins/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/src/support/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/src/support/commands.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/src/support/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/tsconfig.e2e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine-e2e/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/browserslist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/app.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/test-setup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal.module.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal/create-rule-modal.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal/create-rule-modal.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal/create-rule-modal.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal/create-rule-modal.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/test-setup.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/tsconfig.lib.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/tsconfig.lib.prod.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/tslint.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rms-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rms-frontend/nx.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/nx.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +60,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rms-frontend/apps/rules-engine" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rms-frontend/libs/create-rule-modal/src/lib/create-rule-modal" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -116,11 +93,11 @@
       <recent name="models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\create-rule-modal\src\lib\create-rule-modal" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine\src\app\home" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine\src\app" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\core\src\lib" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AddToRmmProcessorTest">
@@ -328,10 +305,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1196" y="455" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586280483687" />
-    <state x="1490" y="337" width="695" height="795" key="find.popup" timestamp="1588769477624">
+    <state x="1490" y="337" width="745" height="795" key="find.popup" timestamp="1588773921216">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1490" y="337" width="695" height="795" key="find.popup/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1588769477624" />
+    <state x="1490" y="337" width="745" height="795" key="find.popup/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1588773921216" />
     <state x="662" y="395" key="new project wizard" timestamp="1587557399762">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -804,6 +804,34 @@
           }
         }
       }
+    },
+    "create-rule-modal": {
+      "projectType": "library",
+      "root": "libs/create-rule-modal",
+      "sourceRoot": "libs/create-rule-modal/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/create-rule-modal/tsconfig.lib.json",
+              "libs/create-rule-modal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/create-rule-modal/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/create-rule-modal/jest.config.js",
+            "tsConfig": "libs/create-rule-modal/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/create-rule-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

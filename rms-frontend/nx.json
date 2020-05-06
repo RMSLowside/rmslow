@@ -71,6 +71,9 @@
     "rules-engine-e2e": {
       "tags": [],
       "implicitDependencies": ["rules-engine"]
+    },
+    "create-rule-modal": {
+      "tags": []
     }
   }
 }

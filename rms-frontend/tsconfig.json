@@ -21,7 +21,8 @@
       "@rms-frontend/grid": ["libs/grid/src/index.ts"],
       "@rms-frontend/header": ["libs/header/src/index.ts"],
       "@rms-frontend/help-modal": ["libs/help-modal/src/index.ts"],
-      "@rms-frontend/forms": ["libs/forms/src/index.ts"]
+      "@rms-frontend/forms": ["libs/forms/src/index.ts"],
+      "@rms-frontend/create-rule-modal": ["libs/create-rule-modal/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
