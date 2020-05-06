@@ -290,8 +290,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/lazy-load-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/lazy-load-e2e/**"]
+            "tsConfig": [
+              "apps/lazy-load-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/lazy-load-e2e/**"
+            ]
           }
         }
       }
@@ -748,9 +753,8 @@
               "apps/ngxs-forms/src/assets"
             ],
             "styles": [
-              "libs/shared-assets/styles.scss",
-              "apps/ngxs-forms/src/styles.scss"
-
+              "apps/ngxs-forms/src/styles.scss",
+              "libs/shared-assets/styles.scss"
             ],
             "scripts": []
           },
@@ -855,6 +859,41 @@
               "!apps/ngxs-forms-e2e/**"
             ]
           }
+        }
+      }
+    },
+    "help-modal": {
+      "projectType": "library",
+      "root": "libs/help-modal",
+      "sourceRoot": "libs/help-modal/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/help-modal/tsconfig.lib.json",
+              "libs/help-modal/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/help-modal/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/help-modal/jest.config.js",
+            "tsConfig": "libs/help-modal/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/help-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }

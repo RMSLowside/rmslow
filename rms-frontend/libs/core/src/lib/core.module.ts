@@ -37,6 +37,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { PreAuthComponent } from './pre-auth/pre-auth.component';
 import { UnauthComponent } from './unauth/unauth.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   imports: [
@@ -74,6 +75,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     MatNativeDateModule,
     FlexLayoutModule,
+    DragDropModule
   ],
   exports: [
     CommonModule,
@@ -110,8 +112,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatPaginatorModule,
     PreAuthComponent,
     MatNativeDateModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DragDropModule
   ],
   declarations: [PreAuthComponent, UnauthComponent]
 })
-export class CoreModule {}
+export class CoreModule { }

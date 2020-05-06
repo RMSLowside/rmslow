@@ -80,7 +80,7 @@
       "tags": [],
       "implicitDependencies": ["date-translation"]
     },
-    "date-range": {
+    "help-modal": {
       "tags": []
     }
   }

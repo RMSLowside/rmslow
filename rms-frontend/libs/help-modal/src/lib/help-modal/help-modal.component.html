@@ -1,0 +1,43 @@
+<div *ngIf="!loading">
+    <div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragBoundary=".cdk-overlay-container">
+        <h1 mat-dialog-title cdkDragHandle class="draggable-title">
+            {{title}}
+        </h1>
+    </div>
+    <div mat-dialog-content style="padding-top: 20px; padding-bottom: 20px;">
+        <mat-accordion *ngIf="!editMode">
+            <mat-expansion-panel *ngFor="let content of contents" [hideToggle]="content.type=='link'">
+                <mat-expansion-panel-header *ngIf="content.type=='text'">
+                    <mat-panel-title>
+                        {{content.title}}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-expansion-panel-header *ngIf="content.type=='link'" #noexpand
+                    (click)="noexpand._toggle();goToPage(content.link)" style="padding-right: 15px;">
+                    <mat-panel-title>
+                        {{content.title}}
+                    </mat-panel-title>
+                    <mat-icon style="font-size: 18px; color: #7e7e7e;">open_in_new</mat-icon>
+                </mat-expansion-panel-header>
+
+                <!-- display create content component to display content depending on type -->
+                <div *ngIf="content.type=='text'">
+                    {{content.value}}
+                </div>
+                <!-- <div *ngIf="content.type=='text'">
+                    {{content.value}}
+                </div>
+                <div *ngIf="content.type=='link'">
+                    {{content.link}}
+                </div> -->
+            </mat-expansion-panel>
+        </mat-accordion>
+        <rms-frontend-help-edit [contents]="contents" (contentChange)="contentChanged($event)"
+            *ngIf="editMode && isEditor"></rms-frontend-help-edit>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-raised-button *ngIf="isEditor && !editMode" (click)="OpenHelpEditor()">Edit</button>
+        <button mat-raised-button *ngIf="editMode" (click)="updateContent()">Update</button>
+        <button mat-raised-button mat-dialog-close>Close</button>
+    </div>
+</div>
