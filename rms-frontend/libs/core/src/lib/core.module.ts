@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
@@ -71,7 +72,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    FlexLayoutModule
+    MatNativeDateModule,
+    FlexLayoutModule,
   ],
   exports: [
     CommonModule,
@@ -107,6 +109,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSortModule,
     MatPaginatorModule,
     PreAuthComponent,
+    MatNativeDateModule,
     FlexLayoutModule
   ],
   declarations: [PreAuthComponent, UnauthComponent]

@@ -7,7 +7,7 @@ const routes: Routes = [
     path: 'home',
     canLoad: [AuthGuard],
     loadChildren: () =>
-      import('./range/range.module').then(m => m.RangeModule)
+      import('./translate/translate.module').then(m => m.RangeModule)
   },
   { path: 'unauth', component: UnauthComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }

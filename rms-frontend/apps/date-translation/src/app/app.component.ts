@@ -14,7 +14,7 @@ import { GlobalState, SetTheme, Login, AuthState } from '@rms-frontend/core';
 import { HeaderComponent } from '@rms-frontend/header';
 
 @Component({
-  selector: 's3-root',
+  selector: 'date-translation-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -54,7 +54,7 @@ export class AppComponent {
       const { HeaderComponent } = await import('@rms-frontend/header');
       const factory = this.cfr.resolveComponentFactory(HeaderComponent);
       this.headerRef = this.vcr.createComponent(factory);
-      this.headerRef.instance.title = 'S3';
+      this.headerRef.instance.title = 'Date Translation';
       this.headerRef.hostView.detectChanges();
       this.headerRef.instance.themeChange.subscribe(theme => {
         this.themeChange(theme);

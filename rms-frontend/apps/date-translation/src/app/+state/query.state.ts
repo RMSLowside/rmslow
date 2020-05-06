@@ -1,5 +1,7 @@
 import { State, Action, Selector, StateContext } from '@ngxs/store';
-import { updateStartQuery, updateStartDate, updateEndDate, updateQueryType, updateEndQuery } from './query.actions';
+import { updateEndQuery } from './query.actions';
+import { Injectable } from '@angular/core';
+import { ImmutableContext } from '@ngxs-labs/immer-adapter';
 
 export interface QueryStateModel {
   startQuery: string;
@@ -8,17 +10,17 @@ export interface QueryStateModel {
   queryType: string;
   endQuery: string;
 }
-
 @State<QueryStateModel>({
   name: 'query',
   defaults: {
     startQuery: "",
-    startDate: new Date(),
-    endDate: new Date(),
+    startDate: null,
+    endDate: null,
     queryType: "",
     endQuery: ""
   }
 })
+@Injectable()
 export class QueryState {
 
   @Selector()
@@ -47,38 +49,40 @@ export class QueryState {
   }
 
 
-  @Action(updateStartQuery)
-  public updateStartQuery(ctx: StateContext<QueryStateModel>, { payload }: updateStartQuery) {
-    const stateModel = ctx.getState();
-    stateModel.startQuery = payload;
-    ctx.setState(stateModel);
-  }
+  // @Action(updateStartQuery)
+  // public updateStartQuery(ctx: StateContext<QueryStateModel>, { payload }: updateStartQuery) {
+  //   const stateModel = ctx.getState();
+  //   stateModel.startQuery = payload;
+  //   ctx.setState(stateModel);
+  // }
 
-  @Action(updateStartDate)
-  public updateStartDate(ctx: StateContext<QueryStateModel>, { payload }: updateStartDate) {
-    const stateModel = ctx.getState();
-    stateModel.startDate = payload;
-    ctx.setState(stateModel);
-  }
+  // @Action(updateStartDate)
+  // public updateStartDate(ctx: StateContext<QueryStateModel>, { payload }: updateStartDate) {
+  //   const stateModel = ctx.getState();
+  //   stateModel.startDate = payload;
+  //   ctx.setState(stateModel);
+  // }
 
-  @Action(updateEndDate)
-  public updateEndDate(ctx: StateContext<QueryStateModel>, { payload }: updateEndDate) {
-    const stateModel = ctx.getState();
-    stateModel.endDate = payload;
-    ctx.setState(stateModel);
-  }
+  // @Action(updateEndDate)
+  // public updateEndDate(ctx: StateContext<QueryStateModel>, { payload }: updateEndDate) {
+  //   const stateModel = ctx.getState();
+  //   stateModel.endDate = payload;
+  //   ctx.setState(stateModel);
+  // }
 
-  @Action(updateQueryType)
-  public updateQueryType(ctx: StateContext<QueryStateModel>, { payload }: updateQueryType) {
-    const stateModel = ctx.getState();
-    stateModel.queryType = payload;
-    ctx.setState(stateModel);
-  }
+  // @Action(updateQueryType)
+  // public updateQueryType(ctx: StateContext<QueryStateModel>, { payload }: updateQueryType) {
+  //   const stateModel = ctx.getState();
+  //   stateModel.queryType = payload;
+  //   ctx.setState(stateModel);
+  // }
 
   @Action(updateEndQuery)
+  @ImmutableContext()
   public updateEndQuery(ctx: StateContext<QueryStateModel>, { payload }: updateEndQuery) {
-    const stateModel = ctx.getState();
-    stateModel.endQuery = payload;
-    ctx.setState(stateModel);
+    ctx.setState((hereState: QueryStateModel) => {
+      hereState.endQuery = payload;
+      return hereState;
+    });
   }
 }
