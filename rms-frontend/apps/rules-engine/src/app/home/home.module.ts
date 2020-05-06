@@ -6,9 +6,17 @@ import { HomeComponent } from './home.component';
 import { NgxsModule } from '@ngxs/store';
 
 import { CoreModule } from '@rms-frontend/core';
+import { GridModule } from '@rms-frontend/grid';
 
 @NgModule({
-  declarations: [HomeComponent],
-  imports: [CommonModule, CoreModule, HomeRoutingModule]
+  declarations: [
+    HomeComponent
+  ],
+  imports: [
+    CommonModule,
+    CoreModule,
+    HomeRoutingModule,
+    GridModule
+  ]
 })
 export class HomeModule {}
