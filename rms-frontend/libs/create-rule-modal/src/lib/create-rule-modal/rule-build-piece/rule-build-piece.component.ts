@@ -26,16 +26,16 @@ export class RuleBuildPieceComponent implements OnInit {
     if (this.contents.length > 0)
       this.contents.forEach(item => {
         this.items.push(this.formBuilder.group({
-          type: new FormControl(item.type || 'text'),
-          title: new FormControl(item.title || ''),
+          condition: new FormControl(item.condition || ''),
+          comparator: new FormControl(item.comparator || ''),
           value: new FormControl(item.value || ''),
           order: new FormControl(item.order)
         }));
       });
     else
       this.items.push(this.formBuilder.group({
-        type: 'text',
-        title: '',
+        condition: '',
+        comparator: '',
         value: '',
         order: ''
       }))
@@ -63,8 +63,8 @@ export class RuleBuildPieceComponent implements OnInit {
   addHelpCard(index) {
     this.items = this.form.get('items') as FormArray;
     this.items.insert(index + 1, this.formBuilder.group({
-      type: 'text',
-      title: '',
+      condition: '',
+      comparator: '',
       value: '',
       order: ''
     }))

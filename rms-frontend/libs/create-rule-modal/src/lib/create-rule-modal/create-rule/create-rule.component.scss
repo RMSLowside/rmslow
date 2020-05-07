@@ -7,6 +7,7 @@
   width: 25%;
   border-right: 1px solid;
   height: 100%;
+  overflow: hidden;
 }
 
 .right {
@@ -19,19 +20,14 @@
 
 .build-bottom {
   height: 90%;
-}
-
-.build-left {
-  width: 60%;
-  border-right: 1px solid;
-  padding-right: 10px;
-}
-
-.build-right {
-  width: 40%;
-  margin-left: 10px;
+  width: 100%;
+  overflow: auto;
 }
 
 .card {
   margin-bottom: 10px;
+}
+
+.full-width {
+ width: 90%;
 }

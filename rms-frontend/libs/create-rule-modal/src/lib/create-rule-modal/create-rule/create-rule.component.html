@@ -2,15 +2,15 @@
   <div class="left" fxLayout="column" fxLayoutAlign="space-between start">
     <div>
       <form>
-        <mat-form-field>
+        <mat-form-field class="full-width">
           <mat-label>Name</mat-label>
           <input matInput required>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="full-width">
           <mat-label>Description</mat-label>
           <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10" required></textarea>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="full-width">
           <mat-label>Record System</mat-label>
           <select matNativeControl required>
             <option value="" selected></option>
@@ -21,8 +21,8 @@
           </select>
         </mat-form-field>
       </form>
-      <p>Priority: LAST</p>
-      <p>Active: FALSE</p>
+      <p class="full-width">Priority: LAST</p>
+      <p class="full-width">Active: FALSE</p>
     </div>
     <span fxFlex="1 1 auto"></span>
     <button mat-raised-button (click)="saveForm()" color="accent">
@@ -32,58 +32,27 @@
   </div>
   <div class="right" fxFlex="1 1 auto">
     <div class="build-top">
-      <h3>Build Rule</h3>
+      <h2>Build Rule</h2>
     </div>
-    <div class="build-bottom">
-      <div class="build-left" fxLayout="column" fxLayoutAlign="start stretch">
-        <mat-card class="card">
-          <mat-card-header>
-            <mat-card-title>Conditions</mat-card-title>
-            <mat-card-subtitle>Select at least one</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            TODO
-          </mat-card-content>
-        </mat-card>
-        <mat-card class="card">
-          <mat-card-header>
-            <mat-card-title>Actions</mat-card-title>
-            <mat-card-subtitle>Select at least one</mat-card-subtitle>
-          </mat-card-header>
-          <mat-card-content>
-            TODO some selection stuff.
-          </mat-card-content>
-        </mat-card>
-      </div>
-      <span fxFlex="1 1 auto"></span>
-      <div class="build-right" fxLayout="column" fxLayoutAlign="start stretch">
-        <mat-card class="card">
-          <mat-card-header>
-            <mat-card-title>Available Conditions</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <ul>
-              <li>CreateDate</li>
-              <li>Producer</li>
-              <li>Title</li>
-              <li>TextContent</li>
-            </ul>
-          </mat-card-content>
-        </mat-card>
-        <mat-card class="card">
-          <mat-card-header>
-            <mat-card-title>Available Conditions</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <ul>
-              <li>Assign RCS</li>
-              <li>Send Notification</li>
-              <li>Drop</li>
-              <li>Send To System</li>
-            </ul>
-          </mat-card-content>
-        </mat-card>
-      </div>
+    <div class="build-bottom" fxLayout="column" fxLayoutAlign="start stretch">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Conditions</mat-card-title>
+          <mat-card-subtitle>Add at least one condition</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <rms-frontend-rule-build-piece></rms-frontend-rule-build-piece>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>Actions</mat-card-title>
+          <mat-card-subtitle>Add at least one action</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <rms-frontend-rule-build-piece></rms-frontend-rule-build-piece>
+        </mat-card-content>
+      </mat-card>
     </div>
   </div>
 </div>
