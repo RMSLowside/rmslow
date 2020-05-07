@@ -9,6 +9,7 @@ import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
 })
 export class RuleBuildPieceComponent implements OnInit {
   @Input() contents = [];
+  @Input() conditionType = true;
   @Output() contentChange: EventEmitter<any> = new EventEmitter<any>();
 
   form: FormGroup;
@@ -23,22 +24,41 @@ export class RuleBuildPieceComponent implements OnInit {
 
     this.items = this.form.get('items') as FormArray;
 
-    if (this.contents.length > 0)
-      this.contents.forEach(item => {
+    if(this.conditionType) {
+      if (this.contents.length > 0) {
+        this.contents.forEach(item => {
+          this.items.push(this.formBuilder.group({
+            condition: new FormControl(item.condition || ''),
+            comparator: new FormControl(item.comparator || ''),
+            value: new FormControl(item.value || ''),
+            order: new FormControl(item.order)
+          }));
+        });
+      } else {
         this.items.push(this.formBuilder.group({
-          condition: new FormControl(item.condition || ''),
-          comparator: new FormControl(item.comparator || ''),
-          value: new FormControl(item.value || ''),
-          order: new FormControl(item.order)
-        }));
-      });
-    else
-      this.items.push(this.formBuilder.group({
-        condition: '',
-        comparator: '',
-        value: '',
-        order: ''
-      }))
+          condition: '',
+          comparator: '',
+          value: '',
+          order: ''
+        }))
+      }
+    } else {
+      if (this.contents.length > 0) {
+        this.contents.forEach(item => {
+          this.items.push(this.formBuilder.group({
+            action: new FormControl(item.condition || ''),
+            value: new FormControl(item.comparator || ''),
+            order: new FormControl(item.order)
+          }));
+        });
+      } else {
+        this.items.push(this.formBuilder.group({
+          action: '',
+          value: '',
+          order: ''
+        }))
+      }
+    }
 
     this.form.get('items').valueChanges.subscribe(x => {
       this.contents = this.reorder(x)
@@ -62,12 +82,20 @@ export class RuleBuildPieceComponent implements OnInit {
 
   addHelpCard(index) {
     this.items = this.form.get('items') as FormArray;
-    this.items.insert(index + 1, this.formBuilder.group({
-      condition: '',
-      comparator: '',
-      value: '',
-      order: ''
-    }))
+    if(this.conditionType) {
+      this.items.insert(index + 1, this.formBuilder.group({
+        condition: '',
+        comparator: '',
+        value: '',
+        order: ''
+      }))
+    } else {
+      this.items.insert(index + 1, this.formBuilder.group({
+          action: '',
+          value: '',
+          order: ''
+      }))
+    }
   }
 
   reorder(values) {

@@ -16,7 +16,7 @@
           </button>
         </div>
         <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
-        <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width">
+        <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width" *ngIf="conditionType">
           <mat-form-field style="width: 20%">
             <mat-label>Condition</mat-label>
             <mat-select formControlName="condition">
@@ -29,13 +29,29 @@
           <mat-form-field style="width: 20%">
             <mat-label>Comparator</mat-label>
             <mat-select formControlName="comparator">
-              <mat-option value='text'>EQUALS</mat-option>
-              <mat-option value='text'>CONTAINS</mat-option>
-              <mat-option value='text'>GREATER THAN</mat-option>
-              <mat-option value='text'>LESS THAN</mat-option>
+              <mat-option value='equals'>EQUALS</mat-option>
+              <mat-option value='contains'>CONTAINS</mat-option>
+              <mat-option value='notcontains'>NOT CONTAINS</mat-option>
+              <mat-option value='greater'>GREATER THAN</mat-option>
+              <mat-option value='less'>LESS THAN</mat-option>
             </mat-select>
           </mat-form-field>
           <mat-form-field style="width: 45%">
+            <mat-label>Value</mat-label>
+            <input matInput formControlName="value" required>
+          </mat-form-field>
+        </div>
+        <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width" *ngIf="!conditionType">
+          <mat-form-field style="width: 30%">
+            <mat-label>Action</mat-label>
+            <mat-select formControlName="action">
+              <mat-option value='rmm'>Add To RMM</mat-option>
+              <mat-option value='message'>Send Notification</mat-option>
+              <mat-option value='transfer'>Transfer To System</mat-option>
+              <mat-option value='drop'>Drop / Do nothing</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style="width: 50%">
             <mat-label>Value</mat-label>
             <input matInput formControlName="value" required>
           </mat-form-field>
