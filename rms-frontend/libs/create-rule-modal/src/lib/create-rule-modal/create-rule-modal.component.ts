@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Input, Output, ComponentFactoryResolve
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { CreateRuleComponent } from './create-rule/create-rule.component';
 import { TestRuleComponent } from './test-rule/test-rule.component';
+import { RuleBuildPieceComponent } from './rule-build-piece/rule-build-piece.component';
 
 @Component({
   selector: 'rms-frontend-create-rule-modal',

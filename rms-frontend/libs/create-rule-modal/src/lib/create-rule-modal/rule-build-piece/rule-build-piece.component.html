@@ -1,0 +1,37 @@
+<form class="example-form" [formGroup]="form">
+    <div cdkDropList (cdkDropListDropped)="drop($event)" class="example-list">
+        <div formArrayName="items" *ngFor="let item of form.get('items')['controls']; let i = index;" cdkDrag class="example-box">
+            <mat-card fxLayout="row">
+                <div class="drag-placeholder" *cdkDragPlaceholder></div>
+                <div fxLayout="column" fxLayoutAlign="space-evenly start">
+                    <button mat-icon-button type="button" class="remove-btn" (click)="removeHelpCard(i)">
+                        <mat-icon>remove</mat-icon>
+                    </button>
+                    <button mat-icon-button type="button" (click)="addHelpCard(i)">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                    <mat-icon cdkDragHandle class="dragable">swap_vert</mat-icon>                    
+                </div>
+                <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
+                <div [formGroupName]="i">                    
+                    <mat-form-field style="width: 30%;">
+                        <mat-label>Type</mat-label>
+                        <mat-select formControlName="type">
+                            <mat-option value='text'>Text</mat-option>
+                            <mat-option value='link'>Link</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field style="width: 70%;">
+                        <mat-label>title</mat-label>
+                        <input matInput formControlName="title">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>content</mat-label>
+                        <textarea matInput formControlName="value"></textarea>
+                    </mat-form-field>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</form>

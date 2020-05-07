@@ -1,4 +1,12 @@
 <div class="main">
+  <div>
+    <span fxFlex="1 1 auto"></span>
+    <mat-form-field class="search">
+      <mat-label>Search</mat-label>
+      <textarea matInput cdkTextareaAutosize cdkAutosizeMinRows="1" cdkAutosizeMaxRows="1"></textarea>
+    </mat-form-field>
+    <span fxFlex="1 1 auto"></span>
+  </div>
   <rms-grid [columns]="gridColumns" [data]="gridData"></rms-grid>
   <br>
   <button mat-raised-button color="accent" class="button" (click)="createRule()">Create Rule</button>

@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       {
         id: 'create-rule-modal',
         hasBackdrop: false,
-        minWidth: '80%',
-        width: '80%',
+        minWidth: '90%',
+        width: '90%',
         minHeight: '90%',
         height: '90%'
       });
@@ -46,5 +46,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   orderRules() {
     console.log("Ordering rules");
+  }
+
+  testRules() {
+    console.log("Testing rules")
   }
 }

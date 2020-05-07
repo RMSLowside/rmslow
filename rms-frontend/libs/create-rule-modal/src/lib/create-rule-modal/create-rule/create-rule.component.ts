@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, NgModule } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output, ComponentFactoryResolver, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { CoreModule } from '@rms-frontend/core';
+import { RuleBuildPieceComponent } from '../rule-build-piece/rule-build-piece.component';
 
 @Component({
   selector: 'rms-frontend-create-rule',
@@ -9,13 +11,15 @@ import { CoreModule } from '@rms-frontend/core';
 export class CreateRuleComponent implements OnInit {
   @Input() name: string = '';
 
-  constructor() {}
+  constructor(
+    public dialogRef: MatDialogRef<CreateRuleComponent>,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {}
-}
 
-@NgModule({
-  declarations: [CreateRuleComponent],
-  imports: [CoreModule]
-})
-class CreateRuleComponentModule {}
+  saveForm(): void {
+    console.log("Actual save the information one day");
+    this.dialogRef.close();
+  }
+}

@@ -13,9 +13,3 @@ export class TestRuleComponent implements OnInit {
 
   ngOnInit(): void {}
 }
-
-@NgModule({
-  declarations: [TestRuleComponent],
-  imports: [CoreModule]
-})
-class TestRuleComponentModule {}
