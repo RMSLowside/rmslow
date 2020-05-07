@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TranslateComponent } from './translate.component';
+import { DateRangeComponent } from './date-range.component';
 
-describe('RangeComponent', () => {
-  let component: TranslateComponent;
-  let fixture: ComponentFixture<TranslateComponent>;
+describe('DateRangeComponent', () => {
+  let component: DateRangeComponent;
+  let fixture: ComponentFixture<DateRangeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TranslateComponent ]
+      declarations: [ DateRangeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TranslateComponent);
+    fixture = TestBed.createComponent(DateRangeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,6 +22,4 @@ describe('RangeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });

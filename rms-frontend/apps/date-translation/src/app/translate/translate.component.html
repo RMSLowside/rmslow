@@ -3,22 +3,7 @@
     <input matInput type="text" [(ngModel)]="currentStartQuery" placeholder="Starting query; use [D] for date" (change)="update()">
   </mat-form-field>
 </div>
-<div>
-  <mat-form-field>
-    <mat-label>Start Date</mat-label>
-    <input matInput [min]="minSDate" [max]="maxSDate" [matDatepicker]="sd" [ngModel]="startDate" (dateInput)="updateStart($event)" (dateChange)="updateStart($event)" disabled>
-    <mat-datepicker-toggle matSuffix [for]="sd"></mat-datepicker-toggle>
-    <mat-datepicker #sd [startAt]="beginning" disabled="false"></mat-datepicker>
-  </mat-form-field>
-  <span *ngIf="startDate" style="margin-left: 10px; margin-right: 10px;">to</span>
-  <mat-form-field *ngIf="startDate">
-    <mat-label>End Date</mat-label>
-    <input matInput [min]="minEDate" [max]="maxEDate" [matDatepicker]="ed" [ngModel]="endDate" (dateInput)="updateEnd($event)" (dateChange)="updateEnd($event)" disabled>
-    <mat-datepicker-toggle matSuffix [for]="ed"></mat-datepicker-toggle>
-    <mat-datepicker #ed [startAt]="today" disabled="false"></mat-datepicker>
-  </mat-form-field>
-</div>
-<br/>
+<rms-date-range (dateEmitter)="updateOnEmit($event)"></rms-date-range>
 <mat-radio-group [(ngModel)]="selectedType">
   <mat-radio-button style="margin-right: 15px;" *ngFor="let type of types" [value]="type" (change)="updateType($event)" [checked]="type == 'Type A'">{{type}}</mat-radio-button>
 </mat-radio-group>
