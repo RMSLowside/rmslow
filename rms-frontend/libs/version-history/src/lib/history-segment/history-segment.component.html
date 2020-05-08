@@ -1,0 +1,24 @@
+<mat-card class="segment">
+  <mat-card-content fxLayout="column"
+    ><div fxLayout="row">
+      <span
+        ><strong>{{ history.user }}</strong> updated
+        <strong>{{ history.field }}</strong> {{ history.date | date }}</span
+      ><span fxFlex="1 1 auto"></span
+      ><button mat-icon-button (click)="revertChange.emit(history)">
+        <mat-icon>undo</mat-icon>
+      </button>
+    </div>
+    <div fxFlex fxLayout="row" fxLayoutAlign="start center">
+      <p>{{ history.oldValue }}</p>
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Arrow Icon"
+        class="icon"
+        [inline]="true"
+        >arrow_forward</mat-icon
+      >
+      <p>{{ history.newValue }}</p>
+    </div></mat-card-content
+  >
+</mat-card>

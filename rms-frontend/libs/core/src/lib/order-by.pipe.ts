@@ -21,7 +21,13 @@ export class OrderByPipe implements PipeTransform {
 
     return orderBy(
       value,
-      [val => val[column].toString().toLowerCase()],
+      [
+        val => {
+          if (val[column] instanceof Date && !isNaN(val[column].valueOf()))
+            return val[column];
+          return val[column].toString().toLowerCase();
+        }
+      ],
       [desc]
     );
   }

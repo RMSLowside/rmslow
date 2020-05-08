@@ -1,0 +1,35 @@
+<div fxFlex flexlayout="column">
+  <span fxLayoutAlign="space-between">
+    <mat-form-field class="filters">
+      <mat-label>Field</mat-label>
+      <mat-select [formControl]="fieldFilter" multiple>
+        <mat-option
+          *ngFor="let filter of getFilter('field')"
+          [value]="filter"
+          >{{ filter }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="filters">
+      <mat-label>User</mat-label>
+      <mat-select [formControl]="userFilter" multiple>
+        <mat-option *ngFor="let filter of getFilter('user')" [value]="filter">{{
+          filter
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="filters">
+      <mat-label>Sort</mat-label>
+      <mat-select [formControl]="sort" [value]="'asc'">
+        <mat-option [value]="'asc'"> Least Recent</mat-option>
+        <mat-option [value]="'desc'"> Most Recent</mat-option>
+      </mat-select>
+    </mat-form-field></span
+  >
+  <rms-frontend-history-segment
+    *ngFor="let history of filterHistories() | orderBy: sort.value:'date'"
+    [history]="history"
+    [canEdit]="canEdit"
+    (revertChange)="revertChange.emit($event)"
+  ></rms-frontend-history-segment>
+</div>

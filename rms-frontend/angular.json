@@ -673,8 +673,8 @@
               "apps/ngxs-forms/src/assets"
             ],
             "styles": [
-              "apps/ngxs-forms/src/styles.scss",
-              "libs/shared-assets/styles.scss"
+              "libs/shared-assets/styles.scss",
+              "apps/ngxs-forms/src/styles.scss"
             ],
             "scripts": []
           },
@@ -771,6 +771,38 @@
             "tsConfig": ["apps/ngxs-forms-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/ngxs-forms-e2e/**"]
           }
+        }
+      }
+    },
+    "version-history": {
+      "projectType": "library",
+      "root": "libs/version-history",
+      "sourceRoot": "libs/version-history/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/version-history/tsconfig.lib.json",
+              "libs/version-history/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/version-history/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/version-history/jest.config.js",
+            "tsConfig": "libs/version-history/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/version-history/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     },

@@ -1,0 +1,17 @@
+<div fxLayout="row">
+  <h1 mat-dialog-title>History</h1>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>
+      close
+    </mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <rms-frontend-history-list
+    [histories]="histories | async"
+    [canEdit]="canEdit"
+    (revertChange)="emit($event)"
+  ></rms-frontend-history-list>
+</mat-dialog-content>

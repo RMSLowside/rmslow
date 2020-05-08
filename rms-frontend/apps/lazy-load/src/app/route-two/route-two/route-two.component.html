@@ -1,4 +1,21 @@
-<p>route-two works!</p>
-<button mat-raised-button color="accent" routerLink="/home">
-  Lazy-App Home
-</button>
+<div fxFlex>
+  <button
+    mat-raised-button
+    color="accent"
+    routerLink="/home"
+    style="margin:20px"
+  >
+    Lazy-App Home
+  </button>
+  <button mat-raised-button color="accent" (click)="openHistory()">
+    History Modal
+  </button>
+  <div fxLayout="column">
+    <span>
+      Current Value for fieldOne is: {{ (histories$ | async)[8].newValue }}
+    </span>
+    <span>
+      Current Value for fieldTwo is: {{ (histories$ | async)[9].newValue }}
+    </span>
+  </div>
+</div>
