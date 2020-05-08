@@ -21,7 +21,7 @@ export class RouteTwoComponent implements OnInit {
     const intialHistories: VersionHistory[] = [];
     if (
       this.store.selectSnapshot(state => state.history?.histories.length) === 0
-    )
+    ) {
       for (let i = 0; i < 10; i++) {
         const history = new VersionHistory();
         history.date = new Date();
@@ -34,7 +34,8 @@ export class RouteTwoComponent implements OnInit {
         history.newValue = `This is the ${history.version} entry for ${history.field}`;
         intialHistories.push(history);
       }
-    this.store.dispatch(new HistoryAction(intialHistories));
+      this.store.dispatch(new HistoryAction(intialHistories));
+    }
   }
   openHistory() {
     const dialogRef = this.dialog.open(HistoryModalComponent);
