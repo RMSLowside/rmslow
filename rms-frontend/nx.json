@@ -74,6 +74,9 @@
     },
     "create-rule-modal": {
       "tags": []
+    },
+    "order-rules-modal": {
+      "tags": []
     }
   }
 }

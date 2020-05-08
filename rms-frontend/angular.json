@@ -832,6 +832,34 @@
         }
       },
       "schematics": {}
+    },
+    "order-rules-modal": {
+      "projectType": "library",
+      "root": "libs/order-rules-modal",
+      "sourceRoot": "libs/order-rules-modal/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/order-rules-modal/tsconfig.lib.json",
+              "libs/order-rules-modal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/order-rules-modal/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/order-rules-modal/jest.config.js",
+            "tsConfig": "libs/order-rules-modal/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/order-rules-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

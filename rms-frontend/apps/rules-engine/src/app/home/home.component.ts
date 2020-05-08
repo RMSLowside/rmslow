@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateRuleModalComponent } from '@rms-frontend/create-rule-modal';
+import { OrderRulesModalComponent } from '@rms-frontend/order-rules-modal';
 import { GridComponent } from '@rms-frontend/grid';
 
 @Component({
@@ -46,6 +47,18 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   orderRules() {
     console.log("Ordering rules");
+    const dialogRef = this.dialog.open(OrderRulesModalComponent,
+      {
+        id: 'order-rules-modal',
+        hasBackdrop: false,
+        minWidth: '90%',
+        width: '90%',
+        minHeight: '90%',
+        height: '90%'
+      });
+    dialogRef.afterClosed().subscribe(res => {
+      console.log('New Rule Closed');
+    });
   }
 
   testRules() {

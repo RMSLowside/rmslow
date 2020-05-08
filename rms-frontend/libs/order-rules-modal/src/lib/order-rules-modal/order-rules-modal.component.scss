@@ -1,0 +1,42 @@
+.modalContainer{
+  height: 100%;
+}
+
+.header-bar {
+  height: 10%;
+  margin-bottom: 15px;
+}
+
+.modal-body {
+  height: 90%;
+}
+
+.left {
+  width: min-content;
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 20px;
+  height: 100%;
+}
+
+.high-priority {
+  width: 100px;
+  height: 100px;
+  background-color: #ff4d4d;
+}
+
+.low-priority {
+  width: 100px;
+  height: 100px;
+  background-color: #668cff;
+}
+
+.right {
+  margin-left: 20px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 25px;
+  padding: 20px;
+  height: 94%;
+  overflow: auto;
+}
