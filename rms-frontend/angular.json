@@ -309,6 +309,130 @@
         }
       }
     },
+    "rules-engine": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/rules-engine",
+      "sourceRoot": "apps/rules-engine/src",
+      "prefix": "rules-engine",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/rules-engine",
+            "index": "apps/rules-engine/src/index.html",
+            "main": "apps/rules-engine/src/main.ts",
+            "polyfills": "apps/rules-engine/src/polyfills.ts",
+            "tsConfig": "apps/rules-engine/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/rules-engine/src/favicon.ico",
+              "apps/rules-engine/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "libs/shared-assets/styles.scss",
+              "apps/rules-engine/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/rules-engine/src/environments/environment.ts",
+                  "with": "apps/rules-engine/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "rules-engine:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "rules-engine:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rules-engine:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/rules-engine/tsconfig.app.json",
+              "apps/rules-engine/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/rules-engine/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/rules-engine/jest.config.js",
+            "tsConfig": "apps/rules-engine/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/rules-engine/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "rules-engine-e2e": {
+      "root": "apps/rules-engine-e2e",
+      "sourceRoot": "apps/rules-engine-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/rules-engine-e2e/cypress.json",
+            "tsConfig": "apps/rules-engine-e2e/tsconfig.e2e.json"
+          },
+          "configurations": {
+            "production": {}
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/rules-engine-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/rules-engine-e2e/**"]
+          }
+        }
+      }
+    },
     "home": {
       "projectType": "application",
       "schematics": {
@@ -838,132 +962,6 @@
         }
       }
     },
-    "rules-engine": {
-      "projectType": "application",
-      "schematics": {},
-      "root": "apps/rules-engine",
-      "sourceRoot": "apps/rules-engine/src",
-      "prefix": "rms-frontend",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/rules-engine",
-            "index": "apps/rules-engine/src/index.html",
-            "main": "apps/rules-engine/src/main.ts",
-            "polyfills": "apps/rules-engine/src/polyfills.ts",
-            "tsConfig": "apps/rules-engine/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "apps/rules-engine/src/favicon.ico",
-              "apps/rules-engine/src/assets"
-            ],
-            "styles": [
-              "apps/rules-engine/src/styles.scss",
-              "libs/shared-assets/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/rules-engine/src/environments/environment.ts",
-                  "with": "apps/rules-engine/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "rules-engine:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "rules-engine:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "rules-engine:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/rules-engine/tsconfig.app.json",
-              "apps/rules-engine/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/rules-engine/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/rules-engine/jest.config.js",
-            "tsConfig": "apps/rules-engine/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "apps/rules-engine/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "rules-engine-e2e": {
-      "root": "apps/rules-engine-e2e",
-      "sourceRoot": "apps/rules-engine-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/rules-engine-e2e/cypress.json",
-            "tsConfig": "apps/rules-engine-e2e/tsconfig.e2e.json",
-            "devServerTarget": "rules-engine:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "rules-engine:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/rules-engine-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/rules-engine-e2e/**"]
-          }
-        }
-      }
-    },
-    "create-rule-modal": {
-      "projectType": "library",
-      "root": "libs/create-rule-modal",
-      "sourceRoot": "libs/create-rule-modal/src",
     "date-range": {
       "projectType": "library",
       "root": "libs/date-range",
@@ -974,10 +972,6 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/create-rule-modal/tsconfig.lib.json",
-              "libs/create-rule-modal/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/create-rule-modal/**"]
               "libs/date-range/tsconfig.lib.json",
               "libs/date-range/tsconfig.spec.json"
             ],
@@ -987,42 +981,6 @@
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "libs/create-rule-modal/jest.config.js",
-            "tsConfig": "libs/create-rule-modal/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/create-rule-modal/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
-    },
-    "order-rules-modal": {
-      "projectType": "library",
-      "root": "libs/order-rules-modal",
-      "sourceRoot": "libs/order-rules-modal/src",
-      "prefix": "rms-frontend",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/order-rules-modal/tsconfig.lib.json",
-              "libs/order-rules-modal/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/order-rules-modal/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/order-rules-modal/jest.config.js",
-            "tsConfig": "libs/order-rules-modal/tsconfig.spec.json",
-            "passWithNoTests": true,
-            "setupFile": "libs/order-rules-modal/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {}
             "jestConfig": "libs/date-range/jest.config.js",
             "tsConfig": "libs/date-range/tsconfig.spec.json",
             "passWithNoTests": true,
