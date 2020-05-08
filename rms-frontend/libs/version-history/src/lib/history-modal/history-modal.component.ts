@@ -15,6 +15,6 @@ export class HistoryModalComponent implements OnInit {
   ngOnInit(): void {}
 
   emit(history: VersionHistory) {
-    console.log(history);
+    alert(`You are reverting ${history.field} to: "${history.newValue}"`);
   }
 }
