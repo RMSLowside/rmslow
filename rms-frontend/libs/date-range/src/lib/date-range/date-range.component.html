@@ -1,0 +1,15 @@
+<div>
+  <mat-form-field>
+    <mat-label>Start Date</mat-label>
+    <input matInput [min]="minSDate" [max]="maxSDate" [matDatepicker]="sd" [ngModel]="startDate" (dateInput)="updateStart($event)" (dateChange)="updateStart($event)" disabled>
+    <mat-datepicker-toggle matSuffix [for]="sd"></mat-datepicker-toggle>
+    <mat-datepicker #sd [startAt]="startDate" disabled="false"></mat-datepicker>
+  </mat-form-field>
+  <span *ngIf="startDate" style="margin-left: 10px; margin-right: 10px;">to</span>
+  <mat-form-field>
+    <mat-label>End Date</mat-label>
+    <input matInput [min]="minEDate" [max]="maxEDate" [matDatepicker]="ed" [ngModel]="endDate" (dateInput)="updateEnd($event)" (dateChange)="updateEnd($event)" disabled>
+    <mat-datepicker-toggle matSuffix [for]="ed"></mat-datepicker-toggle>
+    <mat-datepicker #ed [startAt]="endDate" disabled="false"></mat-datepicker>
+  </mat-form-field>
+</div>

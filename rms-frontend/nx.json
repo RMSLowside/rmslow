@@ -62,6 +62,16 @@
     "header": {
       "tags": []
     },
+    "date-translation": {
+      "tags": []
+    },
+    "date-translation-e2e": {
+      "tags": [],
+      "implicitDependencies": ["date-translation"]
+    },
+    "version-history": {
+      "tags": []
+    },
     "help-modal": {
       "tags": []
     },
@@ -76,6 +86,7 @@
       "tags": []
     },
     "order-rules-modal": {
+    "date-range": {
       "tags": []
     }
   }

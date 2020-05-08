@@ -493,6 +493,129 @@
         }
       }
     },
+    "date-translation": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/date-translation",
+      "sourceRoot": "apps/date-translation/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/date-translation",
+            "index": "apps/date-translation/src/index.html",
+            "main": "apps/date-translation/src/main.ts",
+            "polyfills": "apps/date-translation/src/polyfills.ts",
+            "tsConfig": "apps/date-translation/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/date-translation/src/favicon.ico",
+              "apps/date-translation/src/assets"
+            ],
+            "styles": ["apps/date-translation/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/date-translation/src/environments/environment.ts",
+                  "with": "apps/date-translation/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "date-translation:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "date-translation:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "date-translation:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/date-translation/tsconfig.app.json",
+              "apps/date-translation/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/date-translation/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/date-translation/jest.config.js",
+            "tsConfig": "apps/date-translation/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/date-translation/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "date-translation-e2e": {
+      "root": "apps/date-translation-e2e",
+      "sourceRoot": "apps/date-translation-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/date-translation-e2e/cypress.json",
+            "tsConfig": "apps/date-translation-e2e/tsconfig.e2e.json",
+            "devServerTarget": "date-translation:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "date-translation:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/date-translation-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/date-translation-e2e/**"]
+          }
+        }
+      }
+    },
     "forms": {
       "projectType": "library",
       "root": "libs/forms",
@@ -550,8 +673,8 @@
               "apps/ngxs-forms/src/assets"
             ],
             "styles": [
-              "apps/ngxs-forms/src/styles.scss",
-              "libs/shared-assets/styles.scss"
+              "libs/shared-assets/styles.scss",
+              "apps/ngxs-forms/src/styles.scss"
             ],
             "scripts": []
           },
@@ -648,6 +771,38 @@
             "tsConfig": ["apps/ngxs-forms-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/ngxs-forms-e2e/**"]
           }
+        }
+      }
+    },
+    "version-history": {
+      "projectType": "library",
+      "root": "libs/version-history",
+      "sourceRoot": "libs/version-history/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/version-history/tsconfig.lib.json",
+              "libs/version-history/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/version-history/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/version-history/jest.config.js",
+            "tsConfig": "libs/version-history/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/version-history/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     },
@@ -809,6 +964,10 @@
       "projectType": "library",
       "root": "libs/create-rule-modal",
       "sourceRoot": "libs/create-rule-modal/src",
+    "date-range": {
+      "projectType": "library",
+      "root": "libs/date-range",
+      "sourceRoot": "libs/date-range/src",
       "prefix": "rms-frontend",
       "architect": {
         "lint": {
@@ -819,6 +978,10 @@
               "libs/create-rule-modal/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**", "!libs/create-rule-modal/**"]
+              "libs/date-range/tsconfig.lib.json",
+              "libs/date-range/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/date-range/**"]
           }
         },
         "test": {
@@ -860,6 +1023,18 @@
         }
       },
       "schematics": {}
+            "jestConfig": "libs/date-range/jest.config.js",
+            "tsConfig": "libs/date-range/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/date-range/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

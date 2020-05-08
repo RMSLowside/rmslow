@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
@@ -36,6 +37,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { PreAuthComponent } from './pre-auth/pre-auth.component';
 import { UnauthComponent } from './unauth/unauth.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { OrderByPipe } from './order-by.pipe';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
@@ -72,6 +74,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    MatNativeDateModule,
     FlexLayoutModule,
     DragDropModule
   ],
@@ -109,9 +112,12 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatSortModule,
     MatPaginatorModule,
     PreAuthComponent,
+    MatNativeDateModule,
     FlexLayoutModule,
-    DragDropModule
+    OrderByPipe,
+    DragDropModule,
+    FlexLayoutModule
   ],
-  declarations: [PreAuthComponent, UnauthComponent]
+  declarations: [PreAuthComponent, UnauthComponent, OrderByPipe]
 })
-export class CoreModule { }
+export class CoreModule {}

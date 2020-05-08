@@ -1,0 +1,13 @@
+<div>
+  <mat-form-field style="width: 25%;">
+    <input matInput type="text" [(ngModel)]="currentStartQuery" placeholder="Starting query; use [D] for date" (change)="update()">
+  </mat-form-field>
+</div>
+<rms-date-range (dateEmitter)="updateOnEmit($event)"></rms-date-range>
+<mat-radio-group [(ngModel)]="selectedType">
+  <mat-radio-button style="margin-right: 15px;" *ngFor="let type of types" [value]="type" (change)="updateType($event)" [checked]="type == 'Type A'">{{type}}</mat-radio-button>
+</mat-radio-group>
+<div>
+  <h3>Resulting Query: </h3>
+  <span>{{endQuery$ | async}}</span>
+</div>

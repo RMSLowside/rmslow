@@ -33,7 +33,8 @@ export class AppComponent {
     },
     { key: 'S3 App', value: `${location.origin}/rmslow/apps/s3` },
     { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` },
-    { key: 'NGXS Form App', value: `${location.origin}/rmslow/apps/ngxs-forms` }
+    { key: 'NGXS Form App', value: `${location.origin}/rmslow/apps/ngxs-forms` },
+    { key: 'Date Translation App', value: `${location.origin}/rmslow/apps/date-translation`}
   ];
   @Select(GlobalState.getTheme) theme$: Observable<string>;
 
@@ -46,7 +47,7 @@ export class AppComponent {
     this.store.dispatch(new SetTheme(theme));
   }
 
-  getHelpModalContent() {        
+  getHelpModalContent() {
     const helpContent = [
       new HelpBase({
         type: 'text',
