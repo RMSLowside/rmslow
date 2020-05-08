@@ -5,28 +5,33 @@
         arrow_back
       </mat-icon>
     </button>
-    <span class="wrap-path" matTooltip="{{ path }}"
-          matTooltipPosition="below"
-          matTooltipClass='tooltip2'> {{ path | ellipsis:100 || 'Files' }} </span>
+    <span
+      class="wrap-path"
+      matTooltip="{{ path }}"
+      matTooltipPosition="below"
+      matTooltipClass="tooltip2"
+    >
+      {{ path | ellipsis: 100 || 'Files' }}
+    </span>
     <span fxFlex="1 1 auto"></span>
-      <div class="small-font" *ngIf="selected.length">
-        {{ selected.length }} File(s) Selected
-      </div>
-      <button *ngIf="selected.length" mat-icon-button (click)="selected = []">
-        <mat-icon>
-          clear
-        </mat-icon>
-      </button>
-      <button mat-icon-button (click)="openNewFolderDialog()">
-        <mat-icon>
-          create_new_folder
-        </mat-icon>
-      </button>
-      <button mat-icon-button (click)="uploader.click()">
-        <mat-icon>
-          cloud_upload
-        </mat-icon>
-      </button>
+    <div class="small-font" *ngIf="selected.length">
+      {{ selected.length }} File(s) Selected
+    </div>
+    <button *ngIf="selected.length" mat-icon-button (click)="selected = []">
+      <mat-icon>
+        clear
+      </mat-icon>
+    </button>
+    <button mat-icon-button (click)="openNewFolderDialog()">
+      <mat-icon>
+        create_new_folder
+      </mat-icon>
+    </button>
+    <button mat-icon-button (click)="uploader.click()">
+      <mat-icon>
+        cloud_upload
+      </mat-icon>
+    </button>
   </mat-toolbar>
 
   <div class="container">
@@ -49,14 +54,15 @@
           fxFlex
           fxLayout="column space-between"
           class="element-container"
+          [id]="element.id"
           [ngStyle]="{
             'background-color': selected.includes(element) ? 'grey' : ''
           }"
           (click)="navigate(element, $event)"
           (contextmenu)="menuTrigger.openMenu(); $event.preventDefault()"
-          matTooltip="{{element.name}}"
+          matTooltip="{{ element.name }}"
           matTooltipPosition="below"
-          matTooltipClass='tooltip'
+          matTooltipClass="tooltip"
         >
           <mat-icon
             color="primary"
@@ -73,7 +79,7 @@
             insert_drive_file
           </mat-icon>
 
-          <span>{{ element.name | ellipsis:20 }}</span>
+          <span>{{ element.name | ellipsis: 20 }}</span>
         </div>
       </div>
     </div>
