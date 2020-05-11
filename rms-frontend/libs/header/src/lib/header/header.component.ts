@@ -14,16 +14,12 @@ export class HeaderComponent {
   @Output() themeChange = new EventEmitter<string>();
   @Output() helpChange = new EventEmitter<string>();
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {}
 
   links: KeyValue<string, string>[] = [
     {
       key: 'Main Home',
       value: `https://RMSLowside.github.io/rmslow/apps/home/`
-    },
-    {
-      key: 'Kaylee Home',
-      value: `https://saepark90.github.io/rmslow/apps/home/`
     },
     {
       key: 'Steve Home',
@@ -34,20 +30,31 @@ export class HeaderComponent {
       value: `https://flare891.github.io/rmslow/apps/home`
     },
     { key: 'S3 App', value: `${location.origin}/rmslow/apps/s3` },
-    { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` }
+    { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` },
+    {
+      key: 'NGXS Form App',
+      value: `${location.origin}/rmslow/apps/ngxs-forms`
+    },
+    {
+      key: 'Date Translation App',
+      value: `${location.origin}/rmslow/apps/date-translation`
+    },
+    {
+      key: 'Rules Engine',
+      value: `${location.origin}/rmslow/apps/rules-engine`
+    }
   ];
 
   openHelpModal() {
     // check if help modal is already open
     if (this.dialog.openDialogs.findIndex(x => x.id === 'help-modal') == -1) {
-      const dialogRef = this.dialog.open(HelpModalComponent,
-        {
-          id: 'help-modal',
-          hasBackdrop: false,
-          minWidth: '500px',
-          minHeight: '400px',
-          position: { top: '70px', right: '10px' }
-        });
+      const dialogRef = this.dialog.open(HelpModalComponent, {
+        id: 'help-modal',
+        hasBackdrop: false,
+        minWidth: '500px',
+        minHeight: '400px',
+        position: { top: '70px', right: '10px' }
+      });
       dialogRef.componentInstance.title = 'Home Page Help Modal';
       dialogRef.componentInstance.contents = this.helpContent;
       dialogRef.componentInstance.updateHelpContent.subscribe(value => {
@@ -59,7 +66,7 @@ export class HeaderComponent {
     }
   }
 
-  HelpContentChange(value) {    
+  HelpContentChange(value) {
     this.helpChange.emit(value);
   }
 }

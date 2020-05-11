@@ -12,16 +12,12 @@ import { HelpBase } from '@rms-frontend/help-modal';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(public overlayContainer: OverlayContainer, public store: Store) { }
+  constructor(public overlayContainer: OverlayContainer, public store: Store) {}
   title = 'Home';
   links: KeyValue<string, string>[] = [
     {
       key: 'Main Home',
       value: `https://RMSLowside.github.io/rmslow/apps/home/`
-    },
-    {
-      key: 'Kaylee Home',
-      value: `https://saepark90.github.io/rmslow/apps/home/`
     },
     {
       key: 'Steve Home',
@@ -33,8 +29,18 @@ export class AppComponent {
     },
     { key: 'S3 App', value: `${location.origin}/rmslow/apps/s3` },
     { key: 'Lazy App', value: `${location.origin}/rmslow/apps/lazy-load` },
-    { key: 'NGXS Form App', value: `${location.origin}/rmslow/apps/ngxs-forms` },
-    { key: 'Date Translation App', value: `${location.origin}/rmslow/apps/date-translation`}
+    {
+      key: 'NGXS Form App',
+      value: `${location.origin}/rmslow/apps/ngxs-forms`
+    },
+    {
+      key: 'Date Translation App',
+      value: `${location.origin}/rmslow/apps/date-translation`
+    },
+    {
+      key: 'Rules Engine',
+      value: `${location.origin}/rmslow/apps/rules-engine`
+    }
   ];
   @Select(GlobalState.getTheme) theme$: Observable<string>;
 
@@ -67,7 +73,7 @@ export class AppComponent {
         order: 1,
         value: 'Contains help file content'
       })
-    ]
+    ];
 
     return helpContent;
   }
