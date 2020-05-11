@@ -16,6 +16,7 @@ import {
   TextboxQuestion
 } from '@rms-frontend/forms';
 import cloneDeep from 'lodash-es/cloneDeep';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'lazy-load-route-two',
@@ -24,6 +25,7 @@ import cloneDeep from 'lodash-es/cloneDeep';
 })
 export class RouteTwoComponent implements OnInit {
   @Select(HistoryState.getHistories) histories$: Observable<VersionHistory[]>;
+  userControl = new FormControl();
 
   constructor(public store: Store, public dialog: MatDialog) {}
   person = {
@@ -32,27 +34,10 @@ export class RouteTwoComponent implements OnInit {
     favColor: ''
   };
 
-  user = 'Steve';
   version = 0;
 
   ngOnInit(): void {
-    // const intialHistories: VersionHistory[] = [];
-    // if (
-    //   this.store.selectSnapshot(state => state.history?.histories.length) === 0
-    // ) {
-    //   for (let i = 0; i < 10; i++) {
-    //     const history = new VersionHistory();
-    //     history.date = new Date();
-    //     history.date.setDate(history.date.getDate() - (10 - i));
-    //     history.field = i % 2 === 0 ? 'fieldOne' : 'fieldTwo';
-    //     history.oldValue = i > 1 ? intialHistories[i - 2].newValue : 'None';
-    //     history.user = i % 2 === 0 ? 'Steve' : 'Bryan';
-    //     history.version = Math.floor((i + 2) / 2);
-    //     history.newValue = `This is the ${history.version} entry for ${history.field}`;
-    //     intialHistories.push(history);
-    //   }
-    //   this.store.dispatch(new HistoryAction(intialHistories));
-    // }
+    this.userControl.setValue('Steve');
   }
 
   openHistory() {
@@ -79,9 +64,7 @@ export class RouteTwoComponent implements OnInit {
       this.onSave(value);
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
+    dialogRef.afterClosed().subscribe(result => {});
   }
 
   getQuestions() {
@@ -124,7 +107,7 @@ export class RouteTwoComponent implements OnInit {
       if (formFields[field] != this.person[field]) {
         this.store.dispatch(
           new AddHistory({
-            user: this.user,
+            user: this.userControl.value,
             version: this.version,
             date: modTime,
             newValue: formFields[field],

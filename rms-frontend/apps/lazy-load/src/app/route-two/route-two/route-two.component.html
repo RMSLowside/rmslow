@@ -7,15 +7,35 @@
   >
     Lazy-App Home
   </button>
-  <button mat-raised-button color="accent" (click)="openHistory()">
-    History Modal
-  </button>
-  <button mat-raised-button color="accent" (click)="openForms()">
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="openForms()"
+    style="margin:20px"
+  >
     Edit Person
   </button>
+  <button
+    mat-raised-button
+    color="accent"
+    (click)="openHistory()"
+    [disabled]="(histories$ | async).length == 0"
+    style="margin:20px"
+  >
+    History Modal
+  </button>
   <div fxLayout="column">
-    <span> Name: {{ person.name }} </span>
-    <span> Description: {{ person.description }} </span>
-    <span> Favorite Color: {{ person.favColor }} </span>
+    <mat-form-field style="margin:10px;width:120px">
+      <mat-label>User</mat-label>
+      <input
+        matInput
+        placeholder="user"
+        id="userVal"
+        [formControl]="userControl"
+      />
+    </mat-form-field>
+    <span style="margin:10px;"> Name: {{ person.name }} </span>
+    <span style="margin:10px;"> Description: {{ person.description }} </span>
+    <span style="margin:10px;"> Favorite Color: {{ person.favColor }} </span>
   </div>
 </div>
