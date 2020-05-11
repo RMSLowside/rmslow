@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../scripts/55b2b899-0171-1000-d60a-3834590dfe1a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scripts/nifiStatus.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scripts/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../scripts/test2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +63,19 @@
       <recent name="" />
       <recent name="groovy.util.GroovyTestCase" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\scripts" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\core\src\lib" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm" />
+      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rms" />
       <recent name="rms.processors.json" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="models" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\order-rules-modal\src\lib\order-rules-modal" />
@@ -71,16 +83,6 @@
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\create-rule-modal\src\lib" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine\src\app\home" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="models" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\core\src\lib" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\NiFi\flows" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\liquibase\rmm\sql" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\Drools\tomcat-stuff\conf" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AddToRmmProcessorTest">
@@ -202,10 +204,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="358" key="#Project_Structure" timestamp="1586447078195">
+    <state x="872" y="358" key="#Project_Structure" timestamp="1589210685445">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="358" key="#Project_Structure/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586447078195" />
+    <state x="872" y="358" key="#Project_Structure/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1589210685445" />
     <state x="1070" y="454" key="#com.intellij.ide.util.MemberChooser" timestamp="1587559007397">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
