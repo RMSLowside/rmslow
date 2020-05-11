@@ -13,7 +13,7 @@ export class DynamicFormModalComponent implements OnInit {
   @Output() outputEvent: EventEmitter<any> = new EventEmitter<any>();
   form: FormGroup;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.form = this.toFormGroup(this.questions);
@@ -27,7 +27,8 @@ export class DynamicFormModalComponent implements OnInit {
     let group: any = {};
 
     questions.forEach(question => {
-      group[question.key] = question.required ? new FormControl(question.value || '', Validators.required)
+      group[question.key] = question.required
+        ? new FormControl(question.value || '', Validators.required)
         : new FormControl(question.value || '');
     });
 

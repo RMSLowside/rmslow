@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { VersionHistory } from '../version-history';
 import { Observable } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./history-modal.component.css']
 })
 export class HistoryModalComponent implements OnInit {
+  @Output() revertChange = new EventEmitter<VersionHistory>();
   histories: Observable<VersionHistory[]>;
   canEdit: boolean;
   constructor() {}
@@ -15,6 +16,7 @@ export class HistoryModalComponent implements OnInit {
   ngOnInit(): void {}
 
   emit(history: VersionHistory) {
-    alert(`You are reverting ${history.field} to: "${history.newValue}"`);
+    this.revertChange.emit(history);
+    //alert(`You are reverting ${history.field} to: "${history.newValue}"`);
   }
 }
