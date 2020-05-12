@@ -1,5 +1,10 @@
 <div>
-  <form [formGroup]="form" ngxsForm="dynamicForms.formGroup" [ngxsFormClearOnDestroy]="clearOnDestroy">
+  <form
+    [formGroup]="form"
+    ngxsForm="dynamicForms.formGroup"
+    [ngxsFormClearOnDestroy]="clearOnDestroy"
+    autocomplete="off"
+  >
     <div *ngFor="let question of questions" class="form-row">
       <app-question [question]="question" [form]="form"></app-question>
     </div>
