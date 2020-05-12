@@ -21,6 +21,7 @@ source ~/.bashrc
 # Install Git and checkout project
 yum -y install git
 git clone https://github.com/RMSLowside/rmslow.git
+git clone https://github.com/RMSLowside/versioned_flows.git
 
 # Install Maven
 wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
