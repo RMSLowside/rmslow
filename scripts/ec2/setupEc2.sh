@@ -27,6 +27,13 @@ wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.r
 sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 yum install -y apache-maven
 
+# Install NiFi Registry
+aws s3 cp s3://rmslowdeployment/software/nifi-registry-0.6.0.tar.gz .
+tar -xzvf nifi-registry-0.6.0.tar.gz
+rm nifi-registry-0.6.0.tar.gz
+mv nifi-registry-0.6.0 nifi-registry
+bash nifi-registry/bin/nifi-registry.sh start
+
 # Install NiFi
 aws s3 cp s3://rmslowdeployment/software/nifi-1.11.4-bin.tar.gz .
 tar -xzvf nifi-1.11.4-bin.tar.gz

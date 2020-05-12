@@ -90,3 +90,11 @@ __*__ = This is a built in NiFi processor or we can rewrite for more control.
 We can simply use a IAM credentials on a EC2 box to give our processor access to various AWS resources. Each Processing group can add
 "Controller Services", the one we are interested in is called "AWSCredentialsProviderControllerService" and it supports multiple forms of
  authentication into AWS.
+ 
+ # Running Instances URL
+ Main RMM NiFi: http://rmslow-nifi-570397140.us-east-2.elb.amazonaws.com:8080/nifi/
+ Logging NiFi: http://rmslow-nifi-570397140.us-east-2.elb.amazonaws.com:9090/nifi/
+ NiFi Registry: http://rmslow-nifi-570397140.us-east-2.elb.amazonaws.com:18080/nifi-registry/administration#/explorer/grid-list
+ 
+ # Nifi Flow Versioning
+ https://nifi.apache.org/docs/nifi-docs/html/user-guide.html#version_states
