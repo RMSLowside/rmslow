@@ -61,3 +61,7 @@
 .remove-btn {
   color: red;
 }
+
+::ng-deep .mat-card {
+  padding: 4px;
+}

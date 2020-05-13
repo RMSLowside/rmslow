@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CoreModule } from '@rms-frontend/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { FormGroup, FormControl, FormArray, FormBuilder } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'rms-frontend-rule-build-piece',
@@ -107,5 +108,23 @@ export class RuleBuildPieceComponent implements OnInit {
 
   emitContentChange(values) {
     this.contentChange.emit(values);
+  }
+
+  moveUp(index) {
+    this.items = this.form.get('items') as FormArray;
+    if(index > 0){
+      const item = this.items.at(index);
+      this.items.removeAt(index);
+      this.items.insert(index - 1, item);
+    }
+  }
+
+  moveDown(index) {
+    this.items = this.form.get('items') as FormArray;
+    if (this.items.controls.length != length) {
+      const item = this.items.at(index);
+      this.items.removeAt(index);
+      this.items.insert(index + 1, item);
+    }
   }
 }

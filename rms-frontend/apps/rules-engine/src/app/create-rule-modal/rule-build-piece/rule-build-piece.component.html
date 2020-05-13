@@ -4,16 +4,20 @@
          class="example-box">
       <mat-card fxLayout="row" class="full-width">
         <div class="drag-placeholder" *cdkDragPlaceholder></div>
-        <div fxLayout="column" fxLayoutAlign="space-evenly start">
+        <div fxLayout="row" fxLayoutAlign="start center">
           <button mat-icon-button type="button" class="remove-btn" (click)="removeHelpCard(i)">
             <mat-icon>remove</mat-icon>
           </button>
           <button mat-icon-button type="button" (click)="addHelpCard(i)">
             <mat-icon>add</mat-icon>
           </button>
-          <button mat-icon-button type="button">
+          <button mat-icon-button type="button" [matMenuTriggerFor]="moveMenu">
             <mat-icon cdkDragHandle class="dragable">swap_vert</mat-icon>
           </button>
+          <mat-menu #moveMenu="matMenu">
+            <button mat-menu-item (click)="moveUp(i)">Move Up</button>
+            <button mat-menu-item (click)="moveDown(i)">Move Down</button>
+          </mat-menu>
         </div>
         <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
         <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width" *ngIf="conditionType">

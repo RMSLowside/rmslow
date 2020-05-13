@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Select, Store } from '@ngxs/store';
 import { MatDialog } from '@angular/material/dialog';
-import { CreateRuleModalComponent } from '@rms-frontend/create-rule-modal';
-import { OrderRulesModalComponent } from '@rms-frontend/order-rules-modal';
+import { CreateRuleModalComponent } from '../create-rule-modal/create-rule-modal.component';
+import { OrderRulesModalComponent } from '../order-rules-modal/order-rules-modal.component';
 import { GridComponent } from '@rms-frontend/grid';
 
 @Component({

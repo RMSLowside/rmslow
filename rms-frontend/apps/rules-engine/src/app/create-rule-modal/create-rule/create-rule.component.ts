@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Input, Output, ComponentFactoryResolver, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output, ComponentFactoryResolver, ComponentRef, ViewChild, ViewContainerRef, NgModule } from '@angular/core';
 import { MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { CoreModule } from '@rms-frontend/core';
 import { RuleBuildPieceComponent } from '../rule-build-piece/rule-build-piece.component';
@@ -10,6 +10,7 @@ import { RuleBuildPieceComponent } from '../rule-build-piece/rule-build-piece.co
 })
 export class CreateRuleComponent implements OnInit {
   @Input() name: string = '';
+  ruleString: string = '';
 
   constructor(
     public dialogRef: MatDialogRef<CreateRuleComponent>,
