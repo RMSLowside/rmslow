@@ -20,7 +20,9 @@ source ~/.bashrc
 
 # Install Git and checkout project
 yum -y install git
+sleep 10
 git clone https://github.com/RMSLowside/rmslow.git
+sleep 10
 git clone https://github.com/RMSLowside/versioned_flows.git
 
 # Install Maven

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../scripts/ec2/setupEc2.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
