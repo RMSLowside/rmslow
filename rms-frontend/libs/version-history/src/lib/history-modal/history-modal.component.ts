@@ -17,6 +17,5 @@ export class HistoryModalComponent implements OnInit {
 
   emit(history: VersionHistory) {
     this.revertChange.emit(history);
-    //alert(`You are reverting ${history.field} to: "${history.newValue}"`);
   }
 }

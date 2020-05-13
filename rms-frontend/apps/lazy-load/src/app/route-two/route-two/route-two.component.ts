@@ -41,7 +41,9 @@ export class RouteTwoComponent implements OnInit {
   }
 
   openHistory() {
-    const dialogRef = this.dialog.open(HistoryModalComponent);
+    const dialogRef = this.dialog.open(HistoryModalComponent, {
+      width: '500px'
+    });
     dialogRef.componentInstance.histories = this.histories$;
     dialogRef.componentInstance.canEdit = true;
     dialogRef.componentInstance.revertChange.subscribe(
