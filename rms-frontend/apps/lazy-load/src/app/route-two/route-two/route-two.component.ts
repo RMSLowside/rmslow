@@ -15,7 +15,7 @@ import {
   DropdownQuestion,
   TextboxQuestion
 } from '@rms-frontend/forms';
-import cloneDeep from 'lodash-es/cloneDeep';
+import * as _ from 'lodash';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -48,7 +48,7 @@ export class RouteTwoComponent implements OnInit {
     dialogRef.componentInstance.canEdit = true;
     dialogRef.componentInstance.revertChange.subscribe(
       (value: VersionHistory) => {
-        const person = cloneDeep(this.person);
+        const person = _.cloneDeep(this.person);
         person[value.field] = value.oldValue;
         this.onSave(person);
       }

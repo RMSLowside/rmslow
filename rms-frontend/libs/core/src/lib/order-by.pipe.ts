@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import sortBy from 'lodash-es/sortBy';
-import orderBy from 'lodash-es/orderBy';
+import * as _ from 'lodash';
 
 @Pipe({
   name: 'orderBy'
@@ -12,14 +11,14 @@ export class OrderByPipe implements PipeTransform {
     } // no array
 
     if (!column || column === '') {
-      return sortBy(value.toString().toLowerCase());
+      return _.sortBy(value.toString().toLowerCase());
     } // sort 1d array
 
     if (value.length <= 1) {
       return value;
     } // array with only one item
 
-    return orderBy(
+    return _.orderBy(
       value,
       [
         val => {
