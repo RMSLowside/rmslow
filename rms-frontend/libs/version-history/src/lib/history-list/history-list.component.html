@@ -26,10 +26,20 @@
       </mat-select>
     </mat-form-field></span
   >
-  <rms-frontend-history-segment
-    *ngFor="let history of filterHistories() | orderBy: sort.value:'date'"
-    [history]="history"
-    [canEdit]="canEdit"
-    (revertChange)="revertChange.emit($event)"
-  ></rms-frontend-history-segment>
+
+  <div
+    *ngFor="
+      let history of filterHistories() | orderBy: sort.value:'date';
+      let i = index;
+      first as isFirst
+    "
+  >
+    <hr *ngIf="!isFirst && history.date != filterHistories()[i - 1].date" />
+    <rms-frontend-history-segment
+      [history]="history"
+      [canEdit]="canEdit"
+      (revertChange)="revertChange.emit($event)"
+    >
+    </rms-frontend-history-segment>
+  </div>
 </div>
