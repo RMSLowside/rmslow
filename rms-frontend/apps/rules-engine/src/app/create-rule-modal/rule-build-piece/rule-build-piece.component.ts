@@ -123,4 +123,21 @@ export class RuleBuildPieceComponent implements OnInit {
   getType(index) {
     return this.form.get('items').get(index.toString()).get('conditionName').value.type;
   }
+
+  conditionChanged(event, index) {
+    this.form.get('items').get(index.toString()).get('conditionComparator').setValue("");
+    this.form.get('items').get(index.toString()).get('conditionValue').setValue("");
+  }
+
+  getConditionOptions(index){
+    let selectName = this.form.get('items').get(index.toString()).get('conditionName').value.value;
+    switch(selectName) {
+      case "producer": {
+         return ["System 1", "System 2"];
+      }
+      default: {
+        return [];
+      }
+    }
+  }
 }

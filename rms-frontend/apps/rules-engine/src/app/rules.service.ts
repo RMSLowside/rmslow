@@ -8,7 +8,7 @@ export class RulesService {
   constructor() { }
 
   buildRulesText(conditions:any[], actions:any[]) {
-    let returnRulesText = "ALL_CONDITIONS<br><br>Perform these actions<br><br>ALL_ACTIONS"
+    let returnRulesText = "ALL_CONDITIONS<br><br><h3><b>Perform these actions</b></h3>ALL_ACTIONS"
     let conditionsString = "";
     let actionsString = "";
 
@@ -43,6 +43,9 @@ export class RulesService {
     switch(text) {
       case "equals": {
         return "equal to "
+      }
+      case "notEquals": {
+        return "not equal to "
       }
       case "contains": {
         return "containing "
