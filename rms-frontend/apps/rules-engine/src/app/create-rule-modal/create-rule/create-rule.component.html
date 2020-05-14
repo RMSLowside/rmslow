@@ -1,4 +1,4 @@
-<div class="body">
+<div class="body" fxLayout="row" fxLayoutAlign="start">
   <div class="left" fxLayout="column" fxLayoutAlign="space-between start">
     <div>
       <form>
@@ -29,10 +29,9 @@
       Save Rule
     </button>
   </div>
-  <div class="right" fxFlex="1 1 auto">
+  <div class="middle" fxLayout="column" fxFlex="start">
     <div class="build-top">
       <h2>Build Rule</h2>
-      <h4>Rule: {{ruleString}}</h4>
     </div>
     <div class="build-bottom" fxLayout="column" fxLayoutAlign="start stretch">
       <mat-card class="card">
@@ -41,7 +40,7 @@
           <mat-card-subtitle>Add at least one condition</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <rms-frontend-rule-build-piece [conditionType]="true"></rms-frontend-rule-build-piece>
+          <rms-frontend-rule-build-piece [conditionType]="true" (contentChange)="setConditionState($event)"></rms-frontend-rule-build-piece>
         </mat-card-content>
       </mat-card>
       <mat-card class="card">
@@ -50,9 +49,14 @@
           <mat-card-subtitle>Add at least one action</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <rms-frontend-rule-build-piece [conditionType]="false"></rms-frontend-rule-build-piece>
+          <rms-frontend-rule-build-piece [conditionType]="false" (contentChange)="setActionState($event)"></rms-frontend-rule-build-piece>
         </mat-card-content>
       </mat-card>
     </div>
+  </div>
+  <div class="right">
+    <h2>Rule Output</h2>
+    <span>When a messages arrives</span><br><br>
+    <span innerHtml="{{rulesText$ | async}}"></span>
   </div>
 </div>

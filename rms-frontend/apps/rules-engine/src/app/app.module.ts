@@ -17,6 +17,8 @@ import { CreateRuleComponent } from './create-rule-modal/create-rule/create-rule
 import { RuleBuildPieceComponent } from './create-rule-modal/rule-build-piece/rule-build-piece.component';
 import { TestRuleComponent } from './create-rule-modal/test-rule/test-rule.component';
 
+import { RulesState } from './+state/rules.state';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,7 @@ import { TestRuleComponent } from './create-rule-modal/test-rule/test-rule.compo
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxsModule.forRoot([GlobalState, AuthState]),
+    NgxsModule.forRoot([GlobalState, AuthState, RulesState]),
     NgxsStoragePluginModule.forRoot({
       key: [GlobalState]
     }),

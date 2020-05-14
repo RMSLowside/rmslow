@@ -1,7 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CoreModule } from '@rms-frontend/core';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { FormGroup, FormControl, FormArray, FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormGroup, FormControl, FormArray, FormBuilder, ReactiveFormsModule, FormsModule, Validators } from '@angular/forms';
+
+interface ConditionSelect {
+  name: string;
+  value: string;
+  type: string;
+}
 
 @Component({
   selector: 'rms-frontend-rule-build-piece',
@@ -14,57 +20,44 @@ export class RuleBuildPieceComponent implements OnInit {
   @Output() contentChange: EventEmitter<any> = new EventEmitter<any>();
 
   form: FormGroup;
+  public currentValue: string = null;
   items: FormArray;
 
-  constructor(private formBuilder: FormBuilder) { }
+  conditions: ConditionSelect[] = [
+    {name: 'Create Date', value: 'createDate', type: 'date'},
+    {name: 'Producer', value: 'producer', type: 'select'},
+    {name: 'Title', value: 'title', type: 'text'},
+    {name: 'Text Content', value: 'textContent', type: 'text'},
+  ];
+
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+        items: this.formBuilder.array([])
+      });
+  }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      items: this.formBuilder.array([])
-    });
-
     this.items = this.form.get('items') as FormArray;
 
     if(this.conditionType) {
-      if (this.contents.length > 0) {
-        this.contents.forEach(item => {
-          this.items.push(this.formBuilder.group({
-            condition: new FormControl(item.condition || ''),
-            comparator: new FormControl(item.comparator || ''),
-            value: new FormControl(item.value || ''),
-            order: new FormControl(item.order)
-          }));
-        });
-      } else {
-        this.items.push(this.formBuilder.group({
-          condition: '',
-          comparator: '',
-          value: '',
-          order: ''
-        }))
-      }
+      this.items.push(this.formBuilder.group({
+        conditionName: '',
+        conditionComparator: '',
+        conditionValue: '',
+        order: ''
+      }))
     } else {
-      if (this.contents.length > 0) {
-        this.contents.forEach(item => {
-          this.items.push(this.formBuilder.group({
-            action: new FormControl(item.condition || ''),
-            value: new FormControl(item.comparator || ''),
-            order: new FormControl(item.order)
-          }));
-        });
-      } else {
-        this.items.push(this.formBuilder.group({
-          action: '',
-          value: '',
-          order: ''
-        }))
-      }
+      this.items.push(this.formBuilder.group({
+        action: '',
+        value: '',
+        order: ''
+      }))
     }
 
-    this.form.get('items').valueChanges.subscribe(x => {
-      this.contents = this.reorder(x)
+   this.form.valueChanges.subscribe(x => {
+      this.contents = this.reorder(x.items);
       this.contentChange.emit(this.contents);
-    });
+   });
   }
 
   drop(event: CdkDragDrop<string[]>) {
@@ -85,10 +78,9 @@ export class RuleBuildPieceComponent implements OnInit {
     this.items = this.form.get('items') as FormArray;
     if(this.conditionType) {
       this.items.insert(index + 1, this.formBuilder.group({
-        condition: '',
-        comparator: '',
-        value: '',
-        order: ''
+        conditionName: '',
+        conditionComparator: '',
+        conditionValue: ''
       }))
     } else {
       this.items.insert(index + 1, this.formBuilder.group({
@@ -126,5 +118,9 @@ export class RuleBuildPieceComponent implements OnInit {
       this.items.removeAt(index);
       this.items.insert(index + 1, item);
     }
+  }
+
+  getType(index) {
+    return this.form.get('items').get(index.toString()).get('conditionName').value.type;
   }
 }
