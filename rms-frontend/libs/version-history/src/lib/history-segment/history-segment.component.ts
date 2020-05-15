@@ -13,4 +13,11 @@ export class HistorySegmentComponent implements OnInit {
   @Output() revertChange = new EventEmitter<VersionHistory[]>();
 
   ngOnInit(): void {}
+
+  emit(histories) {
+    this.revertChange.emit(histories);
+  }
+  trackByIndex(index, item) {
+    return index;
+  }
 }

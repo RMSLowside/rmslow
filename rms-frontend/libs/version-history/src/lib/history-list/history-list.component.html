@@ -27,9 +27,7 @@
     </mat-form-field></span
   >
 
-  <div
-    *ngFor="let history of filterHistories(); let i = index; first as isFirst"
-  >
+  <div *ngFor="let history of filterHistories(); trackBy: trackByIndex">
     <!-- <hr *ngIf="!isFirst && history.date != filterHistories()[i - 1].date" /> -->
     <rms-frontend-history-segment
       [histories]="history"

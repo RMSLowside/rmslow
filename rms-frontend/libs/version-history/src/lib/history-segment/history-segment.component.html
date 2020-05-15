@@ -6,7 +6,7 @@
       {{ histories[0].date | date }}
     </span>
     <span fxFlex="1 1 auto"></span>
-    <button mat-icon-button (click)="revertChange.emit(histories)">
+    <button mat-icon-button (click)="emit(histories)">
       <mat-icon>reply_all</mat-icon>
     </button>
   </div>
@@ -16,7 +16,12 @@
       fxLayout="row"
       fxLayoutAlign="start center"
       class="change-segment"
-      *ngFor="let history of histories; first as isFirst; last as isLast"
+      *ngFor="
+        let history of histories;
+        first as isFirst;
+        last as isLast;
+        trackBy: trackByIndex
+      "
     >
       <span
         ><strong style="padding-right: 5px;padding-left: 10px;"
@@ -35,7 +40,7 @@
       <span fxFlex="1 1 auto"></span>
       <button
         mat-icon-button
-        (click)="revertChange.emit([history])"
+        (click)="emit([history])"
         *ngIf="!(isFirst && isLast)"
         style="padding-right: 50px;"
       >

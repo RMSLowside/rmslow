@@ -52,4 +52,7 @@ export class HistoryListComponent implements OnInit {
     });
     return returnArray;
   }
+  trackByIndex(index, item) {
+    return index;
+  }
 }
