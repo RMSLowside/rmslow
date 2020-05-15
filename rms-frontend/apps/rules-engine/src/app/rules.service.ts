@@ -16,9 +16,12 @@ export class RulesService {
       let item = conditions[i];
       let aCondition = this.determineText(item.conditionName.value);
       let aComparator = this.determineText(item.conditionComparator);
-      let aValue = item.value || ""
+      let aValue = item.conditionValue || "";
+      if(item.conditionValueHidden != ""){
+        aValue = aValue.split(", ").join(" OR ")
+      }
 
-      conditionsString = conditionsString + "with " + aCondition + aComparator + item.conditionValue;
+      conditionsString = conditionsString + "with " + aCondition + aComparator + aValue;
 
       if(i != conditions.length - 1) {
         conditionsString = conditionsString + "<br><i>AND</i><br>";
@@ -27,9 +30,13 @@ export class RulesService {
 
     for(let i = 0; i < actions.length; i++){
       let item = actions[i];
-      let aAction = this.determineText(item.action);
+      let aAction = this.determineText(item.actionName);
+      let aValue = item.actionValue || "";
+      if(item.actionValueHidden != ""){
+        aValue = aValue.split(", ").join(" AND ")
+      }
 
-      actionsString = actionsString + aAction + "<b>" + item.value + "</b>";
+      actionsString = actionsString + aAction + "<b>" + aValue + "</b>";
 
       if(i != actions.length - 1) {
         actionsString = actionsString + "<br><i>AND</i><br>";

@@ -993,6 +993,34 @@
           "style": "scss"
         }
       }
+    },
+    "text-add-modal": {
+      "projectType": "library",
+      "root": "libs/text-add-modal",
+      "sourceRoot": "libs/text-add-modal/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/text-add-modal/tsconfig.lib.json",
+              "libs/text-add-modal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/text-add-modal/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/text-add-modal/jest.config.js",
+            "tsConfig": "libs/text-add-modal/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/text-add-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

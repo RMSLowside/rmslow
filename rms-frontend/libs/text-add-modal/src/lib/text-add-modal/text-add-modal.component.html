@@ -1,0 +1,33 @@
+<div fxLayout="column" fxLayoutAlign="space-between start" class="main">
+  <div class="title">Add Text Values</div>
+  <form [formGroup]="form" class="form">
+    <div formArrayName="items" *ngFor="let item of form.get('items')['controls']; let i = index;" class="textTerms">
+      <mat-card fxLayout="row" class="full-width">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <button mat-icon-button type="button" class="remove-btn" (click)="removeTextValue(i)">
+            <mat-icon>remove</mat-icon>
+          </button>
+          <button mat-icon-button type="button" (click)="addTextValue(i)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+        <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
+        <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width">
+          <mat-form-field style="width: 100%">
+            <mat-label>Text</mat-label>
+            <input matInput required formControlName="textValue">
+          </mat-form-field>
+        </div>
+      </mat-card>
+    </div>
+  </form>
+  <div class="buttons" fxLayout="row" fxLayoutAlign="center">
+    <button mat-raised-button type="button" (click)="save()" class="button" color="accent">
+      <mat-icon>save</mat-icon> Save
+    </button>
+    <button mat-raised-button type="button" (click)="close()" color="accent">
+      <mat-icon>close</mat-icon> Close
+    </button>
+  </div>
+</div>
+
