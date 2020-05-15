@@ -1,16 +1,38 @@
-<mat-card class="segment">
-  <mat-card-content fxLayout="column"
-    ><div fxLayout="row">
+<div fxLayout="column">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <span>
+      <strong>{{ histories[0].user }}</strong> updated
+      <strong>{{ histories.length }}</strong> fields
+      {{ histories[0].date | date: 'medium' }}
+    </span>
+    <span fxFlex="1 1 auto"></span>
+    <button
+      mat-icon-button
+      (click)="confirmDialog(histories)"
+      title="Revert all changes in set"
+    >
+      <mat-icon>reply_all</mat-icon>
+    </button>
+  </div>
+  <div fxLayout="column">
+    <div
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign="start center"
+      class="change-segment"
+      *ngFor="
+        let history of histories;
+        first as isFirst;
+        last as isLast;
+        trackBy: trackByIndex
+      "
+    >
       <span
-        ><strong>{{ history.user }}</strong> updated
-        <strong>{{ history.field }}</strong> {{ history.date | date }}</span
-      ><span fxFlex="1 1 auto"></span
-      ><button mat-icon-button (click)="revertChange.emit(history)">
-        <mat-icon>undo</mat-icon>
-      </button>
-    </div>
-    <div fxFlex fxLayout="row" fxLayoutAlign="start center">
-      <p>{{ history.oldValue }}</p>
+        ><strong style="padding-right: 5px;padding-left: 10px;"
+          >{{ history.field }}:</strong
+        ></span
+      >
+      <span [innerHTML]="history.oldValue || '<em>Blank</em>'"></span>
       <mat-icon
         aria-hidden="false"
         aria-label="Arrow Icon"
@@ -18,7 +40,17 @@
         [inline]="true"
         >arrow_forward</mat-icon
       >
-      <p>{{ history.newValue }}</p>
-    </div></mat-card-content
-  >
-</mat-card>
+      <span [innerHTML]="history.newValue || '<em>Blank</em>'"></span>
+      <span fxFlex="1 1 auto"></span>
+      <button
+        mat-icon-button
+        (click)="confirmDialog([history])"
+        *ngIf="!(isFirst && isLast)"
+        style="padding-right: 50px;"
+        title="Revert change"
+      >
+        <mat-icon>reply</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
