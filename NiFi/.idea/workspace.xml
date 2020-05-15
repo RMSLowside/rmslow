@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/create-rule/create-rule.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/create-rule/create-rule.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/text-add-modal/src/lib/text-add-modal/text-add-modal.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/text-add-modal/src/lib/text-add-modal/text-add-modal.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/text-add-modal/src/lib/text-add-modal/text-add-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/text-add-modal/src/lib/text-add-modal/text-add-modal.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
