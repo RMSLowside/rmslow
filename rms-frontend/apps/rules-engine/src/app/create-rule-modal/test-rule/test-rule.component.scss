@@ -1,24 +1,29 @@
 .body {
+  padding: 15px;
+  overflow: hidden;
+  height: 95%;
+}
+
+.main {
+  height: 100%;
+  width: 100%
+}
+
+.title {
+  height: 10%;
+  font-size: large;
+}
+
+.form {
+  height: 75%;
   width: 100%;
+  overflow-y: auto;
 }
 
-.search {
-  width: 50%;
-}
-
-.searchBox {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.card {
-  width: 40%;
-}
-
-.results {
-  margin-top: 50px;
-  height: 100px;
+.column {
+  padding: 15px;
+  max-height: 100%;
+  width: 30%;
 }
 
 .testButton {
@@ -42,6 +47,22 @@
 
 .headerText {
   margin-top: 12px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.remove-btn {
+  color: red;
+}
+
+.table {
+  width: 100%;
+}
+
+.row {
+  cursor: pointer;
 }
 
 pre {
