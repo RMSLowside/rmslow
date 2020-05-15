@@ -993,6 +993,38 @@
           "style": "scss"
         }
       }
+    },
+    "confirmation-modal": {
+      "projectType": "library",
+      "root": "libs/confirmation-modal",
+      "sourceRoot": "libs/confirmation-modal/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/confirmation-modal/tsconfig.lib.json",
+              "libs/confirmation-modal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/confirmation-modal/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/confirmation-modal/jest.config.js",
+            "tsConfig": "libs/confirmation-modal/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/confirmation-modal/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

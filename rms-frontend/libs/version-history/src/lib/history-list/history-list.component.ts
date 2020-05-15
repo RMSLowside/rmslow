@@ -50,6 +50,7 @@ export class HistoryListComponent implements OnInit {
       if (index === filteredHistories.length - 1)
         returnArray.push(_.cloneDeep(pushArray));
     });
+    if (this.sort.value === 'desc') return returnArray.reverse();
     return returnArray;
   }
   trackByIndex(index, item) {

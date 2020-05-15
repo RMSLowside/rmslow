@@ -42,7 +42,7 @@ export class RouteTwoComponent implements OnInit {
 
   openHistory() {
     const dialogRef = this.dialog.open(HistoryModalComponent, {
-      width: '500px'
+      width: '700px'
     });
     dialogRef.componentInstance.histories = this.histories$;
     dialogRef.componentInstance.canEdit = true;
@@ -53,6 +53,7 @@ export class RouteTwoComponent implements OnInit {
           person[val.field] = val.oldValue;
         });
         this.onSave(person);
+        dialogRef.close();
       }
     );
     dialogRef.afterClosed().subscribe(res => {});

@@ -3,10 +3,14 @@
     <span>
       <strong>{{ histories[0].user }}</strong> updated
       <strong>{{ histories.length }}</strong> fields
-      {{ histories[0].date | date }}
+      {{ histories[0].date | date: 'medium' }}
     </span>
     <span fxFlex="1 1 auto"></span>
-    <button mat-icon-button (click)="emit(histories)">
+    <button
+      mat-icon-button
+      (click)="confirmDialog(histories)"
+      title="Revert all changes in set"
+    >
       <mat-icon>reply_all</mat-icon>
     </button>
   </div>
@@ -40,9 +44,10 @@
       <span fxFlex="1 1 auto"></span>
       <button
         mat-icon-button
-        (click)="emit([history])"
+        (click)="confirmDialog([history])"
         *ngIf="!(isFirst && isLast)"
         style="padding-right: 50px;"
+        title="Revert change"
       >
         <mat-icon>reply</mat-icon>
       </button>

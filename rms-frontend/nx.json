@@ -85,8 +85,11 @@
     "create-rule-modal": {
       "tags": []
     },
-    "order-rules-modal": {
+    "order-rules-modal": {},
     "date-range": {
+      "tags": []
+    },
+    "confirmation-modal": {
       "tags": []
     }
   }
