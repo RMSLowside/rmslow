@@ -42,7 +42,7 @@ export class RouteTwoComponent implements OnInit {
 
   openHistory() {
     const dialogRef = this.dialog.open(HistoryModalComponent, {
-      width: '700px'
+      width: '600px'
     });
     dialogRef.componentInstance.histories = this.histories$;
     dialogRef.componentInstance.canEdit = true;
