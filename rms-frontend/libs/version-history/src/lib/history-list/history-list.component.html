@@ -28,18 +28,15 @@
   >
 
   <div
-    *ngFor="
-      let history of filterHistories() | orderBy: sort.value:'date';
-      let i = index;
-      first as isFirst
-    "
+    *ngFor="let history of filterHistories(); let i = index; first as isFirst"
   >
-    <hr *ngIf="!isFirst && history.date != filterHistories()[i - 1].date" />
+    <!-- <hr *ngIf="!isFirst && history.date != filterHistories()[i - 1].date" /> -->
     <rms-frontend-history-segment
-      [history]="history"
+      [histories]="history"
       [canEdit]="canEdit"
       (revertChange)="revertChange.emit($event)"
     >
     </rms-frontend-history-segment>
+    <hr />
   </div>
 </div>

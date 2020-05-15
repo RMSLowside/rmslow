@@ -47,9 +47,11 @@ export class RouteTwoComponent implements OnInit {
     dialogRef.componentInstance.histories = this.histories$;
     dialogRef.componentInstance.canEdit = true;
     dialogRef.componentInstance.revertChange.subscribe(
-      (value: VersionHistory) => {
+      (value: VersionHistory[]) => {
         const person = _.cloneDeep(this.person);
-        person[value.field] = value.oldValue;
+        value.forEach(val => {
+          person[val.field] = val.oldValue;
+        });
         this.onSave(person);
       }
     );

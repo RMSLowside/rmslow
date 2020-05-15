@@ -8,9 +8,9 @@ import { VersionHistory } from '../version-history';
 })
 export class HistorySegmentComponent implements OnInit {
   constructor() {}
-  @Input() history: VersionHistory;
+  @Input() histories: VersionHistory[];
   @Input() canEdit: boolean;
-  @Output() revertChange = new EventEmitter<VersionHistory>();
+  @Output() revertChange = new EventEmitter<VersionHistory[]>();
 
   ngOnInit(): void {}
 }
