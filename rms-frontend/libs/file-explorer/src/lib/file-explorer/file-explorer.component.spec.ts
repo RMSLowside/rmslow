@@ -7,6 +7,7 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 import { FileElement } from '../models/file-element';
 import { of } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
+import { EllipsisPipe } from '@rms-frontend/core';
 
 const fileUploadEvent = {
   srcElement: {
@@ -59,7 +60,7 @@ describe('FileExplorerComponent', () => {
         CoreModule,
         NgxFileDropModule
       ],
-      declarations: [FileExplorerComponent],
+      declarations: [FileExplorerComponent, EllipsisPipe],
       providers: [
         {
           provide: MatDialog,
