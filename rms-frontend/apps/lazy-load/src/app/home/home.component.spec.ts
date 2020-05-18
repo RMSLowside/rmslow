@@ -10,6 +10,7 @@ import { Part2Component } from './part2/part2.component';
 import { Part3Component } from './part3/part3.component';
 import { GridComponent } from '@rms-frontend/grid';
 import { FileExplorerComponent } from '@rms-frontend/file-explorer';
+import { NgxsModule } from '@ngxs/store';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -24,8 +25,8 @@ describe('HomeComponent', () => {
         TabContent1Component,
         Part2Component,
         Part3Component,
-        GridComponent
-        //FileExplorerComponent
+        GridComponent,
+        NgxsModule.forRoot([])
       ],
       imports: [CoreModule, BrowserModule, BrowserAnimationsModule]
     })
