@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/create-rule-modal/test-rule/test-rule.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/order-rules-modal/order-rules-modal.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/order-rules-modal/order-rules-modal.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/order-rules-modal/order-rules-modal.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/order-rules-modal/order-rules-modal.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/order-rules-modal/order-rules-modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/apps/rules-engine/src/app/order-rules-modal/order-rules-modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/libs/__ngcc_entry_points__.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/libs/__ngcc_entry_points__.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,10 +302,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1196" y="455" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1586280483687" />
-    <state x="1490" y="337" width="835" height="795" key="find.popup" timestamp="1589557234891">
+    <state x="1177" y="337" width="1383" height="795" key="find.popup" timestamp="1589814363774">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1490" y="337" width="835" height="795" key="find.popup/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1589557234891" />
+    <state x="1177" y="337" width="1383" height="795" key="find.popup/0.0.2560.1400/-1920.349.1920.1080@0.0.2560.1400" timestamp="1589814363774" />
     <state x="662" y="395" key="new project wizard" timestamp="1587557399762">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
