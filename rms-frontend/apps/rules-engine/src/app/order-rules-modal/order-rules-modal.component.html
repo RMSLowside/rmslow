@@ -1,61 +1,51 @@
-<div class="modalContainer">
+<div class="modalContainer" fxLayout="column" fxLayoutAlign="space-between start">
   <div class="header-bar" fxLayout="row" fxLayoutAlign="space-between start">
     <h1>Set System Rule Priority</h1>
     <button mat-icon-button mat-dialog-close>
       <mat-icon>close</mat-icon>
     </button>
   </div>
-  <div class="modal-body" fxLayout="row" fxLayoutAlign="space-between center">
-    <div class="left" fxLayout="column" fxLayoutAlign="start">
-      <div class="high-priority" fxLayout="row" fxLayoutAlign="space-around center">High</div>
-      <svg width="100%" height="100%">
-        <line x1="50" y1="1%" x2="50" y2="99%" stroke="black"/>
-        <line x1="50" y1="99%" x2="43" y2="96%" stroke="black"/>
-        <line x1="50" y1="99%" x2="57" y2="96%" stroke="black"/>
-      </svg>
-      <div class="low-priority" fxLayout="row" fxLayoutAlign="space-around center">Low</div>
-    </div>
-    <div class="right">
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
-      <p>TODO: Draggable rules ordering.</p>
+  <div fxLayout="row" fxLayoutAlign="space-between start" style="height: 80%; width: 100%">
+    <div class="main" fxLayout="column" fxLayoutAlign="space-between start">
+      <form class="example-form" [formGroup]="form">
+        <div cdkDropList (cdkDropListDropped)="drop($event)" class="example-list">
+          <div formArrayName="items"
+               *ngFor="let item of form.get('items')['controls']; let i = index; let first = first; let last = last"
+               cdkDrag
+               class="example-box">
+            <mat-card fxLayout="row" class="full-width">
+              <div class="drag-placeholder" *cdkDragPlaceholder></div>
+              <div fxLayout="row" fxLayoutAlign="start center">
+                <button mat-icon-button type="button" [matMenuTriggerFor]="moveMenu">
+                  <mat-icon cdkDragHandle class="dragable">swap_vert</mat-icon>
+                </button>
+                <mat-menu #moveMenu="matMenu">
+                  <button mat-menu-item (click)="moveUp(i)">Move Up</button>
+                  <button mat-menu-item (click)="moveDown(i)">Move Down</button>
+                </mat-menu>
+              </div>
+              <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
+              <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width">
+                <mat-icon *ngIf="!first && !last" style="width: 5%"></mat-icon>
+                <mat-icon *ngIf="first" matTooltip="Highest priority rule" style="width: 5%">priority_high</mat-icon>
+                <mat-icon *ngIf="last" matTooltip="Default rule - If no other rules match, the default actions will be applied." style="width: 5%">info</mat-icon>
+                <mat-form-field style="width: 5%">
+                  <mat-label> Rule ID</mat-label>
+                  <input matInput formControlName="ruleId" readonly/>
+                </mat-form-field>
+                <mat-form-field style="width: 80%">
+                  <mat-label>Rule Description</mat-label>
+                  <input matInput formControlName="ruleDescription" readonly/>
+                </mat-form-field>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
+  <button mat-raised-button (click)="saveOrder()" color="accent">
+    <mat-icon>save</mat-icon>
+    Save Order
+  </button>
 </div>

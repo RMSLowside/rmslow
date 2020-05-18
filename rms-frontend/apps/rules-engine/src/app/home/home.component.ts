@@ -51,8 +51,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       {
         id: 'order-rules-modal',
         hasBackdrop: false,
-        minWidth: '90%',
-        width: '90%',
+        minWidth: '50%',
+        width: '50%',
         minHeight: '90%',
         height: '90%'
       });
