@@ -24,7 +24,7 @@ import { HistoryState } from './+state/history/history.state';
     NgxsModule.forRoot([GlobalState, AuthState, HistoryState]),
     NgxsRouterPluginModule.forRoot(),
     NgxsStoragePluginModule.forRoot({
-      key: [GlobalState]
+      key: [GlobalState, HistoryState]
     }),
     NgxsReduxDevtoolsPluginModule.forRoot()
   ],

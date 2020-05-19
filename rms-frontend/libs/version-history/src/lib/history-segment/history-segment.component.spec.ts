@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HistorySegmentComponent } from './history-segment.component';
+import {
+  ConfirmDialogModel,
+  ConfirmationModalComponent
+} from '@rms-frontend/confirmation-modal';
 
 describe('HistorySegmentComponent', () => {
   let component: HistorySegmentComponent;
@@ -8,9 +12,9 @@ describe('HistorySegmentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HistorySegmentComponent ]
-    })
-    .compileComponents();
+      declarations: [HistorySegmentComponent],
+      providers: [ConfirmationModalComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

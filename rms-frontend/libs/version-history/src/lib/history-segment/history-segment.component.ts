@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  Version
-} from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { VersionHistory } from '../version-history';
 import { MatDialog } from '@angular/material/dialog';
 import {
@@ -18,18 +11,16 @@ import {
   templateUrl: './history-segment.component.html',
   styleUrls: ['./history-segment.component.scss']
 })
-export class HistorySegmentComponent implements OnInit {
+export class HistorySegmentComponent {
   constructor(public dialog: MatDialog) {}
   @Input() histories: VersionHistory[];
   @Input() canEdit: boolean;
   @Output() revertChange = new EventEmitter<VersionHistory[]>();
 
-  ngOnInit(): void {}
-
   emit(histories) {
     this.revertChange.emit(histories);
   }
-  trackByIndex(index, item) {
+  trackByIndex(index) {
     return index;
   }
   confirmDialog(histories: VersionHistory[]): void {
