@@ -4,6 +4,7 @@ import { Select, Store } from '@ngxs/store';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateRuleModalComponent } from '../create-rule-modal/create-rule-modal.component';
 import { OrderRulesModalComponent } from '../order-rules-modal/order-rules-modal.component';
+import { TestRulesModalComponent } from '../test-rules-modal/test-rules-modal.component';
 import { GridComponent } from '@rms-frontend/grid';
 
 @Component({
@@ -30,7 +31,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(public store: Store, public dialog: MatDialog) { }
 
   createRule() {
-    console.log("Creating new rule");
     const dialogRef = this.dialog.open(CreateRuleModalComponent,
       {
         id: 'create-rule-modal',
@@ -46,7 +46,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   orderRules() {
-    console.log("Ordering rules");
     const dialogRef = this.dialog.open(OrderRulesModalComponent,
       {
         id: 'order-rules-modal',
@@ -57,11 +56,22 @@ export class HomeComponent implements OnInit, OnDestroy {
         height: '90%'
       });
     dialogRef.afterClosed().subscribe(res => {
-      console.log('New Rule Closed');
+      console.log('Order Rules Closed');
     });
   }
 
   testRules() {
-    console.log("Testing rules")
+    const dialogRef = this.dialog.open(TestRulesModalComponent,
+      {
+        id: 'test-rules-modal',
+        hasBackdrop: false,
+        minWidth: '90%',
+        width: '90%',
+        minHeight: '90%',
+        height: '90%'
+      });
+    dialogRef.afterClosed().subscribe(res => {
+      console.log('Test Rules Closed');
+    });
   }
 }

@@ -1,16 +1,15 @@
-import { Component, OnInit, Input, NgModule } from '@angular/core';
-import { CoreModule } from '@rms-frontend/core';
+import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { RulesMessage } from "../../models/rules-message";
-import { RulesResult } from "../../models/rules-result";
+import { RulesMessage } from "../models/rules-message";
+import { RulesResult } from "../models/rules-result";
 
 @Component({
-  selector: 'rms-frontend-test-rule',
-  templateUrl: './test-rule.component.html',
-  styleUrls: ['./test-rule.component.scss']
+  selector: 'rms-frontend-test-rules-modal',
+  templateUrl: './test-rules-modal.component.html',
+  styleUrls: ['./test-rules-modal.component.scss']
 })
-export class TestRuleComponent implements OnInit {
+export class TestRulesModalComponent implements OnInit {
 
   form: FormGroup;
   items: FormArray;
@@ -20,11 +19,13 @@ export class TestRuleComponent implements OnInit {
   rulesMessage: RulesMessage = new RulesMessage();
   ranSearch: boolean = false;
   guideSelected: boolean = false;
+  currentRuleResult = "";
+  currentRulesRan = "";
 
   displayedColumns: string[] = ['guide', 'status'];
   dataSource: RulesResult[];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, public dialogRef: MatDialogRef<TestRulesModalComponent>,) {
     this.form = this.formBuilder.group({
       items: this.formBuilder.array([])
     });
@@ -88,11 +89,12 @@ export class TestRuleComponent implements OnInit {
     for (let c of this.items.controls) {
       var guide = c.value.guideValue;
       if(guide != ""){
-        var matched = Math.random() >= 0.5?'matched':'unmatched';
+        var matched = Math.random() >= 0.2?'matched rule 17':'unmatched';
+        var ran = Math.round(Math.random() * 10) + 1;
         data.push({
           guide: guide,
           status: matched,
-          rulesRan: 0
+          rulesRan: ran
         });
       }
     }
@@ -113,5 +115,8 @@ export class TestRuleComponent implements OnInit {
     this.rulesMessage.createDate = createDate;
     this.rulesMessage.text = text;
     this.rulesMessage.title = title;
+
+    this.currentRuleResult = element.status;
+    this.currentRulesRan = element.rulesRan;
   }
 }

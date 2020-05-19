@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CreateRuleModalComponent } from './create-rule-modal/create-rule-modal.component';
 import { OrderRulesModalComponent } from './order-rules-modal/order-rules-modal.component';
+import { TestRulesModalComponent } from './test-rules-modal/test-rules-modal.component';
 
 import { CreateRuleComponent } from './create-rule-modal/create-rule/create-rule.component';
 import { RuleBuildPieceComponent } from './create-rule-modal/rule-build-piece/rule-build-piece.component';
@@ -24,6 +25,7 @@ import { RulesState } from './+state/rules.state';
     AppComponent,
     CreateRuleModalComponent,
     OrderRulesModalComponent,
+    TestRulesModalComponent,
     CreateRuleComponent,
     RuleBuildPieceComponent,
     TestRuleComponent

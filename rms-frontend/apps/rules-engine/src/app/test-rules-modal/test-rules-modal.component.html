@@ -1,0 +1,68 @@
+<div fxLayout="column" fxLayoutAlign="space-between start" class="modal">
+  <div fxLayout="row" fxLayoutAlign="space-between start" class="full-width">
+    <h1>Test Rules For Record System Q</h1>
+    <button mat-icon-button mat-dialog-close>
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-between start" class="main">
+    <div fxLayout="column" fxLayoutAlign="space-between start" class="column">
+      <h2>Add GUIDES</h2>
+      <form [formGroup]="form" class="form">
+        <div formArrayName="items" *ngFor="let item of form.get('items')['controls']; let i = index;" class="textTerms">
+          <mat-card fxLayout="row" class="full-width">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <button mat-icon-button type="button" class="remove-btn" (click)="removeGuide(i)">
+                <mat-icon>remove</mat-icon>
+              </button>
+              <button mat-icon-button type="button" (click)="addGuide(i)">
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+            <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
+            <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width">
+              <mat-form-field style="width: 100%">
+                <mat-label>GUIDE</mat-label>
+                <input matInput formControlName="guideValue">
+              </mat-form-field>
+            </div>
+          </mat-card>
+        </div>
+      </form>
+      <button mat-raised-button color="accent" (click)="runTest()">Test Rules</button>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-between start" class="column">
+      <h2 *ngIf="ranSearch">Results</h2>
+      <div *ngIf="ranSearch" style="width: 100%; overflow-y: auto">
+        <table mat-table [dataSource]="dataSource" class="table">
+          <ng-container matColumnDef="guide">
+            <th mat-header-cell *matHeaderCellDef>GUIDE</th>
+            <td mat-cell *matCellDef="let element">{{element.guide}}</td>
+          </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let element">{{element.status}}</td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getRecord(row)" class="row"></tr>
+        </table>
+      </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-between start" class="column">
+      <div *ngIf="guideSelected">
+        <h2>Incoming Message</h2>
+        <pre>{{ rulesMessage | json}}</pre>
+        <div>
+          <h2>Result</h2>
+          <p>{{currentRuleResult}}</p>
+        </div>
+        <div>
+          <h2>Rules Ran Before Match</h2>
+          <p>{{currentRulesRan}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
