@@ -9,7 +9,7 @@ public class Search {
 
     public static String termify(final String input){
         String resultString = "";
-        String restrictedChars = "&|!()= ";
+        String restrictedChars = "&|!()=, ";
         boolean termOpen = false;
         boolean quoteTermOpen = false;
 
@@ -26,7 +26,7 @@ public class Search {
             }
             else {
                 //Quote escape: check if character is an reserved operator/keyword, replace with placeholder if inside quotes
-                if(quoteTermOpen){
+                if(quoteTermOpen && (i == inputString.length() - 1 || inputString.charAt(i+1) != ':') && (i == 0 || inputString.charAt(i-1) != ':')){
                     //Single char ops not used in double char ops
                     if("&|!,".indexOf(inputString.charAt(i)) != -1){
                         if(inputString.charAt(i) == '&') inputString = inputString.substring(0, i) + "<:amp:>" + inputString.substring(i+1);
@@ -37,10 +37,8 @@ public class Search {
                     else if(inputString.substring(i).startsWith("<>")) inputString = inputString.substring(0,i) + "<:lg:>" + inputString.substring(i+2);
                     else if(inputString.substring(i).startsWith("<=")) inputString = inputString.substring(0,i) + "<:le:>" + inputString.substring(i+2);
                     else if(inputString.substring(i).startsWith(">=")) inputString = inputString.substring(0,i) + "<:ge:>" + inputString.substring(i+2);
-                    else if(inputString.substring(i).startsWith("<") && inputString.charAt(i+1) != ':')
-                        inputString = inputString.substring(0,i) + "<:lt:>" + inputString.substring(i+1);
-                    else if(inputString.substring(i).startsWith(">") && (i == 0 || inputString.charAt(i-1) != ':'))
-                        inputString = inputString.substring(0,i) + "<:gt:>" + inputString.substring(i+1);
+                    else if(inputString.substring(i).startsWith("<")) inputString = inputString.substring(0,i) + "<:lt:>" + inputString.substring(i+1);
+                    else if(inputString.substring(i).startsWith(">")) inputString = inputString.substring(0,i) + "<:gt:>" + inputString.substring(i+1);
                     else if(inputString.substring(i).startsWith("=")) inputString = inputString.substring(0,i) + "<:eq:>" + inputString.substring(i+1);
                 }
             }
@@ -167,7 +165,7 @@ public class Search {
                     operatorLevels.set(parensLevel + 1, "");
                 }
             }
-            if("&|!=".indexOf(resultString.charAt(i)) != -1){
+            if("&|!=,".indexOf(resultString.charAt(i)) != -1){
                 termActive = false;
                 //If an operator is found next to another operator, this fails
                 if(opActive){
@@ -181,8 +179,8 @@ public class Search {
                 }
                 //- otherwise, if the operator found is NOT equal to the one we've already found at this level, the query is ambiguous
                 else if(!operatorLevels.get(parensLevel).equals(String.valueOf(resultString.charAt(i)))) {
-                    if("&!=".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!=".indexOf(String.valueOf(resultString.charAt(i))) != -1){
-                        // Do nothing, because & and ! are both AND-type ops, and = is not a real operator shift in this way
+                    if("&!=,".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!=,".indexOf(String.valueOf(resultString.charAt(i))) != -1){
+                        // Do nothing, because & and ! are both AND-type ops, and neither = nor , are real operator shifts in this way
                     }
                     else return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
                 }

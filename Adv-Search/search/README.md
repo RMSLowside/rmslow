@@ -15,11 +15,21 @@ This process repeats until you submit "quit" as the input (or force-quit, e.g. C
 Key concepts:
 - & | ! are single-character versions of AND, OR, NOT (ignored if inside a term)
 - You can also use AND / OR / NOT; they are converted to & | ! respectively
+- support for ANY / ALL operators (field ANY (a,b,c) --> field = (a OR b OR c); field ALL (d,e,f) --> field = (d AND e AND f))
 - There are validator checks against the following:
     - neighboring terms, and neighboring operators
     - unclosed quotes, and unclosed parentheses
     - ambiguous queries
 
+Notes on SOLR: 
+====================================
+In talking with people and browsing Apache’s public github for SOLR, I found a few pieces of SOLR's source code dealing with Query Parsers to analyze.
+
+Their methods are a bit different than the direction I went initially but it accomplishes the processing just as well; this parser seems to have several variables to keep track of current and next tokens, as well as the type of token it is (here, a token is a particular piece of the query string), and then “consumes” the tokens to advance where the parser is in the string; whereas, I move through the string on a character-by-character basis and modify the string itself with markups to show my processor’s interpretation of the string. If I wanted to formalize the process of tokenizing the query strings into object form, or if I had a need to keep track of multiple things about a token at once, this is certainly one way to do it.
+
+These parsers handle a lot! There are many formats / operators I don’t support, though some of them are pretty cool. There’s a slew of different types of tokens it attempts to break down, from simple logic operators and quotes to wildcards (specifically * and ?, though not the other 3), local parameters and filters, prefixes, and more. You can see giant switch statements everywhere to try and catch each of the types in each scenario - again highlighting a slightly different (but essentially equivalent) method of looking at where to break out the logic for different types of keywords and operators.
+
+Overall opinion: while there is some neat structural stuff in this code, the syntax of the query language we’re supporting only covers so much, most of which is fairly straightforward, and even a few operators that I don’t see in the SOLR code verbatim. (e.g.: ANY, ALL, and <>, though all of these have analogs in the form of AND/OR prefixes and likely a looser NOT implementation, plus specific keywords for proximity versus SOLR’s prefix syntax for ordered/unordered proximity). Making a true tokenizer in the aforementioned fashion might be something to look at if parsing begins to be more complicated - or, if more information needs to be extracted about a single token. I haven’t seen anything too revelatory otherwise that jumped out at me - however, knowing where these things are is a good thing for future reference. There are some cool ideas, though I’m not sure they’re necessary to implement at this point in time - especially considering, I do not have to convert this string into a series of objects, nor a JSON object, for the backend. I’m simply converting one string (the search query) into another string (the MySQL query).
 
 Building and running this project:
 ====================================
