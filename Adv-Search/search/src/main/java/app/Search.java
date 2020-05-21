@@ -2,12 +2,14 @@ package app;
 
 import java.io.Console;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Search {
 
     public static String termify(final String input){
         String resultString = "";
-        String restrictedChars = "&|!() ";
+        String restrictedChars = "&|!()= ";
         boolean termOpen = false;
         boolean quoteTermOpen = false;
 
@@ -23,37 +25,67 @@ public class Search {
                 quoteTermOpen = !quoteTermOpen;
             }
             else {
-                //check if character is an operator, replace with placeholder if inside a term
+                //Quote escape: check if character is an reserved operator/keyword, replace with placeholder if inside quotes
                 if(quoteTermOpen){
-                    if("&|!".indexOf(inputString.charAt(i)) != -1){
+                    //Single char ops not used in double char ops
+                    if("&|!,".indexOf(inputString.charAt(i)) != -1){
                         if(inputString.charAt(i) == '&') inputString = inputString.substring(0, i) + "<:amp:>" + inputString.substring(i+1);
                         if(inputString.charAt(i) == '|') inputString = inputString.substring(0, i) + "<:pipe:>" + inputString.substring(i+1);
                         if(inputString.charAt(i) == '!') inputString = inputString.substring(0, i) + "<:excl:>" + inputString.substring(i+1);
+                        if(inputString.charAt(i) == ',') inputString = inputString.substring(0, i) + "<:comma:>" + inputString.substring(i+1);
                     }
-                    //check for whole word all-caps AND
-                    else if(inputString.substring(i).startsWith("AND")){
-                        i += 2;
-                    }
-                    //check for whole word all-caps OR
-                    else if(inputString.substring(i).startsWith("OR")){
-                        i += 1;
-                    }
-                    //check for whole word all-caps NOT
-                    else if(inputString.substring(i).startsWith("NOT")){
-                        i += 2;
-                    }
+                    else if(inputString.substring(i).startsWith("<>")) inputString = inputString.substring(0,i) + "<:lg:>" + inputString.substring(i+2);
+                    else if(inputString.substring(i).startsWith("<=")) inputString = inputString.substring(0,i) + "<:le:>" + inputString.substring(i+2);
+                    else if(inputString.substring(i).startsWith(">=")) inputString = inputString.substring(0,i) + "<:ge:>" + inputString.substring(i+2);
+                    else if(inputString.substring(i).startsWith("<") && inputString.charAt(i+1) != ':')
+                        inputString = inputString.substring(0,i) + "<:lt:>" + inputString.substring(i+1);
+                    else if(inputString.substring(i).startsWith(">") && (i == 0 || inputString.charAt(i-1) != ':'))
+                        inputString = inputString.substring(0,i) + "<:gt:>" + inputString.substring(i+1);
+                    else if(inputString.substring(i).startsWith("=")) inputString = inputString.substring(0,i) + "<:eq:>" + inputString.substring(i+1);
                 }
             }
         }
+
+        //using a regex to extract and deal with ANY/ALL expressions
+        String patternAll = " ALL\\s?(\\([^\\)]*\\))";
+        String patternAny = " ANY\\s?(\\([^\\)]*\\))";
+        Pattern all = Pattern.compile(patternAll);
+        Pattern any = Pattern.compile(patternAny);
+        Matcher matchAll = all.matcher(inputString);
+        Matcher matchAny = any.matcher(inputString);
+        while(matchAll.find()){
+            String commaTerms = matchAll.group(1).replaceAll(",", " AND ");
+            String replacement = " = " + commaTerms;
+            int index = inputString.indexOf(matchAll.group(0));
+            inputString = inputString.substring(0, index) + replacement + inputString.substring(index + matchAll.group(0).length());
+            matchAll = all.matcher(inputString);
+        }
+        while(matchAny.find()){
+            String commaTerms = matchAny.group(1).replaceAll(",", " OR ");
+            String replacement = " = " + commaTerms;
+            int index = inputString.indexOf(matchAny.group(0));
+            inputString = inputString.substring(0, index) + replacement + inputString.substring(index + matchAny.group(0).length());
+            matchAny = any.matcher(inputString);
+        }
+        //replace double equal with single equal (they are equivalent, but I map = to an operator)
+        inputString = inputString.replaceAll("==", "=");
+        //text-wildcard replacement
+        inputString = inputString.replaceAll("\\\\\\*", "<:star:>")
+                   .replaceAll("\\\\\\?", "<:ques:>")
+                   .replaceAll("\\\\_", "<:under:>")
+                   .replaceAll("\\\\@", "<:at:>")
+                   .replaceAll("\\\\#", "<:hash:>");
         //replace all caps-only variants of operators
         inputString = inputString.replaceAll(" AND NOT ", " ! ").replaceAll(" NOT ", " ! ").replaceAll(" AND ", " & ").replaceAll(" OR ", " | ");
         //replace instances of &! with just !
-        inputString = inputString.replaceAll("&!", "!").replaceAll("& !", "!");
-        //check if there are no operators - if that's true, the whole text is one term.
+        inputString = inputString.replaceAll("&!", "!").replaceAll("& !", "!").replaceAll("AND!", "!").replaceAll("&NOT", "!")
+            .replaceAll("AND !", "!").replaceAll("& NOT", "!");
+        //Finally, check if there are no operators - if that's true, the whole text is one term.
         if(!inputString.contains("&") && !inputString.contains("|") && !inputString.contains("!") && !inputString.contains("\"")){
             return "<term>" + inputString + "</term>";
         }
 
+        //2nd Pass: identifies individual terms
         for(int i = 0; i < inputString.length(); i++){
             //iterate through characters, check for quotes that aren't escaped
             if(!quoteTermOpen && inputString.charAt(i) == '"' && (i == 0 || inputString.charAt(i-1) != '\\')){
@@ -71,7 +103,7 @@ public class Search {
                 }
                 else termOpen = !termOpen;
             }
-            else if(!quoteTermOpen && termOpen && 
+            else if(!quoteTermOpen && termOpen &&
                     (i+1 == inputString.length() || restrictedChars.indexOf(inputString.charAt(i+1)) != -1)){
                 termOpen = !termOpen;
                 resultString += inputString.charAt(i) + "</term>";
@@ -81,14 +113,14 @@ public class Search {
             }
         }
 
-        //-----------Post-processing------------
+        //-----------Validation------------
         // Check for the following validation error flags:
         // - neighboring terms
         // - neighboring operators
         // - unclosed / missing quotes (not escaped ones)
         // - unclosed / missing parens
         // - query ambiguity
-
+        System.out.println("DEBUG: " + resultString);
         return Search.validate(resultString);
     }
 
@@ -111,7 +143,7 @@ public class Search {
                     if(termSwitch && termActive){
                         return "Error: There are neighboring terms in this string; an operator should be between every term.";
                     }
-                } 
+                }
                 else if(resultString.charAt(i+1) == '/'){
                     termSwitch = false;
                     opActive = false;
@@ -135,7 +167,7 @@ public class Search {
                     operatorLevels.set(parensLevel + 1, "");
                 }
             }
-            if("&|!".indexOf(resultString.charAt(i)) != -1){
+            if("&|!=".indexOf(resultString.charAt(i)) != -1){
                 termActive = false;
                 //If an operator is found next to another operator, this fails
                 if(opActive){
@@ -149,8 +181,8 @@ public class Search {
                 }
                 //- otherwise, if the operator found is NOT equal to the one we've already found at this level, the query is ambiguous
                 else if(!operatorLevels.get(parensLevel).equals(String.valueOf(resultString.charAt(i)))) {
-                    if("&!".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!".indexOf(String.valueOf(resultString.charAt(i))) != -1){
-                        // Do nothing, because & and ! are both AND-type ops
+                    if("&!=".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!=".indexOf(String.valueOf(resultString.charAt(i))) != -1){
+                        // Do nothing, because & and ! are both AND-type ops, and = is not a real operator shift in this way
                     }
                     else return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
                 }
@@ -192,8 +224,23 @@ public class Search {
         examples.add("123 NOT 456");
         examples.add("STANDARD & \"OR\" AND \"AND\"");
 
+        ArrayList<String> examples2 = new ArrayList<String>();
+        examples2.add("wild*?_@#");
+        examples2.add("wild\\*\\?\\_\\@\\#");
+        examples2.add("\"more key-op tests <> <= >= == > < =\"");
+        examples2.add("\"close-knit key-op tests =<><=>===><\"");
+        examples2.add("field ANY (1,2,3)");
+        examples2.add("field ALL (a,b,c)");
+        examples2.add("test ALL (a,b) AND test2 ANY (c,d)");
+        //proximity checks:
+        examples2.add("(dog, cat) WITHIN 5");
+        examples2.add("(dog, cat) ORDERED 5");
+        examples2.add("s BETWEEN (u, a)");
+        examples2.add("(cat OR Kitten) BETWEEN (tuna, fish)");
+        examples2.add("((dog, cat) WITHIN 5, mouse) ORDERED 10");
+
         while(keepGoing){
-            input = console.readLine("Enter the string you want to termify (type 'examples' to show preset tests, 'quit' to quit): ");
+            input = console.readLine("Enter the string you want to termify (type 'examples' or 'e2' for presets, 'quit' to quit): ");
             if(input.equalsIgnoreCase("quit")) keepGoing = false;
             else if(input.equalsIgnoreCase("examples")){
                 System.out.println("===========Presets:============");
@@ -201,6 +248,15 @@ public class Search {
                     System.out.println("String: " + examples.get(i));
                     System.out.println("Result: " + termify(examples.get(i)));
                     if(i+1 != examples.size()) System.out.println("-------------------------------");
+                }
+                System.out.println("===============================");
+            }
+            else if(input.equalsIgnoreCase("e2")){
+                System.out.println("===========Presets:============");
+                for(int i=0; i < examples2.size(); i++){
+                    System.out.println("String: " + examples2.get(i));
+                    System.out.println("Result: " + termify(examples2.get(i)));
+                    if(i+1 != examples2.size()) System.out.println("-------------------------------");
                 }
                 System.out.println("===============================");
             }

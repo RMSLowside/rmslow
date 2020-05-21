@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
  * Unit test for simple App.
  */
 public class SearchTest {
-    
+
     @Test
     public void testBasicTermify(){
         String input = "test string";
@@ -82,42 +82,42 @@ public class SearchTest {
     public void testNeighboringTerms(){
         String input = "peanut butter & jelly";
         String expected = "Error: There are neighboring terms in this string; an operator should be between every term.";
-        assertEquals(expected, Search.termify(input));        
+        assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testNeighboringOperators(){
         String input = "peanut & butter & | jelly";
         String expected = "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
-        assertEquals(expected, Search.termify(input));        
+        assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testUnclosedQuotes(){
         String input = "toast\"";
         String expected = "Error: There are unclosed quotes in this string; make sure all non-escaped quotes are closed.";
-        assertEquals(expected, Search.termify(input));        
+        assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testUnclosedParentheses1(){
         String input = "(peanut | butter | jelly";
         String expected = "Error: There are unclosed parentheses in this string; make sure all parentheses are correctly closed.";
-        assertEquals(expected, Search.termify(input));        
+        assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testUnclosedParentheses2(){
         String input = "(peanut & butter)) | jelly";
         String expected = "Error: There are unclosed parentheses in this string; make sure all parentheses are correctly closed.";
-        assertEquals(expected, Search.termify(input));        
+        assertEquals(expected, Search.termify(input));
     }
 
     @Test
     public void testAmbiguousQuery(){
         String input = "peanut | butter & jelly";
         String expected = "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
-        assertEquals(expected, Search.termify(input));        
+        assertEquals(expected, Search.termify(input));
     }
 
     @Test
@@ -144,7 +144,7 @@ public class SearchTest {
     @Test
     public void testEmbeddedOperatorsInStrings(){
         String input = "STANDARD & \"What if I wanna type AND, OR, and NOT, huh!?\"";
-        String expected = "<term>STANDARD</term> & <term>What if I wanna type AND, OR, and NOT, huh!?</term>";
+        String expected = "<term>STANDARD</term> & <term>What if I wanna type AND<:comma:> OR<:comma:> and NOT<:comma:> huh!?</term>";
         assertEquals(expected, Search.termify(input));
     }
 
