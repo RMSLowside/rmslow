@@ -42,15 +42,18 @@ export class RouteTwoComponent implements OnInit {
 
   openHistory() {
     const dialogRef = this.dialog.open(HistoryModalComponent, {
-      width: '500px'
+      width: '600px'
     });
     dialogRef.componentInstance.histories = this.histories$;
     dialogRef.componentInstance.canEdit = true;
     dialogRef.componentInstance.revertChange.subscribe(
-      (value: VersionHistory) => {
+      (value: VersionHistory[]) => {
         const person = _.cloneDeep(this.person);
-        person[value.field] = value.oldValue;
+        value.forEach(val => {
+          person[val.field] = val.oldValue;
+        });
         this.onSave(person);
+        dialogRef.close();
       }
     );
     dialogRef.afterClosed().subscribe(res => {});

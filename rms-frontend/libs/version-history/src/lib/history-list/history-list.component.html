@@ -1,5 +1,5 @@
 <div fxFlex flexlayout="column">
-  <span fxLayoutAlign="space-between">
+  <span>
     <mat-form-field class="filters">
       <mat-label>Field</mat-label>
       <mat-select [formControl]="fieldFilter" multiple>
@@ -27,19 +27,14 @@
     </mat-form-field></span
   >
 
-  <div
-    *ngFor="
-      let history of filterHistories() | orderBy: sort.value:'date';
-      let i = index;
-      first as isFirst
-    "
-  >
-    <hr *ngIf="!isFirst && history.date != filterHistories()[i - 1].date" />
+  <div *ngFor="let history of filterHistories(); trackBy: trackByIndex">
+    <!-- <hr *ngIf="!isFirst && history.date != filterHistories()[i - 1].date" /> -->
     <rms-frontend-history-segment
-      [history]="history"
+      [histories]="history"
       [canEdit]="canEdit"
       (revertChange)="revertChange.emit($event)"
     >
     </rms-frontend-history-segment>
+    <hr />
   </div>
 </div>

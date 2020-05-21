@@ -1,0 +1,129 @@
+<form class="example-form" [formGroup]="form">
+  <div cdkDropList (cdkDropListDropped)="drop($event)" class="example-list">
+    <div formArrayName="items" *ngFor="let item of form.get('items')['controls']; let i = index;" cdkDrag
+         class="example-box">
+      <mat-card fxLayout="row" class="full-width">
+        <div class="drag-placeholder" *cdkDragPlaceholder></div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <button mat-icon-button type="button" class="remove-btn" (click)="removeHelpCard(i)">
+            <mat-icon>remove</mat-icon>
+          </button>
+          <button mat-icon-button type="button" (click)="addHelpCard(i)">
+            <mat-icon>add</mat-icon>
+          </button>
+          <button mat-icon-button type="button" [matMenuTriggerFor]="moveMenu">
+            <mat-icon cdkDragHandle class="dragable">swap_vert</mat-icon>
+          </button>
+          <mat-menu #moveMenu="matMenu">
+            <button mat-menu-item (click)="moveUp(i)">Move Up</button>
+            <button mat-menu-item (click)="moveDown(i)">Move Down</button>
+          </mat-menu>
+        </div>
+        <mat-divider vertical="true" style="margin-right: 10px;"></mat-divider>
+        <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width"
+             *ngIf="conditionType">
+          <mat-form-field style="width: 20%">
+            <mat-label>Condition</mat-label>
+            <mat-select formControlName="conditionName" (selectionChange)="conditionChanged($event, i)">
+              <mat-option *ngFor="let condition of conditions" [value]="condition">
+                {{condition.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style="width: 20%">
+            <mat-label>Comparator</mat-label>
+            <mat-select *ngIf="getType(i)=='text'" formControlName="conditionComparator">
+              <mat-option value='equals'>EQUALS</mat-option>
+              <mat-option value='notEquals'>NOT EQUALS</mat-option>
+              <mat-option value='contains'>CONTAINS</mat-option>
+              <mat-option value='notContains'>NOT CONTAINS</mat-option>
+            </mat-select>
+            <mat-select *ngIf="getType(i)=='date'" formControlName="conditionComparator">
+              <mat-option value='equals'>EQUALS</mat-option>
+              <mat-option value='notEquals'>NOT EQUALS</mat-option>
+              <mat-option value='greaterThan'>GREATER THAN</mat-option>
+              <mat-option value='lessThan'>LESS THAN</mat-option>
+            </mat-select>
+            <mat-select *ngIf="getType(i)=='select'" formControlName="conditionComparator">
+              <mat-option value='equals'>EQUALS</mat-option>
+              <mat-option value='notEquals'>NOT EQUALS</mat-option>
+            </mat-select>
+            <mat-select *ngIf="!getType(i)" [disabled]="true">
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="getType(i)=='text'" style="width: 50%">
+            <button mat-icon-button type="button" (click)="openMultiAddModal(i, 'condition')">
+              <mat-icon>add_box</mat-icon>
+            </button>
+            <mat-form-field style="width: 85%">
+              <mat-label>Value</mat-label>
+              <input matInput required formControlName="conditionValue" readonly/>
+            </mat-form-field>
+            <mat-form-field style="width: 0%">
+              <input matInput required formControlName="conditionValueHidden"/>
+            </mat-form-field>
+          </div>
+          <mat-form-field *ngIf="getType(i)=='date'" style="width: 50%">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" disabled formControlName="conditionValue">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker disabled="false"></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field *ngIf="getType(i)=='select'" style="width: 50%">
+            <mat-select formControlName="conditionValue">
+              <mat-option *ngFor="let option of getOptions(i, 'condition')" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field *ngIf="!getType(i)" style="width: 50%">
+            <mat-label>Value</mat-label>
+            <input matInput required [disabled]="true">
+          </mat-form-field>
+        </div>
+        <div [formGroupName]="i" fxLayout="row" fxLayoutAlign="space-around center" class="full-width"
+             *ngIf="!conditionType">
+          <mat-form-field style="width: 40%">
+            <mat-label>Action</mat-label>
+            <mat-select formControlName="actionName">
+              <mat-option value='rmm'>Add To RMM</mat-option>
+              <mat-option value='message'>Send Notification</mat-option>
+              <mat-option value='transfer'>Transfer To System</mat-option>
+              <mat-option value='drop'>Drop / Do nothing</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field *ngIf="getAction(i)=='rmm'" style="width: 50%">
+            <mat-select formControlName="actionValue">
+              <mat-option *ngFor="let option of getOptions(i, 'action')" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div *ngIf="getAction(i)=='message'" style="width: 50%">
+            <button mat-icon-button type="button" (click)="openMultiAddModal(i, 'action')">
+              <mat-icon>add_box</mat-icon>
+            </button>
+            <mat-form-field style="width: 85%">
+              <mat-label>Value</mat-label>
+              <input matInput required formControlName="actionValue" readonly/>
+            </mat-form-field>
+            <mat-form-field style="width: 0%">
+              <input matInput required formControlName="actionValueHidden"/>
+            </mat-form-field>
+          </div>
+          <mat-form-field *ngIf="getAction(i)=='transfer'" style="width: 50%">
+            <mat-select formControlName="actionValue">
+              <mat-option *ngFor="let option of getOptions(i, 'action')" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field *ngIf="!getAction(i) || getAction(i)=='drop'" style="width: 50%">
+            <mat-label>Value</mat-label>
+            <input matInput required [disabled]="true">
+          </mat-form-field>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</form>

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RouteTwoComponent } from './route-two.component';
+import { ConfirmationModalComponent } from '@rms-frontend/confirmation-modal';
 
 describe('RouteTwoComponent', () => {
   let component: RouteTwoComponent;
@@ -8,9 +9,8 @@ describe('RouteTwoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RouteTwoComponent ]
-    })
-    .compileComponents();
+      declarations: [RouteTwoComponent, ConfirmationModalComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

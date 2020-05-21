@@ -1,0 +1,74 @@
+.body {
+  padding: 15px;
+  overflow: hidden;
+  height: 95%;
+}
+
+.main {
+  height: 100%;
+  width: 100%
+}
+
+.title {
+  height: 10%;
+  font-size: large;
+}
+
+.form {
+  height: 75%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.column {
+  padding: 15px;
+  max-height: 100%;
+  width: 30%;
+}
+
+.testButton {
+  margin-right: 15px;
+}
+
+.testResult {
+  width: 300px;
+  padding:0 !important;
+}
+
+.matched {
+  background-color: #49e66e;
+  padding: 5px;
+}
+
+.unmatched {
+  background-color: #e65949;
+  padding: 5px;
+}
+
+.headerText {
+  margin-top: 12px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.remove-btn {
+  color: red;
+}
+
+.table {
+  width: 100%;
+}
+
+.row {
+  cursor: pointer;
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}

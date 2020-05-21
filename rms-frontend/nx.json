@@ -86,7 +86,14 @@
       "tags": []
     },
     "order-rules-modal": {
-    "date-range": {
+      "date-range": {
+        "tags": []
+      }
+    },
+    "text-add-modal": {
+      "tags": []
+    },
+    "confirmation-modal": {
       "tags": []
     }
   }

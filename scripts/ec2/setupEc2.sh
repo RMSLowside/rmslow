@@ -30,6 +30,12 @@ wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.r
 sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 yum install -y apache-maven
 
+# Set all environment variables for NiFi
+echo "export PRIMARY_QUEUE=https://sqs.us-east-2.amazonaws.com/055276781719/fake-outside-queue" >> ~/.bashrc
+echo "export SECONDARY_QUEUE=https://sqs.us-east-2.amazonaws.com/055276781719/records-ingest-queue" >> ~/.bashrc
+echo "export ORIGINAL_RECORDS_TABLE_NAME=records-original-message" >> ~/.bashrc
+source ~/.bashrc
+
 # Install NiFi Registry
 aws s3 cp s3://rmslowdeployment/software/nifi-registry-0.6.0.tar.gz .
 tar -xzvf nifi-registry-0.6.0.tar.gz

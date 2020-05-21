@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HistoryListComponent } from './history-list.component';
+import { CoreModule } from '@rms-frontend/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HistorySegmentComponent } from '../history-segment/history-segment.component';
 
 describe('HistoryListComponent', () => {
   let component: HistoryListComponent;
@@ -8,9 +11,9 @@ describe('HistoryListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HistoryListComponent ]
-    })
-    .compileComponents();
+      declarations: [HistoryListComponent],
+      imports: [CoreModule, ReactiveFormsModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

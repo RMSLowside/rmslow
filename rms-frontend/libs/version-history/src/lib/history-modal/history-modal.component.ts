@@ -8,14 +8,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./history-modal.component.css']
 })
 export class HistoryModalComponent implements OnInit {
-  @Output() revertChange = new EventEmitter<VersionHistory>();
+  @Output() revertChange = new EventEmitter<VersionHistory[]>();
   histories: Observable<VersionHistory[]>;
   canEdit: boolean;
   constructor() {}
 
   ngOnInit(): void {}
 
-  emit(history: VersionHistory) {
+  emit(history: VersionHistory[]) {
     this.revertChange.emit(history);
   }
 }
