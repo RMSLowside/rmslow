@@ -21,6 +21,13 @@ Key concepts:
     - unclosed quotes, and unclosed parentheses
     - ambiguous queries
 
+Notes on proximity searches:
+====================================
+I know that for the original cut of adv. search, I looked into full-text searching in MySQL (which is one of the ways to deal with proximity). At the time, I hit some snags with implementing it that I don't presently remember; those notes are in OneNote back at the office, but if push comes to shove here I think I can do a more simplistic version of some of the proximity operators:
+(a, b) WITHIN # --> (a%b OR b%a)
+(a, b) ORDERED # --> a%b
+a BETWEEN (b,c) --> b%a%c
+
 Notes on SOLR: 
 ====================================
 In talking with people and browsing Apache’s public github for SOLR, I found a few pieces of SOLR's source code dealing with Query Parsers to analyze.

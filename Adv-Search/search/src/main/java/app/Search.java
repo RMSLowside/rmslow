@@ -79,14 +79,28 @@ public class Search {
         inputString = inputString.replaceAll("&!", "!").replaceAll("& !", "!").replaceAll("AND!", "!").replaceAll("&NOT", "!")
             .replaceAll("AND !", "!").replaceAll("& NOT", "!");
         //Finally, check if there are no operators - if that's true, the whole text is one term.
-        if(!inputString.contains("&") && !inputString.contains("|") && !inputString.contains("!") && !inputString.contains("\"")){
+        if(!inputString.contains("&") && !inputString.contains("|") && !inputString.contains("!") && !inputString.contains("\"") &&
+           !inputString.contains("BETWEEN") && !inputString.contains("ORDERED") && !inputString.contains("WITHIN")){
             return "<term>" + inputString + "</term>";
         }
 
         //2nd Pass: identifies individual terms
         for(int i = 0; i < inputString.length(); i++){
+            //skip over proximity operators since they aren't terms
+            if(inputString.substring(i).startsWith("BETWEEN")){
+                resultString += "BETWEEN";
+                i+=6;
+            }
+            else if(inputString.substring(i).startsWith("ORDERED")){
+                resultString += "ORDERED";
+                i+=6;
+            }
+            else if(inputString.substring(i).startsWith("WITHIN")){
+                resultString += "WITHIN";
+                i+=5;
+            }
             //iterate through characters, check for quotes that aren't escaped
-            if(!quoteTermOpen && inputString.charAt(i) == '"' && (i == 0 || inputString.charAt(i-1) != '\\')){
+            else if(!quoteTermOpen && inputString.charAt(i) == '"' && (i == 0 || inputString.charAt(i-1) != '\\')){
                 quoteTermOpen = !quoteTermOpen;
                 resultString += "<term>";
             }
@@ -111,6 +125,17 @@ public class Search {
             }
         }
 
+        //Check for field equals
+        Pattern fieldPattern = Pattern.compile("<term>([^<]*)</term> =");
+        Matcher fieldMatcher = fieldPattern.matcher(resultString);
+
+        while(fieldMatcher.find()){
+            int index = resultString.indexOf(fieldMatcher.group(0));
+            String field = "<field>" + fieldMatcher.group(1) + "</field> =";
+            resultString = resultString.substring(0, index) + field + resultString.substring(index + fieldMatcher.group(0).length());
+            fieldMatcher = fieldPattern.matcher(resultString);
+        }
+
         //-----------Validation------------
         // Check for the following validation error flags:
         // - neighboring terms
@@ -118,7 +143,6 @@ public class Search {
         // - unclosed / missing quotes (not escaped ones)
         // - unclosed / missing parens
         // - query ambiguity
-        System.out.println("DEBUG: " + resultString);
         return Search.validate(resultString);
     }
 
@@ -130,13 +154,18 @@ public class Search {
         ArrayList<String> operatorLevels = new ArrayList<String>();
         operatorLevels.add("");
 
+        //For clarity:
+        // termSwitch = we are either inside a term or we're not
+        // opActive = was the last substring an operator?
+        // termAcitve = was the last substring a term?
+
         for(int i=0; i < resultString.length(); i++){
-            if(resultString.charAt(i) == '<'){
+            if(resultString.charAt(i) == '<' && resultString.charAt(i+1) != '>'){
                 opActive = false;
                 if(termSwitch == false && resultString.charAt(i+1) == '/'){
                     return "Error: There are unclosed quotes in this string; make sure all non-escaped quotes are closed.";
                 }
-                else if(resultString.charAt(i+1) == 't'){
+                else if(resultString.charAt(i+1) == 't' || resultString.charAt(i+1) == 'f'){
                     termSwitch = true;
                     if(termSwitch && termActive){
                         return "Error: There are neighboring terms in this string; an operator should be between every term.";
@@ -147,6 +176,37 @@ public class Search {
                     opActive = false;
                     termActive = true;
                 }
+            }
+            else if(i != resultString.length()-1 && (
+                    resultString.substring(i, i+1) == "<>" ||
+                    resultString.substring(i, i+1) == "<=" ||
+                    resultString.substring(i, i+1) == ">=")){
+                if(opActive){
+                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
+                }
+                opActive = true;
+                i++;
+            }
+            else if(resultString.length() - i - 1 >= 7 && resultString.substring(i).startsWith("BETWEEN")){
+                if(opActive){
+                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
+                }
+                opActive = true;
+                i+=6;
+            }
+            else if(resultString.length() - i - 1 >= 7 && resultString.substring(i).startsWith("ORDERED")){
+                if(opActive){
+                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
+                }
+                opActive = true;
+                i+=6;
+            }
+            else if(resultString.length() - i - 1 >= 6 && resultString.substring(i).startsWith("WITHIN")){
+                if(opActive){
+                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
+                }
+                opActive = true;
+                i+=5;
             }
             else if(resultString.charAt(i) == '('){
                 parensLevel++;
@@ -230,10 +290,7 @@ public class Search {
         examples2.add("field ANY (1,2,3)");
         examples2.add("field ALL (a,b,c)");
         examples2.add("test ALL (a,b) AND test2 ANY (c,d)");
-        //proximity checks:
-        examples2.add("(dog, cat) WITHIN 5");
-        examples2.add("(dog, cat) ORDERED 5");
-        examples2.add("s BETWEEN (u, a)");
+        //proximity checks
         examples2.add("(cat OR Kitten) BETWEEN (tuna, fish)");
         examples2.add("((dog, cat) WITHIN 5, mouse) ORDERED 10");
 
