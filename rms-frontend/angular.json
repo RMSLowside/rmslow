@@ -1057,6 +1057,129 @@
           "style": "scss"
         }
       }
+    },
+    "charts": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/charts",
+      "sourceRoot": "apps/charts/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/charts",
+            "index": "apps/charts/src/index.html",
+            "main": "apps/charts/src/main.ts",
+            "polyfills": "apps/charts/src/polyfills.ts",
+            "tsConfig": "apps/charts/tsconfig.app.json",
+            "aot": true,
+            "assets": ["apps/charts/src/favicon.ico", "apps/charts/src/assets"],
+            "styles": [
+              "libs/shared-assets/styles.scss",
+              "apps/s3/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/charts/src/environments/environment.ts",
+                  "with": "apps/charts/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "charts:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "charts:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "charts:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/charts/tsconfig.app.json",
+              "apps/charts/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/charts/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/charts/jest.config.js",
+            "tsConfig": "apps/charts/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/charts/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "charts-e2e": {
+      "root": "apps/charts-e2e",
+      "sourceRoot": "apps/charts-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/charts-e2e/cypress.json",
+            "tsConfig": "apps/charts-e2e/tsconfig.e2e.json",
+            "devServerTarget": "charts:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "charts:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/charts-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/charts-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {
