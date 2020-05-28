@@ -102,6 +102,9 @@
     "charts-e2e": {
       "tags": [],
       "implicitDependencies": ["charts"]
+    },
+    "data-table": {
+      "tags": []
     }
   }
 }

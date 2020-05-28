@@ -1180,6 +1180,38 @@
           }
         }
       }
+    },
+    "data-table": {
+      "projectType": "library",
+      "root": "libs/data-table",
+      "sourceRoot": "libs/data-table/src",
+      "prefix": "rms-frontend",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/data-table/tsconfig.lib.json",
+              "libs/data-table/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/data-table/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/data-table/jest.config.js",
+            "tsConfig": "libs/data-table/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/data-table/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
