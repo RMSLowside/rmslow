@@ -4,10 +4,19 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { CoreModule } from '@rms-frontend/core';
-import { BarChartModule } from '@swimlane/ngx-charts';
+import { PieChartModule } from '@swimlane/ngx-charts';
+import { LineChartModule } from '@swimlane/ngx-charts';
+import { GridModule } from '@rms-frontend/grid';
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [CommonModule, CoreModule, HomeRoutingModule, BarChartModule]
+  imports: [
+    CommonModule,
+    GridModule,
+    CoreModule,
+    HomeRoutingModule,
+    PieChartModule,
+    LineChartModule
+  ]
 })
 export class HomeModule {}

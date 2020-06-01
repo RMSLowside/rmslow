@@ -1,15 +1,93 @@
-<ngx-charts-bar-vertical
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="single"
-  [gradient]="gradient"
-  [xAxis]="showXAxis"
-  [yAxis]="showYAxis"
-  [legend]="showLegend"
-  [showXAxisLabel]="showXAxisLabel"
-  [showYAxisLabel]="showYAxisLabel"
-  [xAxisLabel]="xAxisLabel"
-  [yAxisLabel]="yAxisLabel"
-  (select)="onSelect($event)"
->
-</ngx-charts-bar-vertical>
+<div fxLayout="column">
+  <div fxLayout="row">
+    <mat-card
+      fxFlex="30"
+      style="margin:2%"
+      fxLayout="column"
+      fxLayoutAlign="space-around"
+    >
+      <span
+        fxLayoutAlign="center"
+        style="font-size: 40px; text-decoration: underline;"
+        >Grade:</span
+      >
+      <span fxLayoutAlign="center" style="font-size: 44px;">B</span>
+    </mat-card>
+    <ngx-charts-line-chart
+      [view]="view"
+      [scheme]=""
+      [legend]="legend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxis]="xAxis"
+      [yAxis]="yAxis"
+      [xAxisLabel]="'Date'"
+      [yAxisLabel]="'Record Count'"
+      [timeline]="timeline"
+      [results]="recordsPerDay"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+      fxFlex="70"
+      style="width: 100%; margin:2%"
+    >
+    </ngx-charts-line-chart>
+  </div>
+  <div fxLayout="row">
+    <mat-card style="margin: 2%;">
+      <mat-card-title>
+        Information
+      </mat-card-title>
+
+      <mat-card-content>
+        <ul>
+          <li>
+            There are 852 records missing a disposition response. View
+          </li>
+
+          <li>
+            There are 15 records on hold. View
+          </li>
+
+          <li>
+            All system metrics. View
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+    <ngx-charts-pie-chart
+      [view]="view"
+      [scheme]=""
+      [results]="schedules"
+      [gradient]="gradient"
+      [legend]="showLegend"
+      [legendPosition]="legendPosition"
+      [labels]="showLabels"
+      [doughnut]="isDoughnut"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)"
+    >
+    </ngx-charts-pie-chart>
+  </div>
+  <div fxLayout="row">
+    <mat-card
+      fxFlex="30"
+      style="margin:2%"
+      fxLayout="column"
+      fxLayoutAlign="space-around"
+    >
+      <span
+        fxLayoutAlign="center"
+        style="font-size: 40px; text-decoration: underline;"
+        >Total Records:</span
+      >
+      <span fxLayoutAlign="center" style="font-size: 44px;">58,456,923</span>
+    </mat-card>
+    <rms-grid
+      [columns]="gridColumns"
+      [data]="gridData"
+      style="width: 100%; margin:2%"
+    ></rms-grid>
+  </div>
+</div>
