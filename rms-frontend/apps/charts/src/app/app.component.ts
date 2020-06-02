@@ -22,27 +22,15 @@ import { HeaderComponent } from '@rms-frontend/header';
 export class AppComponent {
   title = 'charts';
 
-  @Select(GlobalState.getTheme) theme$: Observable<string>;
   @Select(AuthState.isAuthenticated) authed$: Observable<boolean>;
   @ViewChild('header', { read: ViewContainerRef }) vcr: ViewContainerRef;
   headerRef: ComponentRef<HeaderComponent>;
-
   authedSub = this.authed$.subscribe(a => {
     if (a) {
       this.loadHeader();
       this.authedSub.unsubscribe();
     }
   });
-
-  themeSub = this.theme$.subscribe(a => {
-    this.overlayContainer.getContainerElement().classList.remove('dark-theme');
-    this.overlayContainer.getContainerElement().classList.remove('light-theme');
-    this.overlayContainer.getContainerElement().classList.add(`${a}-theme`);
-  });
-
-  themeChange(theme) {
-    this.store.dispatch(new SetTheme(theme));
-  }
 
   constructor(
     public overlayContainer: OverlayContainer,
@@ -56,9 +44,6 @@ export class AppComponent {
       this.headerRef = this.vcr.createComponent(factory);
       this.headerRef.instance.title = 'Charts';
       this.headerRef.hostView.detectChanges();
-      this.headerRef.instance.themeChange.subscribe(theme => {
-        this.themeChange(theme);
-      });
     }
   }
 }

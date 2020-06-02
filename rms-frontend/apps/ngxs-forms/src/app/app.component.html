@@ -1,7 +1,10 @@
-<div class="{{ theme$ | async }}-theme main" style="display: flex; flex-direction: row; height: 100%;">
+<div class="main" style="display: flex; flex-direction: row; height: 100%;">
   <div style="flex:1 1 auto; padding: 0;margin: 0;">
-    <rms-frontend-header [title]="title" (themeChange)="themeChange($event)" [helpContent]="helpContent$ | async"
-      (helpChange)="helpChange($event)"></rms-frontend-header>
+    <rms-frontend-header
+      [title]="title"
+      [helpContent]="helpContent$ | async"
+      (helpChange)="helpChange($event)"
+    ></rms-frontend-header>
 
     <div style="padding: 20px;">
       <mat-card>
@@ -17,29 +20,37 @@
     <div style="padding: 20px;">
       <mat-card>
         <mat-card-header>
-          <mat-card-title>Dyanmic Form modal with NGXS forms plugin</mat-card-title>
+          <mat-card-title
+            >Dyanmic Form modal with NGXS forms plugin</mat-card-title
+          >
         </mat-card-header>
         <mat-card-content>
           <div style="padding: 10px;">
             List of saved form drafts
-            <br>
+            <br />
             (On click dynamic forms should be populated with model value)
             <mat-list role="list" dense>
-              <mat-list-item *ngFor="let draft of (drafts$ | async)">
-                {{draft | json}}
-                <button mat-raised-button (click)="fillForm(draft)">populate form</button>
+              <mat-list-item *ngFor="let draft of drafts$ | async">
+                {{ draft | json }}
+                <button mat-raised-button (click)="fillForm(draft)">
+                  populate form
+                </button>
               </mat-list-item>
             </mat-list>
           </div>
           <mat-divider></mat-divider>
           <div style="padding: 10px;">
-            {{(test$ | async) | json}}
+            {{ test$ | async | json }}
           </div>
           <mat-divider></mat-divider>
           <div style="padding: 10px;">
-            <mat-checkbox color="primary" [(ngModel)]="checked">Clear ngxsform on destroy</mat-checkbox>
-            <br>
-            <button mat-raised-button (click)='openForms()'>open dynamic form</button>
+            <mat-checkbox color="primary" [(ngModel)]="checked"
+              >Clear ngxsform on destroy</mat-checkbox
+            >
+            <br />
+            <button mat-raised-button (click)="openForms()">
+              open dynamic form
+            </button>
           </div>
         </mat-card-content>
       </mat-card>

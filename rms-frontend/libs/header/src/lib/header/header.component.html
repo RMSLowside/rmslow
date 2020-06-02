@@ -17,8 +17,8 @@
 </mat-menu>
 
 <mat-menu #themeMenu="matMenu">
-  <button mat-menu-item (click)="themeChange.emit('dark')">Dark</button>
-  <button mat-menu-item (click)="themeChange.emit('light')">Light</button>
+  <button mat-menu-item (click)="themeChange('dark')">Dark</button>
+  <button mat-menu-item (click)="themeChange('light')">Light</button>
 </mat-menu>
 <mat-menu #linkMenu="matMenu">
   <mat-nav-list>

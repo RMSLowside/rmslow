@@ -1,9 +1,8 @@
-<div class="{{ theme$ | async }}-theme main" fxLayout="row">
+<div class="main" fxLayout="row">
   <div fxFill>
     <rms-frontend-header
       [title]="'Home'"
       [helpContent]="getHelpModalContent()"
-      (themeChange)="themeChange($event)"
     ></rms-frontend-header>
     <mat-nav-list>
       <a mat-list-item href="{{ link.value }}" *ngFor="let link of links">

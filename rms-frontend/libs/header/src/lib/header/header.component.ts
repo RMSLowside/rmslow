@@ -2,6 +2,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { KeyValue } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { HelpModalComponent } from '@rms-frontend/help-modal';
+import { Select, Store } from '@ngxs/store';
+import { GlobalState, SetTheme } from '@rms-frontend/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'rms-frontend-header',
@@ -11,10 +14,15 @@ import { HelpModalComponent } from '@rms-frontend/help-modal';
 export class HeaderComponent {
   @Input() title: string;
   @Input() helpContent: any = [];
-  @Output() themeChange = new EventEmitter<string>();
   @Output() helpChange = new EventEmitter<string>();
+  @Select(GlobalState.getTheme) theme$: Observable<string>;
+  themeSub = this.theme$.subscribe(a => {
+    document.body.classList.remove('dark-theme');
+    document.body.classList.remove('light-theme');
+    document.body.classList.add(`${a}-theme`);
+  });
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public store: Store) {}
 
   links: KeyValue<string, string>[] = [
     {
@@ -64,6 +72,9 @@ export class HeaderComponent {
         console.log('help modal closed');
       });
     }
+  }
+  themeChange(theme: string) {
+    this.store.dispatch(new SetTheme(theme));
   }
 
   HelpContentChange(value) {
