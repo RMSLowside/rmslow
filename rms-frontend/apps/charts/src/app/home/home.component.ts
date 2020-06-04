@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ColorHelper } from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'rms-frontend-home',
@@ -79,8 +80,8 @@ export class HomeComponent {
   ];
   gridColumns = ['days', 'count'];
   gridData = [
-    { days: 'Past Due', count: '5' },
-    { days: '7', count: '25' },
+    { days: 'Past Due', count: '5', rowClass: 'error' },
+    { days: '7', count: '25', rowClass: 'warning' },
     { days: '30', count: '852' },
     { days: '60', count: '900' },
     { days: '90', count: '1500' }

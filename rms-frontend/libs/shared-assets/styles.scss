@@ -6,11 +6,15 @@
 @import './dark';
 .light-theme {
   @include angular-material-theme($light-app-theme);
+  --warning-color: yellow;
+  --error-color: red;
 }
 
 .dark-theme {
   @include angular-material-theme($dark-app-theme);
   --alternate-card-color: #494949;
+  --warning-color: #ea8508;
+  --error-color: red;
   text {
     fill: #fff !important;
   }

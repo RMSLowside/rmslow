@@ -16,7 +16,7 @@
     <ngx-charts-line-chart
       [view]="view"
       [scheme]=""
-      [legend]="legend"
+      [legend]="false"
       [showXAxisLabel]="showXAxisLabel"
       [showYAxisLabel]="showYAxisLabel"
       [xAxis]="xAxis"
@@ -62,7 +62,7 @@
       [gradient]="gradient"
       [legend]="showLegend"
       [legendPosition]="legendPosition"
-      [labels]="showLabels"
+      [labels]="false"
       [doughnut]="isDoughnut"
       (select)="onSelect($event)"
       (activate)="onActivate($event)"

@@ -1,3 +1,4 @@
 $light-app-primary: mat-palette($mat-indigo);
 $light-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-warn: mat-palette($mat-yellow);
 $light-app-theme: mat-light-theme($light-app-primary, $light-app-accent);

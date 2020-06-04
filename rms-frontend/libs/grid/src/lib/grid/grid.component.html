@@ -10,6 +10,7 @@
       mat-cell
       *matCellDef="let element"
       innerHtml="{{ element[column] }}"
+      [class]="element.rowClass || ''"
     ></td>
   </ng-container>
 
