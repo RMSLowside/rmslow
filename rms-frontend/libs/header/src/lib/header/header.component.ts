@@ -50,6 +50,10 @@ export class HeaderComponent {
     {
       key: 'Rules Engine',
       value: `${location.origin}/rmslow/apps/rules-engine`
+    },
+    {
+      key: 'Metrics',
+      value: `${location.origin}/rmslow/apps/charts`
     }
   ];
 

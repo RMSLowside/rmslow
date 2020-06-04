@@ -98,7 +98,7 @@ export class HomeComponent {
   yAxis: boolean = true;
   timeline: boolean = true;
   isDoughnut: boolean = false;
-  legendPosition: string = 'below';
+  legendPosition: string = 'right';
 
   onActivate(data): void {
     console.log('Activate', JSON.parse(JSON.stringify(data)));

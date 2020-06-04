@@ -1,8 +1,8 @@
 <div fxLayout="column" fxFlex="1 1 auto">
   <div fxLayout="row">
     <mat-card
-      fxFlex="30"
-      style="margin:2%"
+      fxFlex="20"
+      style="margin:2%;height: 280px;"
       fxLayout="column"
       fxLayoutAlign="space-around"
     >
@@ -28,13 +28,27 @@
       (select)="onSelect($event)"
       (activate)="onActivate($event)"
       (deactivate)="onDeactivate($event)"
-      fxFlex="70"
+      fxFlex="60"
       style="width: 100%; margin:2%"
     >
     </ngx-charts-line-chart>
+
+    <mat-card
+      style="margin:2%;height: 280px;"
+      fxLayout="column"
+      fxLayoutAlign="space-around"
+      fxFlex="20"
+    >
+      <span
+        fxLayoutAlign="center"
+        style="font-size: 40px; text-decoration: underline;"
+        >Total Records:</span
+      >
+      <span fxLayoutAlign="center" style="font-size: 44px;">58,456,923</span>
+    </mat-card>
   </div>
   <div fxLayout="row">
-    <mat-card style="margin: 2%;">
+    <mat-card style="margin: 2%;" fxFlex="30">
       <mat-card-title>
         Information
       </mat-card-title>
@@ -42,16 +56,13 @@
       <mat-card-content>
         <ul>
           <li>
-            There are 852 records missing a disposition response. View
+            There are 852 records missing a disposition response.
+            <a href="">View</a>
           </li>
 
-          <li>
-            There are 15 records on hold. View
-          </li>
+          <li>There are 15 records on hold. <a href="">View</a></li>
 
-          <li>
-            All system metrics. View
-          </li>
+          <li>All system metrics. <a href="">View</a></li>
         </ul>
       </mat-card-content>
     </mat-card>
@@ -67,27 +78,14 @@
       (select)="onSelect($event)"
       (activate)="onActivate($event)"
       (deactivate)="onDeactivate($event)"
+      fxFlex="40"
     >
     </ngx-charts-pie-chart>
-  </div>
-  <div fxLayout="row">
-    <mat-card
-      fxFlex="30"
-      style="margin:2%"
-      fxLayout="column"
-      fxLayoutAlign="space-around"
-    >
-      <span
-        fxLayoutAlign="center"
-        style="font-size: 40px; text-decoration: underline;"
-        >Total Records:</span
-      >
-      <span fxLayoutAlign="center" style="font-size: 44px;">58,456,923</span>
-    </mat-card>
     <rms-grid
       [columns]="gridColumns"
       [data]="gridData"
       style="width: 100%; margin:2%"
+      fxFlex="30"
     ></rms-grid>
   </div>
 </div>

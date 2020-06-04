@@ -40,6 +40,10 @@ export class AppComponent {
     {
       key: 'Rules Engine',
       value: `${location.origin}/rmslow/apps/rules-engine`
+    },
+    {
+      key: 'Metrics',
+      value: `${location.origin}/rmslow/apps/charts`
     }
   ];
 
