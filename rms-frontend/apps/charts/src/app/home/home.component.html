@@ -1,7 +1,7 @@
 <div fxLayout="column" fxFlex="1 1 auto">
   <div fxLayout="row">
     <mat-card
-      fxFlex="20"
+      fxFlex="25"
       style="margin:2%;height: 280px;"
       fxLayout="column"
       fxLayoutAlign="space-around"
@@ -28,7 +28,7 @@
       (select)="onSelect($event)"
       (activate)="onActivate($event)"
       (deactivate)="onDeactivate($event)"
-      fxFlex="60"
+      fxFlex="50"
       style="width: 100%; margin:2%"
     >
     </ngx-charts-line-chart>
@@ -37,7 +37,7 @@
       style="margin:2%;height: 280px;"
       fxLayout="column"
       fxLayoutAlign="space-around"
-      fxFlex="20"
+      fxFlex="25"
     >
       <span
         fxLayoutAlign="center"
@@ -49,18 +49,28 @@
   </div>
   <div fxLayout="row">
     <mat-card style="margin: 2%;" fxFlex="30">
-      <mat-card-title>
+      <mat-card-title style="font-size: 32px">
         Information
       </mat-card-title>
 
       <mat-card-content>
-        <ul>
+        <ul
+          style="font-size: 18px;
+        line-height: 1.5;"
+        >
           <li>
             There are 852 records missing a disposition response.
             <a href="">View</a>
           </li>
 
           <li>There are 15 records on hold. <a href="">View</a></li>
+
+          <li>
+            There has been a lower amont of records in the last week
+            <a href="">View Average</a>
+          </li>
+
+          <li>18% of records have matched the <a href="">default rule</a>.</li>
 
           <li>All system metrics. <a href="">View</a></li>
         </ul>
