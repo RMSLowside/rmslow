@@ -4,7 +4,8 @@ import {
   Output,
   EventEmitter,
   ChangeDetectionStrategy,
-  ComponentFactoryResolver
+  ComponentFactoryResolver,
+  HostListener
 } from '@angular/core';
 import { FileElement } from '../models/file-element';
 import { MatMenuTrigger } from '@angular/material/menu';
@@ -25,6 +26,10 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FileExplorerComponent {
+  @HostListener('document: dragover', ['$event'])
+  onDragStart(ev: DragEvent) {
+    if (ev.dataTransfer.types.includes('Files')) this.dragged = true;
+  }
   constructor(public dialog: MatDialog) {}
 
   dragged: boolean;
