@@ -12,6 +12,9 @@ import { Select, Store } from '@ngxs/store';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { GlobalState, SetTheme, Login, AuthState } from '@rms-frontend/core';
 import { HeaderComponent } from '@rms-frontend/header';
+import { SessionModalComponent } from './session-modal/session-modal.component';
+import { LoggerService } from './logger.service';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 's3-root',
@@ -36,7 +39,9 @@ export class AppComponent {
   constructor(
     public overlayContainer: OverlayContainer,
     public store: Store,
-    private cfr: ComponentFactoryResolver
+    private cfr: ComponentFactoryResolver,
+    public dialog: MatDialog,
+    public logService: LoggerService
   ) {}
   async loadHeader() {
     if (!this.headerRef) {
@@ -44,7 +49,16 @@ export class AppComponent {
       const factory = this.cfr.resolveComponentFactory(HeaderComponent);
       this.headerRef = this.vcr.createComponent(factory);
       this.headerRef.instance.title = 'S3';
+      this.headerRef.instance.sessionEnabled = true;
       this.headerRef.hostView.detectChanges();
+      this.headerRef.instance.openSession.subscribe(a => {
+        const dialogRef = this.dialog.open(SessionModalComponent);
+        dialogRef.componentInstance.logValues = this.logService.sessionLog.value;
+        dialogRef.afterClosed().subscribe(res => {
+          if (res) {
+          }
+        });
+      });
     }
   }
 }

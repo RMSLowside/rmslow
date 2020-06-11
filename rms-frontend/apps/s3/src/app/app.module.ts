@@ -11,9 +11,10 @@ import { ExplorerState } from './+state/file.state';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SessionModalComponent } from './session-modal/session-modal.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SessionModalComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -3,6 +3,14 @@
 
   <span fxFlex="1 1 auto"></span>
 
+  <button
+    mat-icon-button
+    (click)="openSession.emit('open')"
+    *ngIf="sessionEnabled"
+  >
+    <mat-icon>article</mat-icon>
+  </button>
+
   <button mat-icon-button (click)="openHelpModal()">
     <mat-icon>help_outline</mat-icon>
   </button>

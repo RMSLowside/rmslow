@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent {
   @Input() title: string;
+  sessionEnabled:boolean;
   @Input() helpContent: any = [];
   @Output() helpChange = new EventEmitter<string>();
   @Select(GlobalState.getTheme) theme$: Observable<string>;
@@ -21,6 +22,7 @@ export class HeaderComponent {
     document.body.classList.remove('light-theme');
     document.body.classList.add(`${a}-theme`);
   });
+  @Output() openSession = new EventEmitter<string>();
 
   constructor(public dialog: MatDialog, public store: Store) {}
 

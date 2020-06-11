@@ -14,6 +14,7 @@ import {
 } from './file.actions';
 import { ImmutableContext, ImmutableSelector } from '@ngxs-labs/immer-adapter';
 import { Injectable } from '@angular/core';
+import { LoggerService } from '../logger.service';
 
 export interface ExplorerStateModel {
   files: FileElement[];
@@ -31,6 +32,8 @@ export interface ExplorerStateModel {
 })
 @Injectable()
 export class ExplorerState {
+  constructor(public logService: LoggerService) {}
+
   @Selector()
   @ImmutableSelector()
   static currentSpace(state: ExplorerStateModel) {
@@ -54,6 +57,7 @@ export class ExplorerState {
     const state = ctx.getState();
     const files = state.files;
     files.push(...action.files);
+    this.logService.log(`Uploaded ${action.files.length} files.`);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files;
       return hereState;
@@ -67,6 +71,7 @@ export class ExplorerState {
     const state = ctx.getState();
     const files = state.files;
     files.push(action.folder);
+    this.logService.log(`Added ${action.folder.name} folder.`);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files;
       return hereState;
@@ -78,6 +83,9 @@ export class ExplorerState {
   deleteFolder(ctx: StateContext<ExplorerStateModel>, action: DeleteFolder) {
     const state = ctx.getState();
     const files = state.files;
+    this.logService.log(
+      `Deleted ${files.find(a => a.id === action.id).name} folder.`
+    );
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files.filter(
         entry => entry.id !== action.id && entry.parent !== action.id
@@ -93,6 +101,9 @@ export class ExplorerState {
     const state = ctx.getState();
     const files = state.files;
     const filteredFiles = files.filter(entry => entry.id !== action.id);
+    this.logService.log(
+      `Deleted ${files.find(a => a.id === action.id).name} file.`
+    );
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = filteredFiles;
       return hereState;
@@ -105,6 +116,11 @@ export class ExplorerState {
   renameFile(ctx: StateContext<ExplorerStateModel>, action: RenameFile) {
     const state = ctx.getState();
     const files = state.files;
+    this.logService.log(
+      `Renamed file ${files.find(a => a.id === action.id).name} to ${
+        action.name
+      }.`
+    );
     files.find(file => file.id === action.id).name = action.name;
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files;
@@ -118,6 +134,11 @@ export class ExplorerState {
   renameFolder(ctx: StateContext<ExplorerStateModel>, action: RenameFolder) {
     const state = ctx.getState();
     const files = state.files;
+    this.logService.log(
+      `Renamed folder ${files.find(a => a.id === action.id).name} to ${
+        action.name
+      }.`
+    );
     files.find(file => file.id === action.id).name = action.name;
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files;
@@ -131,6 +152,11 @@ export class ExplorerState {
   moveFolder(ctx: StateContext<ExplorerStateModel>, action: MoveFolder) {
     const state = ctx.getState();
     const files = state.files;
+    this.logService.log(
+      `Moved folder ${files.find(a => a.id === action.id).name} to ${
+        files.find(a => a.id === action.parent).name
+      }.`
+    );
     files.find(file => file.id === action.id).parent = action.parent;
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files;
@@ -144,6 +170,11 @@ export class ExplorerState {
   moveFile(ctx: StateContext<ExplorerStateModel>, action: MoveFile) {
     const state = ctx.getState();
     const files = state.files;
+    this.logService.log(
+      `Moved file ${files.find(a => a.id === action.id).name} to ${
+        files.find(a => a.id === action.parent).name
+      }.`
+    );
     files.find(file => file.id === action.id).parent = action.parent;
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.files = files;
@@ -157,6 +188,7 @@ export class ExplorerState {
   navigateTo(ctx: StateContext<ExplorerStateModel>, action: NavigateTo) {
     const state = ctx.getState();
     const newPath = this.pushToPath(state.path, action.folder.name);
+    this.logService.log(`Navigated to folder ${newPath}.`);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.currentRoot = action.folder;
       hereState.path = newPath;
@@ -177,6 +209,7 @@ export class ExplorerState {
       parent: ''
     };
     const newPath = this.popFromPath(state.path);
+    this.logService.log(`Navigated to folder ${newPath}.`);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.currentRoot = newRoot;
       hereState.path = newPath;

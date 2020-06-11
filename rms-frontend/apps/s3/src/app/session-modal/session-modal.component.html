@@ -1,0 +1,15 @@
+<div fxLayout="row">
+  <h1 mat-dialog-title>Session Log</h1>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>
+      close
+    </mat-icon>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <ol>
+    <li *ngFor="let log of logValues">{{ log }}</li>
+  </ol>
+</mat-dialog-content>

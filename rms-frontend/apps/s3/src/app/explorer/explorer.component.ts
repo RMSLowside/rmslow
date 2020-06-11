@@ -17,6 +17,7 @@ import {
   UploadFiles
 } from '../+state/file.actions';
 import { EncryptService } from '../encrypt.service';
+import { LoggerService } from '../logger.service';
 
 @Component({
   selector: 's3-explorer',
@@ -59,7 +60,11 @@ export class ExplorerComponent implements OnInit, OnDestroy {
     });
   }
 
-  constructor(public store: Store, public encryptService: EncryptService) {}
+  constructor(
+    public store: Store,
+    public encryptService: EncryptService,
+    public logService: LoggerService
+  ) {}
 
   addFolder(folder: { name: string }) {
     this.store.dispatch(
