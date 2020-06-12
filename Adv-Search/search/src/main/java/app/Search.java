@@ -136,6 +136,8 @@ public class Search {
             fieldMatcher = fieldPattern.matcher(resultString);
         }
 
+        resultString = Search.resolveProximity(resultString);
+
         //-----------Validation------------
         // Check for the following validation error flags:
         // - neighboring terms
@@ -146,7 +148,68 @@ public class Search {
         return Search.validate(resultString);
     }
 
+    public static String resolveProximity(String input){
+        String resultString = input;
+
+        if(resultString.contains("BETWEEN")) resultString = Search.convertBetween(resultString);
+
+        if(resultString.contains("WITHIN")) resultString = Search.convertWithin(resultString);
+
+        if(resultString.contains("ORDERED")) resultString = Search.convertOrdered(resultString);
+
+        return resultString;
+    }
+
+    public static String convertWithin(String input){
+        Pattern withinPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) WITHIN <term>(\\d*)</term>");
+        Matcher m = withinPattern.matcher(input);
+        String resultString = input;
+        if(m.find()){
+            // System.out.println("Found within op");
+            // System.out.println("entire match: " + m.group(0));
+            // System.out.println("terms: " + m.group(1));
+            // System.out.println("distance: " + m.group(2));
+            String terms = m.group(1);
+            if(terms.contains("WITHIN")) terms = Search.convertWithin(terms);
+            else if(terms.contains("ORDERED")) terms = Search.convertOrdered(terms);
+            else if(terms.contains("BETWEEN")) terms = Search.convertBetween(terms);
+            int index = input.indexOf(m.group(0));
+            String replacement = "[" + m.group(2) + "W(" + terms + ")]";
+            resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
+        }
+        return resultString;
+    }
+
+    public static String convertOrdered(String input){
+        Pattern orderedPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) ORDERED <term>(\\d*)</term>");
+        Matcher m = orderedPattern.matcher(input);
+        String resultString = input;
+        if(m.find()){
+            String terms = m.group(1);
+            if(terms.contains("WITHIN")) terms = Search.convertWithin(terms);
+            else if(terms.contains("ORDERED")) terms = Search.convertOrdered(terms);
+            else if(terms.contains("BETWEEN")) terms = Search.convertBetween(terms);
+            int index = input.indexOf(m.group(0));
+            String replacement = "[" + m.group(2) + "O(" + terms + ")]";
+            resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
+        }
+        return resultString;
+    }
+
+    public static String convertBetween(String input){
+        Pattern betweenPattern = Pattern.compile("\\(?(<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\)? BETWEEN \\((<term>[\\w \"'\\(\\)<>/]*,[\\w \"'\\(\\)<>/]*</term>)\\)");
+        Matcher m = betweenPattern.matcher(input);
+        String resultString = input;
+        if(m.find()){
+            int index = input.indexOf(m.group(0));
+            String replacement = "[" + m.group(1) + "]B[" + m.group(2) + "]";
+            resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
+        }
+        return resultString;
+    }
+
     public static String validate(String resultString){
+        System.out.println("DEBUG: " + resultString);
         boolean termSwitch = false;
         int parensLevel = 0;
         boolean termActive = false;
@@ -157,7 +220,7 @@ public class Search {
         //For clarity:
         // termSwitch = we are either inside a term or we're not
         // opActive = was the last substring an operator?
-        // termAcitve = was the last substring a term?
+        // termActive = was the last substring a term?
 
         for(int i=0; i < resultString.length(); i++){
             if(resultString.charAt(i) == '<' && resultString.charAt(i+1) != '>'){
@@ -168,6 +231,8 @@ public class Search {
                 else if(resultString.charAt(i+1) == 't' || resultString.charAt(i+1) == 'f'){
                     termSwitch = true;
                     if(termSwitch && termActive){
+                        System.out.println("Erroring out");
+                        System.out.println("substring: " + resultString.substring(i-3, i+3));
                         return "Error: There are neighboring terms in this string; an operator should be between every term.";
                     }
                 }
@@ -187,26 +252,13 @@ public class Search {
                 opActive = true;
                 i++;
             }
-            else if(resultString.length() - i - 1 >= 7 && resultString.substring(i).startsWith("BETWEEN")){
-                if(opActive){
-                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
-                }
+            //check for Between operator
+            else if(resultString.charAt(i) == 'B' && resultString.charAt(i+1) == '['){
                 opActive = true;
-                i+=6;
+                termActive = false;
             }
-            else if(resultString.length() - i - 1 >= 7 && resultString.substring(i).startsWith("ORDERED")){
-                if(opActive){
-                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
-                }
-                opActive = true;
-                i+=6;
-            }
-            else if(resultString.length() - i - 1 >= 6 && resultString.substring(i).startsWith("WITHIN")){
-                if(opActive){
-                    return "Error: There are neighboring operators in this string; make sure no two operators are next to each other.";
-                }
-                opActive = true;
-                i+=5;
+            else if(resultString.charAt(i) == ','){
+                // do nothing
             }
             else if(resultString.charAt(i) == '('){
                 parensLevel++;
@@ -239,10 +291,16 @@ public class Search {
                 }
                 //- otherwise, if the operator found is NOT equal to the one we've already found at this level, the query is ambiguous
                 else if(!operatorLevels.get(parensLevel).equals(String.valueOf(resultString.charAt(i)))) {
-                    if("&!=,".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!=,".indexOf(String.valueOf(resultString.charAt(i))) != -1){
+                    if("&!=".indexOf(operatorLevels.get(parensLevel)) != -1 && "&!=".indexOf(String.valueOf(resultString.charAt(i))) != -1){
                         // Do nothing, because & and ! are both AND-type ops, and neither = nor , are real operator shifts in this way
                     }
-                    else return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
+                    else if(operatorLevels.get(parensLevel) == "," || resultString.charAt(i) == ',') {
+                        //Again, do nothing (commas)
+                    }
+                    else {
+                        System.out.println("op1: " + operatorLevels.get(parensLevel) + ", op2: " + resultString.charAt(i));
+                        return "Error: This query is ambiguous; each level of term grouping should have one type of operator.";
+                    }
                 }
                 opActive = true;
             }
@@ -291,6 +349,10 @@ public class Search {
         examples2.add("field ALL (a,b,c)");
         examples2.add("test ALL (a,b) AND test2 ANY (c,d)");
         //proximity checks
+        examples2.add("(some, example) WITHIN 5");
+        examples2.add("(some, example) ORDERED 10");
+        examples2.add("thing BETWEEN (a, b)");
+        examples2.add("(thing1, thing2) BETWEEN (a, b)");
         examples2.add("(cat OR Kitten) BETWEEN (tuna, fish)");
         examples2.add("((dog, cat) WITHIN 5, mouse) ORDERED 10");
 

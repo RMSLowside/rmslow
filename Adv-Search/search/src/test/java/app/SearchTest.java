@@ -155,4 +155,11 @@ public class SearchTest {
         assertEquals(expected, Search.termify(input));
     }
 
+    // @Test
+    // public void testBetween() {
+    //     String input = "thing BETWEEN (a, b)";
+    //     String expected = "[<term>thing</term>]B[<term>a</term>, <term>b</term>]";
+    //     assertEquals(expected, Search.termify(input));
+    // }
+
 }
