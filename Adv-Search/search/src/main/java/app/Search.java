@@ -446,7 +446,7 @@ public class Search {
                 }
                 System.out.println("===============================");
             }
-            else console.printf("Result: " + termify(input) + "\n");
+            else console.printf("Result: " + termify(input).replaceAll("%", "%%") + "\n");
         }
     }
 }
