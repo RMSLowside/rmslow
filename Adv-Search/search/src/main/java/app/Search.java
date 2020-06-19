@@ -136,6 +136,11 @@ public class Search {
             fieldMatcher = fieldPattern.matcher(resultString);
         }
 
+        //Convert string into object notation
+        // ArrayList<Term> objectifiedInputList = new ArrayList<Term>();
+        // int parensDepth = 0;
+
+
         resultString = Search.resolveProximity(resultString);
 
         //-----------Validation------------
@@ -151,17 +156,126 @@ public class Search {
     public static String resolveProximity(String input){
         String resultString = input;
 
-        if(resultString.contains("BETWEEN")) resultString = Search.convertBetween(resultString);
-
-        if(resultString.contains("WITHIN")) resultString = Search.convertWithin(resultString);
-
-        if(resultString.contains("ORDERED")) resultString = Search.convertOrdered(resultString);
+        while(resultString.contains(" BETWEEN (") || resultString.contains(") WITHIN ") || resultString.contains(") ORDERED ")){
+            if(resultString.contains(" BETWEEN (")) resultString = Search.convertBetween2(resultString);
+            if(resultString.contains(") WITHIN ")) resultString = Search.convertWithin2(resultString);
+            if(resultString.contains(") ORDERED ")) resultString = Search.convertOrdered2(resultString);
+        }
 
         return resultString;
     }
 
+    public static String convertWithin2(String input){
+        int startPrefix = 0;
+        int endPrefix = input.indexOf(") WITHIN ");
+        int backtrackParensCount = 1;
+        String truncated = input.substring(endPrefix + ") WITHIN <term>".length());
+        String limit = truncated.substring(0, truncated.indexOf("</term>"));
+        if(limit.equals("SENTENCE")) limit = "S";
+        else if(limit.equals("PARAGRAPH")) limit = "P";
+        int endIndex = endPrefix + ") WITHIN <term>".length() + (limit + "</term>").length();
+
+        for(int currentIndex = endPrefix; backtrackParensCount > 0 && currentIndex >= 0; currentIndex--){
+            if(input.charAt(currentIndex) == '(') {
+                backtrackParensCount--;
+                if(backtrackParensCount == 0) startPrefix = currentIndex;
+            }
+            else if(input.charAt(currentIndex) == ')') backtrackParensCount++;
+            // else if(currentIndex == 0 && backtrackParensCount > 0){
+            //     return "Error: WITHIN clause parens are not closed correctly";
+            // }
+        }
+
+        String resultString = input.substring(0, startPrefix) + "[" + limit + "W" + input.substring(startPrefix, endPrefix) + ")]" + input.substring(endIndex);
+        return resultString;
+    }
+
+    public static String convertOrdered2(String input){
+        int startPrefix = 0;
+        int endPrefix = input.indexOf(") ORDERED ");
+        int backtrackParensCount = 1;
+        String truncated = input.substring(endPrefix + ") ORDERED <term>".length());
+        String limit = truncated.substring(0, truncated.indexOf("</term>"));
+        if(limit.equals("SENTENCE")) limit = "S";
+        else if(limit.equals("PARAGRAPH")) limit = "P";
+        int endIndex = endPrefix + ") ORDERED <term>".length() + (limit + "</term>").length();
+
+        for(int currentIndex = endPrefix; backtrackParensCount > 0 && currentIndex >= 0; currentIndex--){
+            if(input.charAt(currentIndex) == '(') {
+                backtrackParensCount--;
+                if(backtrackParensCount == 0) startPrefix = currentIndex;
+            }
+            else if(input.charAt(currentIndex) == ')') backtrackParensCount++;
+            // else if(currentIndex == 0 && backtrackParensCount > 0){
+            //     return "Error: ORDERED clause parens are not closed correctly";
+            // }
+        }
+
+        String resultString = input.substring(0, startPrefix) + "[" + limit + "O" + input.substring(startPrefix, endPrefix) + ")]" + input.substring(endIndex);
+        return resultString;
+    }
+
+    public static String convertBetween2(String input){
+        int startPrefix = 0;
+        int endPrefix = input.indexOf(" BETWEEN ");
+        boolean isSimple = false;
+
+        if(input.charAt(endPrefix-1) == ')'){
+            int backtrackParensCount = 1;
+
+            for(int currentIndex = endPrefix; backtrackParensCount > 0 && currentIndex >= 0; currentIndex--){
+                if(input.charAt(currentIndex) == '(') {
+                    backtrackParensCount--;
+                    if(backtrackParensCount == 0) startPrefix = currentIndex;
+                }
+                else if(input.charAt(currentIndex) == ')') backtrackParensCount++;
+                // else if(currentIndex == 0 && backtrackParensCount > 0){
+                //     return "Error: BETWEEN prefix parens are not closed correctly";
+                // }
+            }
+        }
+        else if(input.charAt(endPrefix-1) == '>') {
+            boolean isTerm = true;
+            isSimple = true;
+            startPrefix = endPrefix-1;
+            while(isTerm){
+                if(input.substring(startPrefix, startPrefix + "<term>".length()).equals("<term>")) isTerm = false;
+                else startPrefix--;
+            }
+        }
+
+        int startSuffix = endPrefix + " BETWEEN (".length();
+        int endSuffix = input.length() - 1;
+        int forwardParensCount = 1;
+
+        for(int currentIndex = startSuffix; forwardParensCount > 0 && currentIndex < input.length(); currentIndex++){
+            if(input.charAt(currentIndex) == '(') forwardParensCount++;
+            else if(input.charAt(currentIndex) == ')'){
+                forwardParensCount--;
+                if(forwardParensCount == 0) endSuffix = currentIndex-1;
+            }
+            // else if(currentIndex == 0 && forwardParensCount > 0){
+            //     return "Error: BETWEEN suffix parens are not closed correctly";
+            // }
+        }
+        if(isSimple) {
+            String resultString = input.substring(0, startPrefix) + "[" +
+                                input.substring(startPrefix, endPrefix) + "]B[" +
+                                input.substring(startSuffix, endSuffix+1) + "]" +
+                                input.substring(endSuffix+2);
+            return resultString;
+        }
+        else {
+            String resultString = input.substring(0, startPrefix) + "[" +
+                                input.substring(startPrefix+1, endPrefix-1) + "]B[" +
+                                input.substring(startSuffix, endSuffix+1) + "]" +
+                                input.substring(endSuffix+2);
+            return resultString;
+        }
+    }
+
     public static String convertWithin(String input){
-        Pattern withinPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) WITHIN <term>(\\d*)</term>");
+        Pattern withinPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) WITHIN <term>(\\d*)</term>[^,]*");
         Matcher m = withinPattern.matcher(input);
         String resultString = input;
         if(m.find()){
@@ -170,9 +284,6 @@ public class Search {
             // System.out.println("terms: " + m.group(1));
             // System.out.println("distance: " + m.group(2));
             String terms = m.group(1);
-            if(terms.contains("WITHIN")) terms = Search.convertWithin(terms);
-            else if(terms.contains("ORDERED")) terms = Search.convertOrdered(terms);
-            else if(terms.contains("BETWEEN")) terms = Search.convertBetween(terms);
             int index = input.indexOf(m.group(0));
             String replacement = "[" + m.group(2) + "W(" + terms + ")]";
             resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
@@ -181,14 +292,11 @@ public class Search {
     }
 
     public static String convertOrdered(String input){
-        Pattern orderedPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) ORDERED <term>(\\d*)</term>");
+        Pattern orderedPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) ORDERED <term>(SENTENCE|PARAGRAPH|\\d*)</term>[^,]*");
         Matcher m = orderedPattern.matcher(input);
         String resultString = input;
         if(m.find()){
             String terms = m.group(1);
-            if(terms.contains("WITHIN")) terms = Search.convertWithin(terms);
-            else if(terms.contains("ORDERED")) terms = Search.convertOrdered(terms);
-            else if(terms.contains("BETWEEN")) terms = Search.convertBetween(terms);
             int index = input.indexOf(m.group(0));
             String replacement = "[" + m.group(2) + "O(" + terms + ")]";
             resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
@@ -197,12 +305,16 @@ public class Search {
     }
 
     public static String convertBetween(String input){
-        Pattern betweenPattern = Pattern.compile("\\(?(<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\)? BETWEEN \\((<term>[\\w \"'\\(\\)<>/]*,[\\w \"'\\(\\)<>/]*</term>)\\)");
+        Pattern betweenPattern = Pattern.compile("\\(?(<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\)? BETWEEN \\((<term>[\\w \"'\\(\\)<>/]*,[\\w \"'\\(\\)<>/]*</term>)\\)[^,]*");
         Matcher m = betweenPattern.matcher(input);
         String resultString = input;
         if(m.find()){
             int index = input.indexOf(m.group(0));
-            String replacement = "[" + m.group(1) + "]B[" + m.group(2) + "]";
+            String equivocateOrs = m.group(1);
+            if(equivocateOrs.contains(" | ")){
+                equivocateOrs.replaceAll(" | ", ", ");
+            }
+            String replacement = "[" + equivocateOrs + "]B[" + m.group(2) + "]";
             resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
         }
         return resultString;
@@ -231,8 +343,7 @@ public class Search {
                 else if(resultString.charAt(i+1) == 't' || resultString.charAt(i+1) == 'f'){
                     termSwitch = true;
                     if(termSwitch && termActive){
-                        System.out.println("Erroring out");
-                        System.out.println("substring: " + resultString.substring(i-3, i+3));
+                        System.out.println("Error on this char: " + resultString.substring(0, i-1) + "[[" + resultString.charAt(i) + "]]" + resultString.substring(i+1));
                         return "Error: There are neighboring terms in this string; an operator should be between every term.";
                     }
                 }
