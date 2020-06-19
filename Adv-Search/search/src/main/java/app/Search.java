@@ -185,7 +185,8 @@ public class Search {
             //     return "Error: WITHIN clause parens are not closed correctly";
             // }
         }
-
+        if(limit.equals("S")) endIndex += 7;
+        if(limit.equals("P")) endIndex += 8;
         String resultString = input.substring(0, startPrefix) + "[" + limit + "W" + input.substring(startPrefix, endPrefix) + ")]" + input.substring(endIndex);
         return resultString;
     }
@@ -272,52 +273,6 @@ public class Search {
                                 input.substring(endSuffix+2);
             return resultString;
         }
-    }
-
-    public static String convertWithin(String input){
-        Pattern withinPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) WITHIN <term>(\\d*)</term>[^,]*");
-        Matcher m = withinPattern.matcher(input);
-        String resultString = input;
-        if(m.find()){
-            // System.out.println("Found within op");
-            // System.out.println("entire match: " + m.group(0));
-            // System.out.println("terms: " + m.group(1));
-            // System.out.println("distance: " + m.group(2));
-            String terms = m.group(1);
-            int index = input.indexOf(m.group(0));
-            String replacement = "[" + m.group(2) + "W(" + terms + ")]";
-            resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
-        }
-        return resultString;
-    }
-
-    public static String convertOrdered(String input){
-        Pattern orderedPattern = Pattern.compile("\\((<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\) ORDERED <term>(SENTENCE|PARAGRAPH|\\d*)</term>[^,]*");
-        Matcher m = orderedPattern.matcher(input);
-        String resultString = input;
-        if(m.find()){
-            String terms = m.group(1);
-            int index = input.indexOf(m.group(0));
-            String replacement = "[" + m.group(2) + "O(" + terms + ")]";
-            resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
-        }
-        return resultString;
-    }
-
-    public static String convertBetween(String input){
-        Pattern betweenPattern = Pattern.compile("\\(?(<term>[\\w, \"'\\(\\)<>\\[\\]/]*</term>)\\)? BETWEEN \\((<term>[\\w \"'\\(\\)<>/]*,[\\w \"'\\(\\)<>/]*</term>)\\)[^,]*");
-        Matcher m = betweenPattern.matcher(input);
-        String resultString = input;
-        if(m.find()){
-            int index = input.indexOf(m.group(0));
-            String equivocateOrs = m.group(1);
-            if(equivocateOrs.contains(" | ")){
-                equivocateOrs.replaceAll(" | ", ", ");
-            }
-            String replacement = "[" + equivocateOrs + "]B[" + m.group(2) + "]";
-            resultString = input.substring(0, index) + replacement + input.substring(index + m.group(0).length());
-        }
-        return resultString;
     }
 
     public static String validate(String resultString){
@@ -466,6 +421,9 @@ public class Search {
         examples2.add("(thing1, thing2) BETWEEN (a, b)");
         examples2.add("(cat OR Kitten) BETWEEN (tuna, fish)");
         examples2.add("((dog, cat) WITHIN 5, mouse) ORDERED 10");
+        examples2.add("(a, b) WITHIN SENTENCE");
+        examples2.add("(c, d) WITHIN PARAGRAPH");
+        examples2.add("(((Dublin, Kilkenny, Cork, Kerry) WITHIN 10), ((tour, tourism, tourist) WITHIN 5) WITHIN PARAGRAPH)");
 
         while(keepGoing){
             input = console.readLine("Enter the string you want to termify (type 'examples' or 'e2' for presets, 'quit' to quit): ");
@@ -473,8 +431,8 @@ public class Search {
             else if(input.equalsIgnoreCase("examples")){
                 System.out.println("===========Presets:============");
                 for(int i=0; i < examples.size(); i++){
-                    System.out.println("String: " + examples.get(i));
-                    System.out.println("Result: " + termify(examples.get(i)));
+                    System.out.println("String: " + examples.get(i).replaceAll("%", "%%"));
+                    System.out.println("Result: " + termify(examples.get(i)).replaceAll("%", "%%"));
                     if(i+1 != examples.size()) System.out.println("-------------------------------");
                 }
                 System.out.println("===============================");
@@ -482,8 +440,8 @@ public class Search {
             else if(input.equalsIgnoreCase("e2")){
                 System.out.println("===========Presets:============");
                 for(int i=0; i < examples2.size(); i++){
-                    System.out.println("String: " + examples2.get(i));
-                    System.out.println("Result: " + termify(examples2.get(i)));
+                    System.out.println("String: " + examples2.get(i).replaceAll("%", "%%"));
+                    System.out.println("Result: " + termify(examples2.get(i)).replaceAll("%", "%%"));
                     if(i+1 != examples2.size()) System.out.println("-------------------------------");
                 }
                 System.out.println("===============================");
