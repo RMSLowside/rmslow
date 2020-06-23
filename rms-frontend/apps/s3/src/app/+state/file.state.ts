@@ -13,8 +13,8 @@ import {
   NavigateUp
 } from './file.actions';
 import { ImmutableContext, ImmutableSelector } from '@ngxs-labs/immer-adapter';
-import { Injectable } from '@angular/core';
 import { LoggerService } from '../logger.service';
+import { Injectable } from '@angular/core';
 
 export interface ExplorerStateModel {
   files: FileElement[];
