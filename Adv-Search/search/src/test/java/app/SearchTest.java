@@ -155,11 +155,67 @@ public class SearchTest {
         assertEquals(expected, Search.termify(input));
     }
 
-    // @Test
-    // public void testBetween() {
-    //     String input = "thing BETWEEN (a, b)";
-    //     String expected = "[<term>thing</term>]B[<term>a</term>, <term>b</term>]";
-    //     assertEquals(expected, Search.termify(input));
-    // }
+    @Test
+    public void testWithin() {
+        String input = "(some, example) WITHIN 5";
+        String expected = "[5W(<term>some</term>, <term>example</term>)]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testOrdered() {
+        String input = "(some, example) ORDERED 10";
+        String expected = "[10O(<term>some</term>, <term>example</term>)]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testBetween() {
+        String input = "thing BETWEEN (a, b)";
+        String expected = "[<term>thing</term>]B[<term>a</term>, <term>b</term>]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testMultiBetween() {
+        String input = "(thing1, thing2) BETWEEN (a, b)";
+        String expected = "[<term>thing1</term>, <term>thing2</term>]B[<term>a</term>, <term>b</term>]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testMultiOrBetween() {
+        String input = "(cat OR Kitten) BETWEEN (tuna, fish)";
+        String expected = "[<term>cat</term> | <term>Kitten</term>]B[<term>tuna</term>, <term>fish</term>]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testNestedProx() {
+        String input = "((dog, cat) WITHIN 5, mouse) ORDERED 10";
+        String expected = "[10O[5W((<term>dog</term>, <term>cat</term>)], <term>mouse</term>)]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testSentenceKeyword() {
+        String input = "(a, b) WITHIN SENTENCE";
+        String expected = "[SW(<term>a</term>, <term>b</term>)]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testParagraphKeyword() {
+        String input = "(c, d) WITHIN PARAGRAPH";
+        String expected = "[PW(<term>c</term>, <term>d</term>)]";
+        assertEquals(expected, Search.termify(input));
+    }
+
+    @Test
+    public void testLargerNestedProx() {
+        String input = "(((Dublin, Kilkenny, Cork, Kerry) WITHIN 10), ((tour, tourism, tourist) WITHIN 5) WITHIN PARAGRAPH)";
+        String expected = "[PW([10W((<term>Dublin</term>, <term>Kilkenny</term>, <term>Cork</term>, <term>Kerry</term>)]), [5W((<term>tour</term>, <term>tourism</term>, <term>tourist</term>)])])";
+        assertEquals(expected, Search.termify(input));
+    }
 
 }
