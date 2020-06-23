@@ -188,7 +188,7 @@ export class ExplorerState {
   navigateTo(ctx: StateContext<ExplorerStateModel>, action: NavigateTo) {
     const state = ctx.getState();
     const newPath = this.pushToPath(state.path, action.folder.name);
-    this.logService.log(`Navigated to folder ${newPath}.`);
+    this.logService.log(`Navigated to ${newPath || 'Root'}.`);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.currentRoot = action.folder;
       hereState.path = newPath;
@@ -209,7 +209,7 @@ export class ExplorerState {
       parent: ''
     };
     const newPath = this.popFromPath(state.path);
-    this.logService.log(`Navigated to folder ${newPath}.`);
+    this.logService.log(`Navigated to ${newPath || 'Root'}.`);
     ctx.setState((hereState: ExplorerStateModel) => {
       hereState.currentRoot = newRoot;
       hereState.path = newPath;
