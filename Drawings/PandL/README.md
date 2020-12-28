@@ -195,7 +195,7 @@ PedigreeServiceConnector connector = new PandLServiceConnector("/path/to/jks", "
 
 - Send local P&L object to P&L service.
 ```java
-PedigreeServiceResult = connector.sendEvent(p);
+PedigreeServiceResult psr = connector.sendEvent(p);
 ```
 
 - Other SDK uses.
@@ -210,7 +210,7 @@ Pedigree event = connector.getEvent("1111-1111-1111");
 ArrayList<String> systemCertCns = new ArrayList<String>();
 systemCertCns.add("CN=dev.systems.place");
 systemCertCns.add("CN=test.systems.place");
-connector.registerSystem("guide://4444-4444-4444", "System Name", systemCertCns);
+PedigreeServiceResult psr = connector.registerSystem("guide://4444-4444-4444", "System Name", systemCertCns);
 ```
 
 ## UI
