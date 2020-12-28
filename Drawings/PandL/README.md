@@ -75,7 +75,7 @@ ngimws/pl/event/{uuid}
 RequestType = GET
 PathParamter = {uuid}
 ```
-* Get specific event from database
+* Get a specific event from database
 
 ### Get All Events For GUIDE
 ```
@@ -84,6 +84,14 @@ RequestType = GET
 RequestParms = {guide}
 ```
 * Get all events for a specific object by GUIDE.
+
+### Get Event Graph For GUIDE
+```
+ngimws/pl/events/graph
+RequestType = GET
+RequestParms = {guide}
+```
+* Get events in graph format.
 
 ### Get Events For GUIDE By System(s)
 ```
