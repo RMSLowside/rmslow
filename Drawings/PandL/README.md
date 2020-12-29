@@ -24,6 +24,7 @@ The datastore will be hosted on AWS Aurora MySQL:
 
 The following information will be stored.
 
+#### pedigrees
 ```json5
 {
   uuid: "Internal database unique key",
@@ -218,6 +219,6 @@ Source draw.io here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frm
 
 View Only draw.io here: [Draw.io export](https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=P%26L.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FPandL%2FP%2526L.drawio)
 
-####Example Lineage Plot
+#### Example Lineage Plot
 
 ![Example plot framework](plot.png)
