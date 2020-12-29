@@ -8,15 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Drawings/Dec 2020 WFH Project.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/DashboardDraft.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/DashboardDraft.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/Eva 2.0 NIFI Processor.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/Eva 2.0 NIFI Processor.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/MainArchitecture.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/MainArchitecture.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/Page flow.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/Page flow.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Drawings/PandL/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/PandL/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/Search-2.0.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/Search-2.0.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/Workflows.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/Workflows.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Drawings/physical-doc-notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/Eva/physical-doc-notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
