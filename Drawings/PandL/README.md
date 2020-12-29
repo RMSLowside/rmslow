@@ -95,9 +95,9 @@ PathParamter = {uuid}
 ```
 ngimws/pl/events
 RequestType = GET
-RequestParms = {guide}
+RequestParms = {guide} {dateTimeStart:optional} {dateTimeEnd:optional}
 ```
-* Get all events for a specific object by GUIDE.
+* Get all events for a specific object by GUIDE in an optional dateTime range.
 
 ### Get Event Graph For GUIDE
 ```
@@ -111,9 +111,9 @@ RequestParms = {guide}
 ```
 ngimws/pl/events
 RequestType = GET
-RequestParms = {guide} {systemGuide(s)}
+RequestParms = {guide} {systemGuide(s)} {dateTimeStart:optional} {dateTimeEnd:optional}
 ```
-* Get all events in 1-N systems for a specific object by GUIDE.
+* Get all events in 1-N systems for a specific object by GUIDE in an optional dateTime range.
 
 ### Register System
 ```
