@@ -191,7 +191,7 @@ for(PedigreError error: errors){
 
 - Create Service connector.
 ```java
-PedigreeServiceConnector connector = new PandLServiceConnector("/path/to/jks", "aRealp4ss", "/path/to/trustjks", "anotherR34lP4ss");
+PedigreeServiceConnector connector = new PedigreeServiceConnector("/path/to/jks", "aRealp4ss", "/path/to/trustjks", "anotherR34lP4ss");
 ```
 
 - Send local P&L object to P&L service.

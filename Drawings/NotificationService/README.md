@@ -55,9 +55,9 @@ The list of endpoint types that the Notification service can send to.
   recipientList: "Comma delimited list of recipients to send to.",
   recurrence: "NOW/ONCE/DAILY/WEEKLY/MONTHLY/YEARLY",
   startDate: "The date to start sending notifications",
-  endDate: "THe date to stop sending notifications. This is nullable (no end date)",
+  endDate: "The date to stop sending notifications. This is nullable (no end date)",
   time: "The time of day to send the notification out.",
-  "cn": "The CN of the user/system that created this notification"
+  cn: "The CN of the user/system that created this notification"
 }
 ```
 
@@ -158,7 +158,7 @@ The SDK will have the following software framework.
 - Create local Notification object.
 ```java
 // Create a local Notification object that can be submitted to the Notification API.
-Notification p = new NotificationBuilder()
+Notification n = new NotificationBuilder()
         .setTitle("ITS LUNCH TIME")
         .setDescription("Let Bryan know its time for lunch")
         .setMessage("It's lunch time!")
@@ -168,6 +168,34 @@ Notification p = new NotificationBuilder()
         .setStartDate("2021-01-01")
         .setTime("10:59:59");
         .build();
+```
+
+- Validate Notification object.
+```java
+// Returns all errors with the local Notification object. The validate method can return an empty list.
+ArrayList<NotificationError> errors = n.validate();
+for(NotificationError error: errors){
+    System.out.println(error.getErrorMessage());
+}
+```
+
+- Create Service connector.
+```java
+NotificationServiceConnector connector = new NotificationServiceConnector("/path/to/jks", "aRealp4ss", "/path/to/trustjks", "anotherR34lP4ss");
+```
+
+- Send local Notification object to Notification service.
+```java
+NotificationServiceResult nsr = connector.sendNotification(p);
+```
+
+- Other SDK uses.
+```java
+// Get single notification.
+Notification notification = connector.getNotification("1234-1234-1234");
+
+// Get notification history.
+ArrayList<NotificationHistory> history = connector.getNotificationHistory("1234-1234-1234");
 ```
 
 ## UI
