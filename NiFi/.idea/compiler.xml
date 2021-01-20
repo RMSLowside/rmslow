@@ -13,5 +13,9 @@
         <module name="Lambda" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="rms-custom-processors-nar" target="1.8" />
+      <module name="rms-custom-processors-processors" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
