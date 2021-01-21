@@ -7,7 +7,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="" />
+    <list default="true" id="83dbc854-af9b-43f5-8f00-5a4076b1ba87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Adv-Search/search/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Adv-Search/search/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Drawings/RulesEngine/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Drawings/RulesEngine/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-nar/rms-custom-processors-nar.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rms-custom-processors/rms-custom-processors-processors.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rms-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../rms-frontend/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +55,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Drawings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Adv-Search/search" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -51,11 +64,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adamp\Desktop\rmslow\Drawings\RulesEngine" />
       <recent name="C:\Users\adamp\Desktop\rmslow\Drawings\NotificationService" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine\src\app\models" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine\src\app" />
       <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\libs\text-add-modal\src\lib" />
-      <recent name="C:\Users\adamp\Desktop\rmslow\rms-frontend\apps\rules-engine\src\app\create-rule-modal\rule-build-piece" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
