@@ -9,13 +9,10 @@
         <module name="rms-custom-processors-nar" />
         <module name="Drools" />
         <module name="lambda" />
+        <module name="search" />
         <module name="rms-custom-processors-processors" />
         <module name="Lambda" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="rms-custom-processors-nar" target="1.8" />
-      <module name="rms-custom-processors-processors" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
