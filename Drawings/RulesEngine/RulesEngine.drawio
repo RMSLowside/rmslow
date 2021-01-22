@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-22T14:44:40.734Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="DwBLVtwrdBSdKFpc7dzj" version="14.2.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-22T15:18:21.597Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="3Ga_9ZqW7thSmUrfPG3y" version="14.2.6" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="2601" dy="1074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1165,10 +1165,10 @@
         <mxCell id="BTVQxWk5bwtOSULAfJKO-15" value="Bulk Rules Test" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#996185;fontSize=10;fillColor=#FFFFFF;" vertex="1" parent="U2adl9n7uSknv8khEF7y-1">
           <mxGeometry x="340" y="-1330" width="100" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="BTVQxWk5bwtOSULAfJKO-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="U2adl9n7uSknv8khEF7y-1" source="BTVQxWk5bwtOSULAfJKO-16" target="BTVQxWk5bwtOSULAfJKO-22">
+        <mxCell id="BTVQxWk5bwtOSULAfJKO-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="U2adl9n7uSknv8khEF7y-1" source="BTVQxWk5bwtOSULAfJKO-16" target="BTVQxWk5bwtOSULAfJKO-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="BTVQxWk5bwtOSULAfJKO-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="U2adl9n7uSknv8khEF7y-1" source="BTVQxWk5bwtOSULAfJKO-16" target="BTVQxWk5bwtOSULAfJKO-23">
+        <mxCell id="BTVQxWk5bwtOSULAfJKO-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="U2adl9n7uSknv8khEF7y-1" source="BTVQxWk5bwtOSULAfJKO-16" target="BTVQxWk5bwtOSULAfJKO-23">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="BTVQxWk5bwtOSULAfJKO-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="U2adl9n7uSknv8khEF7y-1" source="BTVQxWk5bwtOSULAfJKO-16" target="BTVQxWk5bwtOSULAfJKO-28">
@@ -1193,7 +1193,7 @@
           <mxGeometry x="730" y="-1130" width="100" height="43" as="geometry" />
         </mxCell>
         <mxCell id="BTVQxWk5bwtOSULAfJKO-28" value="Archive Rule" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#996185;fontSize=10;fillColor=#FFFFFF;" vertex="1" parent="U2adl9n7uSknv8khEF7y-1">
-          <mxGeometry x="450" y="-1210" width="100" height="43" as="geometry" />
+          <mxGeometry x="440" y="-1210" width="100" height="43" as="geometry" />
         </mxCell>
         <mxCell id="BTVQxWk5bwtOSULAfJKO-29" value="Approve Review" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#996185;fontSize=10;fillColor=#FFFFFF;" vertex="1" parent="U2adl9n7uSknv8khEF7y-1">
           <mxGeometry x="307" y="-1210" width="100" height="43" as="geometry" />
