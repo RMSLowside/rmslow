@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-01-22T14:12:46.787Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="Kyk3h1Ebki4jr0nPhnGW" version="14.2.6" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-22T14:21:10.031Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="5jhliftV76o_s4DLJsfU" version="14.2.6" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
-    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2411" dy="1074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1122,7 +1122,7 @@
       <root>
         <mxCell id="wxorMCj1yp3ZmEf3wW2u-0" />
         <mxCell id="wxorMCj1yp3ZmEf3wW2u-1" parent="wxorMCj1yp3ZmEf3wW2u-0" />
-        <mxCell id="8Y5gdHfWrrJUVFkGjFpt-0" value="1.&amp;nbsp; Rules over &amp;lt;interval here&amp;gt; days old are served up for review&lt;br&gt;2.&amp;nbsp; IMOs review rules&lt;br&gt;2.a&amp;nbsp; IMOs review the thirty-day history&lt;br&gt;2.a.1&amp;nbsp; Are rules matching anything&lt;br&gt;2.a.2&amp;nbsp; Is the match volume what is expected&lt;br&gt;2.b&amp;nbsp; IMOs review the recent matches&lt;br&gt;2.b.1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+        <mxCell id="8Y5gdHfWrrJUVFkGjFpt-0" value="1.&amp;nbsp; Rules over &amp;lt;interval here&amp;gt; days old are served up for review&lt;br&gt;2.&amp;nbsp; IMOs review rules&lt;br&gt;2.a&amp;nbsp; IMOs review the thirty-day history&lt;br&gt;2.a.1&amp;nbsp; Are rules matching anything&lt;br&gt;2.a.2&amp;nbsp; Is the match volume what is expected&lt;br&gt;2.b&amp;nbsp; IMOs review the recent matches&lt;br&gt;2.b.1&amp;nbsp; IMOs review the matching attributes&amp;nbsp;&lt;br&gt;2.b.2&amp;nbsp; IMOs can&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="510" y="40" width="370" height="540" as="geometry" />
         </mxCell>
       </root>
