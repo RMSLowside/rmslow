@@ -1,9 +1,9 @@
 # Eva
-
+The Eva service is a brand of services that provides a robust capability for the records management lifecycle.
 ## Components
 
-- Catalog/Dataset
-- Dashboard
+- DMO Dashboard
+- Dataset Catalog
 - Object Search
 - Digitzation
 - Metrics
