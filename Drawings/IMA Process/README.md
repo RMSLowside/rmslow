@@ -31,17 +31,17 @@ The IMA service datastore holds:
 
 Metrics are generated is real-time using MySQL SELECT statements.
 
-The datastore will be hosted on AWS RDS MySQL:
-* IMA will likely store thousands of rows in a single table, so a general-purpose AWS EC2 server is sufficient for hosting.
+The datastore will be hosted on AWS RDS MySQL. IMA will likely store thousands of rows in a single table, so a general-purpose AWS EC2 server is sufficient for hosting.
 
 The following information will be stored.
 
 
 ## **API**
 
-The IMA Service currently interacts with the enterprise authentication service, Records Control Schedule service.  Future development will extend the API to the Rules Engine service, and the System X/Green system.
+The IMA Service currently interacts with the enterprise authentication service, and the Records Control Schedule service.  Future development will extend the API to the Rules Engine service, and the System X/Green system.
 
-The IMA web service will be written in Java and hosted inside a EC2 Apache Tomcat instance. Endpoint access is granted to systems that have been authorized and system certificates registered.  
+The IMA web service is written in Java and hosted inside a EC2 Apache Tomcat instance. Endpoint access is granted to systems that have been authorized and system certificates registered.  
+
 Endpoints are listed below:
 
 
