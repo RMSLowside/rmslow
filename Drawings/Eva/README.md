@@ -1,5 +1,6 @@
 # Eva
 
+The Eva application encompasses a series of services to 
 The Eva service is a brand of services that encompasses the core capabilities of the records management lifecycle and facilitates two key DLMD business objectives - manage records in place and transition from physical to digital records.  Eva services reside on the customer's primary network, but is AWS mission agnostic.
 
 What: 
