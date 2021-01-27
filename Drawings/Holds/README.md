@@ -134,3 +134,49 @@ ResponseType = ArrayList<Hold POJO>
 ## Drawings
 - Dashboard draw.io
 here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FHolds%2FHolds.drawio)
+
+
+## **Software Development Requirements**
+
+
+
+## Who:
+DLMD
+
+
+## What:
+
+1. Build a user interface:
+  - that provides notification that responsive documents require a hold.
+  - allows a search by GUIDE,  applies a ‘Hold’ flag, and other details such as hold expiration date to individual objects.
+  - allows a search by GUIDE, removes the ‘Hold’ flag, and other details.
+  
+2. Build a service that updates the Records Management Metadata service:
+  - To apply or remove holds from specific object(s). 
+  - Provide a notification to the source system of the hold or hold removal, and other pertinent details.
+  - Allow the source system to check hold status if an update/delete is attempted on the object.
+  - Provide role based access control for hold assignment/removal.
+  
+3. Store the hold or hold removal and acknowledgement from the source system in Records Management Metadata.
+4. In Production
+
+
+
+## Why: 
+
+
+
+## Acceptance Criteria:
+
+1.  A user interface:
+    - that provides notification of responsive documents requiring a hold
+    - that allows a search by GUIDE
+    - that applies or removes hold to object(s) in Records Management Metadata
+2. Successful notification to a source system with objects to be held, other details and their acknowledgement.
+3. Details of the hold stored in Records Management Metadata.
+3. Successful demonstration that an object cannot be updated or deleted when a hold has been applied.
+4. Role based access control established
+5. Successful functional and regression testing
+6. Deployed to Production
+
+
