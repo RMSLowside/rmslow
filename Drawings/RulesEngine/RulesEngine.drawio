@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-28T13:11:32.109Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="82QFm3aRzWyWa_-DG2IO" version="14.2.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-28T13:28:43.172Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="0IJyFKykGL-zh42YCy1P" version="14.2.3" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="2522" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1122,7 +1122,7 @@
       <root>
         <mxCell id="wxorMCj1yp3ZmEf3wW2u-0" />
         <mxCell id="wxorMCj1yp3ZmEf3wW2u-1" parent="wxorMCj1yp3ZmEf3wW2u-0" />
-        <mxCell id="8Y5gdHfWrrJUVFkGjFpt-0" value="&lt;div&gt;1. IMO visits rules dashboard, explores rule stats based on the carousel categories&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. button for a category is clicked, Rules Engine launched; rules returned with filters set based on which category selected&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.a.1 IMO can change rule priority&lt;br&gt;(Whether or not this option shows could be role controlled)&lt;br&gt;2.a.2 Rule priority is updated&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.b IMO can test the rule&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.c IMO is reviewing an old rule&lt;/div&gt;&lt;div&gt;2.c.1.i IMO marks rule as reviewed&lt;/div&gt;&lt;div&gt;2.c.1.ii Rule&#39;s date reviewed value is updated&lt;/div&gt;&lt;div&gt;2.c.2.i IMO marks rule as archived&lt;/div&gt;&lt;div&gt;2.c.2.ii Rule priority changed to 0, rule disabled and archived&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.d IMO is reviewing a rule not getting a lot of matches&lt;/div&gt;&lt;div&gt;2.d.1.i IMO marks rule as reviewed&lt;/div&gt;&lt;div&gt;2.d.1.ii Rule&#39;s date reviewed value is updated&lt;/div&gt;&lt;div&gt;2.d.2.i IMO marks rule as archived&lt;/div&gt;&lt;div&gt;2.d.2.ii Rule priority changed to 0, rule disabled and archived&lt;/div&gt;&lt;div&gt;2.d.3.i IMO decides to ignore low match warnings for this rule&lt;/div&gt;&lt;div&gt;2.d.3.ii Rule won&#39;t appear in future low match searches&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.e IMO is reviewing a rule that needs approval&lt;/div&gt;&lt;div&gt;2.e.1.i IMO Approves rule&lt;/div&gt;&lt;div&gt;2.e.1.ii Rule is approved (how priority is set here depends on whether or not creators or approvers are supposed to set priority)&lt;/div&gt;&lt;div&gt;2.e.2.i IMO Deletes rule&lt;/div&gt;&lt;div&gt;2.e.2.ii Rule is deleted (actions taken post-delete may depend on the creator/approver relationship; perhaps a justification message is sent, for example)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="wxorMCj1yp3ZmEf3wW2u-1" vertex="1">
+        <mxCell id="8Y5gdHfWrrJUVFkGjFpt-0" value="&lt;div&gt;1. IMO visits rules dashboard, explores rule stats based on the carousel categories&amp;nbsp;&lt;/div&gt;&lt;div&gt;2. button for a category is clicked, Rules Engine launched; rules returned with filters set based on which category selected&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.a.1 IMO can change rule priority&lt;br&gt;(Whether or not this option shows could be role controlled)&lt;br&gt;2.a.2 Rule priority is updated&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.b IMO can test the rule&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.c IMO is reviewing an old rule&lt;/div&gt;&lt;div&gt;2.c.1.i IMO marks rule as reviewed&lt;/div&gt;&lt;div&gt;2.c.1.ii Rule&#39;s date reviewed value is updated&lt;/div&gt;&lt;div&gt;2.c.2.i IMO marks rule as archived&lt;/div&gt;&lt;div&gt;2.c.2.ii Rule priority changed to 0, rule disabled and archived&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.d IMO is reviewing a rule not getting a lot of matches&lt;/div&gt;&lt;div&gt;2.d.1.i IMO marks rule as reviewed&lt;/div&gt;&lt;div&gt;2.d.1.ii Rule&#39;s date reviewed value is updated&lt;/div&gt;&lt;div&gt;2.d.2.i IMO marks rule as archived&lt;/div&gt;&lt;div&gt;2.d.2.ii Rule archived&lt;/div&gt;&lt;div&gt;2.d.3.i IMO decides to ignore low match warnings for this rule&lt;/div&gt;&lt;div&gt;2.d.3.ii Rule won&#39;t appear in future low match searches&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.e IMO is reviewing a rule that needs approval&lt;/div&gt;&lt;div&gt;2.e.1.i IMO Approves rule&lt;/div&gt;&lt;div&gt;2.e.1.ii Rule is approved (how priority is set here depends on whether or not creators or approvers are supposed to set priority)&lt;/div&gt;&lt;div&gt;2.e.2.i IMO Deletes rule&lt;/div&gt;&lt;div&gt;2.e.2.ii Rule is deleted (actions taken post-delete may depend on the creator/approver relationship; perhaps a justification message is sent, for example)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="wxorMCj1yp3ZmEf3wW2u-1" vertex="1">
           <mxGeometry x="680" y="60" width="370" height="540" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-1" value="Rules Engine" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
@@ -1236,14 +1236,14 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-33" value="&lt;h1&gt;&lt;u&gt;Functions&lt;/u&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-310" y="10" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-35" value="User reviews a rule older than X days" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="350" y="880" width="120" height="60" as="geometry" />
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-35" target="f15YqLJp3Qan_eyRleQ3-68">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-36" value="Rule has a low # of matches" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="530" y="880" width="120" height="60" as="geometry" />
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-35" value="User reviews a rule older than X days" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="620" y="880" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-40" value="Reviewing a Rule" style="ellipse;whiteSpace=wrap;html=1;perimeterSpacing=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="440" y="770" width="120" height="80" as="geometry" />
+          <mxGeometry x="500" y="770" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-41" value="Disable Rule**" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="440" y="180" width="120" height="80" as="geometry" />
@@ -1321,6 +1321,114 @@
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-64" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="140" y="1160" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-65" value="Create Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1100" y="580" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-66" value="Delete Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1090" y="700" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-67" value="Update Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="950" y="605" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-68" target="f15YqLJp3Qan_eyRleQ3-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-68" target="f15YqLJp3Qan_eyRleQ3-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-68" value="" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="660" y="980" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-70" target="f15YqLJp3Qan_eyRleQ3-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-70" value="Rule is disabled, user prompted to archive" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="740" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-72" value="Review date updated" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="500" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-74" value="disable" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="720" y="970" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-75" value="mark reviewed" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="560" y="970" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-76">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="1195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-76" value="Archive?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="765" y="1160" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-80" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="835" y="1170" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-81" value="Rule archived" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="880" y="1165" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-83" target="f15YqLJp3Qan_eyRleQ3-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-83" value="User reviews a rule with a low # of matches" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1250" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-86" target="f15YqLJp3Qan_eyRleQ3-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-86" target="f15YqLJp3Qan_eyRleQ3-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-86" value="" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1290" y="980" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-88" target="f15YqLJp3Qan_eyRleQ3-93">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-88" value="Rule is disabled, user prompted to archive" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1370" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-89" target="f15YqLJp3Qan_eyRleQ3-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-89" value="Review date updated" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1130" y="1050" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-90" value="disable" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1350" y="970" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-91" value="mark reviewed" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1190" y="970" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-93">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1510" y="1195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-93" value="Archive?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1395" y="1160" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-94" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1465" y="1170" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-95" value="Rule archived" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1510" y="1165" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-96">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1190" y="1330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-96" value="Does the user want to &lt;br&gt;ignore this warning for this rule in the future?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1110" y="1155" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-99" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1190" y="1290" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-100" value="Flag set to ignore low match warning on this rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1130" y="1330" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
