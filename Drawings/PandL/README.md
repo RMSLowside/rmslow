@@ -237,9 +237,9 @@ View Only draw.io here: [Draw.io export](https://viewer.diagrams.net/?highlight=
 
 
 ### What:
-Design and build a Pedigree and Lineage service that records and stores the lineage of a document.
-Review design with IMS Technical Directors and PM before beginning development
-Seek security approval if needed.
+- Design and build a Pedigree and Lineage service that records and stores the lineage of an object.
+- Review design with IMS Technical Directors and PM before beginning development
+- Seek security approval if needed. Deployed to Production
 
 
 
@@ -248,4 +248,6 @@ Seek security approval if needed.
 
 
 ### Acceptance Criteria:
-
+1.  A user can view the lineage of an object - event type, who performed the event, and when.
+2.  A user can search lineage by type, event, who, and when.
+3.  Capability has been deployed to Production.
