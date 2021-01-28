@@ -222,3 +222,30 @@ View Only draw.io here: [Draw.io export](https://viewer.diagrams.net/?highlight=
 #### Example Lineage Plot
 
 ![Example plot framework](plot.png)
+
+
+
+
+
+
+## **Software Development Requirements**
+
+
+
+### Who: IMS TD
+
+
+
+### What:
+Design and build a Pedigree and Lineage service that records and stores the lineage of a document.
+Review design with IMS Technical Directors and PM before beginning development
+Seek security approval if needed.
+
+
+
+### Why: 
+
+
+
+### Acceptance Criteria:
+
