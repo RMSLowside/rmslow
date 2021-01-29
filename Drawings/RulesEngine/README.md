@@ -44,9 +44,9 @@ Seek security approval if needed.
 
 ### Acceptance Criteria:
 
-1.  As a DMO, I can create rule(s) for individual systems, including a system default rule and custom rules.
+1.  As a DMO, I can create/edit/archives rule(s) for individual systems, including a system default rule and custom rules.
 2.  As a DMO, I am presented with several options for rule conditions and actions.
-3.  As a DMO, I can create rules in draft mode.
+3.  As a DMO, I can create/edit/delete/test rules in draft mode.
 4.  As a DMO Manager, I can review and approve or deny a rule prior to records processing.
 5.  As a DMO, I can test rules for matching accuracy.
 6.  As a DMO, I can prioritize rules for each system.
