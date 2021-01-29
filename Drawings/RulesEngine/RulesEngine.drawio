@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-28T13:28:43.172Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="0IJyFKykGL-zh42YCy1P" version="14.2.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-29T12:57:57.944Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="Q3mYnEjjgVaCgzEC1svU" version="14.2.3" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="2522" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1230,8 +1230,8 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-29" value="&lt;h1&gt;&lt;u&gt;Workflows&lt;/u&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-310" y="710" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-32" value="*A view that contains a list of GUIDEs that can link to RMM&lt;br&gt;**Disabling a rule = set priority to 0&lt;br&gt;&lt;font color=&quot;#3399ff&quot;&gt;&lt;b&gt;Blue nodes&lt;/b&gt;&lt;/font&gt; represent actions that have workflows" style="text;html=1;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;perimeterSpacing=0;strokeColor=#000000;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="-20" y="620" width="380" height="50" as="geometry" />
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-32" value="*A view that contains a list of GUIDEs that can link to RMM&lt;br&gt;**Disabling a rule = set priority to 0&lt;br&gt;&lt;font color=&quot;#3399ff&quot;&gt;&lt;b&gt;Blue function nodes&lt;/b&gt;&lt;/font&gt; represent actions that have workflows&lt;br&gt;Thought bubbles represent potential questions about the process" style="text;html=1;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;perimeterSpacing=0;strokeColor=#000000;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-20" y="620" width="380" height="80" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-33" value="&lt;h1&gt;&lt;u&gt;Functions&lt;/u&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-310" y="10" width="130" height="40" as="geometry" />
@@ -1243,7 +1243,7 @@
           <mxGeometry x="620" y="880" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-40" value="Reviewing a Rule" style="ellipse;whiteSpace=wrap;html=1;perimeterSpacing=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="500" y="770" width="120" height="80" as="geometry" />
+          <mxGeometry x="970" y="770" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-41" value="Disable Rule**" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="440" y="180" width="120" height="80" as="geometry" />
@@ -1269,7 +1269,7 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-46" target="f15YqLJp3Qan_eyRleQ3-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-46" value="User with approval role selects unapproved Rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-46" value="User with approval role selects pending Rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-130" y="870" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-47" target="f15YqLJp3Qan_eyRleQ3-50">
@@ -1286,7 +1286,7 @@
             <mxPoint x="90" y="1150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-49" value="Rule priority stays at 0" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-49" value="Approver supplies a&amp;nbsp; justification" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="30" y="1040" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-50" value="Rule is applied to system" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
@@ -1300,36 +1300,6 @@
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-55" value="Who ends up setting priority &lt;br&gt;for this rule?&lt;br&gt;Creator or approver?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-340" y="1110" width="200" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-58" target="f15YqLJp3Qan_eyRleQ3-60">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-58" target="f15YqLJp3Qan_eyRleQ3-59">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-58" value="Delete?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="50" y="1150" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-59" value="Rule archived &amp;amp; justification is sent to creator" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="150" y="1250" width="110" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-60" value="Rule deleted" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="-70" y="1250" width="110" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-63" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="-10" y="1160" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-64" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="140" y="1160" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-65" value="Create Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="1100" y="580" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-66" value="Delete Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="1090" y="700" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-67" value="Update Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="950" y="605" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-68" target="f15YqLJp3Qan_eyRleQ3-70">
           <mxGeometry relative="1" as="geometry" />
@@ -1429,6 +1399,195 @@
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-100" value="Flag set to ignore low match warning on this rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="1130" y="1330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-101" value="This workflow assumes the extra&lt;br&gt;&quot;pending&quot; state - is this&amp;nbsp;&lt;br&gt;correct / acceptable?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry y="830" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-103" value="Rule is sent back to Draft status&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="30" y="1150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-105" value="Create Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-140" y="1410" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-106" value="Delete Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1540" y="1410" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-107" value="Update Rule" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=3;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="850" y="1410" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-108" target="f15YqLJp3Qan_eyRleQ3-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-108" value="User with create privileges wants to create a rule" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-140" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-109" target="f15YqLJp3Qan_eyRleQ3-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-109" value="User fills out form with rule details, then creates rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-140" y="1650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-111" target="f15YqLJp3Qan_eyRleQ3-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-111" value="Rule is set to Draft status" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-140" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-113" value="Is priority set in this process?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="40" y="1640" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-114" target="f15YqLJp3Qan_eyRleQ3-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-114" value="Approver disapproves a rule&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="110" y="1780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-119" target="f15YqLJp3Qan_eyRleQ3-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-119" target="f15YqLJp3Qan_eyRleQ3-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-119" value="Edits&lt;br&gt;needed?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-120" y="1910" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-122" value="Creator can freely make edits to rule (see update flow)" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-310" y="1920" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-124" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-170" y="1920" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-125" value="Creator submits rule; Rule is set to Pending status for an Approver to review" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="30" y="1920" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-127" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="-30" y="1920" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-128" target="f15YqLJp3Qan_eyRleQ3-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-128" value="User selects a rule to update" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="850" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-129" target="f15YqLJp3Qan_eyRleQ3-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-129">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="910" y="1760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-129" value="Is this a&amp;nbsp;&lt;br&gt;default rule?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="860" y="1630" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-131" value="Very few things can be updated" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="630" y="1640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-133" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="790" y="1640" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-136" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="930" y="1720" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-137">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="1800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-143" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-137" target="f15YqLJp3Qan_eyRleQ3-142">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-137" value="Is this rule&lt;br&gt;in Draft&lt;br&gt;status?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="860" y="1760" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-141" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="790" y="1770" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-142" target="f15YqLJp3Qan_eyRleQ3-156">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-142" value="User makes updates on the rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="850" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-145" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="930" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-147" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-146">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="695" y="1890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-152" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-146" target="f15YqLJp3Qan_eyRleQ3-151">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-146" value="Is this a &lt;br&gt;Pending rule?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="640" y="1760" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-149" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-148" target="f15YqLJp3Qan_eyRleQ3-142">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-148" value="Status is changed back to Draft" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="635" y="1890" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-150" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="700" y="1850" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-151" value="Edits cannot&amp;nbsp;&lt;br&gt;be made" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="500" y="1770" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-153" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="595" y="1770" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-156" value="User can submit / &lt;br&gt;re-submit rule, which puts rule back into Pending status" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="840" y="2020" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-158" value="User selects rule for deletion" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1540" y="1520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" target="f15YqLJp3Qan_eyRleQ3-161">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1600" y="1580" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-161" target="f15YqLJp3Qan_eyRleQ3-162">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-164" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-161" target="f15YqLJp3Qan_eyRleQ3-166">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1600" y="1750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-161" value="Is this a&amp;nbsp;&lt;br&gt;default rule?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1550" y="1630" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-162" value="Rule cannot be deleted" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1320" y="1640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-163" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1480" y="1640" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-169" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-166" target="f15YqLJp3Qan_eyRleQ3-170">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1600" y="1880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-166" value="User prompted for confirmation" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1540" y="1760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-167" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1620" y="1720" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-168" value="Should the user provide a &lt;br&gt;justification here?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1710" y="1750" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-170" value="Rule is soft-deleted&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1540" y="1880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-171" value="Does this mean archived, &lt;br&gt;or just disabled?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1700" y="1870" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-172" value="Thoughts on how this might work:&amp;nbsp;&lt;br&gt;- user provides justification&lt;br&gt;- rule is disabled&lt;br&gt;- creator of rule can still see rule and the &lt;br&gt;provided justification, make edits, and&lt;br&gt;put it back into Draft / re-submit rule" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1530" y="1980" width="400" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
