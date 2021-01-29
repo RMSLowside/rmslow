@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-29T13:02:01.037Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="L-vc2-uvDxh50bjixvWQ" version="14.2.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-29T14:10:57.234Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="PBctd84rRJVMo8v9ASsS" version="14.2.3" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="2522" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1430,9 +1430,6 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-111" value="Rule is set to Draft status" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-140" y="1780" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-113" value="Is priority set in this process?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="40" y="1640" width="230" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-114" target="f15YqLJp3Qan_eyRleQ3-111">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -1554,7 +1551,7 @@
             <mxPoint x="1370" y="1750" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-161" value="Is this a&amp;nbsp;&lt;br&gt;default rule?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-161" value="Is this rule&lt;br&gt;approved?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="1320" y="1630" width="100" height="80" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-162" value="Rule cannot be deleted" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
@@ -1574,17 +1571,11 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-167" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="1390" y="1720" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-168" value="Should the user provide a &lt;br&gt;justification here?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="1480" y="1750" width="240" height="80" as="geometry" />
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-168" value="Perhaps archive is only available&amp;nbsp;&lt;br&gt;if rule has been disabled for X days" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="1470" y="980" width="290" height="80" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-170" value="Rule is soft-deleted&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="1310" y="1880" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-171" value="Does this mean archived, &lt;br&gt;or just disabled?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="1470" y="1870" width="260" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-172" value="Thoughts on how this might work:&amp;nbsp;&lt;br&gt;- user provides justification&lt;br&gt;- rule is disabled&lt;br&gt;- creator of rule can still see rule and the &lt;br&gt;provided justification, make edits, and&lt;br&gt;put it back into Draft / re-submit rule" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry x="1300" y="1980" width="400" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
