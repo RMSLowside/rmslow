@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-29T12:59:25.719Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="c25s-brMq5xWM5cnIRtG" version="14.2.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-01-29T13:01:15.779Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="KyKHWdG2-0n43Q0PDG0C" version="14.2.3" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="2522" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1266,7 +1266,7 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-46" target="f15YqLJp3Qan_eyRleQ3-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-46" value="User with approval role selects pending Rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-46" value="User with approval role selects Pending rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="-130" y="870" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wxorMCj1yp3ZmEf3wW2u-1" source="f15YqLJp3Qan_eyRleQ3-47" target="f15YqLJp3Qan_eyRleQ3-50">
@@ -1397,8 +1397,8 @@
         <mxCell id="f15YqLJp3Qan_eyRleQ3-100" value="Flag set to ignore low match warning on this rule" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="1130" y="1330" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="f15YqLJp3Qan_eyRleQ3-101" value="This workflow assumes the extra&lt;br&gt;&quot;pending&quot; state - is this&amp;nbsp;&lt;br&gt;correct / acceptable?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
-          <mxGeometry y="830" width="250" height="90" as="geometry" />
+        <mxCell id="f15YqLJp3Qan_eyRleQ3-101" value="These workflows assume the extra&lt;br&gt;&quot;Pending&quot; state - is this&amp;nbsp;&lt;br&gt;correct / acceptable?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="40" y="820" width="250" height="90" as="geometry" />
         </mxCell>
         <mxCell id="f15YqLJp3Qan_eyRleQ3-103" value="Rule is sent back to Draft status&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
           <mxGeometry x="30" y="1150" width="120" height="60" as="geometry" />
