@@ -32,14 +32,14 @@ View Only draw.io here:
 
 
 ### What:
-Design and build a more intuitive Rules Engine
-Review design with IMS Technical Directors and PM before beginning development
-Seek security approval if needed.
-
-
+Provide the business the ability to implement one or more rules against production data and take a defined action based on the rule outcome.  
+Some examples include:  
+•	Records that match certain metadata and receive a defined records control schedule.  
+•	Records coming from System Y are ignored
+•	Records with this attribute are transferred to specific repository.  
 
 ### Why: 
-
+This will allow the business to automate the business process reducing the burden on the end users.  This automation is key to managing the scale of data in the various systems.
 
 
 ### Acceptance Criteria:
