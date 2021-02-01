@@ -211,17 +211,22 @@ View Only draw.io here: [Draw.io export](https://viewer.diagrams.net/?highlight=
 
 
 ### Who: 
-
+Tech Director Staff
 
 
 ### What:
-
-
+Provide a service to standardize the ability of systems to send notification to a variety of platforms to include email, instant messenger, queues, and other platforms as they become relevant.  
 
 
 ### Why: 
-
+As a plug in play service the notification system will simplify the process for systems to send notification without requiring each integrated system to relearn how to send a notification on the instant message platform.  
 
 
 ### Acceptance Criteria:
+1.	Ensure a simple registration process for systems planning to use the notification service.  
+2.	Simplify the notification process by enabling systems to connect to a simple endpoint
+3.	Ensure the message standard is defined and published in the API documentation.  
+4.	Enable the notification system to send email messages
+5.	Enable the notification system to send instant messenger messages
+6.	Enable the notification system to send SNS and/or SQS messages.  
 
