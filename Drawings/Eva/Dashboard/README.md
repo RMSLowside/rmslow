@@ -25,3 +25,18 @@ The Dashboard will provide metrics on the following:
 
 Source draw.io
 here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FDashboard%2FDashboard.drawio)
+
+
+## **Software Development Requirements**
+### Who: 
+Data Lifecycle Personnel
+
+### What:
+Provide users with a functional dashboard to aggregate daily work assignments, activities, actions, and metrics, and other relevant data in a single intuitive interface.  
+
+### Why: 
+DMOs have historically been required to navigate numerous locations to find the data they need.  Often they are managing their work through email and other platforms in an effort to get the required to complete their work.  The constant juggling can lead to missed assignments, delays, and poor support for mission partners.  Providing a single common dashboard that highlights the work that a given DMO is responsible, assignments that have yet to be picked up, and critical metrics should improve the responsiveness of the DMO and improve their overall support for their mission partners.
+
+
+### Acceptance Criteria:
+Coming Soon...
