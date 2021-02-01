@@ -9,7 +9,7 @@ The Dashboard will render views or snippets into some of the following systems:
 - IMA
 - RMM
 - RCS
-- Dataset View
+- Dataset View/Catalog
 - Reprocessor
 
 ## Core Metrics
@@ -39,7 +39,7 @@ DMOs have historically been required to navigate numerous locations to find the 
 
 
 ### Acceptance Criteria:
-1.	Aggregate metrics from x, y, z
+1.	Aggregate metrics from IMA, Catalog, RMMS, RCS, etc.
 2.	Provide overview of activities or tasks assigned to users 
 3.	Provide summary of objects eligible for disposition
 4.	Provide a summary of new datasets created
