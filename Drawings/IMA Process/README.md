@@ -88,7 +88,9 @@ A new knowledgebase that will:
    - Full integration between IMA and System X to send/receive data; including notification when a new system is added.
 
 ## Why: 
-To eliminate the use of MS Excel spreadsheets and the overall manual process of coordination of tasks between DMOs and mission partner systems during system accreditation.
+
+Currently the IMA process relies on a series of tools, applications, and files.  Information is exchanged via email, instant messenger, and other platforms.  Information is manually imported into enterprise tools where the DMOs have little oversite on.  Centralizing the IMA process into once interface for the DMOs where they are better able to map their inputs to the overall IMA process eliminates a number hurdles.  Additionally by eliminating the use of MS Excel spreadsheets and the overall manual process of coordination of tasks between DMOs and mission partner systems during system accreditation will only speed up the process.  Having the embedded metrics provides data lifecycle leadership with critical decision making capabilities.  
+
 
 
 ## Acceptance Criteria:
