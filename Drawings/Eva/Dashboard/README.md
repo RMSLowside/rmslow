@@ -39,4 +39,11 @@ DMOs have historically been required to navigate numerous locations to find the 
 
 
 ### Acceptance Criteria:
-Coming Soon...
+1.	Aggregate metrics from x, y, z
+2.	Provide overview of activities or tasks assigned to users 
+3.	Provide summary of objects eligible for disposition
+4.	Provide a summary of new datasets created
+5.	Provide a summary of new RCS values added or updated
+6.	Provide a summary of datasets missing DMO data.
+7.	Link users back to the source system and/or services.  
+
