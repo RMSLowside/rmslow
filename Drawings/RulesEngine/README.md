@@ -32,7 +32,7 @@ View Only draw.io here:
 
 
 ### What:
-Provide the business the ability to implement one or more rules against production data and take a defined action based on the rule outcome.  
+Provide the business the ability to implement one or more rules against production data and take a defined action based on the rule outcome.  Users need the ability to draft rule and test these rules without impacting live production data.   
 Some examples include:  
 •	Records that match certain metadata and receive a defined records control schedule.  
 •	Records coming from System Y are ignored
