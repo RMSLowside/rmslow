@@ -126,18 +126,19 @@ ArrayList<Disposition> dispositionList = connector.getDispositionsForSystem("sys
 
 
 ### Who: 
-
-
+Data Lifecycle Personnel
 
 ### What:
-
-
-
+Provide Data Lifecycle personnel with an automated tool to notify manage in place systems that one or more specific objects is eligible for disposition.  Disposition may include the transfer of that object or its destruction.   
 
 ### Why: 
-
+The scale of information and electronics holdings are growing at a rate where humans cannot manually review every object.  Capabilities must be established to automate the disposition process based on the appropriate records control schedules applied to objects being held.  
 
 
 ### Acceptance Criteria:
+1.	Ensure the system is able to locate the metadata about objects eligible for disposition.
+2.	Ensure the system is able to provide individuals with an overview of the objects eligible for disposition.  
+3.	Ensure the system is able to notify the holding system that an object is eligible for disposition.
+4.	Ensure the system is able to track the disposition related transactions (ie eligibility, concurrence, notification, acknowledgement, completion.)
 
 
