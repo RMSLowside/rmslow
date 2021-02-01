@@ -141,10 +141,11 @@ here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%
 
 
 ## Who:
-DLMD
+Data Lifecycle Personnel 
 
 
 ## What:
+Provide a service to apply and track a document hold in compliance with business or legal directives.  
 
 1. Build a user interface:
   - that provides notification that responsive documents require a hold.
@@ -163,7 +164,7 @@ DLMD
 
 
 ## Why: 
-
+Documents are subject to a variety of holds stemming from FOIA cases to legal action.  Documents subject to these holds should not be edited, deleted, or transferred while the hold applies to the objects.  The Data Lifecycle personnel needs to be able to ensure documents responsive to a hold are not altered.  
 
 
 ## Acceptance Criteria:
