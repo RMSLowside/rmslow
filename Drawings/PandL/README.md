@@ -244,6 +244,7 @@ View Only draw.io here: [Draw.io export](https://viewer.diagrams.net/?highlight=
 
 
 ### Why: 
+To manage data it’s important to understand the origin of the objects and trace their lineage overtime.  Was the object moved, was it copied/replicated into multiple systems?  Which version is the record copy?  Was the record altered at some point?  Answering these questions a critical to managing data.
 
 
 
