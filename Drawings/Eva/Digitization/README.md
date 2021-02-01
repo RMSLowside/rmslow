@@ -44,3 +44,17 @@ Objects that fail to process, will sit on the reprocessor page waiting for human
 
 Source draw.io
 here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FDigitization%2FEva%20Digitization.drawio)
+
+## **Software Development Requirements**
+### Who: 
+Tech Director Staff
+Data Lifecycle Staff
+
+### What:
+coming soon...
+
+### Why: 
+coming soon...
+
+### Acceptance Criteria:
+coming soon...
