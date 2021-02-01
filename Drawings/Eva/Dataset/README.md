@@ -79,3 +79,16 @@ here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%
 
 Source draw.io
 here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FArchitecture%2FMainArchitecture.drawio)
+
+## **Software Development Requirements**
+### Who: 
+Tech Director Staff
+
+### What:
+Create an IMS centric catalog to augment the enterprise catalog to store dataset records on IMS’ holdings.  The catalog should also support data owned by mission partners that are currently in the custody of IMS.  The catalog should manage the dataset attributes that are relevant to the IMS business and link back to broad datasets stored in the enterprise tool.  
+
+### Why: 
+The IMS catalog would better enable IMS to manage the organizations data without watering down the enterprise offerings.  The IMS catalog would focus on data in IMS’s custody.  Additionally IMS would have additional control over the attributes in the IMS catalog instead of competing with other organizations to support specific attributes.  
+
+### Acceptance Criteria:
+.
