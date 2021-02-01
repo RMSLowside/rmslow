@@ -47,14 +47,19 @@ here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2
 
 ## **Software Development Requirements**
 ### Who: 
-Tech Director Staff
-Data Lifecycle Staff
+- Tech Director Staff
+- Data Lifecycle Staff
 
 ### What:
-coming soon...
+Provide a straightforward interface to allow IMS users to upload digital objects into one or more approved repositories.  The digitization process should allow users to add attributes to the objects before sending those objects to the defined repository.  The digitization services should allow IMS users to add objects to a short term holding pen before transmitting them to a defined repository.  Additionally the tool should allow users to either select a defined dataset to associate the files with, or automatically route the files under a given dataset based on pre-defined attributes.  There should be an option to reprocess objects that failed the initial upload.  
 
 ### Why: 
-coming soon...
+IMS has a large number of digital and physical holdings spread throughout a number of tools, services, repositories and storage locations.  IMS needs to be able to quickly move these objects though the pipeline into a defined repository.  
 
 ### Acceptance Criteria:
-coming soon...
+
+-	As a DMO I can drag files into a browser and have those files end up in a tempory holding pen
+-	As a DMO, I can drag files into a browser, define a dataset, and upload those files into a repository.
+-	As a DMO, I can alter attributes about a file before sending it to the final repository.  
+-	tbd
+
