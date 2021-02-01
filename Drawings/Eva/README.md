@@ -1,6 +1,6 @@
 # Eva
 
-The Eva application is a series of services that encompasses the core capabilities of the records management lifecycle and facilitates two key DLMD business objectives - manage records in place and transition from physical to digital records.  Eva services reside on the customer's primary network, but is AWS mission agnostic. As long as the services operate in the appropriate domains, the locations of the individual services themselves is unimportant; operational cohesion between the services is of greater importance.
+The Eva application is a series of services that encompasses the core capabilities of the records management lifecycle and facilitates two key DLMD business objectives - manage records in place and transition from physical to digital records.  Eva services reside on the customer's primary network, but is AWS mission agnostic. As long as the services operate in the appropriate domains, the locations of the individual services themselves is unimportant; operational cohesion between the services and across the missions is of greater importance.
 
 - A user can also create / update datasets from the EVA UI itself, as well as add files and update metadata 
 - Newly processed data are kept in their appropriate datastore (P&L information, Metadata, Object, or Catalog storage)
