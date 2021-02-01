@@ -7,7 +7,7 @@ The dashboard is the heart of Eva.  This is the location where daily work activi
 The Dashboard will render views or snippets into some of the following systems:
 
 - IMA
-- RMM
+- RMMS
 - RCS
 - Dataset View/Catalog
 - Reprocessor
@@ -16,9 +16,13 @@ The Dashboard will render views or snippets into some of the following systems:
 
 The Dashboard will provide metrics on the following:
 
-- one
-- two
-- three
+-	Number of temporary records in RMMS
+-	Number of permanent records in RMMS
+-	Number of datasets in the enterprise catalog
+-	Number of datasets missing “Eva Data” in the enterprise catalog
+-	Number of systems in each stage of the IMA process 
+-	Etc…
+
 
 
 ## Dashboard UI
