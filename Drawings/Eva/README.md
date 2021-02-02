@@ -39,6 +39,8 @@ here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2
 
 
 ### Who: 
+Tech Director Staff
+Data Lifecycle Personnel 
 
 
 
@@ -48,7 +50,7 @@ here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2
 
 
 ### Why: 
-
+The Data Lifecycle team is currently juggling a number of disconnected applications, services, and processes.  They are using JIRA, Excel, juggling paper, as well as a half dozen or more disconnected capabilities to accomplish their mission.  They are lacking any common working environment and their workflows are all over the board.  Providing a common dashboard while striving to pull together services and offerings will only help to bolster their effectiveness.  Centralizing these efforts will help their efforts to train new officers as well as providing a more intuitive management platform for leadership to make decisions based off of.   
 
 
 ### Acceptance Criteria:
