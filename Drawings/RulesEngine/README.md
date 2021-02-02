@@ -3,12 +3,101 @@
 The Rules Engine is a key component in the suite of records management applications that supports the DLMD tenet for managing records in place.  It allows Data Management Officers to create, test, and execute rules to apply the appropriate records retention schedule on records; as well as comply with federal regulations for records dispositon.
 
 ## **Components**
+### Datastore
 
-  
+##### Rule
+
+```json5
+{
+  uuid: ,
+  name: ,
+  system: ,
+  action: ,
+  status:
+}
+```
+
+
+##### Rule History
+
+```json5
+{
+  uuid: "primary key tied to rules table",
+  date: "reviewed date",
+  action: "created, approved, reviewed, archived",
+  reviewer: "name of the person that reviewed the rule"  
+}
+```
+
+##### Rule Matches
+
+```json5
+{
+  uuid: "primary key tied to rules table",
+  guideId: "",
+  date: "date of rule match?"
+}
+```
 
 ## **API**
 
+### Get Rules
+```
+ngimws/rules
+RequestType = GET
+```
+* Gets all rules
 
+### Get Rules
+```
+ngimws/rules/{query}
+RequestType = GET
+RequestParms = {query}
+```
+* Gets rules for
+
+### Get Rules
+```
+ngimws/rules/{ruleId}
+RequestType = GET
+RequestParms = {ruleId}
+```
+* Gets rules for
+
+### Get Rule History
+```
+ngimws/rules/history/{ruleId}
+RequestType = GET
+RequestParms = {ruleId}
+```
+* Get 30 day rule history for selected rule.
+
+### Get Recent Match
+```
+ngimws/rules/match
+RequestType = GET
+RequestParms = {query}
+```
+* Returns list of recent match rules
+
+### Archive Rule
+```
+ngimws/rules/archive
+RequestType = POST
+RequestParms = {ruleId}
+```
+* Archive rule
+
+### Approve Rule
+```
+ngimws/rules/approve
+RequestType = POST
+RequestParms = {ruleId}
+```
+* Approve rule
+
+
+## SDK
 
 ## **UI**
 
@@ -38,7 +127,7 @@ Some examples include:
 •	Records coming from System Y are ignored
 •	Records with this attribute are transferred to specific repository.  
 
-### Why: 
+### Why:
 This will allow the business to automate the business process reducing the burden on the end users.  This automation is key to managing the scale of data in the various systems.
 
 
