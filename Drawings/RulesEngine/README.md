@@ -9,11 +9,12 @@ The Rules Engine is a key component in the suite of records management applicati
 
 ```json5
 {
-  uuid: ,
-  name: ,
-  system: ,
-  action: ,
-  status:
+  uuid: "unique key",
+  name: "rule name",
+  system: "",
+  conditions: "",
+  action: "",
+  status: ""
 }
 ```
 
@@ -23,7 +24,7 @@ The Rules Engine is a key component in the suite of records management applicati
 ```json5
 {
   uuid: "primary key tied to rules table",
-  date: "reviewed date",
+  date: "date of action",
   action: "created, approved, reviewed, archived",
   reviewer: "name of the person that reviewed the rule"  
 }
@@ -34,8 +35,8 @@ The Rules Engine is a key component in the suite of records management applicati
 ```json5
 {
   uuid: "primary key tied to rules table",
-  guideId: "",
-  date: "date of rule match?"
+  guideId: "guide id for matched system",
+  date: "date of rule match"
 }
 ```
 
@@ -48,21 +49,29 @@ RequestType = GET
 ```
 * Gets all rules
 
-### Get Rules
+### Get Rules By Filter
 ```
 ngimws/rules/{query}
 RequestType = GET
 RequestParms = {query}
 ```
-* Gets rules for
+* Gets rules by filter
 
-### Get Rules
+### Get Rules By System
+```
+ngimws/rules/{sysmtemId}
+RequestType = GET
+RequestParms = {sysmtemId}
+```
+* Gets rules for selected system
+
+### Get Rule
 ```
 ngimws/rules/{ruleId}
 RequestType = GET
 RequestParms = {ruleId}
 ```
-* Gets rules for
+* Gets rule detail
 
 ### Get Rule History
 ```
@@ -74,9 +83,9 @@ RequestParms = {ruleId}
 
 ### Get Recent Match
 ```
-ngimws/rules/match
+ngimws/rules/match/{ruleId}
 RequestType = GET
-RequestParms = {query}
+RequestParms = {ruleId}
 ```
 * Returns list of recent match rules
 
