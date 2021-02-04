@@ -10,11 +10,12 @@ The Rules Engine is a key component in the suite of records management applicati
 ```json5
 {
   uuid: "unique key",
-  name: "rule name",
-  system: "",
-  conditions: "",
-  action: "",
-  status: ""
+  name: "name of the rule",
+  system: "name of the system",
+  description: "description of the rule",
+  conditions: "conditions applied to the rule",
+  status: "active, draft, pending",
+  priority: "priority order of the rule"
 }
 ```
 
@@ -49,13 +50,13 @@ RequestType = GET
 ```
 * Gets all rules
 
-### Get Rules By Filter
+### Get Rules Filtered
 ```
 ngimws/rules/{query}
 RequestType = GET
 RequestParms = {query}
 ```
-* Gets rules by filter
+* Gets rules by facet
 
 ### Get Rules By System
 ```
@@ -75,19 +76,19 @@ RequestParms = {ruleId}
 
 ### Get Rule History
 ```
-ngimws/rules/history/{ruleId}
+ngimws/rules/history/{ruleId}{dateRange}
 RequestType = GET
-RequestParms = {ruleId}
+RequestParms = {ruleId}{dateRange}
 ```
-* Get 30 day rule history for selected rule.
+* Get rule history for selected rule for the date range, default date range to 30 days
 
 ### Get Recent Match
 ```
-ngimws/rules/match/{ruleId}
+ngimws/rules/match/{ruleId}{count}
 RequestType = GET
-RequestParms = {ruleId}
+RequestParms = {ruleId}{count}
 ```
-* Returns list of recent match rules
+* Returns list of x number of recent matches
 
 ### Archive Rule
 ```
