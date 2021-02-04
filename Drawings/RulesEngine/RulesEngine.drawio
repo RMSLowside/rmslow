@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-04T13:36:32.243Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="p0LYIrH-uwSrumRHymI8" version="14.2.9" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-02-04T13:37:10.817Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="0QjAaCLkjaVAprK4kolP" version="14.2.9" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="1655" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1642,7 +1642,7 @@
         <mxCell id="zwfcrOfji7HXLNvru651-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="wxorMCj1yp3ZmEf3wW2u-1" source="zwfcrOfji7HXLNvru651-14" target="zwfcrOfji7HXLNvru651-19" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="zwfcrOfji7HXLNvru651-14" value="User sets priority on the rule." style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" parent="wxorMCj1yp3ZmEf3wW2u-1" vertex="1">
+        <mxCell id="zwfcrOfji7HXLNvru651-14" value="User adjusts system priority order" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" parent="wxorMCj1yp3ZmEf3wW2u-1" vertex="1">
           <mxGeometry x="180" y="2740" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="zwfcrOfji7HXLNvru651-16" value="Rule remains in draft state" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;strokeWidth=1;fillColor=#ffffff;" parent="wxorMCj1yp3ZmEf3wW2u-1" vertex="1">
