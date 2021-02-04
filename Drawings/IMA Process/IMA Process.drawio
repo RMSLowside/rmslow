@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-02-04T18:17:33.203Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="qCRHja0NK0J40q_yjfXx" version="14.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-04T19:03:58.388Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="jaSqDOhvyBBk4rQtNR36" version="14.2.9" type="github">
   <diagram id="Yn146CHNmKTiM8TK_1wL" name="IMA Process">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="462" dy="761" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -178,17 +178,114 @@
         <mxCell id="jiV6JNl9K0BQqRfEvjrz-7" value="11" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="70" y="880" width="70" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-1" target="cbtD3ZACYqGLWfbixj1p-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-1" value="System registers with A&amp;amp;A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="910" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-2" target="cbtD3ZACYqGLWfbixj1p-3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-2" value="IMO team learns of new system" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="910" y="200" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-3" target="cbtD3ZACYqGLWfbixj1p-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-3" value="IMO added new system to the IMO Process tool" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="910" y="300" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-4" target="cbtD3ZACYqGLWfbixj1p-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-4" value="IMO Gatekeeper reviews the system and assigns it to IMO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="910" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-5" target="cbtD3ZACYqGLWfbixj1p-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-5" value="IMO engages with the system and completes the initial system review" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-7" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" y="934" as="sourcePoint" />
+            <mxPoint x="400" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-9" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="931" as="sourcePoint" />
+            <mxPoint x="30" y="105" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-10" target="cbtD3ZACYqGLWfbixj1p-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-10" value="IMO sends a series of questions to the system for review." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-11" target="cbtD3ZACYqGLWfbixj1p-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-11" value="System returns the answers to the question to IMO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-12" target="cbtD3ZACYqGLWfbixj1p-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-12" value="IMO reviews responses and adds comments" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-14" target="cbtD3ZACYqGLWfbixj1p-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1150" y="940" />
+              <mxPoint x="1150" y="630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-14" target="cbtD3ZACYqGLWfbixj1p-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-14" value="IMO &lt;br&gt;approves or rejects" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="900" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-24" value="reject" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="910" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-25" value="approve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1000" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-26" target="cbtD3ZACYqGLWfbixj1p-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-26" value="D/DMO reviews IMA" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-28" target="cbtD3ZACYqGLWfbixj1p-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="1180" />
+              <mxPoint x="1120" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-28" target="cbtD3ZACYqGLWfbixj1p-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-28" value="D/DMO approve or rejects" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="1140" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-31" value="reject" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="1160" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-32" value="IMA is marked complete" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-34" value="approve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="980" y="1220" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
