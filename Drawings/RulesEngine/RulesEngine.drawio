@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-04T13:34:50.968Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="__z_ZR9y5rp9o-J3RIaa" version="14.2.9" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-02-04T13:36:32.243Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="p0LYIrH-uwSrumRHymI8" version="14.2.9" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="1655" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1721,6 +1721,9 @@
         </mxCell>
         <mxCell id="zwfcrOfji7HXLNvru651-55" value="yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="wxorMCj1yp3ZmEf3wW2u-1" vertex="1">
           <mxGeometry x="250" y="3290" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="O30KP6gl6npUXd7WAOq3-0" value="no" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wxorMCj1yp3ZmEf3wW2u-1">
+          <mxGeometry x="260" y="2460" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
