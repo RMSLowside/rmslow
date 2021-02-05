@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-01-08T19:04:12.579Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="ZCfkGDcvQsGyRXC8URvk" version="14.1.8" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-02-05T13:25:05.323Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="czTpX6Zh9ykCeVuQKEw0" version="14.2.9" type="github" pages="5">
   <diagram id="Hv4MSQO7RJrf4JBUDCrN" name="Page/user flow">
-    <mxGraphModel dx="2333" dy="2812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="2212" dy="2452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -110,12 +110,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="__StvcoEmYCR4JoRO-LI" name="Dataset Review WorkFlow">
-    <mxGraphModel dx="1233" dy="1112" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1112" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="wpEfV5L8ABpQnfDice4h-0" />
         <mxCell id="wpEfV5L8ABpQnfDice4h-1" parent="wpEfV5L8ABpQnfDice4h-0" />
         <mxCell id="wpEfV5L8ABpQnfDice4h-2" value="Dataset Review&lt;br&gt;1.&amp;nbsp; Dataset is created&lt;br&gt;2.&amp;nbsp; Dataset is discovered in dataset module&lt;br&gt;3.&amp;nbsp; Dataset is triaged&lt;br&gt;4.&amp;nbsp; Dataset is assigned to an IMO for review.&lt;br&gt;5.&amp;nbsp; IMO reviews the dataset.&amp;nbsp; &lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;a.&amp;nbsp; Contacts the data steward&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;b.&amp;nbsp; Obtains additional information about the dataset&lt;br&gt;6.&amp;nbsp; IMO determines the following:&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;a.&amp;nbsp; RCS Value(s)&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;b.&amp;nbsp; PII Status&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; i.&amp;nbsp; &amp;nbsp; PII Type&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ii.&amp;nbsp; &amp;nbsp;SORN Number&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; iii.&amp;nbsp; Handling Instruction&lt;br&gt;7.&amp;nbsp; IMO sends dataset forward for approval&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;a.&amp;nbsp; Dataset is approved&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;b.&amp;nbsp; Dataset is rejected" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="wpEfV5L8ABpQnfDice4h-1" vertex="1">
-          <mxGeometry x="480" y="100" width="320" height="650" as="geometry" />
+          <mxGeometry x="310" y="90" width="320" height="650" as="geometry" />
         </mxCell>
         <mxCell id="wpEfV5L8ABpQnfDice4h-3" value="Dataset Review" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" parent="wpEfV5L8ABpQnfDice4h-1" vertex="1">
           <mxGeometry x="40" y="20" width="200" height="20" as="geometry" />
@@ -184,6 +184,77 @@
         </mxCell>
         <mxCell id="wpEfV5L8ABpQnfDice4h-21" value="6" style="rounded=0;whiteSpace=wrap;html=1;" parent="wpEfV5L8ABpQnfDice4h-1" vertex="1">
           <mxGeometry x="60" y="410" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-0" target="Quw0Se6lDQFot0qwIVEC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-0" value="Dataset is created" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-1" target="Quw0Se6lDQFot0qwIVEC-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-1" value="Dataset is discovered" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-2" target="Quw0Se6lDQFot0qwIVEC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-2" value="Dataset is triaged" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-3" target="Quw0Se6lDQFot0qwIVEC-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-3" value="Dataset assigned to DMO for review" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-4" target="Quw0Se6lDQFot0qwIVEC-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-4" value="DMO reviews the dataset" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-5" target="Quw0Se6lDQFot0qwIVEC-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-5" value="DMO contacts the data steward" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-6" target="Quw0Se6lDQFot0qwIVEC-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-6" value="DMO adds additional information to the dataset" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-7" target="Quw0Se6lDQFot0qwIVEC-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-7" value="DMO assigns the IMS specific metadata&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Dataset%20is%20created%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22720%22%20y%3D%2280%22%20width%3D%22120%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-8" value="Dataset is finalized" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="720" y="1000" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-9" target="Quw0Se6lDQFot0qwIVEC-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="920" />
+              <mxPoint x="990" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="wpEfV5L8ABpQnfDice4h-1" source="Quw0Se6lDQFot0qwIVEC-9" target="Quw0Se6lDQFot0qwIVEC-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-9" value="Dataset approval" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="740" y="880" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-11" value="Disapproved" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="860" y="890" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-21" value="Approved" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="800" y="970" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
