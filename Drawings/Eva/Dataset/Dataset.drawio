@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-05T13:25:05.323Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="czTpX6Zh9ykCeVuQKEw0" version="14.2.9" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-02-05T13:52:06.251Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="mNChD1toSY5xnI-meAor" version="14.2.9" type="github" pages="5">
   <diagram id="Hv4MSQO7RJrf4JBUDCrN" name="Page/user flow">
     <mxGraphModel dx="2212" dy="2452" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -110,7 +110,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="__StvcoEmYCR4JoRO-LI" name="Dataset Review WorkFlow">
-    <mxGraphModel dx="1112" dy="752" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="wpEfV5L8ABpQnfDice4h-0" />
         <mxCell id="wpEfV5L8ABpQnfDice4h-1" parent="wpEfV5L8ABpQnfDice4h-0" />
@@ -255,6 +255,12 @@
         </mxCell>
         <mxCell id="Quw0Se6lDQFot0qwIVEC-21" value="Approved" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
           <mxGeometry x="800" y="970" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-22" value="Which catalog are we using?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="920" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Quw0Se6lDQFot0qwIVEC-23" value="This assumes the use of the enterprise catalog" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="wpEfV5L8ABpQnfDice4h-1">
+          <mxGeometry x="890" y="150" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
