@@ -40,7 +40,7 @@ The following information will be stored.
 ```json5
 {
   uuid: "unique key",
-  stepId: ""
+  currentStep: "current step system is",
   name: "rule name",
   aaNumber: "",
   systemPoc: "",
@@ -51,14 +51,26 @@ The following information will be stored.
   recordSched: ""
 }
 ```
-##### systemStep
+
+##### systemSteps
 
 ```json5
 {
-  id: "step id",
-  systemId: "",
-  stepName: "",
-  assignee: ""
+  id: "internal step id",
+  stepName: "step name"
+}
+```
+
+##### systemWithStep
+
+```json5
+{
+  id: "internal step id",
+  stepId: "foreign key to systemSteps table",
+  systemId: "foreign key to systems table",
+  startDate: "date of step started",
+  endDate: "date of step ended",
+  assignee: "pipe delimited string of primary and secondary assignee"
 }
 ```
 
@@ -66,10 +78,11 @@ The following information will be stored.
 
 ```json5
 {
-  systemId: "",
-  comment: "",
-  date: "",
-  user: ""
+  systemId: "foreign key to system table",
+  stepId: "foreign key to systemSteps",
+  comment: "comment",
+  date: "comment created date",
+  user: "comment creator"
 }
 ```
 
@@ -77,7 +90,9 @@ The following information will be stored.
 
 ```json5
 {
-  id: "unique key"  
+  id: "internal unique key",
+  reqName: "requirement key",  
+  description: ""
 }
 ```
 
@@ -86,11 +101,11 @@ The following information will be stored.
 ```json5
 {
   id: "internal table id",
-  systemId: "",
-  reqId: "",
-  comment: "",
-  user: "",
-  date: ""
+  systemId: "foreign key to system table",
+  reqId: "foreign key to requirements table",
+  comment: "comment ",
+  user: "user name of commenter",
+  date: "comment created date"
 }
 ```
 
@@ -126,15 +141,9 @@ RequestParms = {systemId}
 * Gets requirements for selected system
 
 ## **UI**
-Source draw.io here: Draw.io Source
+Source draw.io here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FIMA%20Process%2FIMA%20Process.drawio)
 
 View Only draw.io here: Draw.io export
-
-## Drawings
-- Dashboard draw.io
-here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FIMA%20Process%2FIMA%20Process.drawio)
-
-
 
 
 ## **Software Development Requirements**

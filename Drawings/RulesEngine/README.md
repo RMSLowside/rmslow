@@ -9,12 +9,12 @@ The Rules Engine is a key component in the suite of records management applicati
 
 ```json5
 {
-  uuid: "unique key",
+  uuid: "internal unique key",
   name: "name of the rule",
   system: "name of the system",
   description: "description of the rule",
   conditions: "conditions applied to the rule",
-  status: "active, draft, pending",
+  status: "status of the rules: active, draft, pending",
   priority: "priority order of the rule"
 }
 ```
@@ -24,10 +24,11 @@ The Rules Engine is a key component in the suite of records management applicati
 
 ```json5
 {
-  uuid: "primary key tied to rules table",
+  uuid: "primary key",
+  ruleId: "foreign key to rule table"
   date: "date of action",
   action: "created, approved, reviewed, archived",
-  reviewer: "name of the person that reviewed the rule"  
+  reviewer: "name of the user that reviewed the rule"
 }
 ```
 
@@ -35,7 +36,8 @@ The Rules Engine is a key component in the suite of records management applicati
 
 ```json5
 {
-  uuid: "primary key tied to rules table",
+  uuid: "primary key",
+  ruleId: "foreign key to rule table",
   guideId: "guide id for matched system",
   date: "date of rule match"
 }
@@ -76,7 +78,7 @@ RequestParms = {ruleId}
 
 ### Get Rule History
 ```
-ngimws/rules/history/{ruleId}{dateRange}
+ngimws/rules/history/{ruleId}
 RequestType = GET
 RequestParms = {ruleId}{dateRange}
 ```
@@ -84,7 +86,7 @@ RequestParms = {ruleId}{dateRange}
 
 ### Get Recent Match
 ```
-ngimws/rules/match/{ruleId}{count}
+ngimws/rules/match/{ruleId}
 RequestType = GET
 RequestParms = {ruleId}{count}
 ```
@@ -111,12 +113,9 @@ RequestParms = {ruleId}
 
 ## **UI**
 
-
-
-
 ## Drawings
 
-[Source draw.io here:]https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FRulesEngine%2FRulesEngine.drawio
+Dashboard draw.io here: [draw.io here](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FRulesEngine%2FRulesEngine.drawio)
 
 View Only draw.io here:
 
