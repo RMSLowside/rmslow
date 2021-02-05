@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-02-04T15:04:54.556Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36" etag="nSRK2ltYlBesJTkPAHlO" version="14.2.9" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-02-05T17:57:42.662Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="mcsD9L4VIyKg4GpCC2sx" version="14.2.9" type="github" pages="5">
   <diagram id="nulgUZcRM6IO7Wxl4WT8" name="Object Resources">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1635" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="xkv93dfL5ZNA0a60ZzHi-0" />
         <mxCell id="xkv93dfL5ZNA0a60ZzHi-1" parent="xkv93dfL5ZNA0a60ZzHi-0" />
@@ -484,7 +484,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="cIJyjhkG-PVSEUfCtFon" name="Workflow - Physical Docs">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1635" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="5sql7j_-hKy53coNc0Fs-0" />
         <mxCell id="5sql7j_-hKy53coNc0Fs-1" parent="5sql7j_-hKy53coNc0Fs-0" />
@@ -607,14 +607,20 @@
         <mxCell id="5sql7j_-hKy53coNc0Fs-38" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Scenario 2:&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;1. User searches for document X by guide #&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;2. The document has a piece of metadata that shows it is physical&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;3. User clicks a button to request a physical copy&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;4. User fills out some sort of form for location / courier dropoff logistics&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;5. Request goes onto a queue; an email confirmation / update should be provided on the status of the courier (perhaps this would be on the warehousing tool)&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;blockquote style=&quot;font-size: 14px; margin: 0px 0px 0px 40px; border: none; padding: 0px;&quot;&gt;a. If document errors for some reason, kick back to #2 (update status on record)&lt;/blockquote&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;6. warehousing tool pulls request from queue, makes a copy of the document&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;7. warehousing tool arranges for the document copy transfer&lt;/span&gt;&lt;br style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;8. Physical exchange occurs&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=18;" parent="5sql7j_-hKy53coNc0Fs-1" vertex="1">
           <mxGeometry x="285" y="880" width="335" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="E6Xdt8RpDfthd5w9Ko7D-0" value="User searches for document" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5sql7j_-hKy53coNc0Fs-1">
+        <mxCell id="E6Xdt8RpDfthd5w9Ko7D-0" value="User searches for document" style="rounded=0;whiteSpace=wrap;html=1;" parent="5sql7j_-hKy53coNc0Fs-1" vertex="1">
           <mxGeometry x="800" y="80" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="E6Xdt8RpDfthd5w9Ko7D-1" value="Object depicts if its physical or digital" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5sql7j_-hKy53coNc0Fs-1">
+        <mxCell id="E6Xdt8RpDfthd5w9Ko7D-1" value="Object depicts if its physical or digital" style="rounded=0;whiteSpace=wrap;html=1;" parent="5sql7j_-hKy53coNc0Fs-1" vertex="1">
           <mxGeometry x="800" y="180" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="E6Xdt8RpDfthd5w9Ko7D-2" value="User requests the object to be digitized" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5sql7j_-hKy53coNc0Fs-1">
+        <mxCell id="E6Xdt8RpDfthd5w9Ko7D-2" value="User requests the object to be digitized" style="rounded=0;whiteSpace=wrap;html=1;" parent="5sql7j_-hKy53coNc0Fs-1" vertex="1">
           <mxGeometry x="800" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iGFV3R7_I7K_MIsp4NAA-0" value="Request goes to a queue" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5sql7j_-hKy53coNc0Fs-1">
+          <mxGeometry x="800" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iGFV3R7_I7K_MIsp4NAA-1" value="Warehouse tool pulls re" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="5sql7j_-hKy53coNc0Fs-1">
+          <mxGeometry x="800" y="480" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
