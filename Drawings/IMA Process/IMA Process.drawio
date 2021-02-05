@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-02-05T13:26:15.791Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="nQ2gCkF4QpisXh4lfQf8" version="14.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-05T13:34:32.878Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="t1bdd3Nvw5F2U9iewA17" version="14.2.9" type="github">
   <diagram id="Yn146CHNmKTiM8TK_1wL" name="IMA Process">
-    <mxGraphModel dx="1589" dy="1074" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -199,7 +199,7 @@
         <mxCell id="cbtD3ZACYqGLWfbixj1p-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-4" target="cbtD3ZACYqGLWfbixj1p-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cbtD3ZACYqGLWfbixj1p-4" value="IMO Gatekeeper reviews the system and assigns it to IMO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="cbtD3ZACYqGLWfbixj1p-4" value="DMO traffic cop reviews the system and assigns it to DMO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="910" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-5" target="cbtD3ZACYqGLWfbixj1p-10" edge="1">
