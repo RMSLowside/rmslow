@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-05T14:08:31.280Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="sKCR45ivho_5AGf0C5tw" version="14.2.9" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-02-05T14:10:10.519Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="opB6Fm3Wq_OoLMO4c0pB" version="14.2.9" type="github" pages="2">
   <diagram id="Yn146CHNmKTiM8TK_1wL" name="IMA Process">
     <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -11,65 +11,65 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-1" value="System registers with A&amp;amp;A" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="60" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="80" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-2" target="cbtD3ZACYqGLWfbixj1p-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-2" value="DMO team learns of new system" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="160" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="180" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-3" target="cbtD3ZACYqGLWfbixj1p-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-3" value="DMO added new system to the IMA Process tool" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="260" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="280" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-4" target="cbtD3ZACYqGLWfbixj1p-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-4" value="DMO traffic cop reviews the system and assigns it to DMO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="360" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="380" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-9" target="xtFz185AWcqJHEBAqPvH-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-5" value="DMO engages with the system and completes the initial system review" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="460" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="480" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-10" target="cbtD3ZACYqGLWfbixj1p-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-10" value="DMO sends a series of questions to the system for review." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="780" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="800" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-11" target="cbtD3ZACYqGLWfbixj1p-12" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-11" value="System returns the answers to the question to DMO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="880" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="900" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-12" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="400" y="1080" as="targetPoint" />
+            <mxPoint x="250" y="1100" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-12" target="cbtD3ZACYqGLWfbixj1p-10">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="530" y="1010" />
-              <mxPoint x="530" y="810" />
+              <mxPoint x="380" y="1030" />
+              <mxPoint x="380" y="830" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-12" value="DMO reviews responses and adds comments" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="980" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="1000" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-26" target="cbtD3ZACYqGLWfbixj1p-28" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-26" value="D/DMO reviews IMA" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="1200" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="1220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-28" target="cbtD3ZACYqGLWfbixj1p-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -77,22 +77,22 @@
         <mxCell id="xtFz185AWcqJHEBAqPvH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-28" target="cbtD3ZACYqGLWfbixj1p-12">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="260" y="1340" />
-              <mxPoint x="260" y="1010" />
+              <mxPoint x="110" y="1360" />
+              <mxPoint x="110" y="1030" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-28" value="D/DMO approve or rejects" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="360" y="1300" width="80" height="80" as="geometry" />
+          <mxGeometry x="210" y="1320" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-31" value="reject" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="290" y="1310" width="40" height="20" as="geometry" />
+          <mxGeometry x="140" y="1330" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-32" value="IMA is marked complete" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="340" y="1420" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="1440" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-34" value="approve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="410" y="1380" width="40" height="20" as="geometry" />
+          <mxGeometry x="260" y="1400" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-2" target="cbtD3ZACYqGLWfbixj1p-10">
           <mxGeometry relative="1" as="geometry" />
@@ -100,37 +100,37 @@
         <mxCell id="xtFz185AWcqJHEBAqPvH-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-2" target="cbtD3ZACYqGLWfbixj1p-5">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="520" y="700" />
-              <mxPoint x="520" y="490" />
+              <mxPoint x="370" y="720" />
+              <mxPoint x="370" y="510" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-2" value="D/DMO Approves /Rejects" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="660" width="80" height="80" as="geometry" />
+          <mxGeometry x="210" y="680" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-7" target="cbtD3ZACYqGLWfbixj1p-26">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-7" value="DMO Submits for review" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="1080" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="1100" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-9" value="D/DMO Reviews" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="560" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="580" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-5" target="xtFz185AWcqJHEBAqPvH-9">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="400" y="520" as="sourcePoint" />
-            <mxPoint x="400" y="590" as="targetPoint" />
+            <mxPoint x="250" y="540" as="sourcePoint" />
+            <mxPoint x="250" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="efReGdY9lqjWUHzjwBxh-1" value="Feedback&amp;nbsp;loop" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="540" y="900" width="110" height="20" as="geometry" />
+          <mxGeometry x="390" y="920" width="110" height="20" as="geometry" />
         </mxCell>
         <mxCell id="efReGdY9lqjWUHzjwBxh-3" value="approve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="410" y="740" width="40" height="20" as="geometry" />
+          <mxGeometry x="260" y="760" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="efReGdY9lqjWUHzjwBxh-4" value="reject" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="460" y="670" width="40" height="20" as="geometry" />
+          <mxGeometry x="310" y="690" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
