@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-05T13:40:09.528Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="flXCb8bakysavGcrOnHH" version="14.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-02-05T13:42:51.238Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="JHPMp-SsP-oaAHjynNdC" version="14.2.9" type="github">
   <diagram id="Yn146CHNmKTiM8TK_1wL" name="IMA Process">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -202,7 +202,7 @@
         <mxCell id="cbtD3ZACYqGLWfbixj1p-4" value="DMO traffic cop reviews the system and assigns it to DMO" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="910" y="400" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="xtFz185AWcqJHEBAqPvH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-5" target="xtFz185AWcqJHEBAqPvH-2">
+        <mxCell id="xtFz185AWcqJHEBAqPvH-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-9" target="xtFz185AWcqJHEBAqPvH-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-5" value="IMO engages with the system and completes the initial system review" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -252,7 +252,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-26" value="D/DMO reviews IMA" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="910" y="1040" width="120" height="60" as="geometry" />
+          <mxGeometry x="910" y="1160" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="cbtD3ZACYqGLWfbixj1p-28" target="cbtD3ZACYqGLWfbixj1p-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -260,22 +260,22 @@
         <mxCell id="xtFz185AWcqJHEBAqPvH-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-28" target="cbtD3ZACYqGLWfbixj1p-12">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="830" y="1180" />
+              <mxPoint x="830" y="1300" />
               <mxPoint x="830" y="970" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-28" value="D/DMO approve or rejects" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="930" y="1140" width="80" height="80" as="geometry" />
+          <mxGeometry x="930" y="1260" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-31" value="reject" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="860" y="1150" width="40" height="20" as="geometry" />
+          <mxGeometry x="860" y="1270" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-32" value="IMA is marked complete" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="910" y="1260" width="120" height="60" as="geometry" />
+          <mxGeometry x="910" y="1380" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="cbtD3ZACYqGLWfbixj1p-34" value="approve" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="980" y="1220" width="40" height="20" as="geometry" />
+          <mxGeometry x="980" y="1340" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-2" target="cbtD3ZACYqGLWfbixj1p-10">
           <mxGeometry relative="1" as="geometry" />
@@ -283,13 +283,28 @@
         <mxCell id="xtFz185AWcqJHEBAqPvH-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-2" target="cbtD3ZACYqGLWfbixj1p-5">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1090" y="640" />
+              <mxPoint x="1090" y="680" />
               <mxPoint x="1090" y="530" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="xtFz185AWcqJHEBAqPvH-2" value="D/DMO Reviews" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="930" y="600" width="80" height="80" as="geometry" />
+          <mxGeometry x="930" y="640" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xtFz185AWcqJHEBAqPvH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xtFz185AWcqJHEBAqPvH-7" target="cbtD3ZACYqGLWfbixj1p-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xtFz185AWcqJHEBAqPvH-7" value="DMO Submits for review" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xtFz185AWcqJHEBAqPvH-9" value="D/DMO Reviews&lt;br&gt;Approve/Reject" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="910" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xtFz185AWcqJHEBAqPvH-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cbtD3ZACYqGLWfbixj1p-5" target="xtFz185AWcqJHEBAqPvH-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="970" y="560" as="sourcePoint" />
+            <mxPoint x="970" y="630" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
