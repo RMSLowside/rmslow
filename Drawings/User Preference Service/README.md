@@ -1,6 +1,6 @@
 # User Preference Service
 
-The User Preference Service will be a 
+The User Preferences Service will capture and store user preferences that would persist between sessions.  The service would also allow users to access and manage their personal preferences to tailor their application environment for an optimal user experience.
 
 ## **Components**
 ### Datastore
