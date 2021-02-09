@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-09T13:29:59.567Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="XFzJ2bEyDOY0C9GXsaaQ" version="14.3.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-02-09T14:08:34.072Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="bAim6J0k2GKg_CAu2BZy" version="14.3.0" type="github" pages="3">
   <diagram id="JnkVonY7q76SSW1olmCY" name="Rules Audit UI">
     <mxGraphModel dx="2522" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1863,73 +1863,6 @@
         </mxCell>
         <mxCell id="BTVQxWk5bwtOSULAfJKO-62" value="Rules Filter" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#996185;fontSize=10;fillColor=#FFFFFF;" parent="U2adl9n7uSknv8khEF7y-1" vertex="1">
           <mxGeometry x="227" y="-1590" width="100" height="43" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="nQ3oGP9uqPVTF6VbZXW3" name="Page-4">
-    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="waBeYOowaOAg33urCILE-0" />
-        <mxCell id="waBeYOowaOAg33urCILE-1" parent="waBeYOowaOAg33urCILE-0" />
-        <mxCell id="waBeYOowaOAg33urCILE-2" value="Rule" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="150" y="210" width="160" height="230" as="geometry">
-            <mxRectangle x="150" y="210" width="60" height="26" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-3" value="- uuid: int&#xa;-  name: String&#xa;- system: String&#xa;- description: String&#xa;- conditions: RuleCondition[]&#xa;- status: String&#xa;- priority: int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="waBeYOowaOAg33urCILE-2">
-          <mxGeometry y="30" width="160" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="waBeYOowaOAg33urCILE-2">
-          <mxGeometry y="140" width="160" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-5" value="+ [getters/setters]&#xa;+ getActions(): RuleAction[]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="waBeYOowaOAg33urCILE-2">
-          <mxGeometry y="148" width="160" height="82" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-11" value="RuleAction" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="480" y="253" width="160" height="160" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-12" value="- uuid: int&#xa;- ruleId: int&#xa;- date: Date&#xa;- action: String&#xa;- reviewer: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="waBeYOowaOAg33urCILE-11">
-          <mxGeometry y="26" width="160" height="84" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-13" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;" vertex="1" parent="waBeYOowaOAg33urCILE-11">
-          <mxGeometry y="110" width="160" height="8" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-14" value="(no methods)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="waBeYOowaOAg33urCILE-11">
-          <mxGeometry y="118" width="160" height="42" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-15" value="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="310" y="300" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-16" value="0..*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="440" y="300" width="40" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-19" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.013;entryY=0.745;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="waBeYOowaOAg33urCILE-1" source="waBeYOowaOAg33urCILE-12" target="waBeYOowaOAg33urCILE-3">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="420" as="sourcePoint" />
-            <mxPoint x="450" y="370" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-20" value="Rule" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="170" y="60" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-21" value="has many" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="360" y="60" width="80" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-22" value="RuleAction" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="waBeYOowaOAg33urCILE-1">
-          <mxGeometry x="520" y="60" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-24" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="waBeYOowaOAg33urCILE-1" source="waBeYOowaOAg33urCILE-20" target="waBeYOowaOAg33urCILE-21">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="420" as="sourcePoint" />
-            <mxPoint x="450" y="370" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="waBeYOowaOAg33urCILE-26" value="" style="endArrow=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="waBeYOowaOAg33urCILE-1" source="waBeYOowaOAg33urCILE-21" target="waBeYOowaOAg33urCILE-22">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="420" as="sourcePoint" />
-            <mxPoint x="450" y="370" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
