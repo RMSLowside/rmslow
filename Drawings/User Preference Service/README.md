@@ -11,7 +11,7 @@ The User Preferences Service will capture and store user preferences that would 
 
 ## Drawings
 
-Dashboard draw.io here: [draw.io here]
+Dashboard draw.io here: [https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FUser%20Preference%20Service%2FUser%20Preference.drawio]
 
 View Only draw.io here:
 
@@ -28,10 +28,11 @@ View Only draw.io here:
 ### What: Create a microservice that captures and stores user preferences in applications.
 
 
-### Why:
+### Why: Provides a custom tailored application experience.
 
 
 ### Acceptance Criteria:
 1.  As a user, I can set a preference and it persists from session to session.
 2.  As a user, I can change a preference and it persists from session to session.
-3,  As a user, I have a central place to view my user settings.
+3.  As a user, I have a central place to view my user preferences.
+4.  As a user, I have the ability to reset preferences to the default settings.
