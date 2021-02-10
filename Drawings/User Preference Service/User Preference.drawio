@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-10T18:36:55.224Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="oRAlvFtqmdX6P8EvCRKg" version="14.3.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-02-10T18:37:15.928Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="IOUjBRQqxjZ-k3LltiKG" version="14.3.0" type="github" pages="2">
   <diagram id="WPIGd1P5IR4SWYrxd255" name="Thoughts">
     <mxGraphModel dx="868" dy="850" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -369,7 +369,7 @@
           <mxGeometry x="533" y="2079" width="964" height="24" as="geometry" />
         </mxCell>
         <mxCell id="vLLZLHVYE7Vc_knAjPK1-28" value="Search" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=21;fontColor=#0288D1;fontStyle=1;" vertex="1" parent="DMS-eXMD5WUmatszE8yT-1">
-          <mxGeometry x="822" y="2291" width="40" height="20" as="geometry" />
+          <mxGeometry x="817" y="2294" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="vLLZLHVYE7Vc_knAjPK1-29" value="Appearance&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=21;fontColor=#000000;" vertex="1" parent="DMS-eXMD5WUmatszE8yT-1">
           <mxGeometry x="664" y="2291" width="40" height="20" as="geometry" />
