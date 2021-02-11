@@ -41,6 +41,23 @@ The following information will be stored.
 }
 ```
 
+### Potential use case for Graph database? (Neo4j / AWS Neptune)
+
+Given that this system deals with tracing paths between various states, this could potentially be stored as a directed graph.
+Advantages / Disadvantages:
++ Mature Query language options (Cypher QL for Neo4j, Gremlin/SPARQL for Neptune)
++ ACID-compliant, transactional
++ Native support for REST API
++ Support for custom procedures in Java; procedures are custom code that could be added to Neo4J to write custom querying of data that can be invoked using the REST API
++ data exports into JSON / XSL formats, and data imports in similar formats or even straight from a RDB
++ UI exists for running queries and visualizing the output
++ UI access controlled by User credentials allows for neat access controls
++ complex join queries going between various lookup tables and indexing multiple times are not necessary with a graph
+- Query latency tied to graph traversal, so unsure how long queries will have to run if you have to go from one side of the graph to the other
+- Graphs are more optimized for looking up relationships between nodes, so looking up multiple nodes' information is not the most efficient
+- Ability to use Neptune for greater scalability concerns?
+- Differing query languages between Neo4j and Neptune (just adds to the learning curve)
+
 Valid Event Types
 ```
 OBJECT_CREATE - new object created.
