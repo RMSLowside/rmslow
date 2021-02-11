@@ -41,6 +41,15 @@ The following information will be stored.
 }
 ```
 
+Valid Event Types
+```
+OBJECT_CREATE - new object created.
+OBJECT_DELETE - object deleted/dispositioned.
+OBJECT_UPDATE - object was replaced by new version. (eg PDF update)
+OBJECT_CLONE - object copied into new system. Object now exists in N+1 systems (eg IDL to IMAP)
+OBJECT_METADATA - metadata was associated with the object has been updated/deleted
+```
+
 ### Potential use case for Graph database? (Neo4j / AWS Neptune)
 
 Given that this system deals with tracing paths between various states, this could potentially be stored as a directed graph.
@@ -60,15 +69,6 @@ Disadvantages:
 - Graphs are more optimized for looking up relationships between nodes, so looking up multiple nodes' information is not the most efficient
 - Ability to use Neptune for greater scalability concerns?
 - Differing query languages between Neo4j and Neptune (just adds to the learning curve)
-
-Valid Event Types
-```
-OBJECT_CREATE - new object created.
-OBJECT_DELETE - object deleted/dispositioned.
-OBJECT_UPDATE - object was replaced by new version. (eg PDF update)
-OBJECT_CLONE - object copied into new system. Object now exists in N+1 systems (eg IDL to IMAP)
-OBJECT_METADATA - metadata was associated with the object has been updated/deleted
-```
 
 ## API
 The P&L Service will be kept simple as possible to handle the large quantity of objects and api calls coming from 
