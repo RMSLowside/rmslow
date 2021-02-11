@@ -11,7 +11,7 @@ The User Preferences Service will capture and store user preferences that would 
 
 ## Drawings
 
-Dashboard draw.io here: [https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FUser%20Preference%20Service%2FUser%20Preference.drawio]
+Dashboard draw.io [here]: (https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FUser%20Preference%20Service%2FUser%20Preference.drawio)
 
 View Only draw.io here:
 
