@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-12T13:23:15.632Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="Ik2UX5IHmFFsHBIMKm69" version="14.3.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-02-12T13:24:44.327Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="Tpqc7SyUrvQ_LCl18ZpM" version="14.3.0" type="github" pages="5">
   <diagram id="zN0O8GpO3P3C1JhYR0OU" name="Info">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -784,7 +784,7 @@
         <mxCell id="tyR9UxVt1tzF3i0L8Tgb-18" value="OBJECT_DELETE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-30;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="930" y="180" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="tyR9UxVt1tzF3i0L8Tgb-20" value="For visualization, you can query just this object, its states, and the people that modified it: (in Cypher QL)&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Lucida Console&quot;&gt;MATCH (o:Object {id: 1234})-[*1..2]-(nodes) return o, nodes&lt;/font&gt;&lt;br&gt;&lt;br&gt;This query would grab the root node (Object with id 1234) and all nodes 2 steps away from it (which in this case would be the ObjectStates and the Person nodes that acted upon them).&lt;br&gt;Additional resource: &lt;a href=&quot;https://www.youtube.com/watch?v=Cm1yd8d7qv0&amp;amp;feature=emb_logo&quot;&gt;A Neo4j video on how to do versioning&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+        <mxCell id="tyR9UxVt1tzF3i0L8Tgb-20" value="For visualization, you can query just this object and things related to it: (in Cypher QL)&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Lucida Console&quot;&gt;MATCH (o:Object {id: 1234})-[*1..2]-(nodes) return o, nodes&lt;/font&gt;&lt;br&gt;&lt;br&gt;This query would grab the root node (Object with id 1234) and all nodes 2 steps away from it (which in this case would be the ObjectStates and the Person nodes that acted upon them).&lt;br&gt;Additional resource: &lt;a href=&quot;https://www.youtube.com/watch?v=Cm1yd8d7qv0&amp;amp;feature=emb_logo&quot;&gt;A Neo4j video on how to do versioning&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="-20" y="610" width="630" height="100" as="geometry" />
         </mxCell>
       </root>
