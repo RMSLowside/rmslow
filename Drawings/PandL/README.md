@@ -70,7 +70,7 @@ Disadvantages:
 - Ability to use Neptune in our environment?
 - Differing query languages between Neo4j and Neptune (just adds to the learning curve)
 
-However, although graph databases seem quite powerful if you hold the object state, since we probably won't have much stored about the objects themselves it may be overkill to build a graph. Standard tables should work well enough, but if there is a reason to hold state information (or perhaps another reason to use a graph?) then it is theoretically possible to structure the data in this way.
+However, although graph databases seem quite powerful if you hold the object state, since we probably won't have much stored about the objects themselves it may be overkill to build a graph. Standard tables should work well enough (there likely will not be any really complex joins either), but if there is a reason to hold state information (or perhaps another reason to use a graph?) then it is theoretically possible to structure the data in this way.
 There's a rudimentary example of how this might be structured in the DrawIO (on the tab labeled 'Graph DB Example').
 
 ## API
