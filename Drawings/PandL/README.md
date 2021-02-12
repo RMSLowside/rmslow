@@ -52,7 +52,7 @@ OBJECT_METADATA - metadata was associated with the object has been updated/delet
 
 ### Potential use case for Graph database? (Neo4j / AWS Neptune)
 
-Given that this system deals with tracing paths between various states, this could potentially be stored as a directed graph.
+Given that this system deals with tracking an object as it switches between various states, this could potentially be stored as a directed graph.
 
 Advantages:
 + Mature Query language options (Cypher QL for Neo4j, Gremlin/SPARQL for Neptune)
@@ -69,6 +69,9 @@ Disadvantages:
 - Graphs are more optimized for looking up relationships between nodes, so looking up multiple nodes' information is not the most efficient
 - Ability to use Neptune for greater scalability concerns?
 - Differing query languages between Neo4j and Neptune (just adds to the learning curve)
+
+There's a rudimentary example of how this might be structured in the DrawIO (on the tab labeled 'Graph DB Example').
+
 
 ## API
 The P&L Service will be kept simple as possible to handle the large quantity of objects and api calls coming from 
