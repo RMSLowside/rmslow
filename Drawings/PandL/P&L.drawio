@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-12T13:02:40.185Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="Dp0ZlJK2NGrlV6xpjz54" version="14.3.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-02-12T13:07:56.480Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="3ahSHMieElN403qyOC0d" version="14.3.0" type="github" pages="5">
   <diagram id="zN0O8GpO3P3C1JhYR0OU" name="Info">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -643,7 +643,7 @@
         <mxCell id="SeFDAFTBHVMCc2Hpnk3b-17" value="from: 20210101&lt;br&gt;to:20210128" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.42;position2=0.75;direction=west;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="75" y="170" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="t8K0UleFzupTOeHjdPvZ-0" value="Each State contains all the elements of a particular object we want to track" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+        <mxCell id="t8K0UleFzupTOeHjdPvZ-0" value="state: &quot;created&quot;&lt;br&gt;location: &quot;System EFG&quot;&lt;br&gt;&lt;br&gt;whatever else we want to store about the object state" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="140" y="-110" width="120" height="140" as="geometry" />
         </mxCell>
         <mxCell id="JFffdxgfTsY2jG59JmVR-0" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="SeFDAFTBHVMCc2Hpnk3b-1" source="SeFDAFTBHVMCc2Hpnk3b-3" target="SeFDAFTBHVMCc2Hpnk3b-4">
@@ -700,16 +700,16 @@
         <mxCell id="7mjcZJMw9UbUeVvr0WpK-9" value="OBJECT_UPDATE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=10;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="350" y="290" width="150" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="7mjcZJMw9UbUeVvr0WpK-10" value="eventSystem: ABC&lt;br&gt;eventNotes: lorem ipsum&lt;br&gt;eventType: OBJECT_CREATE&lt;br&gt;(perhaps unneeded)" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
-          <mxGeometry x="410" y="-50" width="120" height="170" as="geometry" />
+        <mxCell id="7mjcZJMw9UbUeVvr0WpK-10" value="eventSystem: &quot;ABC&quot;&lt;br&gt;eventNotes: &quot;lorem ipsum&quot;&lt;br&gt;eventType: &quot;OBJECT_CREATE&quot;&lt;br&gt;(perhaps unneeded)" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+          <mxGeometry x="410" y="-50" width="130" height="170" as="geometry" />
         </mxCell>
         <mxCell id="7mjcZJMw9UbUeVvr0WpK-11" value="OBJECT_METADATA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-40;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="380" y="440" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="7mjcZJMw9UbUeVvr0WpK-12" value="eventSystem: XYZ&lt;br&gt;(perhaps eventCn?)&lt;br&gt;eventNotes: blah" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.38;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+        <mxCell id="7mjcZJMw9UbUeVvr0WpK-12" value="eventSystem: &quot;XYZ&quot;&lt;br&gt;(perhaps eventCn?)&lt;br&gt;eventNotes: &quot;blah&quot;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.38;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="425" y="220" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="7mjcZJMw9UbUeVvr0WpK-13" value="eventSystem: XYZ&lt;br&gt;eventNotes: blah" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;direction=west;position2=0.83;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+        <mxCell id="7mjcZJMw9UbUeVvr0WpK-13" value="eventSystem: &quot;ABC&quot;&lt;br&gt;eventNotes: &quot;blah&quot;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;direction=west;position2=0.83;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="420" y="480" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="tyR9UxVt1tzF3i0L8Tgb-0" value="(This only contains the id on purpose, everything else goes in a state node)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
