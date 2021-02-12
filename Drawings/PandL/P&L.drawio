@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-12T13:07:56.480Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="3ahSHMieElN403qyOC0d" version="14.3.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-02-12T13:19:06.525Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.146 Safari/537.36" etag="ygmR2spJGx8Fy2eijdEu" version="14.3.0" type="github" pages="5">
   <diagram id="zN0O8GpO3P3C1JhYR0OU" name="Info">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -643,8 +643,8 @@
         <mxCell id="SeFDAFTBHVMCc2Hpnk3b-17" value="from: 20210101&lt;br&gt;to:20210128" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;size=30;position=0.42;position2=0.75;direction=west;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="75" y="170" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="t8K0UleFzupTOeHjdPvZ-0" value="state: &quot;created&quot;&lt;br&gt;location: &quot;System EFG&quot;&lt;br&gt;&lt;br&gt;whatever else we want to store about the object state" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
-          <mxGeometry x="140" y="-110" width="120" height="140" as="geometry" />
+        <mxCell id="t8K0UleFzupTOeHjdPvZ-0" value="state: &quot;created&quot;&lt;br&gt;location: &quot;System EFG&quot;&lt;br&gt;&lt;br&gt;whatever else we want to store about the object state to show what gets updated" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+          <mxGeometry x="140" y="-150" width="120" height="180" as="geometry" />
         </mxCell>
         <mxCell id="JFffdxgfTsY2jG59JmVR-0" value="" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="SeFDAFTBHVMCc2Hpnk3b-1" source="SeFDAFTBHVMCc2Hpnk3b-3" target="SeFDAFTBHVMCc2Hpnk3b-4">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -784,7 +784,7 @@
         <mxCell id="tyR9UxVt1tzF3i0L8Tgb-18" value="OBJECT_DELETE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=-30;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="930" y="180" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="tyR9UxVt1tzF3i0L8Tgb-20" value="For visualization, you can query just this object, its states, and the people that modified it: (in Cypher QL)&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Lucida Console&quot;&gt;MATCH (o:Object {id: 1234})-[*1..2]-(nodes) return o, nodes&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
+        <mxCell id="tyR9UxVt1tzF3i0L8Tgb-20" value="For visualization, you can query just this object, its states, and the people that modified it: (in Cypher QL)&lt;br&gt;&lt;br&gt;&lt;font face=&quot;Lucida Console&quot;&gt;MATCH (o:Object {id: 1234})-[*1..2]-(nodes) return o, nodes&lt;/font&gt;&lt;br&gt;&lt;br&gt;Additional resource: &lt;a href=&quot;https://www.youtube.com/watch?v=Cm1yd8d7qv0&amp;amp;feature=emb_logo&quot;&gt;A Neo4j video on how to do versioning&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;" vertex="1" parent="SeFDAFTBHVMCc2Hpnk3b-1">
           <mxGeometry x="20" y="620" width="630" height="100" as="geometry" />
         </mxCell>
       </root>
