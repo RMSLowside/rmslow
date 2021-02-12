@@ -67,11 +67,11 @@ Advantages:
 Disadvantages:
 - Query latency tied to graph traversal, so unsure how long queries will have to run if you have to go from one side of the graph to the other
 - Graphs are more optimized for looking up relationships between nodes, so looking up multiple nodes' information is not the most efficient
-- Ability to use Neptune for greater scalability concerns?
+- Ability to use Neptune in our environment?
 - Differing query languages between Neo4j and Neptune (just adds to the learning curve)
 
+However, although graph databases seem quite powerful if you hold the object state, since we probably won't have much stored about the objects themselves it may be overkill to build a graph. Standard tables should work well enough, but if there is a reason to hold state information (or perhaps another reason to use a graph?) then it is theoretically possible to structure the data in this way.
 There's a rudimentary example of how this might be structured in the DrawIO (on the tab labeled 'Graph DB Example').
-
 
 ## API
 The P&L Service will be kept simple as possible to handle the large quantity of objects and api calls coming from 
