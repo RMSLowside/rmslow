@@ -4,7 +4,7 @@ The User Preferences Service will capture and store user preferences that would 
 
 ## To Solve
 User prefs is supposed to be a micro service that would support non-RMS apps.
-- We need to define how we add a new service
+- We need to define how we add a new service (particularly for non-RMS managed services)
 - How those new features get onto the prefs UI.  Can the UI be built dynamically from a table or ______???
 - Define standards for things like dark theme, rows on a table, etc.  
 
