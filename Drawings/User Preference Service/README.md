@@ -12,14 +12,46 @@ User prefs is supposed to be a micro service that would support non-RMS apps.
 
 ## **Components**
 ## Datastore
+The following information will be stored.
+
+##### userPreference
+
+```json5
+{
+  uuid: "internal unique key",
+  application: "preference location: Global Preferences, RCS, IMA, Eva, SCGR, MarkId, etc",
+  category: "preference category such as theme, profile, search, appearance etc"
+}
+```
+
+## API
+
+### Get user preferences for selected user
+```
+ngimws/preference/{userId}
+RequestType = GET
+RequestParms = {userId}
+```
+* Gets user preferences for selected user
+
+### Update user preferences
+```
+ngimws/preference/{userId}
+RequestType = POST
+RequestParms = {userId}
+RequrestBody = Preference POJO
+```
+* Update user preference
 
 ## SDK
+
+
 
 ## **UI**
 
 ## Drawings
 
-Dashboard draw.io [here]: (https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FUser%20Preference%20Service%2FUser%20Preference.drawio)
+Dashboard draw.io: [here](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FUser%20Preference%20Service%2FUser%20Preference.drawio)
 
 View Only draw.io here:
 
