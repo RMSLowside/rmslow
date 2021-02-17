@@ -14,25 +14,56 @@ User prefs is supposed to be a micro service that would support non-RMS apps.
 ## Datastore
 The following information will be stored.
 
-##### userPreference
-
+### preference
 ```json5
 {
   uuid: "internal unique key",
-  application: "preference location: Global Preferences, RCS, IMA, Eva, SCGR, MarkId, etc",
-  category: "preference category such as theme, profile, search, appearance etc"
+  systemName: "Name of the system preference belongs to. ex. iServices ",
+  applicationName: "Name of the application or sub category of preference. Global Preferences, RCS, IMA, Eva, SCGR, MarkId, etc",
+  category: "preference category. Theme, profile, search, appearance etc"
+}
+```
+
+### preferenceOptions
+```json5
+{
+  uuid: "internal unique key",
+  refId: "foreign key tied to reference table",
+  type: "type of selection: dropdown, number etc. field will be used if external service will use our UI."
+  options: "options applicable to the category"
+}
+```
+
+### userPreference
+```json5
+{
+  uuid: "internal unique key",
+  refId: "foreign key tied to reference table",  
+  userName: "user full name",
+  userId: "",
+  userCN: "",
+  value: "value of users selection"
 }
 ```
 
 ## API
 
-### Get user preferences for selected user
+### Add Preference
+```
+ngimws/preference
+RequestType = POST
+RequestParam
+RequestBody = List<PreferenceOptions>
+```
+* add preference
+
+### Get user preference for user
 ```
 ngimws/preference/{userId}
 RequestType = GET
 RequestParms = {userId}
 ```
-* Gets user preferences for selected user
+* Gets user preference
 
 ### Update user preferences
 ```
@@ -44,8 +75,6 @@ RequrestBody = Preference POJO
 * Update user preference
 
 ## SDK
-
-
 
 ## **UI**
 
