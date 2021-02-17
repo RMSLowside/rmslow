@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-17T13:54:06.195Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="YJyzN2FdsC2LnQ-2uDUo" version="14.3.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-02-17T13:57:41.951Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36" etag="xunhf1YUvCefUmR_NZsT" version="14.3.2" type="github" pages="2">
   <diagram id="u19ZEMzb4xL3nT7dDBoH" name="Disposition">
     <mxGraphModel dx="1635" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -307,6 +307,12 @@
         </mxCell>
         <mxCell id="0kQzc2dbmu2aIp_ph2vn-23" value="RMM is updated with results" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="4fSJCAxQdGxjCxuYD4hq-1" vertex="1">
           <mxGeometry x="930" y="1460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_RJlTEC7HtZifwJN0CAb-0" value="Message on queue for 14 days" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4fSJCAxQdGxjCxuYD4hq-1">
+          <mxGeometry x="1070" y="1060" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_RJlTEC7HtZifwJN0CAb-2" value="pulled from queue" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4fSJCAxQdGxjCxuYD4hq-1">
+          <mxGeometry x="945" y="1120" width="40" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
