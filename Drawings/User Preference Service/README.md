@@ -28,9 +28,10 @@ The following information will be stored.
 ```json5
 {
   uuid: "internal unique key",
-  refId: "foreign key tied to reference table",
-  type: "type of selection: dropdown, number etc. field will be used if external service will use our UI."
-  options: "options applicable to the category"
+  prefId: "foreign key tied to reference table",
+  type: "type of selection: dropdown, number etc. field will be used if external service will use our UI.",
+  options: "options applicable to the category",
+  default: "default selection for preference option"
 }
 ```
 
@@ -38,10 +39,8 @@ The following information will be stored.
 ```json5
 {
   uuid: "internal unique key",
-  refId: "foreign key tied to reference table",  
-  userName: "user full name",
-  userId: "",
-  userCN: "",
+  prefId: "foreign key tied to reference table",  
+  ainNumber: "ain number of user",
   value: "value of users selection"
 }
 ```
@@ -52,7 +51,6 @@ The following information will be stored.
 ```
 ngimws/preference
 RequestType = POST
-RequestParam
 RequestBody = List<PreferenceOptions>
 ```
 * add preference
@@ -68,11 +66,36 @@ RequestParms = {userId}
 ### Update user preferences
 ```
 ngimws/preference/{userId}
-RequestType = POST
+RequestType = UPDATE
 RequestParms = {userId}
 RequrestBody = Preference POJO
 ```
 * Update user preference
+
+### Reset user preference
+```
+ngimws/preference/{userId}
+RequestType = UPDATE
+RequestParms = {userId}{appName}
+```
+* Reset user preference to default values for user
+
+### Reset all user preference
+```
+ngimws/preference/{appName}
+RequestType = UPDATE
+RequestParms = {appName}
+```
+* Reset all user preference for application
+
+## Delete preference
+```
+ngimws/preference/{userId}
+RequestType = DELETE
+RequestParms = {userId}
+RequrestBody = Preference POJO
+```
+* delete preference
 
 ## SDK
 
