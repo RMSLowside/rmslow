@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-23T14:47:18.871Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="CmP9r0ZB3nOYKlIz4L-W" version="14.3.1" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-02-23T14:48:40.461Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="ntUuvexdGrku7-c4MeO2" version="14.3.1" type="github" pages="4">
   <diagram id="9W2wLLliIjkz___lpmyt" name="OLD - IMA Process Workflow - OLD">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1665,8 +1665,8 @@
         <mxCell id="SJw1eKubHwrvgVQfSb9l-1" value="&lt;span&gt;Perhaps a vertical &lt;br&gt;bar graph?&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="RIaHg2EdIce3mso3oA9U-1">
           <mxGeometry x="3008" y="-181" width="175" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="SJw1eKubHwrvgVQfSb9l-60" value="Could have scroll bars vertical and&lt;br&gt;horizontal if needed, maybe anchor the&lt;br&gt;names on the left; perhaps also have&lt;br&gt;labels on the bars themselves, or have&lt;br&gt;hover text for additional info?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="RIaHg2EdIce3mso3oA9U-1">
-          <mxGeometry x="2962" y="-74" width="301" height="149" as="geometry" />
+        <mxCell id="SJw1eKubHwrvgVQfSb9l-60" value="Could have scroll bars vertical and&lt;br&gt;horizontal if needed, maybe anchor the&lt;br&gt;names on the left; perhaps also have&lt;br&gt;labels on the bars themselves, or have&lt;br&gt;hover text for additional info, like who &lt;br&gt;it was assigned to, etc?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="RIaHg2EdIce3mso3oA9U-1">
+          <mxGeometry x="2962" y="-105" width="323" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
