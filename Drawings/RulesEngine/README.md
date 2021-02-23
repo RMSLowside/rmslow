@@ -49,6 +49,7 @@ The Rules Engine is a key component in the suite of records management applicati
 ```
 ngimws/rules
 RequestType = GET
+ResponseType = Rule[]
 ```
 * Gets all rules
 
@@ -57,6 +58,7 @@ RequestType = GET
 ngimws/rules/{query}
 RequestType = GET
 RequestParms = {query}
+ResponseType = Rule[]
 ```
 * Gets rules by facet
 
@@ -64,15 +66,17 @@ RequestParms = {query}
 ```
 ngimws/rules/{sysmtemId}
 RequestType = GET
-RequestParms = {sysmtemId}
+RequestParms = {systemId}
+ResponseType = Rule[]
 ```
 * Gets rules for selected system
 
-### Get Rule
+### Get Rule by Id
 ```
 ngimws/rules/{ruleId}
 RequestType = GET
 RequestParms = {ruleId}
+ResponseType = Rule
 ```
 * Gets rule detail
 
@@ -81,6 +85,7 @@ RequestParms = {ruleId}
 ngimws/rules/history/{ruleId}
 RequestType = GET
 RequestParms = {ruleId}{dateRange}
+ResponseType = Json
 ```
 * Get rule history for selected rule for the date range, default date range to 30 days
 
@@ -89,14 +94,26 @@ RequestParms = {ruleId}{dateRange}
 ngimws/rules/match/{ruleId}
 RequestType = GET
 RequestParms = {ruleId}{count}
+ResponseType = Json
 ```
 * Returns list of x number of recent matches
+
+### Create Rule
+```
+ngimws/rules/match/create
+RequestType = POST
+RequestBody = Rule{}
+ResponseType = Rule
+```
+
+* Create a new rule
 
 ### Archive Rule
 ```
 ngimws/rules/archive
 RequestType = POST
 RequestParms = {ruleId}
+ResponseType = boolean (success / fail)
 ```
 * Archive rule
 
@@ -105,6 +122,7 @@ RequestParms = {ruleId}
 ngimws/rules/approve
 RequestType = POST
 RequestParms = {ruleId}
+ResponseType = Rule
 ```
 * Approve rule
 
