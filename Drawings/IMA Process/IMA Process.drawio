@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-02-24T13:46:21.977Z" agent="5.0 (Windows)" etag="8ApSa3VQ-x_NTnQgvXkb" version="14.4.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-02-24T14:29:41.471Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="E6waItpzUP8l0XZnyjYX" version="14.4.2" type="github" pages="4">
   <diagram id="9W2wLLliIjkz___lpmyt" name="OLD - IMA Process Workflow - OLD">
-    <mxGraphModel dx="1422" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="wfvqPyZ1mpEepuq5jgTv-0" />
         <mxCell id="wfvqPyZ1mpEepuq5jgTv-1" parent="wfvqPyZ1mpEepuq5jgTv-0" />
@@ -179,7 +179,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8BfEsK64Uzmx8nrZN77Z" name="IMA Dashboard">
-    <mxGraphModel dx="3022" dy="2067" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3336" dy="2100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="RIaHg2EdIce3mso3oA9U-0" />
         <mxCell id="RIaHg2EdIce3mso3oA9U-1" parent="RIaHg2EdIce3mso3oA9U-0" />
@@ -1677,16 +1677,16 @@
         <mxCell id="K5CBC9q48cTaOVGb7EQ_-79" value="February 19, 2021" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" parent="K5CBC9q48cTaOVGb7EQ_-15" vertex="1">
           <mxGeometry x="14" y="133" width="118" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="INDy7z9S_t7mawoKOjOL-0" value="February 21, 2021" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
+        <mxCell id="INDy7z9S_t7mawoKOjOL-0" value="February 21, 2021" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" parent="K5CBC9q48cTaOVGb7EQ_-15" vertex="1">
           <mxGeometry x="171" y="135" width="118" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="INDy7z9S_t7mawoKOjOL-1" value="&lt;div&gt;With IT since February 23, 2021&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
+        <mxCell id="INDy7z9S_t7mawoKOjOL-1" value="&lt;div&gt;With IT since February 23, 2021&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" parent="K5CBC9q48cTaOVGb7EQ_-15" vertex="1">
           <mxGeometry x="320" y="138" width="118" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="INDy7z9S_t7mawoKOjOL-2" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
+        <mxCell id="INDy7z9S_t7mawoKOjOL-2" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" parent="K5CBC9q48cTaOVGb7EQ_-15" vertex="1">
           <mxGeometry x="130" y="138" width="11" height="8.8" as="geometry" />
         </mxCell>
-        <mxCell id="INDy7z9S_t7mawoKOjOL-3" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
+        <mxCell id="INDy7z9S_t7mawoKOjOL-3" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" parent="K5CBC9q48cTaOVGb7EQ_-15" vertex="1">
           <mxGeometry x="299" y="135" width="11" height="8.8" as="geometry" />
         </mxCell>
         <mxCell id="SJw1eKubHwrvgVQfSb9l-1" value="&lt;span&gt;Perhaps a vertical &lt;br&gt;bar graph?&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="RIaHg2EdIce3mso3oA9U-1" vertex="1">
@@ -1694,6 +1694,9 @@
         </mxCell>
         <mxCell id="SJw1eKubHwrvgVQfSb9l-60" value="Could have scroll bars vertical and&lt;br&gt;horizontal if needed, maybe anchor the&lt;br&gt;names on the left; perhaps also have&lt;br&gt;labels on the bars themselves, or have&lt;br&gt;hover text for additional info, like who &lt;br&gt;it was assigned to, etc?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" parent="RIaHg2EdIce3mso3oA9U-1" vertex="1">
           <mxGeometry x="2962" y="-105" width="323" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="0SKObi6wWbmUpQxZhF88-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/simplicio/128x128/folder_warning.png" vertex="1" parent="RIaHg2EdIce3mso3oA9U-1">
+          <mxGeometry x="1414" y="-482" width="128" height="128" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
