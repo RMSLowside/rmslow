@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-24T13:45:12.468Z" agent="5.0 (Windows)" etag="HE03mBCnNtXmtPz7WusQ" version="14.4.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-02-24T13:46:21.977Z" agent="5.0 (Windows)" etag="8ApSa3VQ-x_NTnQgvXkb" version="14.4.2" type="github" pages="4">
   <diagram id="9W2wLLliIjkz___lpmyt" name="OLD - IMA Process Workflow - OLD">
     <mxGraphModel dx="1422" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1682,6 +1682,12 @@
         </mxCell>
         <mxCell id="INDy7z9S_t7mawoKOjOL-1" value="&lt;div&gt;With IT since February 23, 2021&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#999999;" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
           <mxGeometry x="320" y="138" width="118" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="INDy7z9S_t7mawoKOjOL-2" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
+          <mxGeometry x="130" y="138" width="11" height="8.8" as="geometry" />
+        </mxCell>
+        <mxCell id="INDy7z9S_t7mawoKOjOL-3" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check" vertex="1" parent="K5CBC9q48cTaOVGb7EQ_-15">
+          <mxGeometry x="299" y="135" width="11" height="8.8" as="geometry" />
         </mxCell>
         <mxCell id="SJw1eKubHwrvgVQfSb9l-1" value="&lt;span&gt;Perhaps a vertical &lt;br&gt;bar graph?&lt;/span&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="RIaHg2EdIce3mso3oA9U-1" vertex="1">
           <mxGeometry x="3008" y="-181" width="175" height="80" as="geometry" />
