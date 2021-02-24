@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-02-24T14:40:04.064Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="QfP-kLiL3M8C0-ZNLkpa" version="14.4.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-02-24T18:44:17.631Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36" etag="v2dOibjysCGgdwz7CjPv" version="14.4.2" type="github" pages="4">
   <diagram id="9W2wLLliIjkz___lpmyt" name="OLD - IMA Process Workflow - OLD">
     <mxGraphModel dx="868" dy="450" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -179,7 +179,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8BfEsK64Uzmx8nrZN77Z" name="IMA Dashboard">
-    <mxGraphModel dx="5072" dy="3000" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3816" dy="2100" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="RIaHg2EdIce3mso3oA9U-0" />
         <mxCell id="RIaHg2EdIce3mso3oA9U-1" parent="RIaHg2EdIce3mso3oA9U-0" />
@@ -585,8 +585,8 @@
         <mxCell id="Aohobg9WkplTmHid20kJ-39" value="December 23, 2020" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;fontColor=#B3B3B3;" parent="Aohobg9WkplTmHid20kJ-36" vertex="1">
           <mxGeometry x="313" width="248" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="d_5cActOekL9p3jgvR9e-73" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.critical;fontSize=14;fontColor=#FFFFFF;fillColor=#FF8000;" parent="RIaHg2EdIce3mso3oA9U-35" vertex="1">
-          <mxGeometry x="29" y="217" width="21" height="21" as="geometry" />
+        <mxCell id="MlWj27SjKLlWab0ltKFj-0" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_48-128.png" vertex="1" parent="RIaHg2EdIce3mso3oA9U-35">
+          <mxGeometry x="33" y="172" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="RIaHg2EdIce3mso3oA9U-47" value="DMO View" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=18;fontStyle=1" parent="RIaHg2EdIce3mso3oA9U-1" vertex="1">
           <mxGeometry x="33" y="-908" width="98" height="26" as="geometry" />
@@ -1347,8 +1347,8 @@
         <mxCell id="1bK7WGt_RngYVN3RoiwW-28" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.critical;fontSize=14;fontColor=#FFFFFF;fillColor=#FF0000;" parent="1bK7WGt_RngYVN3RoiwW-0" vertex="1">
           <mxGeometry x="36" y="133.00314769975805" width="21" height="19.053658536585385" as="geometry" />
         </mxCell>
-        <mxCell id="1bK7WGt_RngYVN3RoiwW-53" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.critical;fontSize=14;fontColor=#FFFFFF;fillColor=#FF8000;" parent="1bK7WGt_RngYVN3RoiwW-0" vertex="1">
-          <mxGeometry x="36" y="169.9970731707318" width="21" height="19.053658536585385" as="geometry" />
+        <mxCell id="0SKObi6wWbmUpQxZhF88-40" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_48-128.png" parent="1bK7WGt_RngYVN3RoiwW-0" vertex="1">
+          <mxGeometry x="30" y="164" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="1bK7WGt_RngYVN3RoiwW-29" value="Optional Cards" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="RIaHg2EdIce3mso3oA9U-1" vertex="1">
           <mxGeometry x="1532" y="-846" width="141" height="20" as="geometry" />
@@ -1694,9 +1694,6 @@
         </mxCell>
         <mxCell id="SJw1eKubHwrvgVQfSb9l-60" value="Could have scroll bars vertical and&lt;br&gt;horizontal if needed, maybe anchor the&lt;br&gt;names on the left; perhaps also have&lt;br&gt;labels on the bars themselves, or have&lt;br&gt;hover text for additional info, like who &lt;br&gt;it was assigned to, etc?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" parent="RIaHg2EdIce3mso3oA9U-1" vertex="1">
           <mxGeometry x="2962" y="-105" width="323" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="0SKObi6wWbmUpQxZhF88-40" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_48-128.png" vertex="1" parent="RIaHg2EdIce3mso3oA9U-1">
-          <mxGeometry x="1356" y="-417" width="128" height="128" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
