@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-02T13:47:52.989Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="p5qb07JYI8FYmm-WSeGI" version="14.4.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-03-02T13:50:56.779Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="gxCyct9_lvrO8ByK-mXo" version="14.4.3" type="github" pages="2">
   <diagram id="kV-ZABMWpSK8eVZeWYC4" name="Systems">
     <mxGraphModel dx="2336" dy="2087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -3019,12 +3019,6 @@
         </mxCell>
         <mxCell id="BAzcrg2GYYM3-22vutlj-520" value="System X" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3333FF;strokeColor=none;fontColor=#FFFFFF;align=left;spacingLeft=5;fontSize=24;" parent="BAzcrg2GYYM3-22vutlj-1" vertex="1">
           <mxGeometry x="2080" y="1898" width="340" height="64" as="geometry" />
-        </mxCell>
-        <mxCell id="BAzcrg2GYYM3-22vutlj-521" value="" style="shape=ellipse;dashed=0;strokeColor=none;shadow=1;fontSize=13;align=center;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;html=1;aspect=fixed;fillColor=#F8F9FA;" parent="BAzcrg2GYYM3-22vutlj-1" vertex="1">
-          <mxGeometry x="2092.5" y="2018" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="BAzcrg2GYYM3-22vutlj-522" value="" style="dashed=0;html=1;shape=mxgraph.gmdl.edit;strokeColor=none;fillColor=#737373;shadow=0;" parent="BAzcrg2GYYM3-22vutlj-521" vertex="1">
-          <mxGeometry x="9.642857142857142" y="9.642857142857142" width="10.714285714285714" height="10.714285714285714" as="geometry" />
         </mxCell>
         <mxCell id="BAzcrg2GYYM3-22vutlj-523" value="" style="shape=ellipse;dashed=0;strokeColor=none;shadow=1;fontSize=13;align=center;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;html=1;aspect=fixed;fillColor=#F8F9FA;" parent="BAzcrg2GYYM3-22vutlj-1" vertex="1">
           <mxGeometry x="2377.5" y="2018" width="30" height="30" as="geometry" />
