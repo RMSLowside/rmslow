@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-02T18:11:35.420Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="SN61_lSsLhO03tLJKP1u" version="14.4.3" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2021-03-02T18:11:42.948Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="x_wQEkt3IsdJ0AkR1-IK" version="14.4.3" type="github" pages="3">
   <diagram id="kV-ZABMWpSK8eVZeWYC4" name="Systems">
     <mxGraphModel dx="1924" dy="1059" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -6281,9 +6281,6 @@
         </mxCell>
         <mxCell id="h1tm8dhIZBLdWwkPpcQf-1" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/essential-3/32/354-Document_Question-128.png;fillColor=#FF9933;fontSize=12;fontColor=#999999;align=left;" vertex="1" parent="0eniUdpxWAq90WhDDnb1-1">
           <mxGeometry x="1727" y="176" width="40" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="h1tm8dhIZBLdWwkPpcQf-2" value="&lt;h1&gt;Heading&lt;/h1&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontColor=#999999;align=left;" vertex="1" parent="0eniUdpxWAq90WhDDnb1-1">
-          <mxGeometry x="1327.5" y="-90" width="190" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
