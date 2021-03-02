@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-02T15:45:00.620Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="-smAhXN0J8FZG_VInBet" version="14.4.3" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-03-02T15:45:36.767Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36" etag="g43MHol3Qq4Vk5MwOaEL" version="14.4.3" type="github" pages="3">
   <diagram id="kV-ZABMWpSK8eVZeWYC4" name="Systems">
     <mxGraphModel dx="1924" dy="1869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -4456,6 +4456,14 @@
         <mxCell id="UL3GFApEBOe_MKhI3Z5B-24" value="IMO Notes - Published to System" style="text;fontColor=#999999;fontSize=12;verticalAlign=middle;strokeColor=none;fillColor=none;" vertex="1" parent="BAzcrg2GYYM3-22vutlj-1">
           <mxGeometry x="402.66508088112306" y="2518.25" width="256.85589519650654" height="27.575187969924812" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="oLpqgqBUc1WvOTlxVynD" name="Template">
+    <mxGraphModel dx="1635" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0eniUdpxWAq90WhDDnb1-0" />
+        <mxCell id="0eniUdpxWAq90WhDDnb1-1" parent="0eniUdpxWAq90WhDDnb1-0" />
       </root>
     </mxGraphModel>
   </diagram>
