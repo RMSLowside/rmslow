@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-10T21:21:00.573Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="wvY5zapXzrHEZp-TTqG9" version="14.4.6" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-03-10T21:27:49.105Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="kbuJrZHBpbEcoTEMCPCR" version="14.4.6" type="github" pages="8">
   <diagram name="Eva 2.0 High Level" id="u2OVcTeATrK4WQEmrBUq">
     <mxGraphModel dx="2123" dy="1346" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -663,7 +663,7 @@
         <mxCell id="iyaF3Hq2DZ67kIFVNMl5-64" value="IMAP" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#FFFFFF;fillColor=#66B2FF;" vertex="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
           <mxGeometry x="390" y="1340" width="120" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="iyaF3Hq2DZ67kIFVNMl5-65" value="&lt;b&gt;Option 2 (Not Ideal) - Data is allowed into our boundary before it is identified as &quot;unfit&quot;&lt;br&gt;&lt;/b&gt;Would retain data in Workspace until IMAP review is conducted.&lt;br&gt;From the Workspace, data goes to IMAP for various machine learning reviews (entity extraction, dupe detection, etc) and marked as either approved or rejected.&lt;br&gt;Rejected data is shipped to Star Wars by the service&lt;br&gt;Approved data is stored in the &quot;regular&quot; object store." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
+        <mxCell id="iyaF3Hq2DZ67kIFVNMl5-65" value="&lt;b&gt;Option 2 (Not Ideal) - Data is allowed into our boundary before it is appropriately identified.&lt;br&gt;&lt;/b&gt;Would retain data in Workspace until IMAP review is conducted.&lt;br&gt;From the Workspace, data goes to IMAP for various machine learning reviews (entity extraction, dupe detection, etc) and marked as either approved or rejected.&lt;br&gt;Rejected data is shipped to Star Wars by the service&lt;br&gt;Approved data is stored in the &quot;regular&quot; object store." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
           <mxGeometry x="-418" y="332" width="1302" height="20" as="geometry" />
         </mxCell>
         <mxCell id="iyaF3Hq2DZ67kIFVNMl5-66" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#00FF00;startArrow=classicThin;startFill=1;exitX=0.145;exitY=1;exitDx=0;exitDy=-4.35;exitPerimeter=0;" edge="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
@@ -958,12 +958,14 @@
             <mxPoint x="118" y="-610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="J1AjZD9h3qVy4hx_36dx-70" value="" style="endArrow=classic;html=1;" edge="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
+        <mxCell id="J1AjZD9h3qVy4hx_36dx-71" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="hqW5xcn8j7cCD8bkVc0s-1" source="J1AjZD9h3qVy4hx_36dx-66">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="152" y="-1026" as="sourcePoint" />
-            <mxPoint x="200" y="-1026" as="targetPoint" />
-            <Array as="points" />
+            <mxPoint x="177" y="-663" as="sourcePoint" />
+            <mxPoint x="220" y="-695" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="J1AjZD9h3qVy4hx_36dx-72" value="&lt;b&gt;Option1 - Data is appropriately identified before entering the Eva boundary.&lt;br&gt;&lt;/b&gt;From the Scanning Center, data goes to IMAP&#39;s various machine learning tools for appropriate identification. &amp;nbsp; &amp;nbsp;If &quot;approved&quot;, it enters the pipeline and is stored in the selected object store. (Ours or IDL). &amp;nbsp;If &quot;rejected&quot;, it goes to Star Wars.&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
+          <mxGeometry x="-478" y="-1052" width="1302" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
