@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-10T21:54:34.958Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="y9doVvF0-8NAACGMRBZD" version="14.4.6" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-03-10T21:55:15.049Z" agent="5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="GPy2dmrFqycA9raDxA_0" version="14.4.6" type="github" pages="8">
   <diagram name="Eva 2.0 High Level" id="u2OVcTeATrK4WQEmrBUq">
     <mxGraphModel dx="2123" dy="1346" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -964,7 +964,7 @@
             <mxPoint x="220" y="-695" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="J1AjZD9h3qVy4hx_36dx-72" value="&lt;b&gt;Option1 - Data is appropriately identified before entering the Eva boundary.&lt;br&gt;&lt;/b&gt;From the Scanning Center, data goes to IMAP&#39;s various machine learning tools for appropriate identification. &amp;nbsp; &amp;nbsp;If &quot;approved&quot;, it enters the pipeline and is stored in the selected object store. (Ours or IDL). &amp;nbsp;If &quot;rejected&quot;, it goes to Star Wars.&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
+        <mxCell id="J1AjZD9h3qVy4hx_36dx-72" value="&lt;b&gt;Option 1(Most Ideal) - Data is appropriately identified before entering the Eva boundary.&lt;br&gt;&lt;/b&gt;From the Scanning Center, data goes to IMAP&#39;s various machine learning tools for appropriate identification. &amp;nbsp; &amp;nbsp;If &quot;approved&quot;, it enters the pipeline and is stored in the selected object store. (Ours or IDL). &amp;nbsp;If &quot;rejected&quot;, it goes to Star Wars." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
           <mxGeometry x="-478" y="-1052" width="1302" height="20" as="geometry" />
         </mxCell>
         <mxCell id="J1AjZD9h3qVy4hx_36dx-74" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#000000;" edge="1" parent="hqW5xcn8j7cCD8bkVc0s-1">
