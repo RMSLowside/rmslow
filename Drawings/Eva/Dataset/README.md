@@ -80,6 +80,9 @@ here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%
 Source draw.io
 here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FArchitecture%2FMainArchitecture.drawio)
 
+## Parent / Child Dataset Architecture Ideas:
+Source draw.io here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FDataset%2FParentChild.drawio)
+
 ## **Software Development Requirements**
 ### Who: 
 Tech Director Staff
