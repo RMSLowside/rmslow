@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-16T13:38:39.387Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="Vr09o50PM_Tpd_w9v7Za" version="14.4.4" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-03-16T13:40:35.852Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36" etag="8pAppemrpXBvff1R7bp2" version="14.4.4" type="github" pages="2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Workflow/Questions">
     <mxGraphModel dx="1635" dy="866" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1060,15 +1060,15 @@
         <mxCell id="e1a8Mvf2x-XjBfQX8XMT-31" value="" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#DFDFDF;html=1;whiteSpace=wrap;fillColor=#FFFFFF;fontColor=#495057;" vertex="1" parent="kOFa79KxeKtVWTGNYDuU-1">
           <mxGeometry x="304" y="2730" width="260" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-32" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Dataset Title #1&lt;/font&gt;&lt;br&gt;Guide: 123456/1258d25s8f22f&lt;br&gt;other data goes here" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;verticalAlign=top;fillColor=#0085FC;strokeColor=#0085FC;fontColor=#ffffff;" vertex="1" parent="e1a8Mvf2x-XjBfQX8XMT-31">
+        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-32" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Sub-Dataset Title #1&lt;/font&gt;&lt;br&gt;Guide: 123456/1258d25s8f22f&lt;br&gt;other data goes here" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.topButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;verticalAlign=top;fillColor=#0085FC;strokeColor=#0085FC;fontColor=#ffffff;" vertex="1" parent="e1a8Mvf2x-XjBfQX8XMT-31">
           <mxGeometry width="260" height="100" relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-33" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Dataset Title #2&lt;/font&gt;&lt;br&gt;Guide: 185576/58d6s8dd222dgf8&lt;br&gt;Other data goes here&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="e1a8Mvf2x-XjBfQX8XMT-31">
+        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-33" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Sub-Dataset Title #2&lt;/font&gt;&lt;br&gt;Guide: 185576/58d6s8dd222dgf8&lt;br&gt;Other data goes here&lt;br&gt;&lt;br&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;perimeter=none;whiteSpace=wrap;resizeWidth=1;align=left;spacing=10;" vertex="1" parent="e1a8Mvf2x-XjBfQX8XMT-31">
           <mxGeometry width="260" height="100" relative="1" as="geometry">
             <mxPoint y="100" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-34" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Dataset Title #3&lt;/font&gt;&lt;br&gt;Guide: 123456/88d55s6c8fs6&lt;br&gt;other data goes here&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.bottomButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;resizeHeight=0;align=left;spacing=10;" vertex="1" parent="e1a8Mvf2x-XjBfQX8XMT-31">
+        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-34" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Sub-Dataset Title #3&lt;/font&gt;&lt;br&gt;Guide: 123456/88d55s6c8fs6&lt;br&gt;other data goes here&lt;br&gt;&lt;br&gt;" style="strokeColor=inherit;fillColor=inherit;gradientColor=inherit;fontColor=inherit;html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.bottomButton;rSize=5;perimeter=none;whiteSpace=wrap;resizeWidth=1;resizeHeight=0;align=left;spacing=10;" vertex="1" parent="e1a8Mvf2x-XjBfQX8XMT-31">
           <mxGeometry y="1" width="260" height="100" relative="1" as="geometry">
             <mxPoint y="-100" as="offset" />
           </mxGeometry>
@@ -1338,8 +1338,8 @@
         <mxCell id="e1a8Mvf2x-XjBfQX8XMT-115" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3333FF;" vertex="1" parent="kOFa79KxeKtVWTGNYDuU-1">
           <mxGeometry x="41" y="2660" width="1069" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-116" value="Dataset Title #1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;" vertex="1" parent="kOFa79KxeKtVWTGNYDuU-1">
-          <mxGeometry x="51.25" y="2670" width="111.5" height="20" as="geometry" />
+        <mxCell id="e1a8Mvf2x-XjBfQX8XMT-116" value="Dataset Title #1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=16;" vertex="1" parent="kOFa79KxeKtVWTGNYDuU-1">
+          <mxGeometry x="51.25" y="2670" width="138.75" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
