@@ -14,17 +14,31 @@ User prefs is supposed to be a micro service that would support non-RMS apps.
 ## Datastore
 The following information will be stored.
 
-### preference
+### Preferences
+store system specific preferences list
 ```json5
 {
   uuid: "internal unique key",
   systemName: "Name of the system preference belongs to. ex. iServices ",
   applicationName: "Name of the application or sub category of preference. Global Preferences, RCS, IMA, Eva, SCGR, MarkId, etc",
+  global: "flag to indicate global prference"
   category: "preference category. Theme, profile, search, appearance etc"
 }
 ```
 
+### User preference
+store users preference selection
+```json5
+{
+  uuid: "internal unique key",
+  prefId: "foreign key tied to reference table",  
+  ainNumber: "ain number of user",
+  value: "value of users selection"
+}
+```
+
 ### preferenceOptions
+future table if UI is created. store list of preference options
 ```json5
 {
   uuid: "internal unique key",
@@ -32,16 +46,6 @@ The following information will be stored.
   type: "type of selection: dropdown, number etc. field will be used if external service will use our UI.",
   options: "options applicable to the category",
   default: "default selection for preference option"
-}
-```
-
-### userPreference
-```json5
-{
-  uuid: "internal unique key",
-  prefId: "foreign key tied to reference table",  
-  ainNumber: "ain number of user",
-  value: "value of users selection"
 }
 ```
 
@@ -55,13 +59,30 @@ RequestBody = List<PreferenceOptions>
 ```
 * add preference
 
-### Get user preference for user
+### Update Preference
 ```
-ngimws/preference/{userId}
-RequestType = GET
-RequestParms = {userId}
+ngimws/preference
+RequestType = POST
+RequestBody = List<PreferenceOptions>
 ```
-* Gets user preference
+* add preference
+
+### Delete Preference
+```
+ngimws/preference
+RequestType = POST
+RequestBody = List<PreferenceOptions>
+```
+* add preference
+
+### Get Preferences
+
+
+### Get preference
+
+
+### Add user preference
+
 
 ### Update user preferences
 ```
@@ -71,6 +92,16 @@ RequestParms = {userId}
 RequrestBody = Preference POJO
 ```
 * Update user preference
+
+### Delete user preference
+
+### Get user preference for user
+```
+ngimws/preference/{userId}
+RequestType = GET
+RequestParms = {userId}
+```
+* Gets user preference
 
 ### Reset user preference
 ```
@@ -88,15 +119,6 @@ RequestParms = {appName}
 ```
 * Reset all user preference for application
 
-## Delete preference
-```
-ngimws/preference/{userId}
-RequestType = DELETE
-RequestParms = {userId}
-RequrestBody = Preference POJO
-```
-* delete preference
-
 ## SDK
 
 ## **UI**
@@ -104,10 +126,6 @@ RequrestBody = Preference POJO
 ## Drawings
 
 Dashboard draw.io: [here](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FUser%20Preference%20Service%2FUser%20Preference.drawio)
-
-View Only draw.io here:
-
-
 
 ## **Software Development Requirements**
 
