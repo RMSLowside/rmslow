@@ -33,8 +33,6 @@ here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2
 - Object Search draw.io
 here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FFile%2FEva%20Search.drawio)
 
-Parent/Child Source draw.io here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FParentChild%2FParentChild.drawio)
-
 ## **Software Development Requirements**
 
 
