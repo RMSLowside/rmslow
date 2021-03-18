@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-17T17:58:38.831Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="0_3ji9MJeyLYj1kTOCa8" version="14.4.8" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-03-18T12:39:47.655Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="1bYEVaCe7CG9WIPiJJUA" version="14.4.8" type="github" pages="8">
   <diagram name="Eva 2.0 High Level" id="u2OVcTeATrK4WQEmrBUq">
     <mxGraphModel dx="1822" dy="1162" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -321,19 +321,8 @@
         <mxCell id="6W5ZjQAP1qN65vsEq8g1-87" value="Manage in Place High Level Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=40;fontStyle=1" parent="6W5ZjQAP1qN65vsEq8g1-1" vertex="1">
           <mxGeometry x="-15" y="-37" width="851" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="6W5ZjQAP1qN65vsEq8g1-91" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="6W5ZjQAP1qN65vsEq8g1-1" source="6W5ZjQAP1qN65vsEq8g1-88" target="6W5ZjQAP1qN65vsEq8g1-36" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="6W5ZjQAP1qN65vsEq8g1-92" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="6W5ZjQAP1qN65vsEq8g1-1" source="6W5ZjQAP1qN65vsEq8g1-88" target="6W5ZjQAP1qN65vsEq8g1-44" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="184" y="1131" />
-              <mxPoint x="762" y="1131" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="6W5ZjQAP1qN65vsEq8g1-88" value="BYNAC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF00;fontSize=16;fontColor=#000000;align=center;gradientColor=#3399FF;" parent="6W5ZjQAP1qN65vsEq8g1-1" vertex="1">
-          <mxGeometry x="94" y="1194" width="120" height="60" as="geometry" />
+          <mxGeometry x="851" y="1245" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="iHU-u8DEtRdlDgTZo3jV-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" parent="6W5ZjQAP1qN65vsEq8g1-1" source="iHU-u8DEtRdlDgTZo3jV-0" target="6W5ZjQAP1qN65vsEq8g1-24" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -385,6 +374,9 @@
         </mxCell>
         <mxCell id="5wvnr7pPt7OTe4pVi2kg-0" value="Warehousing Tool" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0;fontFamily=Helvetica;fontColor=#001933;shadow=1;fillColor=#FFFF00;strokeWidth=5;strokeColor=#B5739D;" vertex="1" parent="6W5ZjQAP1qN65vsEq8g1-1">
           <mxGeometry x="251" y="444" width="120" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="Px06Y1R-94rmJSIMpUUQ-0" value="Will SMART and the Warehouse tool coexist?&lt;br&gt;Will we need to talk to both?&lt;br&gt;Is there a link from warehouse to scanning center?" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="6W5ZjQAP1qN65vsEq8g1-1">
+          <mxGeometry x="-366" y="391" width="274" height="184" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
