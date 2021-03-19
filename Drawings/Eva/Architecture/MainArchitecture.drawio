@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-03-19T12:14:23.999Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="oXhoRFUQIDn6uQfwohWu" version="14.4.8" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-03-19T12:34:30.996Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="_dp3PBeUEvo0t5aXY38M" version="14.4.8" type="github" pages="6">
   <diagram name="Eva 2.0 High Level" id="u2OVcTeATrK4WQEmrBUq">
-    <mxGraphModel dx="1822" dy="1162" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
+    <mxGraphModel dx="2431" dy="1489" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="6W5ZjQAP1qN65vsEq8g1-0" />
         <mxCell id="6W5ZjQAP1qN65vsEq8g1-1" parent="6W5ZjQAP1qN65vsEq8g1-0" />
@@ -407,7 +407,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Efbz6BZ98Bf-ADubQhmt" name="Star Wars Options">
-    <mxGraphModel dx="3170" dy="2470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2222" dy="1962" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="hqW5xcn8j7cCD8bkVc0s-0" />
         <mxCell id="hqW5xcn8j7cCD8bkVc0s-1" parent="hqW5xcn8j7cCD8bkVc0s-0" />
@@ -682,14 +682,12 @@
         <mxCell id="iyaF3Hq2DZ67kIFVNMl5-65" value="&lt;b&gt;Option 2 (Not Ideal) - Data is allowed into Eva boundary before it is appropriately identified.&lt;/b&gt;&lt;br&gt;&lt;br&gt;Data is retained in Workspace until IMAP review is conducted.&lt;br&gt;From the Workspace, data goes to IMAP for various machine learning reviews (entity extraction, dupe detection, etc) and marked as either approved or rejected.&lt;br&gt;Rejected data is shipped to Star Wars by the service. &amp;nbsp;Rejected data is removed from the Workspace and some purge/sanitation activities would kick off. &amp;nbsp;&lt;br&gt;Approved data is stored in the &quot;regular&quot; object store.&lt;br&gt;With each occurrence, would need to report to ISSM and Enterprise IT and follow any mandates given.&lt;br&gt;Prepare for consequences to our system accreditation.&lt;br&gt;&lt;br&gt;&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="hqW5xcn8j7cCD8bkVc0s-1" vertex="1">
           <mxGeometry x="-418" y="332" width="1302" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="iyaF3Hq2DZ67kIFVNMl5-66" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#00FF00;startArrow=classicThin;startFill=1;exitX=0.145;exitY=1;exitDx=0;exitDy=-4.35;exitPerimeter=0;" parent="hqW5xcn8j7cCD8bkVc0s-1" edge="1">
+        <mxCell id="iyaF3Hq2DZ67kIFVNMl5-66" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#00FF00;startArrow=classicThin;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="hqW5xcn8j7cCD8bkVc0s-1" edge="1" target="iyaF3Hq2DZ67kIFVNMl5-64" source="iyaF3Hq2DZ67kIFVNMl5-36">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="607" y="841" />
-              <mxPoint x="607" y="886" />
+              <mxPoint x="668" y="886" />
               <mxPoint x="307" y="886" />
-              <mxPoint x="307" y="1276" />
-              <mxPoint x="413" y="1276" />
+              <mxPoint x="307" y="1359" />
             </Array>
             <mxPoint x="639.5549999999998" y="840.6500000000001" as="sourcePoint" />
             <mxPoint x="413" y="1340" as="targetPoint" />
