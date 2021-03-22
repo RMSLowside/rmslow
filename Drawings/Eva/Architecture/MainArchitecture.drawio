@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-03-22T18:33:36.488Z" agent="5.0 (Windows)" etag="4GuuHdo9bnexiCdi7GTb" version="14.5.0" type="github" pages="6">
+<mxfile host="app.diagrams.net" modified="2021-03-22T18:41:00.881Z" agent="5.0 (Windows)" etag="hqigJGnua8CbNMU0WB7k" version="14.5.0" type="github" pages="6">
   <diagram name="Eva 2.0 High Level" id="u2OVcTeATrK4WQEmrBUq">
-    <mxGraphModel dx="2492" dy="1406" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
+    <mxGraphModel dx="2209" dy="1406" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="6W5ZjQAP1qN65vsEq8g1-0" />
         <mxCell id="6W5ZjQAP1qN65vsEq8g1-1" parent="6W5ZjQAP1qN65vsEq8g1-0" />
@@ -406,8 +406,17 @@
         <mxCell id="7gkZWsTi8Tl6XB-n8ewu-2" value="Notification Service*" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;fillColor=#FFFF00;" parent="6W5ZjQAP1qN65vsEq8g1-1" vertex="1">
           <mxGeometry x="78" y="1417" width="115" height="52" as="geometry" />
         </mxCell>
+        <mxCell id="6mN6I8kIUK03KaLIaWE8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="6W5ZjQAP1qN65vsEq8g1-1" source="6mN6I8kIUK03KaLIaWE8-0" target="6W5ZjQAP1qN65vsEq8g1-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="6mN6I8kIUK03KaLIaWE8-0" value="UI API Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66B2FF;strokeColor=#FFFFFF;" vertex="1" parent="6W5ZjQAP1qN65vsEq8g1-1">
           <mxGeometry x="498" y="987" width="81" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="6mN6I8kIUK03KaLIaWE8-4" value="&lt;div&gt;Datastore &lt;br&gt;&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Helvetica;fontSize=12;fontColor=#000000;rounded=0;strokeWidth=3;" vertex="1" parent="6W5ZjQAP1qN65vsEq8g1-1">
+          <mxGeometry x="1074" y="1103" width="81" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="6mN6I8kIUK03KaLIaWE8-5" value="&lt;div&gt;Datastore &lt;br&gt;&lt;/div&gt;&lt;div&gt;3&lt;br&gt;&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Helvetica;fontSize=12;fontColor=#000000;rounded=0;strokeWidth=3;" vertex="1" parent="6W5ZjQAP1qN65vsEq8g1-1">
+          <mxGeometry x="1076" y="1220" width="81" height="97" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
