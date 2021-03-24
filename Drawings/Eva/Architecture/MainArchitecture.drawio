@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T15:29:01.975Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="J9w8K8dNKZi90l4lggfD" version="14.5.1" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-03-24T15:33:52.789Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="BJtxzUmp9XnEXg-oF_aF" version="14.5.1" type="github" pages="8">
   <diagram id="Ax_AN81rM1XSi6OaU2bE" name="Eva Highest Level">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -430,7 +430,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of Eva 2.0 High Level" id="LXxL-S9mSq0Vl07ukjNI">
-    <mxGraphModel dx="2222" dy="1562" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
+    <mxGraphModel dx="2473" dy="1696" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-0" />
         <mxCell id="Aogzl7tKjDnLRohEGT3o-1" parent="Aogzl7tKjDnLRohEGT3o-0" />
@@ -824,6 +824,9 @@
         </mxCell>
         <mxCell id="3-WOdARkc6jjXrZru05P-9" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Concerns:&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-227.2" y="-535" width="105" height="43" as="geometry" />
+        </mxCell>
+        <mxCell id="2KuqAkGTanSz628e4Zk_-0" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Do the File and/or Catalog Services inside of EVA &lt;br&gt;need to talk directly to the P&amp;amp;L Service, &lt;br&gt;or is that something that should &lt;br&gt;be left for the IMS Business Service to handle?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="Aogzl7tKjDnLRohEGT3o-1">
+          <mxGeometry x="-269.35" y="-362" width="463" height="198" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
