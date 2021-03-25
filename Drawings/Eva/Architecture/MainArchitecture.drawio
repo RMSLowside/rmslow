@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-03-24T15:51:49.022Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="v_aROo8lfrER8NP2KUyq" version="14.5.1" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-03-25T12:41:59.460Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="d5kSkc69abki0T2TaO3G" version="14.5.1" type="github" pages="8">
   <diagram id="Ax_AN81rM1XSi6OaU2bE" name="Eva Highest Level">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -435,7 +435,7 @@
         <mxCell id="Aogzl7tKjDnLRohEGT3o-0" />
         <mxCell id="Aogzl7tKjDnLRohEGT3o-1" parent="Aogzl7tKjDnLRohEGT3o-0" />
         <mxCell id="Aogzl7tKjDnLRohEGT3o-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#0000FF;strokeColor=#B3B3B3;dashed=1;strokeWidth=3;arcSize=7;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
-          <mxGeometry x="-649.2" y="463" width="1856" height="1200" as="geometry" />
+          <mxGeometry x="-649.2" y="463" width="1878.2" height="1200" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-3" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=#0000FF;strokeColor=#B3B3B3;dashed=1;strokeWidth=3;fillColor=#CCCCCC;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-277.20000000000005" y="626" width="938" height="536" as="geometry" />
@@ -523,9 +523,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="3-WOdARkc6jjXrZru05P-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#0DD11A;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-31" target="Aogzl7tKjDnLRohEGT3o-65" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-31" value="IMS Business Services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66B2FF;strokeColor=#FFFFFF;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="71.79999999999995" y="906" width="156" height="62" as="geometry" />
         </mxCell>
@@ -605,6 +602,9 @@
         <mxCell id="3-WOdARkc6jjXrZru05P-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FF0000;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-59" target="Aogzl7tKjDnLRohEGT3o-72" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="tF8dThvaTRkaZe0V5Enz-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-59" target="Aogzl7tKjDnLRohEGT3o-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-59" value="NIFI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF00;strokeColor=#FFFF00;fontColor=#000000;fontFamily=Helvetica;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-60.700000000000045" y="647.25" width="128" height="63" as="geometry" />
         </mxCell>
@@ -619,12 +619,6 @@
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-63" value="Ingest&lt;br style=&quot;font-size: 13px;&quot;&gt;Queue" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;rounded=0;fillColor=#FFFF00;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-186.20000000000005" y="742" width="60" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-64" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-65" target="Aogzl7tKjDnLRohEGT3o-61" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-65" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Workspace&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Tahoma;fontSize=12;fontColor=#001933;fontStyle=0;strokeColor=#FFFFFF;fillColor=#66B2FF;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
-          <mxGeometry x="-38.2" y="827.5" width="83" height="71" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-66" value="&amp;nbsp;IMS Catalog Storage&lt;br&gt;(Keystone)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Helvetica;fontSize=12;fontColor=#000000;fillColor=#FFFF00;rounded=0;strokeColor=#B5739D;strokeWidth=5;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="1049.8" y="1065" width="81" height="97" as="geometry" />
@@ -680,9 +674,6 @@
           <mxGeometry x="830.8" y="1536.5" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-122" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#FF66B3;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-86" target="Aogzl7tKjDnLRohEGT3o-119" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="3-WOdARkc6jjXrZru05P-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF66B3;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-86" target="3-WOdARkc6jjXrZru05P-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-86" value="Enterprise Index Service" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;strokeWidth=3;fontFamily=Helvetica;fontSize=22;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
@@ -772,7 +763,7 @@
         <mxCell id="Aogzl7tKjDnLRohEGT3o-114" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#999999;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-115" target="Aogzl7tKjDnLRohEGT3o-87" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-115" value="UI API Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#66B2FF;strokeColor=#FFFFFF;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
+        <mxCell id="Aogzl7tKjDnLRohEGT3o-115" value="UI API Service" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;fillColor=#FFFF33;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-100.00000000000004" y="1047" width="109" height="46" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-116" value="&lt;div&gt;Datastore &lt;br&gt;&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Helvetica;fontSize=12;fontColor=#000000;rounded=0;strokeWidth=3;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
@@ -826,14 +817,14 @@
             <mxPoint x="829.8" y="991" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="3-WOdARkc6jjXrZru05P-3" value="SQS Queues" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;rounded=1;fillColor=#FFFF00;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
-          <mxGeometry x="665" y="1399" width="80" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="3-WOdARkc6jjXrZru05P-9" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Concerns:&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-227.2" y="-535" width="105" height="43" as="geometry" />
         </mxCell>
         <mxCell id="2KuqAkGTanSz628e4Zk_-0" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Do the File and/or Catalog Services inside of EVA &lt;br&gt;need to talk directly to the P&amp;amp;L Service, &lt;br&gt;or is that something that should &lt;br&gt;be left for the IMS Business Service to handle?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-269.35" y="-362" width="463" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="Aogzl7tKjDnLRohEGT3o-65" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Workspace&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Tahoma;fontSize=12;fontColor=#001933;fontStyle=0;strokeColor=#FFFFFF;fillColor=#66B2FF;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
+          <mxGeometry x="1116" y="970" width="83" height="71" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
