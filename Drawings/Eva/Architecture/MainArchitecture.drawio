@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-03-26T12:23:22.688Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="GNyqJmEZxXGgxD3PngBj" version="14.5.1" type="github" pages="8">
+<mxfile host="app.diagrams.net" modified="2021-03-26T12:45:18.514Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="WSIsrcqE3u8RU37ozawF" version="14.5.1" type="github" pages="8">
   <diagram id="Ax_AN81rM1XSi6OaU2bE" name="Eva Highest Level">
-    <mxGraphModel dx="2222" dy="1162" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2831" dy="1489" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="MDXQ7Dz_SPkKRHJg7z1x-0" />
         <mxCell id="MDXQ7Dz_SPkKRHJg7z1x-1" parent="MDXQ7Dz_SPkKRHJg7z1x-0" />
@@ -536,7 +536,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Copy of Eva 2.0 High Level" id="LXxL-S9mSq0Vl07ukjNI">
-    <mxGraphModel dx="2473" dy="1696" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
+    <mxGraphModel dx="2696" dy="1816" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-0" />
         <mxCell id="Aogzl7tKjDnLRohEGT3o-1" parent="Aogzl7tKjDnLRohEGT3o-0" />
@@ -563,14 +563,6 @@
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-9" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-11" target="Aogzl7tKjDnLRohEGT3o-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-10" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;strokeColor=#0066CC;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-11" target="Aogzl7tKjDnLRohEGT3o-73" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="-313" y="102" />
-              <mxPoint x="725" y="102" />
-            </Array>
-          </mxGeometry>
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-11" value="&lt;font color=&quot;#000000&quot;&gt;Ingest&lt;br style=&quot;font-size: 12px&quot;&gt;Queues&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=12;fontStyle=0;fontColor=#0000FF;fontFamily=Tahoma;strokeColor=#DAE8FC;fillColor=#66B2FF;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-351" y="136.5" width="77" height="77" as="geometry" />
@@ -664,10 +656,13 @@
         <mxCell id="Aogzl7tKjDnLRohEGT3o-42" value="RMM Table" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontStyle=0;fontColor=#001933;fontFamily=Tahoma;fontSize=12;strokeColor=#FFFFFF;fillColor=#66B2FF;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="193.64999999999995" y="232" width="110" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-43" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=#0066CC;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-44" target="Aogzl7tKjDnLRohEGT3o-73" edge="1">
+        <mxCell id="Aogzl7tKjDnLRohEGT3o-43" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0066CC;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-44" target="Aogzl7tKjDnLRohEGT3o-73" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-44" value="Disposition &amp;amp; Holds&lt;br&gt;Notification Service" style="whiteSpace=wrap;html=1;fontStyle=0;fontFamily=Tahoma;fillColor=#FFFF00;strokeColor=#FFFF00;fontColor=#001933;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
+        <mxCell id="sznYCfOHcBtyc1KcDdUi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#0066CC;" edge="1" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-44" target="sznYCfOHcBtyc1KcDdUi-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Aogzl7tKjDnLRohEGT3o-44" value="Disposition Service" style="whiteSpace=wrap;html=1;fontStyle=0;fontFamily=Tahoma;fillColor=#FFFF00;strokeColor=#FFFF00;fontColor=#001933;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="508.99999999999994" y="217" width="132" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-45" value="Scanning Center" style="whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;shadow=1;fontStyle=0;strokeColor=#DAE8FC;fontColor=#001933;fillColor=#66B2FF;rounded=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
@@ -744,8 +739,8 @@
         <mxCell id="Aogzl7tKjDnLRohEGT3o-72" value="Pedigree &amp;amp; Lineage Service&lt;br&gt;(Keystone)" style="whiteSpace=wrap;html=1;fillColor=#FFFF00;strokeColor=#B5739D;strokeWidth=5;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="384.04999999999995" y="646" width="102" height="65.5" as="geometry" />
         </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-73" value="SQS Queues" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;fillColor=#FFFF00;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
-          <mxGeometry x="665" y="503" width="80" height="80" as="geometry" />
+        <mxCell id="Aogzl7tKjDnLRohEGT3o-73" value="Holds Service" style="whiteSpace=wrap;html=1;aspect=fixed;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;fillColor=#FFFF00;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
+          <mxGeometry x="758" y="219" width="68" height="68" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-74" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#6600CC;" parent="Aogzl7tKjDnLRohEGT3o-1" source="Aogzl7tKjDnLRohEGT3o-78" target="Aogzl7tKjDnLRohEGT3o-89" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -854,7 +849,7 @@
         <mxCell id="Aogzl7tKjDnLRohEGT3o-109" value="Warehousing Tool" style="whiteSpace=wrap;html=1;fontStyle=0;fontFamily=Helvetica;fontColor=#001933;shadow=1;fillColor=#FFFF00;strokeWidth=5;strokeColor=#B5739D;rounded=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-363.20000000000005" y="536.5" width="120" height="62" as="geometry" />
         </mxCell>
-        <mxCell id="Aogzl7tKjDnLRohEGT3o-110" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Will SMART and the Warehouse tool coexist?&lt;br&gt;Will we need to talk to both?&lt;br&gt;Is there a link from warehouse to scanning center?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeWidth=1;rounded=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
+        <mxCell id="Aogzl7tKjDnLRohEGT3o-110" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Will SMART and the Warehouse tool coexist?&lt;br&gt;Will we need to talk to both?&lt;br&gt;Is there a link from warehouse to scanning center?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeWidth=1;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-279" y="-494" width="482.3" height="141" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-111" value="User Preferences" style="whiteSpace=wrap;html=1;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;fillColor=#FFFF00;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
@@ -926,11 +921,17 @@
         <mxCell id="3-WOdARkc6jjXrZru05P-9" value="&lt;font style=&quot;font-size: 20px&quot;&gt;Concerns:&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-227.2" y="-535" width="105" height="43" as="geometry" />
         </mxCell>
-        <mxCell id="2KuqAkGTanSz628e4Zk_-0" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Do the File and/or Catalog Services inside of EVA &lt;br&gt;need to talk directly to the P&amp;amp;L Service, &lt;br&gt;or is that something that should &lt;br&gt;be left for the IMS Business Service to handle?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
+        <mxCell id="2KuqAkGTanSz628e4Zk_-0" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Do the File and/or Catalog Services inside of EVA &lt;br&gt;need to talk directly to the P&amp;amp;L Service, &lt;br&gt;or is that something that should &lt;br&gt;be left for the IMS Business Service to handle?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="-269.35" y="-362" width="463" height="198" as="geometry" />
         </mxCell>
         <mxCell id="Aogzl7tKjDnLRohEGT3o-65" value="&lt;font style=&quot;font-size: 12px&quot;&gt;Workspace&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fontFamily=Tahoma;fontSize=12;fontColor=#001933;fontStyle=0;strokeColor=#FFFFFF;fillColor=#66B2FF;rounded=1;shadow=1;" parent="Aogzl7tKjDnLRohEGT3o-1" vertex="1">
           <mxGeometry x="1116" y="970" width="83" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="sznYCfOHcBtyc1KcDdUi-0" value="&lt;font style=&quot;font-size: 15px&quot;&gt;Who or what does the &lt;br&gt;Notification Service&amp;nbsp;&lt;br&gt;notify?&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="Aogzl7tKjDnLRohEGT3o-1">
+          <mxGeometry x="313" y="-481" width="317" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="sznYCfOHcBtyc1KcDdUi-1" value="Disposition SQS Queue" style="whiteSpace=wrap;html=1;strokeColor=#FFFF00;fontFamily=Helvetica;fontSize=12;fontColor=#000000;fillColor=#FFFF00;rounded=1;shadow=1;" vertex="1" parent="Aogzl7tKjDnLRohEGT3o-1">
+          <mxGeometry x="518" y="91" width="115" height="52" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
