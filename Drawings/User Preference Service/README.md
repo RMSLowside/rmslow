@@ -51,7 +51,7 @@ future table if UI is created. store list of preference options
 --------------
 
 #### Secondary option for User Pref: storing prefs as JSON block
-```
+```json5
   uuid: "unique key",
   ainNumber: "AIN of user",
   prefState: "[
