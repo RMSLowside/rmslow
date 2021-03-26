@@ -48,8 +48,45 @@ future table if UI is created. store list of preference options
   default: "default selection for preference option"
 }
 ```
+--------------
+
+####Secondary option for User Pref: storing prefs as JSON block
+```
+  uuid: "unique key",
+  ainNumber: "AIN of user",
+  prefState: "[
+    {
+      systemName: "name of system that the preferences apply to",     // perhaps have a "global" option?
+      preferences: [
+        {
+          prefId: "foreign key tied to ref table", 
+          value: "value selected by user"
+        },
+        ... // continue for each preference for this system
+      ]
+    },
+    ...  // continue for each system
+  ]"
+```
+(?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the ain for the user?
 
 ## API
+
+### Get all preferences
+```
+ngimws/preference
+RequestType = GET
+RequestBody = List<PreferenceOptions>
+```
+* get list of all preferences (grab user ain to find?)
+
+### Get specific preference
+```
+ngimws/preference/{prefId}
+RequestType = GET
+RequestBody = List<PreferenceOptions>
+```
+* get a specific preference
 
 ### Add Preference
 ```
@@ -65,7 +102,7 @@ ngimws/preference
 RequestType = POST
 RequestBody = List<PreferenceOptions>
 ```
-* add preference
+* update preference
 
 ### Delete Preference
 ```
@@ -73,16 +110,15 @@ ngimws/preference
 RequestType = POST
 RequestBody = List<PreferenceOptions>
 ```
-* add preference
-
-### Get Preferences
-
-
-### Get preference
-
+* delete preference
 
 ### Add user preference
-
+```
+ngimws/preference/{userId}
+RequestType = POST
+RequestBody = Preference POJO
+```
+* add a new user preference
 
 ### Update user preferences
 ```
