@@ -68,7 +68,8 @@ future table if UI is created. store list of preference options
     ...  // continue for each system
   ]"
 ```
-(?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the ain for the user?
+(?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the ain for the user.
+Also, I'm a little unsure about how to do this as a system saving a preference. My frame of mind around this might be off-base, so I want to ask about differences between system saving a preference vs. user doing so.
 
 ## API
 
@@ -130,6 +131,12 @@ RequrestBody = Preference POJO
 * Update user preference
 
 ### Delete user preference
+```
+ngimws/preference/delete/{userId}
+RequestType = POST
+RequestBody = List<PreferenceOptions>
+```
+* delete user preference
 
 ### Get user preference for user
 ```
