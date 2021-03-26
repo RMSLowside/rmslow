@@ -32,7 +32,7 @@ store users preference selection
 {
   uuid: "internal unique key",
   prefId: "foreign key tied to reference table",  
-  ainNumber: "ain number of user",
+  userId: "unique user id",
   value: "value of users selection"
 }
 ```
@@ -53,7 +53,7 @@ future table if UI is created. store list of preference options
 #### Secondary option for User Pref: storing prefs as JSON block
 ```json5
   uuid: "unique key",
-  ainNumber: "AIN of user",
+  userId: "unique user id",
   prefState: "[
     {
       systemName: "name of system that the preferences apply to",     // perhaps have a "global" option?
@@ -68,7 +68,7 @@ future table if UI is created. store list of preference options
     ...  // continue for each system
   ]"
 ```
-(?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the ain for the user.
+(?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the the user id.
 Also, I'm a little unsure about how to do this as a system saving a preference. My frame of mind around this might be off-base, so I want to ask about differences between system saving a preference vs. user doing so.
 
 ## API
@@ -79,7 +79,7 @@ ngimws/preference
 RequestType = GET
 RequestBody = List<PreferenceOptions>
 ```
-* get list of all preferences (grab user ain to find?)
+* get list of all preferences 
 
 ### Get specific preference
 ```
