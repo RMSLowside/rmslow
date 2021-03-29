@@ -58,7 +58,8 @@ future table if UI is created. store list of preference options
       systemName: "name of system that the preferences apply to",     // perhaps have a "global" option?
       preferences: [
         {
-          prefId: "foreign key tied to ref table", 
+          pref: "prefKey",
+          name: "nice name for pref"
           value: "value selected by user"
         },
         ... // continue for each preference for this system
