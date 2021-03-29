@@ -52,7 +52,6 @@ future table if UI is created. store list of preference options
 
 #### Secondary option for User Pref: storing prefs as JSON block
 ```json5
-  uuid: "unique key",
   userId: "unique user id",
   prefState: "[
     {
@@ -69,7 +68,6 @@ future table if UI is created. store list of preference options
   ]"
 ```
 (?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the the user id.
-Also, I'm a little unsure about how to do this as a system saving a preference. My frame of mind around this might be off-base, so I want to ask about differences between system saving a preference vs. user doing so.
 
 ## API
 
