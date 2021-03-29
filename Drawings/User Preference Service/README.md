@@ -21,7 +21,7 @@ store system specific preferences list
   uuid: "internal unique key",
   systemName: "Name of the system preference belongs to. ex. iServices ",
   applicationName: "Name of the application or sub category of preference. Global Preferences, RCS, IMA, Eva, SCGR, MarkId, etc",
-  global: "flag to indicate global prference"
+  global: "flag to indicate global prference",
   category: "preference category. Theme, profile, search, appearance etc"
 }
 ```
@@ -59,7 +59,7 @@ future table if UI is created. store list of preference options
       preferences: [
         {
           pref: "prefKey",
-          name: "nice name for pref"
+          name: "nice name for pref",
           value: "value selected by user"
         },
         ... // continue for each preference for this system
