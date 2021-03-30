@@ -15,42 +15,7 @@ User prefs is supposed to be a micro service that would support non-RMS apps.
 The following information will be stored.
 
 ### Preferences
-store system specific preferences list
-```json5
-{
-  uuid: "internal unique key",
-  systemName: "Name of the system preference belongs to. ex. iServices ",
-  applicationName: "Name of the application or sub category of preference. Global Preferences, RCS, IMA, Eva, SCGR, MarkId, etc",
-  global: "flag to indicate global prference",
-  category: "preference category. Theme, profile, search, appearance etc"
-}
-```
 
-### User preference
-store users preference selection
-```json5
-{
-  uuid: "internal unique key",
-  prefId: "foreign key tied to reference table",  
-  userId: "unique user id",
-  value: "value of users selection"
-}
-```
-
-### preferenceOptions
-future table if UI is created. store list of preference options
-```json5
-{
-  uuid: "internal unique key",
-  prefId: "foreign key tied to reference table",
-  type: "type of selection: dropdown, number etc. field will be used if external service will use our UI.",
-  options: "options applicable to the category",
-  default: "default selection for preference option"
-}
-```
---------------
-
-#### Secondary option for User Pref: storing prefs as JSON block
 ```json5
   userId: "unique user id",
   prefState: "[
@@ -78,7 +43,7 @@ ngimws/preference
 RequestType = GET
 RequestBody = List<PreferenceOptions>
 ```
-* get list of all preferences 
+* get list of all preferences
 
 ### Get specific preference
 ```
