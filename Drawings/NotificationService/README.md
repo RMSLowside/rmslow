@@ -52,8 +52,7 @@ The list of endpoint types that the Notification service can send to.
   description: "A short description of what the notification is for",
   message: "The message to be sent to the endpoint",
   endpointId: "Link back to endpoints table",
-  recipientList: "Comma delimited list of recipients to send to.",
-  recurrence: "NOW/ONCE/DAILY/WEEKLY/MONTHLY/YEARLY",
+  userId: "recipient user id",  
   startDate: "The date to start sending notifications",
   endDate: "The date to stop sending notifications. This is nullable (no end date)",
   time: "The time of day to send the notification out.",
@@ -163,8 +162,7 @@ Notification n = new NotificationBuilder()
         .setDescription("Let Bryan know its time for lunch")
         .setMessage("It's lunch time!")
         .setEndpointId(Endpoints.SKYPE)
-        .setRecipientList("kimmela.skypeexchange.org,hoggeb.skypeexchange.org")
-        .setRecurrence(Recurrence.DAILY)
+        .setUserId("kimmela")        
         .setStartDate("2021-01-01")
         .setTime("10:59:59");
         .build();
@@ -193,7 +191,6 @@ NotificationServiceResult nsr = connector.sendNotification(p);
 ```java
 // Get single notification.
 Notification notification = connector.getNotification("1234-1234-1234");
-
 // Get notification history.
 ArrayList<NotificationHistory> history = connector.getNotificationHistory("1234-1234-1234");
 ```
@@ -210,7 +207,7 @@ View Only draw.io here: [Draw.io export](https://viewer.diagrams.net/?highlight=
 
 
 
-### Who: 
+### Who:
 Tech Director Staff
 
 
@@ -218,7 +215,7 @@ Tech Director Staff
 Provide a service to standardize the ability of systems to send notification to a variety of platforms to include email, instant messenger, queues, and other platforms as they become relevant.  
 
 
-### Why: 
+### Why:
 As a plug in play service the notification system will simplify the process for systems to send notification without requiring each integrated system to relearn how to send a notification on the instant message platform.  
 
 
@@ -229,4 +226,3 @@ As a plug in play service the notification system will simplify the process for 
 4.	Enable the notification system to send email messages
 5.	Enable the notification system to send instant messenger messages
 6.	Enable the notification system to send SNS and/or SQS messages.  
-
