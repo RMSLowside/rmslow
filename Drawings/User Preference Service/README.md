@@ -33,41 +33,62 @@ The following information will be stored.
     ...  // continue for each system
   ]"
 ```
+
+```json5
+  userId: "unique user id",
+  preferences: "[
+    {
+      name: "systemName.pagesize",
+      value: "15"
+    },
+    ...  // continue for each preferences
+  ]"
+```
 (?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the the user id.
 
 ## API
 
-### Get all preferences
+### Get all user preferences
 ```
-ngimws/preference
+ngimws/preference/{userId}
 RequestType = GET
-RequestBody = List<PreferenceOptions>
+PathParamter = {userId}
 ```
 * get list of all preferences
 
-### Get specific preference
+### Get preference by name
 ```
-ngimws/preference/{prefId}
+ngimws/preference/{name}
 RequestType = GET
-RequestBody = List<PreferenceOptions>
+PathParamter = {name}
 ```
 * get a specific preference
-
-### Add Preference
-```
-ngimws/preference
-RequestType = POST
-RequestBody = List<PreferenceOptions>
-```
-* add preference
 
 ### Update Preference
 ```
 ngimws/preference
 RequestType = POST
-RequestBody = List<PreferenceOptions>
+RequestBody = preference JSON
 ```
 * update preference
+
+### Delete user preference
+```
+ngimws/preference/userId
+RequestType = DELETE
+PathParamter = {userId}
+```
+* delete preference
+
+
+### Add Preference
+```
+ngimws/preference
+RequestType = POST
+RequestBody = JSON block
+```
+* add preference
+
 
 ### Delete Preference
 ```
@@ -76,39 +97,6 @@ RequestType = POST
 RequestBody = List<PreferenceOptions>
 ```
 * delete preference
-
-### Add user preference
-```
-ngimws/preference/{userId}
-RequestType = POST
-RequestBody = Preference POJO
-```
-* add a new user preference
-
-### Update user preferences
-```
-ngimws/preference/{userId}
-RequestType = UPDATE
-RequestParms = {userId}
-RequrestBody = Preference POJO
-```
-* Update user preference
-
-### Delete user preference
-```
-ngimws/preference/delete/{userId}
-RequestType = POST
-RequestBody = List<PreferenceOptions>
-```
-* delete user preference
-
-### Get user preference for user
-```
-ngimws/preference/{userId}
-RequestType = GET
-RequestParms = {userId}
-```
-* Gets user preference
 
 ### Reset user preference
 ```
@@ -127,6 +115,14 @@ RequestParms = {appName}
 * Reset all user preference for application
 
 ## SDK
+- Create local user preference object.
+```java
+// Create a local Notification object that can be submitted to the user preference API.
+Preference n = new PreferenceBuilder()
+        .setUserId("####")
+        .setPreference("preference json block")
+        .build();
+```
 
 ## **UI**
 
