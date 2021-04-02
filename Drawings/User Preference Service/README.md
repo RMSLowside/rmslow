@@ -24,7 +24,6 @@ The following information will be stored.
       preferences: [
         {
           pref: "prefKey",
-          name: "nice name for pref",
           value: "value selected by user"
         },
         ... // continue for each preference for this system
@@ -34,21 +33,11 @@ The following information will be stored.
   ]"
 ```
 
-```json5
-  userId: "unique user id",
-  preferences: "[
-    {
-      name: "systemName.pagesize",
-      value: "15"
-    },
-    ...  // continue for each preferences
-  ]"
-```
 (?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the the user id.
 
 ## API
 
-### Get all user preferences
+### Get preferences for user
 ```
 ngimws/preference/{userId}
 RequestType = GET
@@ -56,63 +45,22 @@ PathParamter = {userId}
 ```
 * get list of all preferences
 
-### Get preference by name
+### Update Preference for user
 ```
-ngimws/preference/{name}
-RequestType = GET
-PathParamter = {name}
-```
-* get a specific preference
-
-### Update Preference
-```
-ngimws/preference
+ngimws/preference/{userId}
 RequestType = POST
+PathParamter = {userId}
 RequestBody = preference JSON
 ```
 * update preference
 
-### Delete user preference
+### Delete preferences for user
 ```
 ngimws/preference/userId
 RequestType = DELETE
 PathParamter = {userId}
 ```
 * delete preference
-
-
-### Add Preference
-```
-ngimws/preference
-RequestType = POST
-RequestBody = JSON block
-```
-* add preference
-
-
-### Delete Preference
-```
-ngimws/preference
-RequestType = POST
-RequestBody = List<PreferenceOptions>
-```
-* delete preference
-
-### Reset user preference
-```
-ngimws/preference/{userId}
-RequestType = UPDATE
-RequestParms = {userId}{appName}
-```
-* Reset user preference to default values for user
-
-### Reset all user preference
-```
-ngimws/preference/{appName}
-RequestType = UPDATE
-RequestParms = {appName}
-```
-* Reset all user preference for application
 
 ## SDK
 - Create local user preference object.
