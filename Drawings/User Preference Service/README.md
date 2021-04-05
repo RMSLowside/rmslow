@@ -35,6 +35,22 @@ The following information will be stored.
 
 (?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the the user id.
 
+Another take on this, using object structure without arrays:
+```json5
+  userId: "unique user id",
+  preferences: "{
+    'EVA': {
+      'prefKey': prefValue,
+      ... // continue for all EVA prefs; if a pref is not found, then the calling system (which will manage the default values) uses the default
+    },
+    'iServices': {...},
+    'system3': {...},
+    'systemX': {...},
+    ...
+    // each system gets a block. If new system sets a pref that isn't saved here, a new block with that preference is made
+  }"
+```
+
 ## API
 
 ### Get preferences for user
