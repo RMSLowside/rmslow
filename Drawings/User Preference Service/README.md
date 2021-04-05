@@ -16,38 +16,33 @@ The following information will be stored.
 
 ### Preferences
 
-```json5
-  userId: "unique user id",
-  prefState: "[
-    {
-      systemName: "name of system that the preferences apply to",     // perhaps have a "global" option?
-      preferences: [
-        {
-          pref: "prefKey",
-          value: "value selected by user"
-        },
-        ... // continue for each preference for this system
-      ]
-    },
-    ...  // continue for each system
-  ]"
-```
-
-(?) Would adding some sort of 'authorizedRoles' property to the Preferences ref. table (in the specific system pref store above) be a good idea? Perhaps we could authorize edits if it matches a certain group or role name as well as matching the the user id.
-
 Another take on this, using object structure without arrays:
 ```json5
   userId: "unique user id",
   preferences: "{
-    'EVA': {
-      prefKey: 'prefValue',
-      ... // if a pref is not found, then the calling system (which will manage the default values) uses the default
+    iServices: {
+      scgr: {
+        gridColums: "title, description,...."
+        pageSize: "15"
+        ...
+      }
+      rcs:{
+        gridColums: "title, description,...."
+        pageSize: "15"
+        ...
+      }
+      eva: {
+       prefKey: 'prefValue'
+       ...
+      }
+      theme: "dark"
+      ...  
     },
-    'iServices': {...},
-    'system3': {...},
-    'systemX': {...},
+    system3: {...},
+    systemX: {...},
     ...
-    // each system gets a block. If new system sets a pref that isn't saved here, a new block with that preference is made
+    communication: "email"
+    
   }"
 ```
 
