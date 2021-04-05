@@ -52,7 +52,8 @@ Using object structure without arrays:
 * The service should not care what system is sending/getting preferences
 * As long as it is coming from the correct user it should not matter if system3 tries to update iServices.scgr.pageSize
 * For phase one we will have a proxy, application UI talks to application service, which talks to the user prefs service
-* that we should be able to auto grab some user information
+* We are not validating a user exists more than does an id match a regex
+* No special characters in prefences. camelCase keys at all levels
 
 ## API
 
@@ -89,7 +90,7 @@ PathParamter = {userId}
     
   }"
 ```
-* If user doesn't exist, returns an error
+
 
 ### Update Preference for user
 ```
@@ -112,12 +113,12 @@ RequestBody = preference JSON
     }
   }"
 ```
-* If user doesn't exist, returns an error
+
 
 ### delete Preference for user
 ```
 ngimws/preference/{userId}
-RequestType = POST
+RequestType = DELETE
 PathParamter = {userId}
 RequestBody = preference JSON
 ```
@@ -132,9 +133,19 @@ RequestBody = preference JSON
 - Create local user preference object.
 ```java
 // Create a local Notification object that can be submitted to the user preference API.
+
+//Create
 Preference n = new PreferenceBuilder()
         .setUserId("####")
-        .setPreference("preference json block")
+        .setPreference("prefKey")
+        .setValue("value")
+        .build();
+
+//Delete
+Preference n = new PreferenceBuilder()
+        .setUserId("####")
+        .setPreference("prefKey")
+        .delete()
         .build();
 ```
 
