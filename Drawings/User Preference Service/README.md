@@ -46,6 +46,13 @@ Using object structure without arrays:
   }"
 ```
 
+## Assumptions
+
+* The service should not care what system is sending/getting preferences
+** As long as it is coming from the correct user it should not matter if system3 tries to update iServices.scgr.pageSize
+* For phase one we will have a proxy, application UI talks to application service, which talks to the user prefs service
+** that we should be able to auto grab some user information
+
 ## API
 
 ### Get preferences for user
