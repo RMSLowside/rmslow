@@ -14,7 +14,14 @@ The Notification service consists of the following components:
 
 ## Datastore
 
-The Notification service contains multiple tables hosted on AWS Aurora MySQL.
+- Notification object.
+```java
+message:String,
+title: String,
+endpoint: String
+recipients: String[],
+classification: ?
+```
 
 ## API
 The Notification web service will be written in Java and hosted inside a EC2 Apache Tomcat instance.
@@ -42,8 +49,10 @@ The SDK will have the following software framework.
 // Create a local Notification object that can be submitted to the Notification API.
 Notification n = new NotificationBuilder()
         .setMessage("It's lunch time!")
+        .setTitle("title")
+        .setClassification("classGoesHere")
         .setEndpointId(Endpoints.SKYPE)
-        .setUserId("kimmela")        
+        .setUserId("123456")        
         .build();
 ```
 
