@@ -99,7 +99,7 @@ RequestBody = preference JSON
 ```
 * update preference
 * Example /pref/123456
-* RequestBody: iServices.scgr.pageSize: 15
+* RequestBody: {node: "iServices.scgr.pageSize", value:"15"}
 * This would create the node and any needed above so if nothing existed for the user they would have this block
 ```json5
   userId: "unique user id",
