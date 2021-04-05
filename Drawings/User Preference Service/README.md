@@ -49,9 +49,9 @@ Using object structure without arrays:
 ## Assumptions
 
 * The service should not care what system is sending/getting preferences
-** As long as it is coming from the correct user it should not matter if system3 tries to update iServices.scgr.pageSize
+* As long as it is coming from the correct user it should not matter if system3 tries to update iServices.scgr.pageSize
 * For phase one we will have a proxy, application UI talks to application service, which talks to the user prefs service
-** that we should be able to auto grab some user information
+* that we should be able to auto grab some user information
 
 ## API
 
@@ -69,7 +69,7 @@ PathParamter = {userId}
 * If "iServices.scgr" is passed as node without a depth, you will get all nodes starting at scgr
 * If a node that does not exist is passed "iServices.scgr.testthing.anybodyHome" null would be returned. It would be up to the application to manage it's own defaults
 * If 2 is passed at as a level you will get all nodes up to 2 depth
-** In this example that would return:
+* In this example that would return:
 ```json5
   userId: "unique user id",
   preferences: "{
