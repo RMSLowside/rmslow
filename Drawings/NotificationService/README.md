@@ -1,18 +1,20 @@
 # Notification Service
 
-The Notification Service is a common component that enables teams to send notifications to a variety of endpoints while
-also tracking the history of all events sent through it.
+The Notification Service is a common Service that enables applications to send notifications to a variety of endpoints
 
 The Notification service consists of the following components:
 
-- The Notification service datastore
 - The Notification service API
 - The Notification service SDK
-- The Notification service UI
 
 # Components
 
-## Datastore
+
+## API
+The Notification web service will be written in Java and hosted inside a EC2 Apache Tomcat instance.
+The endpoints below will be open to use by systems that have registered their system certificates with the Notification service.
+Notification service will route to the micro service for sending based on endpoint, email goes to the EmailService, Skype to SkypeService, and so on.
+If no enpoint is specified, the service will check the UserPrefs service for the recipients, defaulting to emial, and then routing the messages.
 
 - Notification object.
 ```java
@@ -22,10 +24,6 @@ endpoint: String,
 recipients: String[],
 classification: ?
 ```
-
-## API
-The Notification web service will be written in Java and hosted inside a EC2 Apache Tomcat instance.
-The endpoints below will be open to use by systems that have registered their system certificates with the Notification service.
 
 ### Send Notification
 ```
@@ -51,8 +49,8 @@ Notification n = new NotificationBuilder()
         .setMessage("It's lunch time!")
         .setTitle("title")
         .setClassification("classGoesHere")
-        .setEndpointId(Endpoints.SKYPE)
-        .setUserId("123456")        
+        .setEndpoint(Endpoints.SKYPE)
+        .setRecipients(["123456"])        
         .build();
 ```
 
