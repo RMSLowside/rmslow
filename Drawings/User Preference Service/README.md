@@ -3,7 +3,7 @@
 The User Preferences Service will capture and store user preferences that would persist between sessions.  The service will allow users to manage personal preferences to tailor their working environment for an optimal application experience.  
 
 ## To Solve
-User prefs is supposed to be a micro service that would support non-RMS apps.
+User prefs is supposed to be a micro service that would support all apps.
 - We need to define how we add a new service (particularly for non-RMS managed services)
 - How those new features get onto the prefs UI.  Can the UI be built dynamically from a table or ______???
 - Define standards for things like dark theme, rows on a table, etc.  
