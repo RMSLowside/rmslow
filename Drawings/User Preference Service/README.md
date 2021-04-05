@@ -16,13 +16,13 @@ The following information will be stored.
 
 ### Preferences
 
-Another take on this, using object structure without arrays:
+Using object structure without arrays:
 ```json5
   userId: "unique user id",
   preferences: "{
     iServices: {
       scgr: {
-        gridColums: "title, description,....",
+        gridColumns: "title, description,....",
         pageSize: "15",
         ...
       },
