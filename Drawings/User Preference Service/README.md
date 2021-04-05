@@ -27,7 +27,7 @@ Another take on this, using object structure without arrays:
         ...
       },
       rcs:{
-        gridColums: "title, description,....",
+        gridColumns: "title, description,....",
         pageSize: "15",
         ...
       },
