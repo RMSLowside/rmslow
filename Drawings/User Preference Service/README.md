@@ -41,8 +41,9 @@ Using object structure without arrays:
     system3: {...},
     systemX: {...},
     ...,
-    communication: "email"
-    
+    global:{
+      communication: "email"
+    }
   }"
 ```
 
