@@ -50,11 +50,35 @@ Another take on this, using object structure without arrays:
 
 ### Get preferences for user
 ```
-ngimws/preference/{userId}
+ngimws/preference/{userId}/{node || level}
 RequestType = GET
 PathParamter = {userId}
 ```
 * get list of all preferences
+* If no node or level is provided, entire object is returned
+* If "iServices" is passed under block you would return the nodes atarting at Iservices
+* If "iServices.scgr" is passed under block, you will get all nodes starting at scgr
+* If 2 is passed at as a level you will get all nodes up to 2 depth
+** In this example that would return:
+```json5
+  userId: "unique user id",
+  preferences: "{
+    iServices: {
+      theme: "dark"
+      Any other prefs at this level
+    },
+    system3: {
+      pref: "val"
+    },
+    systemX: {
+      pref: "val"
+    },
+    ...
+    communication: "email"
+    
+  }"
+```
+
 
 ### Update Preference for user
 ```
@@ -64,14 +88,20 @@ PathParamter = {userId}
 RequestBody = preference JSON
 ```
 * update preference
-
-### Delete preferences for user
+* Example /pref/123456
+* RequestBody: iServices.scgr.pageSize: 15
+* This would create the node and any needed above so if nothing existed for the user they would have this block
+```json5
+  userId: "unique user id",
+  preferences: "{
+    iServices: {
+      scgr: {
+        pageSize: "15"
+      }
+    }
+  }"
 ```
-ngimws/preference/userId
-RequestType = DELETE
-PathParamter = {userId}
-```
-* delete preference
+ * TO delete a pref you would send the node with no value: "iServices.scgr:null" would get rid of the block under scgr
 
 ## SDK
 - Create local user preference object.
