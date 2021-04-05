@@ -125,6 +125,7 @@ RequestBody = preference JSON
 * RequestBody: iServices.scgr
 * Would delete everything under the scgr block for the user
 * If preference does not exist, returns a 200 with a message that says "This pref does not exist for this user"
+* If user doesn't exist, returns an error
 
 ## SDK
 - Create local user preference object.
