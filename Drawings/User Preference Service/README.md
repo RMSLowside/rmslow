@@ -58,8 +58,8 @@ PathParamter = {userId}
 * Node is defaulted to 'root'
 * If root is passed without a depth you will get all preferences
 * If "iServices" is passed as node without a depth you would return the nodes starting at Iservices
-* * If "iServices" is passed as node with a depth of 1 you would return all the leaf nodes directly unde iServices, in the example above that would be theme only
-* If "iServices.scgr" is passed under block, you will get all nodes starting at scgr
+* If "iServices" is passed as node with a depth of 1 you would return all the leaf nodes directly unde iServices, in the example above that would be theme only
+* If "iServices.scgr" is passed as node without a depth, you will get all nodes starting at scgr
 * If a node that does not exist is passed "iServices.scgr.testthing.anybodyHome" null would be returned. It would be up to the application to manage it's own defaults
 * If 2 is passed at as a level you will get all nodes up to 2 depth
 ** In this example that would return:
