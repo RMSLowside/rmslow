@@ -41,7 +41,7 @@ Another take on this, using object structure without arrays:
   preferences: "{
     'EVA': {
       prefKey: 'prefValue',
-      ... // continue for all EVA prefs; if a pref is not found, then the calling system (which will manage the default values) uses the default
+      ... // if a pref is not found, then the calling system (which will manage the default values) uses the default
     },
     'iServices': {...},
     'system3': {...},
