@@ -18,7 +18,7 @@ The Notification service consists of the following components:
 ```java
 message:String,
 title: String,
-endpoint: String
+endpoint: String,
 recipients: String[],
 classification: ?
 ```
