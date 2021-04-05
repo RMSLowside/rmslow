@@ -16,12 +16,14 @@ The endpoints below will be open to use by systems that have registered their sy
 Notification service will route to the micro service for sending based on endpoint, email goes to the EmailService, Skype to SkypeService, and so on.
 If no endpoint is specified, the service will check the UserPrefs service for the recipients, defaulting to email, and then routing the messages.
 
+Version 1 single recipient it is on the caller to call multiple times. Version 1 no groups.
+
 - Notification object.
 ```java
 message:String,
 title: String,
 endpoint: String,
-recipients: String[],
+recipients: String,
 classification: ?
 ```
 
@@ -50,7 +52,7 @@ Notification n = new NotificationBuilder()
         .setTitle("title")
         .setClassification("classGoesHere")
         .setEndpoint(Endpoints.SKYPE)
-        .setRecipients(["123456"])        
+        .setRecipients("123456")        
         .build();
 ```
 
