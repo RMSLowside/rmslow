@@ -14,7 +14,7 @@ The Notification service consists of the following components:
 The Notification web service will be written in Java and hosted inside a EC2 Apache Tomcat instance.
 The endpoints below will be open to use by systems that have registered their system certificates with the Notification service.
 Notification service will route to the micro service for sending based on endpoint, email goes to the EmailService, Skype to SkypeService, and so on.
-If no enpoint is specified, the service will check the UserPrefs service for the recipients, defaulting to email, and then routing the messages.
+If no endpoint is specified, the service will check the UserPrefs service for the recipients, defaulting to email, and then routing the messages.
 
 - Notification object.
 ```java
