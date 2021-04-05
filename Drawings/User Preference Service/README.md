@@ -40,7 +40,7 @@ Another take on this, using object structure without arrays:
     },
     system3: {...},
     systemX: {...},
-    ...
+    ...,
     communication: "email"
     
   }"
