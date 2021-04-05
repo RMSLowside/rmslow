@@ -58,6 +58,7 @@ PathParamter = {userId}
 * If no node or level is provided, entire object is returned
 * If "iServices" is passed under block you would return the nodes atarting at Iservices
 * If "iServices.scgr" is passed under block, you will get all nodes starting at scgr
+* If a node that does not exist is passed "iServices.scgr.testthing.anybodyHome" null would be returned. It would be up to the application to manage it's own defaults
 * If 2 is passed at as a level you will get all nodes up to 2 depth
 ** In this example that would return:
 ```json5
