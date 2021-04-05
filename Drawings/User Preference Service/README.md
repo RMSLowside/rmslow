@@ -88,7 +88,7 @@ PathParamter = {userId}
     
   }"
 ```
-
+* If user doesn't exist, returns an error
 
 ### Update Preference for user
 ```
@@ -101,6 +101,7 @@ RequestBody = preference JSON
 * Example /pref/123456
 * RequestBody: iServices.scgr.pageSize: 15
 * This would create the node and any needed above so if nothing existed for the user they would have this block
+* If user doesn't exist, returns an error
 ```json5
   userId: "unique user id",
   preferences: "{
@@ -123,7 +124,7 @@ RequestBody = preference JSON
 * Example /pref/123456
 * RequestBody: iServices.scgr
 * Would delete everything under the scgr block for the user
-* If preference does not exist, returns an error
+* If preference does not exist, returns a 200 with a message that says "This pref does not exist"
 
 ## SDK
 - Create local user preference object.
