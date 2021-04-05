@@ -34,7 +34,7 @@ RequestBody = Notifications POJO
 
 ## SDK
 If integrated systems do not want to write their own code to integrate with the Notification web service API, an SDK will be made available
-for download from Artifactory and the Notification Service UI.
+for download from Artifactory.
 
 A SDK will be available for the following languages:
 
