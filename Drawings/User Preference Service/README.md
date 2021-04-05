@@ -22,20 +22,20 @@ Another take on this, using object structure without arrays:
   preferences: "{
     iServices: {
       scgr: {
-        gridColums: "title, description,...."
-        pageSize: "15"
+        gridColums: "title, description,....",
+        pageSize: "15",
         ...
-      }
+      },
       rcs:{
-        gridColums: "title, description,...."
-        pageSize: "15"
+        gridColums: "title, description,....",
+        pageSize: "15",
         ...
-      }
+      },
       eva: {
-       prefKey: 'prefValue'
+       prefKey: 'prefValue',
        ...
-      }
-      theme: "dark"
+      },
+      theme: "dark",
       ...  
     },
     system3: {...},
@@ -64,7 +64,7 @@ PathParamter = {userId}
   userId: "unique user id",
   preferences: "{
     iServices: {
-      theme: "dark"
+      theme: "dark",
       Any other prefs at this level
     },
     system3: {
