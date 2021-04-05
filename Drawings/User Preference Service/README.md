@@ -119,10 +119,11 @@ RequestType = POST
 PathParamter = {userId}
 RequestBody = preference JSON
 ```
-* update preference
+* delete preference
 * Example /pref/123456
 * RequestBody: iServices.scgr
 * Would delete everything under the scgr block for the user
+* If preference does not exist, returns an error
 
 ## SDK
 - Create local user preference object.
