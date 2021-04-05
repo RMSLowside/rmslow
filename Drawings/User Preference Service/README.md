@@ -111,7 +111,18 @@ RequestBody = preference JSON
     }
   }"
 ```
- * TO delete a pref you would send the node with no value: "iServices.scgr:null" would get rid of the block under scgr
+
+### delete Preference for user
+```
+ngimws/preference/{userId}
+RequestType = POST
+PathParamter = {userId}
+RequestBody = preference JSON
+```
+* update preference
+* Example /pref/123456
+* RequestBody: iServices.scgr
+* Would delete everything under the scgr block for the user
 
 ## SDK
 - Create local user preference object.
