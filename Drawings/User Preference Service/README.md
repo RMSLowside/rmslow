@@ -101,7 +101,6 @@ RequestBody = preference JSON
 * Example /pref/123456
 * RequestBody: iServices.scgr.pageSize: 15
 * This would create the node and any needed above so if nothing existed for the user they would have this block
-* If user doesn't exist, returns an error
 ```json5
   userId: "unique user id",
   preferences: "{
@@ -112,6 +111,7 @@ RequestBody = preference JSON
     }
   }"
 ```
+* If user doesn't exist, returns an error
 
 ### delete Preference for user
 ```
