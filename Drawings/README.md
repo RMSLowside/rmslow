@@ -1,6 +1,14 @@
 # Drawings
 This folder contains our Draw IO files architecture diagrams, flow charts, mock-ups, and other drawings and notes.
 
+## Required drawings
+- SvcV-2 Services Resource Flow Description
+- API Definitions
+- Sequence Diagrams
+- DIV-1/DIV-3 -Logical/Physical Data Diagram
+- Architectural Diagram
+- Anything else needed
+
 ## EVA Drawings
 - Architecture draw.io
 here: [Draw.io Source](https://app.diagrams.net/?src=about#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FEva%2FArchitecture%2FMainArchitecture.drawio)
