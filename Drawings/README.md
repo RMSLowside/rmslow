@@ -6,7 +6,7 @@ This folder contains our Draw IO files architecture diagrams, flow charts, mock-
 - [SvcV-2 example](https://docs.nomagic.com/display/UPDM2P185/SvcV-2+Services+Resource+Flow+Description)
 - API Definitions
 - Sequence Diagrams
-- DIV-1/DIV-3 -Logical/Physical Data Diagram
+- DIV-2/DIV-3 -Logical/Physical Data Diagram
 - Architectural Diagram
 - Anything else needed
 
