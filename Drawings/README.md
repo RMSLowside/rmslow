@@ -3,6 +3,7 @@ This folder contains our Draw IO files architecture diagrams, flow charts, mock-
 
 ## Required drawings
 - SvcV-2 Services Resource Flow Description
+- [svcv](https://dodcio.defense.gov/Library/DoDArchitectureFramework/dodaf20_services2.aspx)
 - API Definitions
 - Sequence Diagrams
 - DIV-1/DIV-3 -Logical/Physical Data Diagram
