@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-08T14:18:03.057Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="dYh1CYrXltNtmMNiw8J_" version="14.5.7" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-04-08T14:20:08.836Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="M0VgwpVrssykWLMfb0K2" version="14.5.7" type="github" pages="5">
   <diagram id="yvoPdxW38xUAE_G0r4dE" name="Info">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1169,7 +1169,7 @@
             <mxPoint x="100" y="343" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="kkM9rtD5AZhpZWzRvXDq-20" value="return null" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;fontFamily=Helvetica;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1">
+        <mxCell id="kkM9rtD5AZhpZWzRvXDq-20" value="Obj.type = null" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;fontFamily=Helvetica;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="225" y="420.5" as="sourcePoint" />
             <mxPoint x="84" y="419.5" as="targetPoint" />
@@ -1203,8 +1203,8 @@
         <mxCell id="VXMPrNVo3MlUeENppWDQ-13" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
           <mxGeometry x="-50" y="610" width="750" height="410" as="geometry" />
         </mxCell>
-        <mxCell id="kkM9rtD5AZhpZWzRvXDq-39" value="[UserPrefService&lt;br&gt;returned null]&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
-          <mxGeometry x="-25" y="530" width="80" height="20" as="geometry" />
+        <mxCell id="kkM9rtD5AZhpZWzRvXDq-39" value="[Obj.type is still null]&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
+          <mxGeometry x="-25" y="520" width="80" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
