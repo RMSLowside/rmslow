@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-08T13:56:27.006Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="1b7v0b7hC6c8bUo6mK16" version="14.5.7" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-04-08T14:00:24.751Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="EAAU3kzaUt9p56pxUqZU" version="14.5.7" type="github" pages="5">
   <diagram id="yvoPdxW38xUAE_G0r4dE" name="Info">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1158,7 +1158,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="kkM9rtD5AZhpZWzRvXDq-11" value="sendNotification(type?)" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1" source="kkM9rtD5AZhpZWzRvXDq-0" target="VXMPrNVo3MlUeENppWDQ-11">
+        <mxCell id="kkM9rtD5AZhpZWzRvXDq-11" value="sendNotification(type?, msg, ...)" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1" source="kkM9rtD5AZhpZWzRvXDq-0" target="VXMPrNVo3MlUeENppWDQ-11">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="-40" y="356" as="sourcePoint" />
             <mxPoint x="420" y="470" as="targetPoint" />
