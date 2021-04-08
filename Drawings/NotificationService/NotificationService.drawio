@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-08T13:51:18.294Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="Vo74_uESm-rZXcTxtYmN" version="14.5.7" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2021-04-08T13:52:01.501Z" agent="5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="fibdDIs-jEsk7x_yyJA-" version="14.5.7" type="github" pages="5">
   <diagram id="yvoPdxW38xUAE_G0r4dE" name="Info">
     <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1049,7 +1049,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8zZ_oITlpo-OSzF2_ptK" name="Sequence">
-    <mxGraphModel dx="2271" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1527" dy="363" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="VXMPrNVo3MlUeENppWDQ-0" />
         <mxCell id="VXMPrNVo3MlUeENppWDQ-1" parent="VXMPrNVo3MlUeENppWDQ-0" />
@@ -1074,14 +1074,13 @@
         <mxCell id="VXMPrNVo3MlUeENppWDQ-11" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-3">
           <mxGeometry x="55" y="80" width="10" height="920" as="geometry" />
         </mxCell>
-        <mxCell id="kkM9rtD5AZhpZWzRvXDq-25" value="create &lt;br&gt;NotificationObject&lt;br&gt;(Obj)" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontFamily=Helvetica;exitX=1.2;exitY=0.038;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-3" source="VXMPrNVo3MlUeENppWDQ-11">
+        <mxCell id="kkM9rtD5AZhpZWzRvXDq-25" value="create &lt;br&gt;NotificationObject&lt;br&gt;(Obj)" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;fontFamily=Helvetica;exitX=1.038;exitY=0.034;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-3" source="VXMPrNVo3MlUeENppWDQ-11">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="110" as="sourcePoint" />
+            <mxPoint x="80" y="111" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="67" y="111" />
+              <mxPoint x="80" y="111" />
               <mxPoint x="100" y="111" />
               <mxPoint x="100" y="160" />
-              <mxPoint x="64" y="160" />
             </Array>
             <mxPoint x="64" y="160" as="targetPoint" />
           </mxGeometry>
