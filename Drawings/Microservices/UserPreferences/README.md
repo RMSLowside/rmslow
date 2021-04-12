@@ -72,7 +72,7 @@ PathParamter = {userId}
 
 #### Error Codes:
 ```
-404 (Not Found) : A user with the given userId was not found
+404 (Not Found) : A user with the given userId was not found OR user is null
 ```
 
 ### Update Preference for user
@@ -99,6 +99,7 @@ RequestBody = preference JSON
 
 #### Error Codes:
 ```
+403 (Forbidden) : node is null, cannot update root node
 404 (Not Found) : A user with the given userId was not found
 ```
 
@@ -118,7 +119,9 @@ RequestBody = preference JSON
 
 #### Error Codes:
 ```
-404 (Not Found) : A user with the given userId was not found
+400 (Bad Request) : node does not exist for this user's preferences
+403 (Forbidden) : node is null, cannot delete root node
+404 (Not Found) : A user with the given userId was not found OR user is null
 ```
 
 ## SDK
