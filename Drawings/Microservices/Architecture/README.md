@@ -4,9 +4,9 @@ The
 
 # Components
 * Notification Service
-** Email Service
-** Messaging Service
-** Service TBD
+   * Email Service
+   * Messaging Service
+   * Service TBD
 * User Preferences Service
 * People Service
 * Whitelist Service
