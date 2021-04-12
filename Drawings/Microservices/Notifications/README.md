@@ -37,7 +37,7 @@ RequestBody = Notifications POJO
 #### Error Codes:
 ```
 400 (Bad Request) : request object is in some way improperly formatted
-404 (Not Found) : Endpoint not found or otherwise unreachable
+500 (Internal Server Error) : Something happened in the respective messaging service
 ```
 
 ## SDK
