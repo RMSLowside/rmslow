@@ -6,6 +6,9 @@ The Email service consists of the following components:
 
 - The Email service API
 
+- Email Service draw.io
+here: [Draw.io Source](https://app.diagrams.net/?title=Copy%20of%20PeopleService.drawio&client=1#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FMicroservices%2FEmailService%2FEmailService.drawio)
+
 # Components
 
 ## API
