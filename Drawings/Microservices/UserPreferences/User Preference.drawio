@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-12T20:12:24.551Z" agent="5.0 (Windows)" etag="RQ1bJmvz32jgfRdUgc63" version="14.5.10" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-04-12T20:12:30.525Z" agent="5.0 (Windows)" etag="k4l8rv05KvwseO0Rd9Mx" version="14.5.10" type="github" pages="7">
   <diagram id="WPIGd1P5IR4SWYrxd255" name="Thoughts">
     <mxGraphModel dx="1422" dy="1267" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1400" pageHeight="1700" math="0" shadow="0">
       <root>
@@ -1063,9 +1063,6 @@
             <Array as="points" />
             <mxPoint as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="Ws8amAIpS_nBqJhwDtLX-0" value="Add Userid&lt;br&gt;Add Specific Errors&lt;br&gt;Assumption - Create &amp;amp; Update are the same&lt;br&gt;Update - default for systems vs. multiple calls to the User Pref. service" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="gSnDp3KwC2gbsZZSmgc5-1">
-          <mxGeometry x="770" y="410" width="240" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
