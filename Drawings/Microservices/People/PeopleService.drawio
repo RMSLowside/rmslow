@@ -1,17 +1,17 @@
-<mxfile host="app.diagrams.net" modified="2021-04-12T14:07:33.212Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="B_VF2e8iZxBdIquG97HH" version="14.5.6" type="github" pages="4">
-  <diagram id="2ZicLahAkMwy1uGJY4i7" name="Workflow">
+<mxfile host="app.diagrams.net" modified="2021-04-12T14:21:15.057Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="B8Q-p0XHFWTf8WzYsp-X" version="14.5.6" type="github" pages="4">
+  <diagram id="2ZicLahAkMwy1uGJY4i7" name="Architecture">
     <mxGraphModel dx="1902" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="esgHbYrnC5C50tomHgbE-0" />
         <mxCell id="esgHbYrnC5C50tomHgbE-1" parent="esgHbYrnC5C50tomHgbE-0" />
-        <mxCell id="GKuD-xg1_WZd025ETePE-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="esgHbYrnC5C50tomHgbE-1" source="CmkUiu_usdwQD7UQJuM9-8" target="GKuD-xg1_WZd025ETePE-0">
+        <mxCell id="GKuD-xg1_WZd025ETePE-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="esgHbYrnC5C50tomHgbE-1" source="CmkUiu_usdwQD7UQJuM9-8" target="GKuD-xg1_WZd025ETePE-0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CmkUiu_usdwQD7UQJuM9-8" value="People Service" style="whiteSpace=wrap;html=1;rounded=1;" parent="esgHbYrnC5C50tomHgbE-1" vertex="1">
-          <mxGeometry x="230" y="120" width="120" height="60" as="geometry" />
+          <mxGeometry x="300" y="250" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="GKuD-xg1_WZd025ETePE-0" value="Enterprise Access" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="esgHbYrnC5C50tomHgbE-1">
-          <mxGeometry x="230" y="270" width="120" height="60" as="geometry" />
+          <mxGeometry x="100" y="250" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
