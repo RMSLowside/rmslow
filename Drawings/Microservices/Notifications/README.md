@@ -34,6 +34,12 @@ RequestType = POST
 RequestBody = Notifications POJO
 ```
 
+#### Error Codes:
+```
+400 (Bad Request) : request object is in some way improperly formatted
+404 (Not Found) : Endpoint not found or otherwise unreachable
+```
+
 ## SDK
 If integrated systems do not want to write their own code to integrate with the Notification web service API, an SDK will be made available
 for download from Artifactory.
