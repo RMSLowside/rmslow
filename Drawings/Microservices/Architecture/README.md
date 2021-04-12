@@ -1,6 +1,6 @@
 # Microservices Architecture
 
-The 
+This is a location to capture and visualize the generic microservices components.
 
 # Components
 * Notification Service
