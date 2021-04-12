@@ -2,6 +2,9 @@
 
 This is a location to capture and visualize the generic microservices components.
 
+Source draw.io
+here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FMicroservices%2FArchitecture%2FMicroservices%20Architecture.drawio)
+
 # Components
 * Notification Service
    * Email Service
@@ -12,5 +15,4 @@ This is a location to capture and visualize the generic microservices components
 * Whitelist Service
 
 
-Source draw.io
-here: [Draw.io Source](https://app.diagrams.net/#HRMSLowside%2Frmslow%2Fmaster%2FDrawings%2FMicroservices%2FArchitecture%2FMicroservices%20Architecture.drawio)
+
