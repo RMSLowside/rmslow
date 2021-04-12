@@ -70,6 +70,11 @@ PathParamter = {userId}
 * If "iServices.scgr" is passed as node, you will get all nodes starting at scgr
 * If a node that does not exist is passed "iServices.scgr.testthing.anybodyHome" null would be returned. It would be up to the application to manage it's own defaults
 
+#### Error Codes:
+```
+404 (Not Found) : A user with the given userId was not found
+```
+
 ### Update Preference for user
 ```
 ngimws/preference/{userId}
@@ -92,6 +97,10 @@ RequestBody = preference JSON
   }"
 ```
 
+#### Error Codes:
+```
+404 (Not Found) : A user with the given userId was not found
+```
 
 ### delete Preference for user
 ```
@@ -106,6 +115,11 @@ RequestBody = preference JSON
 * Would delete everything under the scgr block for the user
 * If preference doesn't exist, returns successfully with a message that says "This pref does not exist for this user"
 * If user doesn't exist, returns an error
+
+#### Error Codes:
+```
+404 (Not Found) : A user with the given userId was not found
+```
 
 ## SDK
 - Create local user preference object.
