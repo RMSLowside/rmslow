@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-12T19:48:43.453Z" agent="5.0 (Windows)" etag="DNSVWSvTlfdB844gVNO_" version="14.5.10" type="github" pages="7">
+<mxfile host="app.diagrams.net" modified="2021-04-12T19:49:36.168Z" agent="5.0 (Windows)" etag="dyhArRo9YUeRmAOALJro" version="14.5.10" type="github" pages="7">
   <diagram id="yvoPdxW38xUAE_G0r4dE" name="Info">
     <mxGraphModel dx="1422" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -1049,18 +1049,18 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8zZ_oITlpo-OSzF2_ptK" name="Sequence">
-    <mxGraphModel dx="2272" dy="1967" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2272" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="VXMPrNVo3MlUeENppWDQ-0" />
         <mxCell id="VXMPrNVo3MlUeENppWDQ-1" parent="VXMPrNVo3MlUeENppWDQ-0" />
         <mxCell id="V4QNBh_t8fmaG58uwp8u-2" value="alt Success" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
-          <mxGeometry x="-720" y="780" width="720" height="140" as="geometry" />
+          <mxGeometry x="-720" y="780" width="710" height="140" as="geometry" />
         </mxCell>
         <mxCell id="kkM9rtD5AZhpZWzRvXDq-31" value="opt" style="shape=umlFrame;whiteSpace=wrap;html=1;fontFamily=Helvetica;" parent="VXMPrNVo3MlUeENppWDQ-1" vertex="1">
           <mxGeometry x="-780" y="150" width="410" height="220" as="geometry" />
         </mxCell>
         <mxCell id="VXMPrNVo3MlUeENppWDQ-13" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;" parent="VXMPrNVo3MlUeENppWDQ-1" vertex="1">
-          <mxGeometry x="-720" y="520" width="720" height="240" as="geometry" />
+          <mxGeometry x="-720" y="520" width="710" height="240" as="geometry" />
         </mxCell>
         <mxCell id="kkM9rtD5AZhpZWzRvXDq-1" value="uPS:userPrefService" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="VXMPrNVo3MlUeENppWDQ-1" vertex="1">
           <mxGeometry x="-500" y="10" width="140" height="490" as="geometry" />
@@ -1188,9 +1188,6 @@
             <mxPoint x="-580.5" y="820" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="veMIReHhxxMeJ-EuQylp-0" value="&lt;b&gt;Message Type&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;Email Service should call the People Service to get uniqueID to send email&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;Skype and Other have different attributes.&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;Return line - indifferent, let each individual service handle.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=bottom;whiteSpace=wrap;rounded=0;labelPosition=center;verticalLabelPosition=top;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
-          <mxGeometry x="590" y="140" width="120" height="250" as="geometry" />
-        </mxCell>
         <mxCell id="V4QNBh_t8fmaG58uwp8u-15" value="3.3.1 return Success" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-50" y="890" as="sourcePoint" />
@@ -1214,7 +1211,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V4QNBh_t8fmaG58uwp8u-18" value="alt Bad Request" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
-          <mxGeometry x="-719.5" y="940" width="720" height="120" as="geometry" />
+          <mxGeometry x="-719.5" y="940" width="709.5" height="120" as="geometry" />
         </mxCell>
         <mxCell id="V4QNBh_t8fmaG58uwp8u-24" value="3.1.2 return 400" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=0.9;entryY=0.302;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1">
           <mxGeometry relative="1" as="geometry">
@@ -1245,7 +1242,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="V4QNBh_t8fmaG58uwp8u-29" value="alt Service Error" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
-          <mxGeometry x="-719.5" y="1090" width="720" height="110" as="geometry" />
+          <mxGeometry x="-719.5" y="1090" width="709.5" height="110" as="geometry" />
         </mxCell>
         <mxCell id="V4QNBh_t8fmaG58uwp8u-35" value="3.1.3 return 500" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=0.9;entryY=0.302;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="VXMPrNVo3MlUeENppWDQ-1">
           <mxGeometry relative="1" as="geometry">
