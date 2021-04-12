@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-12T19:50:34.398Z" agent="5.0 (Windows)" etag="LIs7MLfGR5WFZCF9LaMh" version="14.5.10" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-04-12T19:50:59.318Z" agent="5.0 (Windows)" etag="It6ItB0AOo6_eBkFKexy" version="14.5.10" type="github" pages="4">
   <diagram id="2ZicLahAkMwy1uGJY4i7" name="Architecture">
     <mxGraphModel dx="1422" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -26,7 +26,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8zZ_oITlpo-OSzF2_ptK" name="Sequence">
-    <mxGraphModel grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" page="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="867" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="VXMPrNVo3MlUeENppWDQ-0" />
         <mxCell id="VXMPrNVo3MlUeENppWDQ-1" parent="VXMPrNVo3MlUeENppWDQ-0" />
@@ -167,9 +167,6 @@
             <mxPoint x="308" y="476" as="targetPoint" />
             <Array as="points" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="-sMb2o5gEwD_STwPzS0T-0" value="Add UniqueID&lt;br&gt;&lt;br&gt;Lower Email Service&lt;br&gt;&lt;br&gt;add Person Service lookup&lt;br&gt;return Success/Fail - 40x Recipient/user Not Found&lt;br&gt;&lt;br&gt;&lt;br&gt;Add Person Service to SVC-V2&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="VXMPrNVo3MlUeENppWDQ-1">
-          <mxGeometry x="530" y="510" width="290" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
