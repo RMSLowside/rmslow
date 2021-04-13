@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-12T18:54:28.344Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36 Edg/89.0.774.48" etag="92cF7lNzL1qoXm8-u5P8" version="14.5.10" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-04-13T10:25:55.964Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36 Edg/89.0.774.48" etag="r1j7Dxysx_dQBuWVz_r9" version="14.6.0" type="github" pages="4">
   <diagram id="2ZicLahAkMwy1uGJY4i7" name="Architecture">
     <mxGraphModel dx="1422" dy="893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -38,7 +38,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ngDmDRu6eEG6-tXYbggL-5" value="ee: Enterprise Access" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" parent="VXMPrNVo3MlUeENppWDQ-1" vertex="1">
-          <mxGeometry x="630" y="30" width="220" height="410" as="geometry" />
+          <mxGeometry x="630" y="30" width="210" height="410" as="geometry" />
         </mxCell>
         <mxCell id="ngDmDRu6eEG6-tXYbggL-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="ngDmDRu6eEG6-tXYbggL-5" vertex="1">
           <mxGeometry x="90" y="100" width="10" height="300" as="geometry" />
