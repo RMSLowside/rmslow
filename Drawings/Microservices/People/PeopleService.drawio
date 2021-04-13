@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-13T10:25:55.964Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36 Edg/89.0.774.48" etag="r1j7Dxysx_dQBuWVz_r9" version="14.6.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2021-04-13T11:08:05.211Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36 Edg/89.0.774.48" etag="8wg3fiZGalKVL5H7Y9gg" version="14.6.0" type="github" pages="4">
   <diagram id="2ZicLahAkMwy1uGJY4i7" name="Architecture">
     <mxGraphModel dx="1422" dy="893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -164,7 +164,7 @@
             <mxPoint x="430" y="150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NLSzTlkjB3znGvsnhn3P-13" value="«exhangeElement»&lt;br&gt;&lt;div&gt;EnterpriseExchange&lt;/div&gt;" style="html=1;" parent="Ox95dz9BANwZEl6q_HYK-1" vertex="1">
+        <mxCell id="NLSzTlkjB3znGvsnhn3P-13" value="«exchangeElement»&lt;br&gt;&lt;div&gt;EnterpriseExchange&lt;/div&gt;" style="html=1;" parent="Ox95dz9BANwZEl6q_HYK-1" vertex="1">
           <mxGeometry x="600" y="160" width="145" height="50" as="geometry" />
         </mxCell>
         <mxCell id="NLSzTlkjB3znGvsnhn3P-14" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="Ox95dz9BANwZEl6q_HYK-1" source="NLSzTlkjB3znGvsnhn3P-13" target="NLSzTlkjB3znGvsnhn3P-24" edge="1">
@@ -233,7 +233,7 @@
         <mxCell id="BlRUrhaM2jrv6QA4Gzeq-11" value="+ personAttrE: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="BlRUrhaM2jrv6QA4Gzeq-6" vertex="1">
           <mxGeometry y="130" width="180" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="BAKol3dgOUc04qU7Xrgm-0" value="Add Fail&lt;br&gt;&lt;br&gt;Use error40x for User/Recipient Not Found&amp;nbsp;&lt;br&gt;&lt;br&gt;Add to ReadMe consideration for using tokens&lt;br&gt;What if a downstream system requests the token?&lt;br&gt;&lt;br&gt;Will token have userid at minimum, may have email address or other attributes." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="Ox95dz9BANwZEl6q_HYK-1">
+        <mxCell id="BAKol3dgOUc04qU7Xrgm-0" value="Add Fail&lt;br&gt;&lt;br&gt;Use error40x for User/Recipient Not Found&amp;nbsp;&lt;br&gt;&lt;br&gt;Add to ReadMe consideration for using tokens&lt;br&gt;What if a downstream system requests the token?&lt;br&gt;&lt;br&gt;Will token have userid at minimum, may have email address or other attributes." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="Ox95dz9BANwZEl6q_HYK-1" vertex="1">
           <mxGeometry x="860" y="218" width="250" height="20" as="geometry" />
         </mxCell>
       </root>
